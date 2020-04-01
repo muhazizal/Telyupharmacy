@@ -160,7 +160,7 @@ p {
 }
 
 .col-md-3 {
-	margin-bottom: 3%;
+	margin-bottom: 5%;
 }
 
 .card-block {
@@ -176,6 +176,7 @@ p {
 	letter-spacing: 0.02em;
 	color: #000000;
 }
+
 
 .card-text {}
 
@@ -212,4 +213,8 @@ p {
 	line-height: 12px;
 	letter-spacing: 0.02em;
 	color: #ABABAB;
+}
+
+.col-md-4{
+	margin-top: 5%;
 }
