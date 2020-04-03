@@ -23,7 +23,7 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid" id="section0">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<a class="navbar-brand col-md6" id="navbar1" href="#">Telyu<span>Pharmacy</span></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -48,10 +48,12 @@
 			<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
 				<ul class="navbar-nav" id="navbar3">
 					<li class="nav-item">
-						<a class="nav-link" id="a-item" href="#">Sign In</a>
+						<a class="nav-link" id="a-item" href="#" data-toggle="modal" data-target="#loginmodal">Sign
+							In</a>
 					</li>
 					<li class="nav-item" id="SignUp">
-						<a class="nav-link" id="a-item" href="#">Sign Up</a>
+						<a class="nav-link" id="a-item" href="#">Sign
+							Up</a>
 					</li>
 				</ul>
 			</div>
@@ -62,12 +64,13 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<h2>Lorem ipsum dolor sit amet, consectetur adipiscieng elit</h2>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui repellendus voluptates
+					<p id="tittle-section1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui
+						repellendus voluptates
 						rerum
 						ea
 						ducimus reiciendis nisi quae perspiciatis quas inventore architecto, iste commodi dignissimos
 						nostrum
-						dolorum placeat libero vel.</p>
+						dolorum placeat libero vel.</tittle=se>
 				</div>
 				<div class="col-lg-6">
 					<img id="orang" src="/assets/image/undraw_medicine_b1ol.png" alt="">
@@ -84,7 +87,7 @@
 				<ol class="carousel-indicators">
 					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+					<!-- <li data-target="#carouselExampleCaptions" data-slide-to="2"></li> -->
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -101,13 +104,13 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 					</div>
-					<div class="carousel-item">
-						<img src="/assets/image/kirito.jpg" class="d-block w-100" alt="...">
+					<!-- <div class="carousel-item">
+						<img src="" class="d-block w-100" alt="...">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Third slide label</h5>
 							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -136,7 +139,7 @@
 							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
-									<h5>Mylanta</h5>
+									<h5><a id="label-section-3">Mylanta</a></h5>
 								</div>
 								<div class="card-text">
 									<div class="harga">Rp</div>
@@ -309,6 +312,28 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="container" id="SignIn">
+					<div class="modal fade" id="loginmodal">
+						<div class="bg-modal">
+							<div class="modal-content text-center">
+								<h5 id="tittle-sign">Sign In</h5>
+								<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Username/E-mail" />
+									<input class="form-control" type="password" placeholder="Password" />
+								</div>
+								<p id="forgot">Forgot the password? <a href="" id="click">Click Here</a></p>
+								<button type="button" class="btn btn-info" id="btn-Sign-In">Sign In</button>
+								<p id="forgot">or sign in with</p>
+								<button type="button" class="btn btn-light" id="btn-Google">Google or Facebook</button>
+								<p id="forgot">Don't have account? <a href="" id="click">Sign Up Here</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
 
 
 

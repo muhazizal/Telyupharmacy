@@ -1,12 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,700;1,900&display=swap');
 
-.container {}
+/* sign in */
+.bg-modal {
+	position: absolute;
+	width: 320px;
+	height: 429px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	top: 20%;
+	left: 40%;
+}
 
-.container-fluid {}
+#tittle-sign {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #9C9C9C;
+	margin-top: 5%;
+}
+
+#Telyu {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	color: #4BC2C5;
+	margin-top: 3%;
+}
+
+.form-group input {
+	width: 230px;
+	height: 44px;
+	border: 1px solid #8F8F8F;
+	box-sizing: border-box;
+	margin-left: 13%;
+	margin-top: 5%;
+}
+
+#forgot {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	color: #000000;
+}
+
+#click {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	color: #4BC2C5;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#click:hover {
+	color: grey;
+}
+
+#btn-Sign-In {
+	width: 230px;
+	height: 44px;
+	background: #4BC2C5 !important;
+	border-radius: 10px;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	margin-left: 13%;
+	margin-bottom: 5%;
+	color: #FFFFFF;
+}
+
+#btn-Google {
+	width: 230px;
+	height: 44px;
+	border: 1px solid #ABABAB;
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: #ABABAB;
+	margin-left: 13%;
+	margin-bottom: 5%;
+}
+
+/* section0 */
+
+#section0 {
+	margin-top: 10px;
+}
 
 .navbar {
 	background-color: white !important;
-	display: flex;
+	/* display: flex; */
+}
+
+.nav-link:hover {
+	color: #4BC2C5 !important;
 }
 
 .collapse {
@@ -69,7 +171,7 @@ h2 {
 	margin-top: 15%;
 }
 
-p {
+#tittle-section1 {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
@@ -178,6 +280,10 @@ p {
 	color: #000000;
 }
 
+#label-section-3:hover {
+	color: magenta;
+	cursor: pointer;
+}
 
 .card-text {}
 
@@ -216,6 +322,6 @@ p {
 	color: #ABABAB;
 }
 
-.col-md-4{
+.col-md-4 {
 	margin-top: 5%;
 }
