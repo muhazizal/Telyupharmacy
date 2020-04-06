@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,700;1,900&display=swap');
 
 /* sign in */
+
+#SignIn {
+	align-self: center;
+}
+
 .bg-modal {
+	align-items: center;
+	justify-content: center;
+}
+
+#loginmodal {}
+
+.modal-content {
 	position: absolute;
 	width: 320px;
 	height: 429px;
@@ -9,6 +21,8 @@
 	border-radius: 10px;
 	top: 20%;
 	left: 40%;
+	/* border: 2px solid black !important; */
+
 }
 
 #tittle-sign {
