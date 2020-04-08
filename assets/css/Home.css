@@ -214,7 +214,10 @@ h2 {
 #vector1 {
 	display: flex;
 	visibility: 1;
-	transform: translate(0%, 13%);
+	width: 15%;
+	position: absolute;
+	height: auto;
+	margin-top: -5%;
 }
 
 /* section2 */
