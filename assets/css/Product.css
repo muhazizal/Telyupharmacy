@@ -5,11 +5,27 @@
 
 #section0 {
 	width: 100%;
-	padding-top: 10px;
+	/* padding-top: 10px; */
+}
+
+#navbarSupportedContent {
+	margin-top: 1%;
 }
 
 .navbar {
 	background: white !important;
+}
+
+#a-item {
+	color: black;
+}
+
+.collapse {
+	display: flex;
+}
+
+.nav-link:hover {
+	color: #4BC2C5 !important;
 }
 
 .navbar-brand {
@@ -37,16 +53,30 @@
 	font-size: 18px;
 	line-height: 25px;
 	color: #ABABAB;
-	padding-left: 4%;
-	width: 20%;
 }
+
+#icon {
+	border: none;
+
+}
+
+.input-group-btn {
+	margin-top: 2px;
+	margin-left: 2%;
+}
+
+#icon:hover {
+	background-color: white !important;
+}
+
+
 
 .fa-search {
-	transform: translate(200%);
 	cursor: pointer;
+	color: black;
 }
 
-ul {
+#section0 ul {
 	margin-left: 2%;
 }
 
@@ -65,12 +95,8 @@ ul {
 	cursor: pointer;
 }
 
-.from-inline {
-	margin-right: 20%;
-}
-
 .fa-shopping-cart {
-	transform: translate(-500%, 0%);
+	transform: translate(-200%, 0%);
 	color: #ababab;
 	cursor: pointer;
 }
@@ -84,7 +110,10 @@ ul {
 #section2 {
 	padding-top: 5%;
 	width: 98%;
+}
 
+#section2 .col-md-2 {
+	margin-top: 1%;
 }
 
 #tittle-section2 {
@@ -94,12 +123,12 @@ ul {
 	font-size: 14px;
 	line-height: 19px;
 	color: #000000;
+	margin-left: 2%;
 }
 
 h6 {
 	padding-top: 8%;
 	margin-left: 7%;
-	padding-bottom: 8%;
 }
 
 .card input {
@@ -107,12 +136,10 @@ h6 {
 	border: 1px solid #E7EAEC;
 	box-sizing: border-box;
 	border-radius: 5px;
-	margin-left: 5%;
 }
 
 .card {
-	width: 190px;
-	height: 400px;
+	width: 100%;
 }
 
 #min {
@@ -120,17 +147,37 @@ h6 {
 	margin-right: 0;
 }
 
-/* .col-md-2{
-	border: 2px solid black;
-} */
+.col-md-2 {
+	/* margin-top: 2%; */
+}
 
-.form-row {
-	margin-top: 10%;
+#section2 button {
+	width: 80%;
+	margin-left: 5%;
+	margin-top: 5%;
+	border: 1px solid #E7EAEC !important;
+	border-radius: 15px !important;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: #ABABAB !important;
+}
+
+#section2 button:hover {
+	color: white !important;
+}
+
+#submit {
+	margin-bottom: 10%;
+	margin-top: 0;
 }
 
 #price {
-	margin-left: 0;
-	margin-right: 5%;
+	width: 80%;
+	margin-bottom: 5%;
+	margin-left: 5%;
 }
 
 
@@ -224,6 +271,9 @@ h6 {
 	color: white !important;
 }
 
+#section5 ul {
+	list-style-type: none;
+}
 
 #copyright {
 	font-family: Nunito Sans;

@@ -30,31 +30,49 @@
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<i class="fa fa-search" aria-hidden="true"></i>
-					<!-- <form class="form-inline"> -->
-					<input id="search" class="form-control mr-sm-2" type="search" placeholder="Search"
-						aria-label="Search">
-					<!-- </form> -->
-					<ul class="navbar-nav mr-auto">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Product</a>
+							<form action="" class="navbar-form">
+								<div class="form-group input-group">
+									<input id="search" type="text" class="form-control" placeholder="Search">
+									<div class="input-group-btn">
+										<button type="button" id="icon" class="btn btn-outline-info">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Article</a>
+							<a class="nav-link" id="a-item" href="#">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">About Us</a>
+							<a class="nav-link" id="a-item" href="#">Article</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="#">About Us</a>
 						</li>
 					</ul>
-					<form class="form-inline">
+				</div>
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<form class="form-inline ">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 						<img src="/assets/image/kirito.jpg" class="rounded-circle d-block" />
 					</form>
 				</div>
 			</nav>
 		</div>
+
+
+
+
+
+
+
+
+
+
 		<div class="container-fluid" id="section1">
 
 		</div>
@@ -62,40 +80,246 @@
 			<div class="row">
 				<div class="col-md-2" id="form">
 					<h1 id="tittle-section2">Search for more details</h1>
-					<div class="card">
+					<div class="card" id="PriceRange">
 						<h6>Price Range</h6>
-
-						<form>
-							<div class="form-row align-items-center">
-								<div class="col-auto">
-									<label class="sr-only" for="inlineFormInputGroup">Username</label>
-									<div class="input-group" id="min">
-										<div class="input-group-prepend">
-											<div class="input-group-text">Rp.</div>
-										</div>
-										<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-											placeholder="Minimum price">
-									</div>
-								</div>
-							</div>
+						<form action="">
+							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
+								placeholder="Minimum price">
+							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
+								placeholder="Maximum price">
+							<button type="btn" class="btn btn-outline-info" id="submit">Submit</button>
+							<!-- <button type="btn" class="btn btn-outline-info" id="submit1">25rb - 50rb</button>
+							<button type="btn" class="btn btn-outline-info" id="submit2">50rb - 100rb</button>
+							<button type="btn" class="btn btn-outline-info">100rb - 200rb</button> -->
 						</form>
-						<form>
-							<div class="form-row align-items-center">
-								<div class="col-auto">
-									<label class="sr-only" for="inlineFormInputGroup">Username</label>
-									<div class="input-group" id="min">
-										<div class="input-group-prepend">
-											<div class="input-group-text">Rp.</div>
-										</div>
-										<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-											placeholder="Maximum price">
-									</div>
-								</div>
-							</div>
-						</form>
-
 					</div>
-					</form>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="card">
+						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<div class="card-block">
+							<div class="card-title">
+								<h5><a id="label-section-3">Mylanta</a></h5>
+							</div>
+							<div class="card-text">
+								<div class="harga">Rp</div>
+								<div class="rating">rating</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-2">
 				</div>
 				<div class="col-md-2">
 					<div class="card">
