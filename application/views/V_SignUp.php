@@ -4,20 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="/assets/css/SignUp.css">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<title>TelyuPharmacy | Sign Up</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
+	<!-- External CSS -->
+	<link rel="stylesheet" href="<?= base_url('assets/css/SignUp.css'); ?>">
 </head>
 
 <body>
@@ -27,12 +18,13 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6" id="gambar1">
-				
+
 			</div>
-			<img id="vector3" src="/assets/image/vector 3.png" alt="">
+			<img id="vector3" src="<?= base_url('assets/image/vector3.png'); ?>" alt=""> 
 			<div class="col-lg-6">
-				<img id="orang" src="/assets/image/dokter1.png" alt="">	
-				<img id="vector2" src="/assets/image/vector 2.png" alt="">
+				<img id="orang" src="<?= base_url('assets/image/dokter1.png'); ?>" alt="">	
+				<img id="vector2" src="<?= base_url('assets/image/vector2.png'); ?>" alt="">
+
 				<form class="form-container ">
 					<div class="text-center">
 						<h1 id="top">Get your medicine faster,</h1>
@@ -63,6 +55,13 @@
 						<p><a href="" id="a">Terms and Conditions </a>and<a id="a" href=""> Privacy Policy</a></p>
 					</div>
 				</form>
+				
 			</div>
+		</div>
+	</div>
 
+	<!-- Bootstrap JS -->
+	<script src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+	<script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+</body>
 </html>
