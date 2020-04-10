@@ -1,23 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 
 #header {
 	margin-top: 2%;
 	margin-bottom: 5%;
 }
 
+#Telyu-navbar {
+	color: #4BC2C5;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	margin: 0;
+	padding: 0;
+}
+
+#Pharmacy-navbar {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-size: 24px;
+	font-weight: lighter;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	color: black;
+	margin: 0;
+}
+
 #Telyu {
-	font-family: 'Montserrat';
+	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
 	color: #4BC2C5;
+	text-decoration: none;
 }
 
 #pharmacy {
-	font-family: 'Montserrat';
+	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 24px;
@@ -26,15 +52,7 @@
 	color: black;
 }
 
-#orang {
-	display: flex;
-	width: 100%;
-	height: auto;
-	align-items: center;
-	position : absolute;
-	margin-left: -85%;
-	margin-top: -5%;
-}
+
 
 
 .form-group {
@@ -45,7 +63,7 @@
 	background: #FFFFFF;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
-	width: 60%;
+	width: 65%;
 	margin-left: 20%;
 	position: relative;
 }
@@ -56,7 +74,7 @@
 
 h1 {
 	margin-top: 0;
-	font-family: 'Nunito Sans';
+	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 24px;
@@ -72,7 +90,7 @@ h1 {
 }
 
 label {
-	font-family: 'Nunito Sans';
+	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 12px;
@@ -94,26 +112,32 @@ button {
 	border-radius: 5px;
 }
 
-#vector2 {
-	display: flex;
-	visibility: 1;
-	width: 45%;
+#orang {
 	position: absolute;
-	margin-top: -20%;
-	margin-left: 60%;
+	/* width: 70%; */
+	left: 30%;
+	display: flex;
 }
 
-#vector3 {
-	display: flex;
-	visibility: 1;
-	width: 20%;
+
+#vector1 {
 	position: absolute;
-	margin-top: 30%;
+	top: 46%;
+	left: 0%;
+	width: 39%;
+	height: auto;
+}
+
+
+#vector2 {
+	position: absolute;
+	right: 0%;
+	bottom: 32%;
 }
 
 p,
 span {
-	font-family: 'Nunito Sans';
+	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 12px;
@@ -128,4 +152,23 @@ span {
 
 #footer {
 	padding-bottom: 3%;
+}
+
+@media screen and (max-width: 767px) {
+	#vector1 {
+		display: none;
+	}
+
+	#vector2 {
+		display: none;
+	}
+
+	#orang {
+		display: none;
+	}
+
+	.form-container {
+		width: 150%;
+		left: 15%;
+	}
 }
