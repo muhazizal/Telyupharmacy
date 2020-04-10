@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | Sign Up</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css'); ?>">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/SignUp.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/SignUp.css'); ?>">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 						<input type="password" class="form-control" id="exampleInputPassword1">
 					</div>
 					<div class="form-group">
-						<label ">Password</label>
+						<label>Password</label>
 						<input type=" password" class="form-control" id="exampleInputPassword1">
 					</div>
 					<div class="text-center" id="footer">
@@ -61,7 +61,8 @@
 	</div>
 
 	<!-- Bootstrap JS -->
-	<script src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
-	<script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/bootstrap/js/jquery-3.4.1.min.js') ?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?= base_url('assets/bootstrap/js/bootstrap.min.js'); ?>"></script>
 </body>
 </html>
