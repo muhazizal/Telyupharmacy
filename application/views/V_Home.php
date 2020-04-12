@@ -27,25 +27,25 @@
 				<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="#">
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="V_Product.html">Product</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="#">Article</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar3">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="#" data-toggle="modal" data-target="#loginmodal">Sign
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>" data-toggle="modal" data-target="#loginmodal">Sign
 								In</a>
 						</li>
 						<li class="nav-item" id="SignUp">
-							<a class="nav-link" id="a-item" href="V_SignUp.html">Sign
+							<a class="nav-link" id="a-item" href="">Sign
 								Up</a>
 						</li>
 					</ul>
@@ -67,9 +67,9 @@
 						dolorum placeat libero vel.
 				</div>
 				<div class="col-lg-6">
-					<img id="orang" src="/assets/image/Dokter1.png" alt="">
+					<img id="orang" src="<?= base_url('assets/image/Dokter1.png') ?>" alt="">
 				</div>
-				<img id="vector1" src="/assets/image/Vector1_Home.png" alt="">
+				<img id="vector1" src="<?= base_url('assets/image/Vector1_Home.png') ?>" alt="">
 			</div>
 		</div>
 
@@ -82,14 +82,14 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="/assets/image/pohon1.jpg" class="d-block w-100" alt="...">
+						<img src="<?= base_url('assets/image/pohon1.jpg') ?>" class="d-block w-100" alt="...">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>First slide label</h5>
 							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="/assets/image/pohon2.jpg" class="d-block w-100" alt="...">
+						<img src="<?= base_url('assets/image/pohon2.jpg') ?>" class="d-block w-100" alt="...">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Second slide label</h5>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -120,7 +120,7 @@
 				<div class="row" id="row1">
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5><a id="label-section-3">Mylanta</a></h5>
@@ -134,7 +134,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -148,7 +148,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -162,7 +162,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -178,7 +178,7 @@
 				<div class="row" id="row2">
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -192,7 +192,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -206,7 +206,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -220,7 +220,7 @@
 					</div>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<h5>Mylanta</h5>
@@ -242,7 +242,7 @@
 			<div class="row" id="row2">
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
 								<h5>Mylanta</h5>
@@ -256,7 +256,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title">
 								<h5>Mylanta</h5>
@@ -270,7 +270,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title">
 								<h5>Mylanta</h5>
@@ -284,7 +284,7 @@
 				</div>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="/assets/image/kirito.jpg" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title">
 								<h5>Mylanta</h5>
@@ -323,16 +323,16 @@
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Home</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Product</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Article</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -361,13 +361,13 @@
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Instagram</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Facebook</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">Twitter</a>
+								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Twitter</a>
 							</li>
 						</ul>
 					</div>

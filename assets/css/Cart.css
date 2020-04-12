@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* universal */
-
-
-
-/* section0 */
+/* navbar */
 
 #section0 {
 	width: 100%;
@@ -106,135 +102,64 @@
 }
 
 
-/* section1 */
-
-
 /* section2 */
-
 #section2 {
-	padding-top: 5%;
-	width: 98%;
+	width: 90%;
+	/* border: 2px solid black; */
 }
 
-#section2 .col-md-2 {
-	margin-top: 1%;
+.img-fluid{
+    width: 20%;
 }
 
-#tittle-section2 {
+.form-check-input {
+	color: black;
+	background-color: #4BC2C5;
+}
+
+.form-container {
+	margin-top: 5%;
+	width: 80%;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	padding: 1em;
+	margin-left: 10%;
+}
+
+#tittle-section-2 {
+
+	margin-left: 5%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #000000;
-	margin-left: 2%;
 }
 
-h6 {
-	padding-top: 8%;
-	margin-left: 7%;
-}
-
-.card input {
-	width: 90%;
-	border: 1px solid #E7EAEC;
-	box-sizing: border-box;
-	border-radius: 5px;
-}
-
-.card {
-	width: 100%;
-}
-
-#min {
-	margin-left: 3%;
-	margin-right: 0;
-}
-
-#label-section-3{
-	color: black;
-	text-decoration: none;
-}
-
-#section2 button {
-	width: 80%;
-	margin-left: 5%;
-	margin-top: 5%;
-	border: 1px solid #E7EAEC !important;
-	border-radius: 15px !important;
+#tittle-section-2-2 {
+	float: right;
+	margin-right: 5%;
 	font-family: Nunito Sans;
 	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-	color: #ABABAB !important;
-}
-
-#section2 button:hover {
-	color: white !important;
-}
-
-#submit {
-	margin-bottom: 10%;
-	margin-top: 0;
-}
-
-#price {
-	width: 80%;
-	margin-bottom: 5%;
-	margin-left: 5%;
-	
-}
-
-
-#header {
-	margin-bottom: 3%;
-	padding-bottom: 1%;
-	border-bottom: 1px solid #C4C4C4;
-
-}
-
-#Tittle {
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24px;
-	line-height: 33px;
-	letter-spacing: 0.02em;
-	color: #000000;
-}
-
-.card {
-	border-radius: 10px;
-}
-
-#col-section-3 {
-	margin-bottom: 5%;
-}
-
-.card-block {
-	margin: 10%;
-}
-
-.card-title {
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	letter-spacing: 0.02em;
-	color: #000000;
 }
 
-.img-fluid {
-	border-radius: 10px 10px 0px 0px;
+hr {
+	width: 90%;
 }
 
-
-
-
-
-
+.btn-info {
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	width: 90%;
+	background: #4BC2C5;
+	border-radius: 10px;
+	height: 36px;
+}
 
 
 

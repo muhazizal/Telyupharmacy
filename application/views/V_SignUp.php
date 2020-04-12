@@ -21,12 +21,12 @@
 		<div class="row">
 
 			<div class="col-md-6">
-				<img id="orang" src="/assets/image/Dokter2.png" alt="">
-				<img id="vector1" src="/assets/image/Vector1_SignUp.png" alt="">
+				<img id="orang" src="<?= base_url('assets/image/Dokter2.png') ?>" alt="">
+				<img id="vector1" src="<?= base_url('assets/image/Vector1_SignUp.png') ?>" alt="">
 			</div>
 
 			<div class="col-6">
-				<img id="vector2" src="/assets/image/Vector2_SignUp.png" alt="">
+				<img id="vector2" src="<?= base_url('assets/image/Vector2_SignUp.png') ?>" alt="">
 				<form class="form-container ">
 					<div class="text-center">
 						<h1 id="top">Get your medicine faster,</h1>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="form-group">
 						<label>Full name</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
@@ -48,10 +48,10 @@
 					</div>
 					<div class="form-group">
 						<label ">Password</label>
-						<input type=" password" class="form-control">
+						<input type=" password" class="form-control" >
 					</div>
 					<div class="text-center" id="footer">
-						<button type="button" class="btn btn-info">Sign Up</button>
+						<a class="btn btn-primary" href="<?= base_url("")?>" role="button">SignUp</a>
 						<br>
 						<span>By Registering, I agree</span>
 						<p><a href="" id="a">Terms and Conditions </a>and<a id="a" href=""> Privacy Policy</a></p>
