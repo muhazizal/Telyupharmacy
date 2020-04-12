@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/Telyupharmacy/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -324,7 +324,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'telyupharmacy';
 
 /*
 |--------------------------------------------------------------------------
