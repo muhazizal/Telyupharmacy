@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<div class="container-fluid">
 		<div id="header" class="text-center">
-			<a class="navbar-brand" id="Telyu-navbar" href="V_Home.html">
+			<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">
 				Telyu<span id="Pharmacy-navbar">Pharmacy</span>
 			</a>
 		</div>

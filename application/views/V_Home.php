@@ -18,16 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid-0" id="section0">
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" id="Telyu-navbar" href="V_Home.html">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
+				<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
-						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">
-							</a>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
 						</li>
@@ -389,8 +385,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- Sign In -->
 		<div class="container" id="SignIn">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="loginmodal">
-					<div class="bg-modal">
+				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
+					<div class="modal-dialog bg-modal">
 						<div class="modal-content text-center">
 							<h5 id="tittle-sign">Sign In</h5>
 							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
@@ -398,12 +394,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<input class="form-control" type="text" placeholder="Username/E-mail" />
 								<input class="form-control" type="password" placeholder="Password" />
 							</div>
-							<p id="forgot">Forgot the password? <a href="" id="click">Click Here</a></p>
+							<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
 							<button type="button" class="btn btn-info" id="btn-Sign-In">Sign In</button>
-							<p id="forgot">or sign in with</p>
-							<button type="button" class="btn btn-light" id="btn-Google">Cancel</button>
-							<p id="forgot">Don't have account? <a href="V_SignUp.html" id="click">Sign Up Here</a>
+							<p id="forgot">Don't have account? <a href="<?= site_url('./SignUp'); ?>" id="click">Sign Up Here</a>
 							</p>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
@@ -411,17 +406,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 	</div>
-
-
-
-
-
-
-
-
-
-
-
 
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
