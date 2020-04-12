@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,6 +49,20 @@
 				</div>
 			</nav>
 		</div>
+
+		<!-- Flashdata -->
+		<?php if ($this->session->flashdata('flash_success')) : ?>
+    <div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" role="alert">
+					<strong><?= $this->session->flashdata('flash_success'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+    <?php endif; ?>
 
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
@@ -335,7 +352,7 @@
 							<li id="section5-2-li">
 								<span id="section5-header">Visit</span>
 							<li>
-							<li <span id="copyright">TelyuPharmacy</span>
+							<li> <span id="copyright">TelyuPharmacy</span>
 								<span id="copyright">Jl Telekomunikasi, Sukapura, Kec.Dayeuhklot,</span>
 								<span id="copyright">Bandung, Jawa Barat</span><br>
 								<span id="copyright">40257</span>
@@ -369,6 +386,7 @@
 			</div>
 		</div>
 
+		<!-- Sign In -->
 		<div class="container" id="SignIn">
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="loginmodal">

@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,13 +52,13 @@
 					<div class="form-group">
 						<label>Phone mnumber</label>
 						<input type="text" name="phonenumber" value="<?= set_value('phonenumber'); ?>" 
-							class="form-control" pattern="[0-9]{12}" title="Use Number with Twelve Characters" required>
+							class="form-control" pattern="[0-9]{12}" title="Use number within twelve characters" required>
 						<p><?= form_error('phonenumber'); ?></p>
 					</div>
 					<div class="form-group">
 						<label ">Password</label>
 						<input type=" password" name="password" value="<?= set_value('password'); ?>" 
-							class="form-control" pattern=".{8,}" title="Use Eight or More Characters" required>
+							class="form-control" pattern=".{8,}" title="Use eight or more characters" required>
 						<p><?= form_error('password'); ?></p>
 					</div>
 					<div class="text-center" id="footer">
