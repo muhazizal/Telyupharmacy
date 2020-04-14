@@ -117,6 +117,7 @@
 	background-color: #4BC2C5;
 }
 
+
 .form-container {
 	margin-top: 5%;
 	width: 80%;
@@ -125,6 +126,22 @@
 	border-radius: 15px;
 	padding: 1em;
 	margin-left: 10%;
+}
+
+.quantity-input {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(0%,-125%);
+
+}
+
+#quantityinput1{
+	border: none;
+	outline: none;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0,.5);
 }
 
 #tittle-section-2 {

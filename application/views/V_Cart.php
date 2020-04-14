@@ -10,6 +10,7 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Cart.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
@@ -71,9 +72,15 @@
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<input class="quantity-input" type="number" value="" id="quantityinput1">
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+					</div>
+					<div class="nice-number">
+  						<button>-</button>
+  						<input type="number" value="100" style="width: 4ch;">
+  						<button>+</button>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -189,6 +196,13 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+	<script src="jquery.nice-number.js"></script>
+	<script>
+		$(function(){
+			$('input[type="number"]').niceNumber();
+		});	
+	</script>
 </body>
 
 </html>
