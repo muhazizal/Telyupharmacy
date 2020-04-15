@@ -49,7 +49,7 @@
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="<?= site_url('./Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>" class="rounded-circle d-block" /></a>
 					</form>
 				</div>
