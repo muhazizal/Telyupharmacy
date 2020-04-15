@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('./Product') ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
