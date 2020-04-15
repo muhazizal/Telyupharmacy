@@ -18,11 +18,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid-0" id="section0">
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+
+				<div class="collapse navbar-collapse justify-content-around">
+					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('./Product') ?>">Product</a>
@@ -32,7 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+
+				<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar3">
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= base_url("") ?>" data-toggle="modal" data-target="#loginmodal">Sign

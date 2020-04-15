@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<p><?= form_error('phonenumber'); ?></p>
 					</div>
 					<div class="form-group">
-						<label ">Password</label>
+						<label>Password</label>
 						<input type=" password" name="password" value="<?= set_value('password'); ?>" 
 							class="form-control" pattern=".{8,}" title="Use eight or more characters" required>
 						<p><?= form_error('password'); ?></p>
