@@ -19,32 +19,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-				<div class="collapse navbar-collapse justify-content-around">
-					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
+				<div class="collapse navbar-collapse justify-content-start">
+					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				</div>
 
-				<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('./Product') ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product') ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
 
-				<div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar3">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>" data-toggle="modal" data-target="#loginmodal">Sign
+							<a class="nav-link" id="a-item" href="<?= site_url("") ?>" data-toggle="modal" data-target="#loginmodal">Sign
 								In</a>
 						</li>
 						<li class="nav-item" id="SignUp">
-							<a class="nav-link" id="a-item" href="<?= site_url('./SignUp') ?>">Sign Up</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Auth/do_signUp') ?>">Sign Up</a>
 						</li>
 					</ul>
 				</div>
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php if ($this->session->flashdata('flash_success')) : ?>
     <div class="row">
 			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('flash_success'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
@@ -118,9 +118,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</a>
 			</div>
 		</div>
-
-
-
 
 		<!-- section3 -->
 		<div class="container-fluid" id="section3">
@@ -335,16 +332,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -373,13 +370,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Instagram</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Facebook</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("") ?>">Twitter</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Twitter</a>
 							</li>
 						</ul>
 					</div>
@@ -392,12 +389,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
 					<div class="modal-dialog bg-modal">
-						<div class="modal-content text-center">
+						<div class="modal-content text-center" style="left: 18%;">
 							<h5 id="tittle-sign">Sign In</h5>
 							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
 							<div class="form-group">
-								<input class="form-control" type="text" placeholder="Username/E-mail" />
-								<input class="form-control" type="password" placeholder="Password" />
+								<form action="" method="post">
+									<input class="form-control" type="text" name="username" 
+										value="<?= set_value('username'); ?>" placeholder="Username" />
+									<p><?= form_error('username') ?></p>
+									<input class="form-control" type="password" name="password" 
+										value="<?= set_value('password'); ?>" placeholder="Password" />
+									<p><?= form_error('password'); ?></p>
+								</form>
 							</div>
 							<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
 							<button type="button" class="btn btn-info" id="btn-Sign-In">Sign In</button>

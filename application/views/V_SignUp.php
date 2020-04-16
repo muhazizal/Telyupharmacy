@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<div class="container-fluid">
 		<div id="header" class="text-center">
-			<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('./Home') ?>">
+			<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">
 				Telyu<span id="Pharmacy-navbar">Pharmacy</span>
 			</a>
 		</div>
@@ -31,35 +31,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-6">
 				<img id="vector2" src="<?= base_url('assets/image/Vector2_SignUp.png') ?>" alt="">
 
-				<form action="" method="post" class="form-container ">
+				<form action="<?= site_url('Auth/do_signUp') ?>" method="post" class="form-container ">
 					<div class="text-center">
 						<h1 id="top">Get your medicine faster,</h1>
 						<h1>Read health articles</h1>
 						<span>Already have an TelyuPharmacy</span>
-						<p>account <a href="<?= site_url('./Home') ?>" id="a">Click Here</a></p>
+						<p>account <a href="<?= site_url('Home') ?>" id="a">Click Here</a></p>
 					</div>
 
 					<div class="form-group">
-						<label>Full name</label>
-						<input type="text" name="fullname" value="<?= set_value('fullname'); ?>" class="form-control" required>
-						<p><?= form_error('name'); ?></p>
+						<label>Username</label>
+						<input type="text" name="username" value="<?= set_value('username'); ?>" class="form-control">
+						<p><?= form_error('username', '<p class="text-danger">', '</p>'); ?></p>
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" name="email" value="<?= set_value('email'); ?>" class="form-control" required>
-						<p><?= form_error('email'); ?></p>
-					</div>
-					<div class="form-group">
-						<label>Phone mnumber</label>
-						<input type="text" name="phonenumber" value="<?= set_value('phonenumber'); ?>" 
-							class="form-control" pattern="[0-9]{12}" title="Use number within twelve characters" required>
-						<p><?= form_error('phonenumber'); ?></p>
+						<input type="email" name="email" value="<?= set_value('email'); ?>" class="form-control">
+						<p><?= form_error('email', '<p class="text-danger">', '</p>'); ?></p>
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type=" password" name="password" value="<?= set_value('password'); ?>" 
-							class="form-control" pattern=".{8,}" title="Use eight or more characters" required>
-						<p><?= form_error('password'); ?></p>
+						<input type="password" name="password1"	class="form-control">
+						<p><?= form_error('password1', '<p class="text-danger">', '</p>'); ?></p>
+					</div>
+					<div class="form-group">
+						<label>Repeat Password</label>
+						<input type="password" name="password2" class="form-control">
+						<p><?= form_error('password2', '<p class="text-danger">', '</p>'); ?></p>
 					</div>
 					<div class="text-center" id="footer">
 						<button type="submit" name="btn_SignUp" class="btn btn-primary">Sign Up</button>
