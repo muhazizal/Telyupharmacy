@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 			</div>
 		</div>
-		<?php } else { ?>
+		<?php } else if ($this->session->flashdata('logout')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">

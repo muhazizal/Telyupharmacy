@@ -33,12 +33,14 @@
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
 					</form>
+					<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
 				</div>
+				
 			</nav>
 		</div>
 

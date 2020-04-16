@@ -6,8 +6,7 @@ class Auth extends CI_Controller {
   function __construct() {
     parent::__construct();
 
-    $this->load->library('form_validation');
-    $this->load->model('M_Auth');
+    $this->load->model('M_User');
   }
 
   // Load sign in by default
@@ -27,7 +26,7 @@ class Auth extends CI_Controller {
     $username = $this->input->post('username');
     $password = $this->input->post('password');
 
-    $user = $this->db->get_where('user', ['username' => $username])->row_array();
+    $user = $this->M_User->checkUser($username);
 
     // if user avail
     if ($user) {
@@ -39,10 +38,16 @@ class Auth extends CI_Controller {
             'username' => $user['username'],
             'role_id'  => $user['role_id']
           ];
-
-          $this->session->set_userdata($data);
-          $this->session->set_flashdata('signIn_success', 'Sign in Success!');
-          redirect('Home');
+          // Role Admin = 1, Role Pembeli = 2
+          if ($user['role_id'] == 1) {
+            $this->session->set_userdata($data);
+            $this->session->set_flashdata('signIn_success', 'Sign in Success!');
+            redirect('Admin');
+          } else {
+            $this->session->set_userdata($data);
+            $this->session->set_flashdata('signIn_success', 'Sign in Success!');
+            redirect('Pembeli');
+          }
         } else {
           $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
           redirect('Home');
@@ -85,10 +90,10 @@ class Auth extends CI_Controller {
         'password'  => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
         'image'     => 'default.jpg',
         'active'    => 1,
-        'role_id'   => 2,
+        'role_id'   => 1,
       ];
 
-      $this->M_Auth->signUp($data);
+      $this->M_User->createUser($data);
       $this->session->set_flashdata('signUp_success', 'Sign Up Success!');
       redirect('Home');
     }
