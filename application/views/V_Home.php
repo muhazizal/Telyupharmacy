@@ -52,18 +52,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<!-- Flashdata -->
-		<?php if ($this->session->flashdata('flash_success')) : ?>
+		<?php if ($this->session->flashdata('signUp_success')) { ?>
     <div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('flash_success'); ?></strong>
+					<strong><?= $this->session->flashdata('signUp_success'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 			</div>
     </div>
-    <?php endif; ?>
+    <?php } else if ($this->session->flashdata('signIn_success')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('signIn_failed')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('logout'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } ?>
 
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
@@ -384,7 +417,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-		<!-- Sign In -->
+		<!-- Sign In Modal-->
 		<div class="container" id="SignIn">
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
@@ -392,20 +425,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="modal-content text-center" style="left: 18%;">
 							<h5 id="tittle-sign">Sign In</h5>
 							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
-							<div class="form-group">
-								<form action="" method="post">
+
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group">
 									<input class="form-control" type="text" name="username" 
 										value="<?= set_value('username'); ?>" placeholder="Username" />
-									<p><?= form_error('username') ?></p>
-									<input class="form-control" type="password" name="password" 
-										value="<?= set_value('password'); ?>" placeholder="Password" />
-									<p><?= form_error('password'); ?></p>
-								</form>
-							</div>
-							<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
-							<button type="button" class="btn btn-info" id="btn-Sign-In">Sign In</button>
-							<p id="forgot">Don't have account? <a href="<?= site_url('./SignUp'); ?>" id="click">Sign Up Here</a>
-							</p>
+										<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
+									<input class="form-control" type="password" name="password" placeholder="Password" />
+									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
+								</div>
+								<div class="form-group">
+									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
+									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
+									<p id="forgot">Don't have account? 
+										<a href="<?= site_url('./SignUp'); ?>" id="click">Sign Up Here</a>
+									</p>
+								</div>
+							</form>
+
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>

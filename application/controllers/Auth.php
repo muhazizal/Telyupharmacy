@@ -10,6 +10,54 @@ class Auth extends CI_Controller {
     $this->load->model('M_Auth');
   }
 
+  // Load sign in by default
+  public function index() {
+    $this->form_validation->set_rules('username', 'Username', 'required|trim');
+    $this->form_validation->set_rules('password', 'Password', 'required|trim');
+    
+    if ($this->form_validation->run() == FALSE) {
+      $this->load->view('V_Home');
+    } else {
+      $this->_do_signIn();
+    }
+  }
+
+  // Function sign in
+  private function _do_signIn() {
+    $username = $this->input->post('username');
+    $password = $this->input->post('password');
+
+    $user = $this->db->get_where('user', ['username' => $username])->row_array();
+
+    // if user avail
+    if ($user) {
+      // if user active
+      if ($user['active'] == 1) {
+        // if password true
+        if (password_verify($password, $user['password'])) {
+          $data = [
+            'username' => $user['username'],
+            'role_id'  => $user['role_id']
+          ];
+
+          $this->session->set_userdata($data);
+          $this->session->set_flashdata('signIn_success', 'Sign in Success!');
+          redirect('Home');
+        } else {
+          $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+          redirect('Home');
+        }
+      } else {
+        $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+        redirect('Home');
+      }
+    } else {
+      $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+      redirect('Home');
+    }
+  }
+
+  // function sign up
   public function do_signUp() {
     // Set form_validation required
     $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[user.username]', [
@@ -32,8 +80,8 @@ class Auth extends CI_Controller {
       $this->load->view('V_SignUp');
     } else {
       $data = [
-        'username'  => $this->input->post('username'),
-        'email'     => $this->input->post('email'),
+        'username'  => htmlspecialchars($this->input->post('username', true)),
+        'email'     => htmlspecialchars($this->input->post('email', true)),
         'password'  => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
         'image'     => 'default.jpg',
         'active'    => 1,
@@ -41,9 +89,16 @@ class Auth extends CI_Controller {
       ];
 
       $this->M_Auth->signUp($data);
-      $this->session->set_flashdata('flash_success', 'Sign Up Success!');
+      $this->session->set_flashdata('signUp_success', 'Sign Up Success!');
       redirect('Home');
     }
+  }
+
+  public function do_logout() {
+    $this->session->unset_userdata('username');
+    $this->session->unset_userdata('role_id');
+    $this->session->set_flashdata('logout', 'Logout Success!');
+    redirect('Home');
   }
   
 }
