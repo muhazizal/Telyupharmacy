@@ -39,25 +39,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<p>account <a href="<?= site_url('Home') ?>" id="a">Click Here</a></p>
 					</div>
 
-					<div class="form-group">
+					<div class="form-group mb-3">
 						<label>Username</label>
 						<input type="text" name="username" value="<?= set_value('username'); ?>" class="form-control">
-						<p><?= form_error('username', '<p class="text-danger">', '</p>'); ?></p>
+						<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="form-group">
+					<div class="form-group mb-3">
 						<label>Email</label>
 						<input type="email" name="email" value="<?= set_value('email'); ?>" class="form-control">
-						<p><?= form_error('email', '<p class="text-danger">', '</p>'); ?></p>
+						<?= form_error('email', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="form-group">
+					<div class="form-group mb-3">
 						<label>Password</label>
 						<input type="password" name="password1"	class="form-control">
-						<p><?= form_error('password1', '<p class="text-danger">', '</p>'); ?></p>
+						<?= form_error('password1', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="form-group">
+					<div class="form-group mb-3">
 						<label>Repeat Password</label>
 						<input type="password" name="password2" class="form-control">
-						<p><?= form_error('password2', '<p class="text-danger">', '</p>'); ?></p>
+						<?= form_error('password2', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="text-center" id="footer">
 						<button type="submit" name="btn_SignUp" class="btn btn-primary">Sign Up</button>

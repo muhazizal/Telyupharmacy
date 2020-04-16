@@ -12,13 +12,13 @@ class Auth extends CI_Controller {
 
   public function do_signUp() {
     // Set form_validation required
-    $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[pembeli.username]', [
+    $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[user.username]', [
       'is_unique' => 'This username already used!'
     ]);
-    $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[pembeli.email]', [
+    $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]', [
       'is_unique' => 'This Email already used!'
     ]);
-    $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[3]|matches[password2]', [
+    $this->form_validation->set_rules('password1', 'Password', 'required|trim|min_length[8]|matches[password2]', [
       'matches' => 'Password does not matches, enter correctly!',
       'min_length' => 'Password minimal 8 characters!'
     ]);
@@ -35,8 +35,9 @@ class Auth extends CI_Controller {
         'username'  => $this->input->post('username'),
         'email'     => $this->input->post('email'),
         'password'  => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
-        'active'    => 1,
         'image'     => 'default.jpg',
+        'active'    => 1,
+        'role_id'   => 2,
       ];
 
       $this->M_Auth->signUp($data);
