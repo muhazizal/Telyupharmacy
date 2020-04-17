@@ -16,7 +16,7 @@ class Pembeli extends CI_Controller {
     $data['user'] = $this->db->get_where('user', ['username' => 
     $this->session->userdata('username')])->row_array();
     
-    $this->load->view('Home', $data);
+    $this->load->view('Home', $data); //nopal
   }
   
 }
