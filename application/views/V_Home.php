@@ -351,7 +351,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<br>
 						<span id="create">Creating Your healty,</span>
 						<br>
-						<span id="create">For Yout Future</span>
+						<span id="create">For Your Future</span>
 						<br>
 						<br>
 						<br>
