@@ -108,8 +108,8 @@
 	/* border: 2px solid black; */
 }
 
-.img-fluid{
-    width: 20%;
+.img-fluid {
+	width: 20%;
 }
 
 .form-check-input {
@@ -126,22 +126,6 @@
 	border-radius: 15px;
 	padding: 1em;
 	margin-left: 10%;
-}
-
-.quantity-input {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(0%,-125%);
-
-}
-
-#quantityinput1{
-	border: none;
-	outline: none;
-	padding: 5px;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0,.5);
 }
 
 #tittle-section-2 {
@@ -168,7 +152,7 @@ hr {
 	width: 90%;
 }
 
-.btn-info {
+#checkout {
 	margin-top: 5%;
 	margin-left: 5%;
 	margin-bottom: 5%;
@@ -178,7 +162,66 @@ hr {
 	height: 36px;
 }
 
+#Barang {
+	margin-top: 5%;
+	margin-left: 5%;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
 
+
+
+#number {
+	border: none;
+	background-color: white;
+	width: 10%;
+	text-align: center;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: #000000;
+	border-bottom: 1px solid #ABABAB;
+}
+
+.btn-outline {
+	border: 1px solid #C4C4C4;
+	padding: 0%;
+	margin: 0%;
+	border-radius: 100px;
+	width: 26px;
+	height: 26px;
+}
+
+.card {
+	border: none;
+	border-bottom: 1px solid #C4C4C4;
+	padding-bottom: 5%;
+	margin-top: 5%;
+}
+
+#Hapus {
+	float: right;
+	margin-left: 5%;
+	color: #4BC2C5;
+}
+
+#tittle {
+	margin-left: 2%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: #000000;
+}
+
+.fa-trash {
+	color: #C4C4C4;
+}
 
 /* section5 */
 

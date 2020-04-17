@@ -65,22 +65,27 @@
 				<div class="col-md-7">
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<span id="tittle">Pilih Semua Produk</span>
+						<button id="Hapus" class="btn outline-info">Hapus</button>
+						<br>
 						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							
+							<div class="row">
+								<div class="col-md-4">
+								<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<img id="Barang" src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
+								</div>
+								<div class="col-md-8">
+									<p>Antasida 60ml</p>
+									<p>Rp. 15,000</p>
+									<div class="">
+										<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
+										<input type="text" id="number" value="1">
+										<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
+										<button type="button" class="btn btn-outline"><i class="fa fa-trash" aria-hidden="true"></i></button>
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-						<input class="quantity-input" type="number" value="" id="quantityinput1">
-					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-					</div>
-					<div class="nice-number">
-  						<button>-</button>
-  						<input type="number" value="100" style="width: 4ch;">
-  						<button>+</button>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -90,7 +95,7 @@
 						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-2">(4)</span>
 						<hr>
 						<span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 65.000</span>
-						<a class="btn btn-info" href="<?= base_url("") ?>" role="button">Checkout</a>
+						<a id="checkout" class="btn btn-info" href="<?= base_url("") ?>" role="button">Checkout</a>
 					</form>
 				</div>
 			</div>
@@ -185,7 +190,7 @@
 
 	</div>
 	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
+	<script src="assets/js/cart.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
@@ -198,11 +203,6 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
 	<script src="jquery.nice-number.js"></script>
-	<script>
-		$(function(){
-			$('input[type="number"]').niceNumber();
-		});	
-	</script>
 </body>
 
 </html>
