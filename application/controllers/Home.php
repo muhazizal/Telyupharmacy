@@ -10,7 +10,7 @@ class Home extends CI_Controller {
   }
   
   public function index() {
-    $this->load->view('V_Cart');
+    $this->load->view('V_AdminArticle');
   }
 }
 
