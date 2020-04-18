@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
+					<strong><?= $this->session->flashdata('signIn_success'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -429,8 +429,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<form action="<?= site_url('Auth') ?>" method="post">
 								<div class="form-group">
 									<input class="form-control" type="text" name="username" 
-										value="<?= set_value('username'); ?>" placeholder="Username" />
-										<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
+										value="<?= set_value('username'); ?>" placeholder="Username"
+									/>
+									<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
 									<input class="form-control" type="password" name="password" placeholder="Password" />
 									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
 								</div>

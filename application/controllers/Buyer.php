@@ -1,21 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Pembeli extends CI_Controller {
 
   public function __construct()
   {
     parent::__construct();
 
-    checkLoginAdmin();
+    checkLoginBuyer();
   }
   
   public function index() {
-    $data['admin'] = $this->db->get_where('admin', [
+    $data['buyer'] = $this->db->get_where('buyer', [
       'username' => $this->session->userdata('username'),
     ])->row_array();
     
-    $this->load->view('V_AdminProduct', $data['admin']);
+    $this->load->view('Home', $data['buyer']);
   }
   
 }
