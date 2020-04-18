@@ -96,9 +96,18 @@
 }
 
 .fa-shopping-cart {
-	transform: translate(-200%, 0%);
+	/* transform: translate(-200%, 0%); */
 	color: #ababab;
 	cursor: pointer;
+
+	/* padding:1em; */
+	/* width: max-content; */
+}
+
+#shoping {
+	border-bottom: 3px solid #4BC2C5;
+	margin-right: 5%;
+	padding: 0 20px 0 15px;
 }
 
 
@@ -129,7 +138,6 @@
 }
 
 #tittle-section-2 {
-
 	margin-left: 5%;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -146,6 +154,12 @@
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
+}
+
+#number-checkout {
+	width: 6%;
+	background-color: white;
+	border: none;
 }
 
 hr {

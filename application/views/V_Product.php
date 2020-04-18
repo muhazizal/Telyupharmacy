@@ -37,13 +37,13 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
+							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./Article") ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./AboutUs") ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
@@ -68,6 +68,9 @@
 		<div class="container-fluid" id="section1">
 
 		</div>
+
+
+		<!-- section2 -->
 		<div class="container-fluid" id="section2">
 			<div class="row">
 				<div class="col-md-2" id="form">

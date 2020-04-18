@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/AdminArticle.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Article.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
@@ -29,7 +29,7 @@
 							<a class="nav-link" id="a-item" href="<?= site_url("./Product") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a style="border-bottom : 3px solid #4BC2C5"class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
 						</li>
 					</ul>
 				</div>

@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-/* universal */
 
-
+/* section0 */
 
 /* section0 */
 
@@ -109,137 +108,123 @@
 	cursor: pointer;
 }
 
-
 /* section1 */
 
-
-/* section2 */
-
-#section2 {
-	padding-top: 5%;
-	width: 98%;
+#section1 {
+	background: #FFFFFF;
+	width: 95%;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	margin-top: 5%;
+	position: relative;
+	margin-bottom: 5%;
 }
 
-#section2 .col-md-2 {
-	margin-top: 1%;
-}
-
-#tittle-section2 {
+#tittle {
+	padding-top: 3%;
+	margin-left: 3%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 14px;
-	line-height: 19px;
-	color: #000000;
-	margin-left: 2%;
-}
-
-h6 {
-	padding-top: 8%;
-	margin-left: 7%;
-}
-
-.card input {
-	width: 90%;
-	border: 1px solid #E7EAEC;
-	box-sizing: border-box;
-	border-radius: 5px;
-}
-
-.card {
-	width: 100%;
-}
-
-#min {
-	margin-left: 3%;
-	margin-right: 0;
-}
-
-#label-section-3{
-	color: black;
-	text-decoration: none;
-}
-
-#section2 button {
-	width: 80%;
-	margin-left: 5%;
-	margin-top: 5%;
-	border: 1px solid #E7EAEC !important;
-	border-radius: 15px !important;
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-	color: #ABABAB !important;
-}
-
-#section2 button:hover {
-	color: white !important;
-}
-
-#submit {
-	margin-bottom: 10%;
-	margin-top: 0;
-}
-
-#price {
-	width: 80%;
-	margin-bottom: 5%;
-	margin-left: 5%;
-	
-}
-
-
-#header {
-	margin-bottom: 3%;
-	padding-bottom: 1%;
-	border-bottom: 1px solid #C4C4C4;
-
-}
-
-#Tittle {
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 24px;
 	line-height: 33px;
-	letter-spacing: 0.02em;
-	color: #000000;
+	color: #4BC2C5;
+}
+
+#team {
+	margin-top: 1%;
+	justify-content: space-around;
 }
 
 .card {
-	border-radius: 10px;
+	border: none;
+	margin-top: 2%;
 }
 
-#col-section-3 {
-	margin-bottom: 5%;
+
+
+#team-photo {
+	width: 150px;
+	height: 150px;
 }
 
-.card-block {
-	margin: 10%;
+#nama {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #000000;
+	margin-top: 7%;
 }
 
-.card-title {
+#nim {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 19px;
+	text-align: center;
+	color: #9D9CB5;
+	margin-top: 2%;
+}
+
+
+/* section2 */
+#section2 {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	width: 95%;
+	padding-bottom: 5%;
+	margin-left: 2.5%;
+}
+
+#margin ol {
+	margin-top: 2%;
+	margin-left: 3%;
+}
+
+#margin ul {
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#margin li {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	color: #4BC2C5;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #000000;
+
 }
 
-.img-fluid {
-	border-radius: 10px 10px 0px 0px;
+#margin ol li ul li {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+	color: #4BC2C5;
+	list-style-type: disc;
 }
 
+#margin span {
+	color: black;
+}
 
-
-
-
-
-
+#orang {
+	width: 100%;
+	position: absolute;
+	top: 20%;
+	right: 5%;
+	display: flex;
+}
 
 
 /* section5 */
@@ -281,9 +266,6 @@ h6 {
 	color: white !important;
 }
 
-#section5 ul {
-	list-style-type: none;
-}
 
 #copyright {
 	font-family: Nunito Sans;
@@ -322,4 +304,11 @@ h6 {
 	line-height: 25px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
+}
+
+
+@media screen and (max-width:767px) {
+	#orang {
+		display: none;
+	}
 }

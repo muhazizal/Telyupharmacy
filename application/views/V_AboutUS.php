@@ -9,13 +9,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/AdminAboutUs.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/AboutUs.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
 	<div class="container-fluid-0">
-		<div class="container-fluid" id="section0">
+	<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= base_url("") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -26,21 +26,34 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("./Product") ?>">Product</a>
+							<form action="" class="navbar-form">
+								<div class="form-group input-group">
+									<input id="search" type="text" class="form-control" placeholder="Search">
+									<div class="input-group-btn">
+										<button type="button" id="icon" class="btn btn-outline-info">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
 						</li>
+						<li class="nav-item">
+							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= base_url("") ?>">About Us</a>
+						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block" /></a>
+						<a href="<?= site_url('./Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>" class="rounded-circle d-block" /></a>
 					</form>
-					<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
 				</div>
-				
 			</nav>
 		</div>
 
@@ -50,15 +63,8 @@
 			<div class="row text-center" id="team">
 				<div class="card">
 					<div class="card-body">
-						<img id="team-photo"src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
-				
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo"src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid rounded-circle">
+						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
+							class="img-fluid rounded-circle">
 						<h3 id="nama">Naufal Harsa Pratama</h3>
 						<h3 id="nim">1301180240</h3>
 					</div>
@@ -66,7 +72,8 @@
 
 				<div class="card">
 					<div class="card-body">
-						<img id="team-photo"src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid rounded-circle">
+						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
+							class="img-fluid rounded-circle">
 						<h3 id="nama">Naufal Harsa Pratama</h3>
 						<h3 id="nim">1301180240</h3>
 					</div>
@@ -74,7 +81,8 @@
 
 				<div class="card">
 					<div class="card-body">
-						<img id="team-photo"src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid rounded-circle">
+						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
+							class="img-fluid rounded-circle">
 						<h3 id="nama">Naufal Harsa Pratama</h3>
 						<h3 id="nim">1301180240</h3>
 					</div>
@@ -82,7 +90,17 @@
 
 				<div class="card">
 					<div class="card-body">
-						<img id="team-photo"src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid rounded-circle">
+						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
+							class="img-fluid rounded-circle">
+						<h3 id="nama">Naufal Harsa Pratama</h3>
+						<h3 id="nim">1301180240</h3>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-body">
+						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
+							class="img-fluid rounded-circle">
 						<h3 id="nama">Naufal Harsa Pratama</h3>
 						<h3 id="nim">1301180240</h3>
 					</div>
@@ -117,10 +135,12 @@
 						<li>Bagaimana cara membeli produk di Telyupharmacy
 							<ul>
 								<li><span>Pilih menu Product pada navbar bagian atas di Home Page</span></li>
-								<li><span>Cari produk lewat search box dengan mengisi nama produk yang dicari</span></li>
+								<li><span>Cari produk lewat search box dengan mengisi nama produk yang dicari</span>
+								</li>
 								<li><span>Anda juga dapat mencari produk berdasarkan rating dan harga produk</span></li>
 								<li><span>Pilih produk sesuai yang diinginkan di tampilan produk</span></li>
-								<li><span>Produk akan masuk ke dalam cart yang ada di navbar bagian atas Home Page</span></li>
+								<li><span>Produk akan masuk ke dalam cart yang ada di navbar bagian atas Home
+										Page</span></li>
 								<li><span>Checkout pembelian produk yang ada di cart.</span></li>
 							</ul>
 						</li>
@@ -131,11 +151,11 @@
 								<li><span>Anda juga bisa mensorting artikel berdasarkan kategori dan waktu.</span></li>
 							</ul>
 						</li>
-						
+
 					</ol>
 				</div>
 				<div class="col-md-5">
-					<img id="orang"src="<?= base_url('assets/image/AboutUs.svg') ?>" alt="">
+					<img id="orang" src="<?= base_url('assets/image/AboutUs.svg') ?>" alt="">
 				</div>
 			</div>
 		</div>

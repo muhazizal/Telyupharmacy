@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Product') ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('./Product') ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("./Article") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
@@ -102,8 +102,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section1">
 			<div class="row">
 				<div class="col-lg-6">
-					<h2>Lorem ipsum dolor sit amet, consectetur adipiscieng elit</h2>
-					<p id="tittle-section1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui
+					<h2 id="tittle-section1-1">Lorem ipsum dolor sit amet, consectetur adipiscieng elit</h2>
+					<p id="tittle-section1-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui
 						repellendus voluptates
 						rerum
 						ea
@@ -422,7 +422,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
 					<div class="modal-dialog bg-modal">
-						<div class="modal-content text-center" style="left: 18%;">
+						<div class="modal-content text-center">
 							<h5 id="tittle-sign">Sign In</h5>
 							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
 

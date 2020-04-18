@@ -49,11 +49,11 @@
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<form class="form-inline ">
-						<a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					<!-- <form class="form-inline "> -->
+						<a id="shoping" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
-					</form>
+					<!-- </form> -->
 				</div>
 			</nav>
 		</div>
@@ -71,17 +71,19 @@
 						<div class="card">
 							<div class="row">
 								<div class="col-md-4">
-								<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-								<img id="Barang" src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
+									<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+									<img id="Barang" src="<?= base_url('assets/image/kirito.jpg') ?>" alt=""
+										class="img-fluid">
 								</div>
 								<div class="col-md-8">
 									<p>Antasida 60ml</p>
 									<p>Rp. 15,000</p>
 									<div class="">
 										<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
-										<input type="text" id="number" value="1">
+										<input type="text" id="number" value="1" disabled="true">
 										<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
-										<button type="button" class="btn btn-outline"><i class="fa fa-trash" aria-hidden="true"></i></button>
+										<button type="button" class="btn btn-outline"><i class="fa fa-trash"
+												aria-hidden="true"></i></button>
 									</div>
 								</div>
 							</div>
@@ -92,7 +94,8 @@
 					<form class="form-container">
 						<span id="tittle-section-2">Ringkasan Belanja</span>
 						<hr>
-						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-2">(4)</span>
+						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-2">(<input
+								id="number-checkout" type="text" value="1" disabled="true">)</span>
 						<hr>
 						<span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 65.000</span>
 						<a id="checkout" class="btn btn-info" href="<?= base_url("") ?>" role="button">Checkout</a>
@@ -201,7 +204,7 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script> 
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="jquery.nice-number.js"></script>
 </body>
 

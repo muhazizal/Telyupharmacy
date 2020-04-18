@@ -19,8 +19,7 @@
 	height: 429px;
 	background: #FFFFFF;
 	border-radius: 10px;
-	top: 20%;
-	left: 40%;
+	transform: translate(30%,30%);
 
 }
 
@@ -88,8 +87,8 @@
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	margin-left: 13%;
 	margin-bottom: 5%;
+	/* margin-left: 3%; */
 	color: #FFFFFF;
 }
 
@@ -183,7 +182,7 @@
 	margin-top: 5%;
 }
 
-h2 {
+#tittle-section1-1 {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: 800;
@@ -192,16 +191,18 @@ h2 {
 	letter-spacing: 0.02em;
 	margin-left: 2%;
 	margin-top: 15%;
+	position: relative;
 }
 
-#tittle-section1 {
+#tittle-section1-2 {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	margin-left: 2%
+	margin-left: 2%;
+	position: relative;
 }
 
 #orang {
@@ -268,7 +269,7 @@ h2 {
 	color: #000000;
 }
 
-.btn-info {
+#section3 .btn-info {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
