@@ -8,7 +8,11 @@ class Home extends CI_Controller {
   }
   
   public function index() {
-    $this->load->view('V_AdminHome');
+    $this->load->view('V_Home');
+  }
+
+  public function load_aboutUs(){
+    $this->load->view("V_AboutUs");
   }
 }
 
