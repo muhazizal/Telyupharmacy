@@ -114,16 +114,18 @@
 /* section2 */
 #section2 {
 	width: 90%;
-	/* border: 2px solid black; */
 }
 
 .img-fluid {
 	width: 20%;
 }
 
-.form-check-input {
-	color: black;
-	background-color: #4BC2C5;
+#anak {
+	background-color: violet;
+}
+
+input[type=checkbox]:checked+label:before {
+	background-color: violet;
 }
 
 
@@ -146,6 +148,11 @@
 	line-height: 19px;
 }
 
+#tittle-section-2-1 {
+	float: right;
+	margin-right: 5%;
+}
+
 #tittle-section-2-2 {
 	float: right;
 	margin-right: 5%;
@@ -157,7 +164,7 @@
 }
 
 #number-checkout {
-	width: 6%;
+	width: 10px;
 	background-color: white;
 	border: none;
 }
@@ -317,4 +324,16 @@ hr {
 	line-height: 25px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 767px) {
+	#md4 {
+		position: relative;
+	}
+
+	#md8 {
+		margin-top: 9em;
+		margin-left: 5%;
+	}
 }

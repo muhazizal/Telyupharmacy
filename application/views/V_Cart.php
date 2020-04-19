@@ -64,18 +64,18 @@
 			<div class="row">
 				<div class="col-md-7">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						<input onclick="checkAll()" class="form-check-input" type="checkbox" value="" id="parent" >
 						<span id="tittle">Pilih Semua Produk</span>
 						<button id="Hapus" class="btn outline-info">Hapus</button>
 						<br>
 						<div class="card">
 							<div class="row">
-								<div class="col-md-4">
-									<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<div class="col-md-4" id="md4">
+									<input class="form-check-input" type="checkbox" value="" id="anak" >
 									<img id="Barang" src="<?= base_url('assets/image/kirito.jpg') ?>" alt=""
 										class="img-fluid">
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-8" id="md8">
 									<p>Antasida 60ml</p>
 									<p>Rp. 15,000</p>
 									<div class="">
@@ -94,7 +94,7 @@
 					<form class="form-container">
 						<span id="tittle-section-2">Ringkasan Belanja</span>
 						<hr>
-						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-2">(<input
+						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-1">(<input
 								id="number-checkout" type="text" value="1" disabled="true">)</span>
 						<hr>
 						<span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 65.000</span>
@@ -193,7 +193,27 @@
 
 	</div>
 	<!-- Bootstrap JS -->
-	<script src="assets/js/cart.js"></script>
+	
+	<script>
+        function checkAll() {
+            var parent = document.getElementById("parent");
+            var input = document.getElementsByTagName("input");
+            if (parent.checked === true) {
+                for (var i = 0; i < input.length; i++) {
+                    if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
+                        input[i].checked = true;
+                    }
+                }
+            } else if (parent.checked === false) {
+                for (var i = 0; i < input.length; i++) {
+                    if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
+                        input[i].checked = false;
+                    }
+                }
+            }
+        }
+    </script>
+	
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>

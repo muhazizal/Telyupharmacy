@@ -4,7 +4,6 @@
 /* universal */
 
 
-
 /* section0 */
 
 #section0 {
@@ -109,83 +108,78 @@
 
 
 /* section1 */
-
-
-/* section2 */
-
-#section2 {
-	padding-top: 5%;
-	width: 98%;
+#section1 {
+	margin-top: 5%;
 }
 
-#section2 .col-md-2 {
-	margin-top: 1%;
+#tittle-section1-1 {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 49px;
+	letter-spacing: 0.02em;
+	margin-left: 2%;
+	margin-top: 15%;
+	position: relative;
 }
 
-#tittle-section2 {
+#tittle-section1-2 {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #000000;
+	letter-spacing: 0.02em;
 	margin-left: 2%;
+	position: relative;
 }
 
-h6 {
-	padding-top: 8%;
-	margin-left: 7%;
-}
-
-.card input {
-	width: 90%;
-	border: 1px solid #E7EAEC;
-	box-sizing: border-box;
-	border-radius: 5px;
-}
-
-.card {
+#orang {
+	display: flex;
 	width: 100%;
+	height: auto;
 }
 
-#min {
-	margin-left: 3%;
-	margin-right: 0;
+#vector1 {
+	display: flex;
+	visibility: 1;
+	width: 15%;
+	position: absolute;
+	height: auto;
+	margin-top: -5%;
 }
 
-#label-section-3{
-	color: black;
-	text-decoration: none;
-}
+/* section2 */
 
-#section2 button {
-	width: 80%;
-	margin-left: 5%;
+#section2 {
 	margin-top: 5%;
-	border: 1px solid #E7EAEC !important;
-	border-radius: 15px !important;
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-	color: #ABABAB !important;
-}
-
-#section2 button:hover {
-	color: white !important;
-}
-
-#submit {
-	margin-bottom: 10%;
-	margin-top: 0;
-}
-
-#price {
 	width: 80%;
-	margin-bottom: 5%;
-	margin-left: 5%;
-	
+	border-radius: 10px;
+	/* border:2px solid black; */
+}
+
+.carousel-item {
+	border-radius: 10px;
+}
+
+.d-block {
+	border-radius: 10px;
+}
+
+
+
+/* section3 */
+#section3 {
+	margin-top: 5%;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	width: 90%;
+}
+
+#section3-1 {
+	padding: 5%;
 }
 
 #header {
@@ -205,7 +199,23 @@ h6 {
 	color: #000000;
 }
 
+#section3 .btn-info {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	background: #4BC2C5;
+	border-radius: 10px;
+	float: right;
+}
+
 .card {
+	border-radius: 10px;
+}
+
+.img-fluid {
 	border-radius: 10px;
 }
 
@@ -227,15 +237,47 @@ h6 {
 	color: #000000;
 }
 
-.img-fluid {
-	border-radius: 10px 10px 0px 0px;
+#label-section-3:hover {
+	color: magenta;
+	cursor: pointer;
 }
 
+.card-text {}
 
+/* section4 */
 
+#section4 {
+	margin-top: 5%;
+}
 
+.text-center {
+	margin-bottom: 5%;
+}
 
+#body-title {
+	margin: 10%;
 
+}
+
+#card-title-section4 {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	color: #000000;
+}
+
+#text-section-4 {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 9px;
+	line-height: 12px;
+	letter-spacing: 0.02em;
+	color: #ABABAB;
+}
 
 
 
@@ -275,12 +317,9 @@ h6 {
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: white !important;
+	color: white;
 }
 
-#section5 ul {
-	list-style-type: none;
-}
 
 #copyright {
 	font-family: Nunito Sans;
