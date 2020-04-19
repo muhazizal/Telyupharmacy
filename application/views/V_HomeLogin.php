@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</form>
 						</li>
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item"
+							<a class="nav-link" id="a-item"
 								href="<?= base_url("") ?>">Product</a>
 						</li>
 						<li class="nav-item">

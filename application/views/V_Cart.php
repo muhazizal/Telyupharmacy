@@ -193,7 +193,7 @@
 
 	</div>
 	<!-- Bootstrap JS -->
-	
+	<script src="<?= base_url("assets/js/cart.js") ?>"></script>
 	<script>
         function checkAll() {
             var parent = document.getElementById("parent");
