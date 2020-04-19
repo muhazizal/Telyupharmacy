@@ -15,7 +15,7 @@
 
 <body>
 	<div class="container-fluid-0">
-		<div class="container-fluid" id="section0">
+	<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= base_url("") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -26,21 +26,35 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("./Product") ?>">Product</a>
+							<form action="" class="navbar-form">
+								<div class="form-group input-group">
+									<input id="search" type="text" class="form-control" placeholder="Search">
+									<div class="input-group-btn">
+										<button type="button" id="icon" class="btn btn-outline-info">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</form>
 						</li>
 						<li class="nav-item">
-							<a style="border-bottom : 3px solid #4BC2C5"class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-					<form class="form-inline ">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<!-- <form class="form-inline "> -->
+						<a id="shoping" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
-					</form>
-					<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
+					<!-- </form> -->
 				</div>
-
 			</nav>
 		</div>
 
