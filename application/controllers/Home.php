@@ -9,13 +9,6 @@ class Home extends CI_Controller {
   
   public function index() {
     $this->load->view('V_Home');
-<<<<<<< HEAD
-=======
-  }
-
-  public function load_aboutUs(){
-    $this->load->view("V_AboutUs");
->>>>>>> 90da2416db07050ff49beb96974db544946ed0d3
   }
 }
 
