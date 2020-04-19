@@ -100,12 +100,11 @@ class Auth extends CI_Controller {
     } else {
       $data = [
         'username'  => htmlspecialchars($this->input->post('username', TRUE)),
-        'email'     => htmlspecialchars($this->input->post('email', TRUE)),
         'password'  => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
+        'email'     => htmlspecialchars($this->input->post('email', TRUE)),
         'name'      => htmlspecialchars($this->input->post('username', TRUE)),
         'image'     => 'default.jpg',
         'status'    => 2,
-        'active'   => 1,
       ];
 
       $this->M_Buyer->createBuyer($data);
