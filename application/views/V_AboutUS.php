@@ -189,16 +189,16 @@
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("./Home") ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("./Product") ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("./Article") ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("./AboutUs") ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -227,13 +227,13 @@
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Instagram</a>
+								<a class="nav-link" id="copyright" href="https://www.instagram.com/">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Facebook</a>
+								<a class="nav-link" id="copyright" href="https://www.facebook.com/"">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Twitter</a>
+								<a class="nav-link" id="copyright" href="https://twitter.com/">Twitter</a>
 							</li>
 						</ul>
 					</div>
