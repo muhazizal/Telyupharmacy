@@ -80,7 +80,7 @@
 	width: 90%;
 }
 
-#product {
+#article {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -161,7 +161,7 @@ td {
 }
 
 
-/* add new product */
+/* add new article */
 
 #tittle {
 	font-family: Nunito Sans;
@@ -200,7 +200,7 @@ textarea {
 	margin-bottom: 5%;
 }
 
-#NewProduct .btn-primary,
+#NewArticle .btn-primary,
 .btn-outline-danger {
 	width: 65%;
 	margin-bottom: 3%;
@@ -211,7 +211,7 @@ textarea {
 }
 
 
-/* edit product */
+/* edit article */
 
 
 

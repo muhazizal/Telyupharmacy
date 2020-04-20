@@ -15,7 +15,7 @@
 
 <body>
 	<div class="container-fluid-0">
-	<div class="container-fluid" id="section0">
+		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= base_url("") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -38,21 +38,22 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./Product") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a style="border-bottom : 3px solid #4BC2C5" class="nav-link" id="a-item"
+								href="<?= base_url("./Article") ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./AboutUs") ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<!-- <form class="form-inline "> -->
-						<a id="shoping" href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block" /></a>
+					<a id="shoping" href="<?= base_url("./Cart") ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+							class="rounded-circle d-block" /></a>
 					<!-- </form> -->
 				</div>
 			</nav>
@@ -60,54 +61,57 @@
 
 		<div class="container-fluid" id="section1">
 			<div class="row text-left article">
-				<div class="col-md-2">
+				<div class="col-lg-3">
 					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
 				</div>
-				<div class="col-md-10">
+				<div class="col-lg-9">
 					<h1 id="arttittle">Article Topik #1<h1>
 							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras.</h3>
+								Vulputate faucibus.</h3>
+								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
+								at rhoncus quis eget cras</h3>
 							<h2 id="category">category1</h2>
 				</div>
 			</div>
-			<div class="row text-left article" >
-				<div class="col-md-2">
+			<div class="row text-left article">
+				<div class="col-lg-3">
 					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
 				</div>
-				<div class="col-md-10">
-					<h1 id="arttittle">Article Topik #2<h1>
+				<div class="col-lg-9">
+					<h1 id="arttittle">Article Topik #1<h1>
 							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras.</h3>
-							<h2 id="category">category2</h2>
-				</div>
-            </div>
-            <div class="row text-left article">
-				<div class="col-md-2">
-					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-md-10">
-					<h1 id="arttittle">Article Topik #3<h1>
-							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras.</h3>
-							<h2 id="category">category3</h2>
+								Vulputate faucibus.</h3>
+								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
+								at rhoncus quis eget cras</h3>
+							<h2 id="category">category1</h2>
 				</div>
 			</div>
-			<div class="row text-left article" >
-				<div class="col-md-2">
+			<div class="row text-left article">
+				<div class="col-lg-3">
 					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
 				</div>
-				<div class="col-md-10">
-					<h1 id="arttittle">Article Topik #4<h1>
+				<div class="col-lg-9">
+					<h1 id="arttittle">Article Topik #1<h1>
 							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras.</h3>
-							<h2 id="category">category4</h2>
+								Vulputate faucibus.</h3>
+								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
+								at rhoncus quis eget cras</h3>
+							<h2 id="category">category1</h2>
 				</div>
 			</div>
-		</div>
+			<div class="row text-left article">
+				<div class="col-lg-3">
+					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-9">
+					<h1 id="arttittle">Article Topik #1<h1>
+							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Vulputate faucibus.</h3>
+								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
+								at rhoncus quis eget cras</h3>
+							<h2 id="category">category1</h2>
+				</div>
+			</div>
 
 
 	</div>

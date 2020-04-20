@@ -8,14 +8,25 @@ class Pembeli extends CI_Controller {
     parent::__construct();
 
     checkLoginBuyer();
+    $this->load->model('M_Buyer');
   }
   
   public function index() {
-    $data['buyer'] = $this->db->get_where('buyer', [
-      'username' => $this->session->userdata('username'),
-    ])->row_array();
+    $username = $this->session->userdata('username');
+    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
     
     $this->load->view('Home', $data['buyer']);
+  }
+
+  // show filename
+  // $('.custom-file-input').on('change', () => {
+  //   let filename = $(this).val().split('\\').pop();
+  //   $(this).next('.custom-file-label').addClass("selected").html(filename);
+  // });
+
+  public function do_editProfile() {
+    $username = $this->session->userdata('username');
+    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
   }
   
 }

@@ -4,12 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TelyuPharmacy | AdminProduct</title>
+	<title>TelyuPharmacy | AdminArticle</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/AdminProduct.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/AdminArticle.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
@@ -47,7 +47,7 @@
 
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
-			<span id="product">Product</span>
+			<span id="article">Article</span>
 			<form action="" class="navbar-form">
 				<div class="form-group input-group">
 					<input id="search" type="text" class="form-control col-md-3" placeholder="Search">
@@ -57,15 +57,15 @@
 						</button>
 					</div>
 					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary" data-toggle="modal"
-						data-target="#addProduct">Add New Product</a>
+						data-target="#addArticle">Add New Article</a>
 				</div>
 			</form>
 			<table class="table">
 				<thead>
 					<tr>
 						<th scope="col">Photo</th>
-						<th scope="col">Product Name</th>
-						<th scope="col">Price</th>
+						<th scope="col">Topic</th>
+						<th scope="col">Category</th>
 						<th scope="col">Action</th>
 						<th scope="col">Details</th>
 					</tr>
@@ -75,11 +75,11 @@
 						<td>
 							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
+						<td id="margin">Article #1</td>
+						<td id="margin">Gangguan Pernapasan</td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
+								data-target="#EditArticle">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
 						<td>
@@ -93,11 +93,11 @@
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
+						<td id="margin">Article #2</td>
+						<td id="margin">Gangguan Pencernaan</td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
+								data-target="#EditArticle">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
 						<td>
@@ -111,11 +111,11 @@
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
+						<td id="margin">Article #3</td>
+						<td id="margin">Penyakit Kanker</td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
+								data-target="#EditArticle">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
 						<td>
@@ -129,11 +129,11 @@
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
+						<td id="margin">Article #4</td>
+						<td id="margin">Gangguan Penglihatan</td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
+								data-target="#EditArticle">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
 						<td>
@@ -149,13 +149,13 @@
 
 
 
-		<!-- Add Product -->
-		<div class="container" id="NewProduct">
+		<!-- Add Article -->
+		<div class="container" id="NewArticle">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="addProduct" role="dialog">
+				<div class="modal fade justify-content-center" id="addArticle" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Add New Product</h5>
+							<h5 id="tittle">Add New Article</h5>
 							<form action="" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -164,9 +164,9 @@
 										<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<a href=""><input type="text" class="form-control"></a>
 								</div>
 
@@ -175,7 +175,7 @@
 							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
 							<div class="text-center">
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Product</button>
+									Article</button>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</div>
@@ -185,13 +185,13 @@
 			</div>
 		</div>
 
-		<!-- Edit Product -->
-		<div class="container" id="NewProduct">
+		<!-- Edit Article -->
+		<div class="container" id="NewArticle">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="EditProduct" role="dialog">
+				<div class="modal fade justify-content-center" id="EditArticle" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Add New Product</h5>
+							<h5 id="tittle">Add New Article</h5>
 							<form action="" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -200,9 +200,9 @@
 									
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
 								</div>
 
@@ -211,7 +211,7 @@
 							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
 							<div class="text-center">
 								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Product</button>
+									Article</button>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</div>
@@ -229,22 +229,6 @@
 
 
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
