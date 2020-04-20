@@ -38,13 +38,13 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./Product") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./Article") ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= base_url("") ?>">About Us</a>
+							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= base_url("./AboutUs") ?>">About Us</a>
 						</li>
 					</ul>
 				</div>

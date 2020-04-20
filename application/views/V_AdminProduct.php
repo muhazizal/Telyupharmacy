@@ -55,7 +55,7 @@
 							<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 					</div>
-					<button type="button" class="btn btn-primary">Add New Product</button>
+					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProduct">Add New Product</a>
 				</div>
 			</form>
 			<table class="table">
@@ -70,57 +70,102 @@
 				</!-->
 				<tbody>
 					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
+						<td >
+							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td>Kirito</td>
-						<td>Rp 15,000</td>
-						<td>
+						<td id="margin">Kirito</td>
+						<td id="margin">Rp 15,000</td>
+						<td id="margin">
 							<button type="button" class="btn btn-warning">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
-						<td>ini apa</td>
+						<td><div class="detail">
+								<a href=""><img class="rounded-circle d-block" id="detail" src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
+							</div></td>
 					</tr>
 					<tr>
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td>Kirito</td>
-						<td>Rp 15,000</td>
-						<td>
+						<td id="margin">Kirito</td>
+						<td id="margin">Rp 15,000</td>
+						<td id="margin">
 							<button type="button" class="btn btn-warning">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
-						<td>ini apa</td>
+						<td><div class="detail">
+								<a href=""><img class="rounded-circle d-block" id="detail" src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
+							</div></td>
 					</tr>
 					<tr>
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td>Kirito</td>
-						<td>Rp 15,000</td>
-						<td>
+						<td id="margin">Kirito</td>
+						<td id="margin">Rp 15,000</td>
+						<td id="margin">
 							<button type="button" class="btn btn-warning">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
-						<td>ini apa</td>
+						<td><div class="detail">
+								<a href=""><img class="rounded-circle d-block" id="detail" src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
+							</div></td>
 					</tr>
 					<tr>
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td>Kirito</td>
-						<td>Rp 15,000</td>
-						<td>
+						<td id="margin">Kirito</td>
+						<td id="margin">Rp 15,000</td>
+						<td id="margin">
 							<button type="button" class="btn btn-warning">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
-						<td>ini apa</td>
+						<td>
+							<div class="detail">
+								<a href=""><img class="rounded-circle d-block" id="detail" src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
+							</div>
+						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 
+
+
+		<!-- Add Product -->
+		<div class="container" id="NewProduct">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="addProduct" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle">Add New Product</h5>
+							<form action="" class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+								<img id="addImage" src="<?= base_url('assets/image/kirito.jpg') ?>"
+									class="rounded-circle d-block" />
+									</div>
+								<div  class="col-md-7" id="inputan">
+									<div class="topic-title">Product Name</div>
+									<input type="text" class="form-control">
+									<div class="topic-title">Product Name</div>
+									<input type="text" class="form-control">
+								</div>
+								
+							</form>
+							<div class="topic-title desc">Description</div>
+							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+							<div class="text-center">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Add New Product</button>
+							<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
 
 
 

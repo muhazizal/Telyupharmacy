@@ -104,11 +104,16 @@
 	cursor: pointer;
 }
 
+
+
+
+
+
 /* section1 */
 
 #section1 {
 	background: #FFFFFF;
-	width: 95%;
+	width: 60%;
 	margin-top: 5%;
 	position: relative;
 	margin-bottom: 5%;
@@ -119,6 +124,10 @@
 	margin: 10px;
 	padding-bottom: 15px;
 
+}
+
+.row{
+	margin-top: 3%;
 }
 
 #tittle {
@@ -136,6 +145,7 @@
 	width: 100px;
 	height: 100px;
 	border-radius: 10px;
+	margin-left: 5%;
 }
 
 #arttittle {
