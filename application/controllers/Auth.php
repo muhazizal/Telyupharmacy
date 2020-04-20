@@ -12,6 +12,10 @@ class Auth extends CI_Controller {
 
   // Load sign in by default
   public function index() {
+    // if ($this->session->userdata('username')) {
+    //   redirect('')
+    // }
+    
     $this->form_validation->set_rules('username', 'Username', 'required|trim');
     $this->form_validation->set_rules('password', 'Password', 'required|trim');
     
@@ -42,42 +46,43 @@ class Auth extends CI_Controller {
         $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$admin['username']);
         redirect('Admin');
       } else {
-        $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+        $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
         redirect('Auth');
       }
     // if buyer avail
     } else if ($buyer) {
-      // if buyer active
-      if ($buyer['active'] == 1) {
+      // if buyer true
+      if ($buyer['status'] == 2) {
         // if password true
         if (password_verify($password, $buyer['password'])) {
           $data = [
             'username' => $buyer['username'],
-            'email' => $buyer['email'],
-            'name' => $buyer['name'],
-            'image' => $buyer['image'],
             'status' => $buyer['status'],
           ];
           $this->session->set_userdata($data);
           $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$buyer['username']);
           redirect('Home');
         } else {
-          $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+          $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
           redirect('Auth');
         }
       } else {
-        $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+        $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
         redirect('Auth');
       }
     // if admin & buyer not avail
     } else {
-      $this->session->set_flashdata('signIn_failed', 'Sign in Failed!');
+      $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
       redirect('Auth');
     }
   }
 
   // Function sign up
   public function do_signUp() {
+    // if ($this->session->userdata('username')) {
+    //   redirect('')
+    // }
+
     // Set form_validation required
     $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[buyer.username]', [
       'is_unique' => 'This username already used!'
@@ -108,15 +113,16 @@ class Auth extends CI_Controller {
       ];
 
       $this->M_Buyer->createBuyer($data);
-      $this->session->set_flashdata('signUp_success', 'Sign Up Success, Check Your Email for Verification!');
+      $this->session->set_flashdata('signUp_success', 'Sign up success!');
       redirect('Home');
     }
   }
 
+  // Function logout
   public function do_logout() {
     $this->session->unset_userdata('username');
     $this->session->unset_userdata('status');
-    $this->session->set_flashdata('logout', 'Logout Success!');
+    $this->session->set_flashdata('logout', 'Logout success!');
     redirect('Home');
   }
   

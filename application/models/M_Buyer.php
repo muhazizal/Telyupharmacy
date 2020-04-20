@@ -13,6 +13,9 @@ class M_Buyer extends CI_Model {
     ])->row_array();
   }
   
+  public function editBuyer() {
+    
+  }
 }
 
 ?>
