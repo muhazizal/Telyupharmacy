@@ -38,24 +38,25 @@
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
 					</form>
-					<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
+					<a id="apink" class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
 				</div>
 				
 			</nav>
 		</div>
 
-		<div class="container-fluid-0 text-center" id="section1">
+		<div class="container-fluid text-center" id="section1">
 			<div class="row">
-				<div class="col-sm-12">
-					<img id="vector4" src="<?= base_url('assets/image/vector 4.png') ?>" alt="">
+				<div class="col-md-12">
 					<h3 id="tittle-section1-1">Halo Maol Bucin,</h3>
-					<h2 id="tittle-section1-2">Selamat Datang di Dashboard Admin!</h2>
-					<img id="kartun" src="<?= base_url('assets/image/Rectangle 111.png') ?>" alt="">    
+					<h2 id="tittle-section1-2">Selamat Datang di Dashboard Admin!</h2>    
 				</div>  
 			</div>
 		</div>
-		<img id="vector5" src="<?= base_url('assets/image/vector 5.png') ?>" alt="">
+		<img class="text-center"id="vector5" src="<?= base_url('assets/image/vector 5.png') ?>" alt="">
+		<img id="vector4" src="<?= base_url('assets/image/vector 4.png') ?>" alt="">
+		<img id="kartun" src="<?= base_url('assets/image/Rectangle 111.png') ?>" alt=""> 
 	</div>
+	
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">

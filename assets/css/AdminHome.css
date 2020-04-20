@@ -5,16 +5,22 @@
 
 #section0 {
 	width: 100%;
-
+	position: relative;
 	/* padding-top: 10px; */
 }
 
+#apink {
+	position: relative;
+}
+
 #navbarSupportedContent {
-	margin-top: 1%;
+	margin-top: 0.5%;
+	position: relative;
 }
 
 .navbar {
 	background: white !important;
+	position: relative;
 }
 
 #a-item {
@@ -64,6 +70,10 @@
 	cursor: pointer;
 }
 
+.btn-primary {
+	position: relative;
+}
+
 
 
 /* section1 */
@@ -71,44 +81,43 @@
 #section1 {
 	background: #FFFFFF;
 	width: 100%;
-	position: relative;
-    margin-bottom: 5%;
+	margin-bottom: 5%;
+
+}
+
+.col-md-12 {
+	margin-top: 5%;
 }
 
 #vector4 {
-	width: 10%;
-	position: absolute;
-	left: 0%;
-	top:220%;
 	display: flex;
-	margin-top: 15.5%;
+	position: absolute;
+	bottom: 0%;
+	width: 11.3%;
 }
-
 
 #vector5 {
-
-	top: 0%;
-	right: 0%;
-	width: 15%;
-	position: absolute;
-}
-#kartun {
-	width: 30%;
-	position: absolute;
-	right: 30%;
 	display: flex;
-	top:145%;
-	margin-top: 15.5%;
+	position: absolute;
+	/* margin-left: 88.7%; */
+	top: 0%;
+	left: 88.7%;
+	width: 11.3%;
 }
 
-#tittle-section1-1{
-    font-size: 18px;
+#kartun {
+	left: 40%;
+	position: absolute;
+	bottom: 0%;
+	width: 30%;
 }
 
-#tittle-section1-2{
-    
+#tittle-section1-1 {
+	font-size: 18px;
 }
 
-body{
+#tittle-section1-2 {}
+
+body {
 	width: 100%;
 }
