@@ -100,9 +100,9 @@
 	display: flex;
 	position: absolute;
 	/* margin-left: 88.7%; */
-	top: 0%;
-	left: 88.7%;
-	width: 11.3%;
+	top: 8.5%;
+	left: 83.5%;
+	width: 20%;
 }
 
 #kartun {
@@ -110,6 +110,10 @@
 	position: absolute;
 	bottom: 0%;
 	width: 30%;
+}
+
+#welcome{
+	margin-top: 15%;
 }
 
 #tittle-section1-1 {

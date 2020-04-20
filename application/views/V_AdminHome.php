@@ -46,13 +46,13 @@
 
 		<div class="container-fluid text-center" id="section1">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="welcome">
 					<h3 id="tittle-section1-1">Halo Maol Bucin,</h3>
 					<h2 id="tittle-section1-2">Selamat Datang di Dashboard Admin!</h2>    
 				</div>  
 			</div>
 		</div>
-		<img class="text-center"id="vector5" src="<?= base_url('assets/image/vector 5.png') ?>" alt="">
+		<img class="text-center"id="vector5" src="<?= base_url('assets/image/Vector2_SignUp.png') ?>" alt="">
 		<img id="vector4" src="<?= base_url('assets/image/vector 4.png') ?>" alt="">
 		<img id="kartun" src="<?= base_url('assets/image/Rectangle 111.png') ?>" alt=""> 
 	</div>

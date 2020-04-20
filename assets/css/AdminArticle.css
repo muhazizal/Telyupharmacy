@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* universal */
+
+
+/* section0 */
+
+#section0 {
+	width: 100%;
+	/* padding-top: 10px; */
+}
+
+#navbarSupportedContent {
+	margin-top: 1%;
+}
+
+.navbar {
+	background: white !important;
+}
+
+#a-item {
+	color: black;
+}
+
+.collapse {
+	display: flex;
+}
+
+.nav-link:hover {
+	color: #4BC2C5 !important;
+}
+
+.navbar-brand {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	color: #4BC2C5 !important;
+}
+
+#Pharmacy {
+	color: black !important;
+	font-weight: normal;
+	font-family: Nunito Sans;
+}
+
+#section0 ul {
+	margin-left: 2%;
+}
+
+.nav-item a {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+}
+
+.rounded-circle {
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+}
+
+
+
+/* section1 */
+
+#section1 {
+	margin-top: 3%;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 2em;
+	position: relative;
+	width: 90%;
+}
+
+#article {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.navbar-form {
+	margin-top: 3%;
+}
+
+
+#search {
+	border: none;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+#icon {
+	border: none;
+	color: black;
+}
+
+#icon:hover {
+	background-color: white !important;
+}
+
+
+#section1 .btn-primary {
+	margin-left: 55%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+
+
+img {
+	width: 15vh;
+}
+
+td {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+#margin {
+	transform: translate(0%, 20%);
+}
+
+.btn-danger {
+	/* margin-left: 15px; */
+}
+
+.detail {
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+#detail {
+	width: 15%;
+	margin-top: 45%;
+	margin-left: 40%;
+	transform: translate(0%, -5%);
+}
+
+
+/* add new article */
+
+#tittle {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+#addImage {
+	width: 151px;
+	height: 151px;
+	margin-left: 10%;
+	margin-top: 3%;
+}
+
+.form-control {
+	width: 80%;
+}
+
+#inputan {
+	margin-top: 5%;
+}
+
+.desc,
+textarea {
+	margin-left: 10%;
+}
+
+textarea {
+	margin-bottom: 5%;
+}
+
+#NewArticle .btn-primary,
+.btn-outline-danger {
+	width: 65%;
+	margin-bottom: 3%;
+}
+
+.fa-camera {
+	transform: translate(500%, -550%);
+}
+
+
+/* edit article */
+
+
+
+/* media screen */
+
+
+@media screen and (max-width:530px) {
+	#section1 .btn-primary {
+		margin-top: 5%;
+
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	#margin {
+		transform: translate(0%, 0%);
+	}
+
+	.btb-outline {
+		margin-top: 0%;
+	}
+
+	.btn-danger {
+		margin-top: 5%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	thead {
+		display: none;
+	}
+
+	td {
+		display: flex;
+	}
+
+	.btn-primary {
+		margin: 0;
+	}
+
+	#detail {
+		margin: 0% 0% 0% 40%;
+	}
+
+	.btn-danger {
+		margin-left: 3%;
+
+	}
+
+	.btn-danger,
+	.btn-warning {
+		margin-bottom: 3%;
+	}
+
+	#inputan {
+		margin-left: 15%;
+	}
+
+	.fa-camera {
+		margin-left: 7%;
+	}
+
+}
