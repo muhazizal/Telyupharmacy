@@ -157,7 +157,7 @@ td {
 }
 
 
-/* add new product */
+/* add,update,details product */
 
 #tittle {
 	font-family: Nunito Sans;
@@ -205,6 +205,12 @@ textarea {
 
 .fa-camera {
 	transform: translate(500%, -550%);
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+	background-color: #FFE7E7;
+	opacity: 1;
 }
 
 

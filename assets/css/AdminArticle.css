@@ -198,7 +198,7 @@ td {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-/* add new article */
+/* add,edit,detail */
 
 #tittle {
 	font-family: Nunito Sans;
@@ -248,8 +248,12 @@ textarea {
 	transform: translate(500%, -550%);
 }
 
+.form-control:disabled,
+.form-control[readonly] {
+	background-color: #FFE7E7;
+	opacity: 1;
+}
 
-/* edit article */
 
 
 
