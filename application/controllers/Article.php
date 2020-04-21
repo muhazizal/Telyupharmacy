@@ -6,24 +6,24 @@ class Article extends CI_Controller {
     public function __construct()
 	{
         parent::__construct();
-        
-        
 		$this->load->model('M_Article');
     }
 
     public function index(){
         checkLoginBuyer();
-        $this->load->view("V_Article");
+        $data['data_article'] = $this->M_Article->get_AllArticle();
+        $this->load->view("V_Article",$data);
     }
 
     public function load_AdminArticle(){
         checkLoginAdmin();
-        $this->load->view("V_AdminArticle"); 
+        $data['data_article'] = $this->M_Article->get_AllArticle();
+        $this->load->view("V_AdminArticle",$data); 
     }
     
     public function add_Article(){
         $data = [
-            "id" => $this->input->mt_rand(10000000000,99999999999),
+            //"id" => $this->input->mt_rand(10000000000,99999999999),
 			"title" => $this->input->post('name', true),
             "description" => $this->input->post('description', true),
             "category" => $this->input->post('description', true),
