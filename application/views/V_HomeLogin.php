@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="<?= base_url("") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
+				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -41,39 +41,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item"
-								href="<?= base_url("") ?>">Product</a>
+								href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./Article") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./AboutUs") ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href="<?= site_url('./Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
+						<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
 					</form>
 				</div>
 			</nav>
 		</div>
 
 		<!-- Flashdata -->
-		<?php if ($this->session->flashdata('signUp_success')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signUp_success'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<?php } else if ($this->session->flashdata('signIn_success')) { ?>
+    <?php if ($this->session->flashdata('signIn_success')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
@@ -83,29 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-		</div>
-		<?php } else if ($this->session->flashdata('signIn_failed')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<?php } else if ($this->session->flashdata('logout')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('logout'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			</div>
-		</div>
+    </div>
 		<?php } ?>
 
 		<!-- section1 -->
@@ -167,7 +135,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container" id="section3-1">
 				<div id="header">
 					<span id="Tittle">Best Seller</span>
-					<button type="button" class="btn btn-info">Lihat Semua</button>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
 				</div>
 				<div class="row" id="row1">
 					<div class="col-md-3" id="col-section-3">
@@ -375,16 +343,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Buyer"); ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Product"); ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Article"); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin"); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -413,13 +381,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Instagram</a>
+								<a class="nav-link" id="copyright" href="#">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Facebook</a>
+								<a class="nav-link" id="copyright" href="#">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Twitter</a>
+								<a class="nav-link" id="copyright" href="#">Twitter</a>
 							</li>
 						</ul>
 					</div>

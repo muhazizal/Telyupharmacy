@@ -61,7 +61,7 @@ class Auth extends CI_Controller {
           ];
           $this->session->set_userdata($data);
           $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$buyer['username']);
-          redirect('Home');
+          redirect('Buyer');
         } else {
           $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
           redirect('Auth');

@@ -9,6 +9,12 @@ class M_Admin extends CI_Model {
       'password' => $password,
     ])->row_array();
   }
+
+  public function getAdmin($username) {
+    return $this->db->get_where('admin', [
+      'username' => $username,
+    ])->row_array();
+  } 
   
 }
 

@@ -8,14 +8,19 @@ class Admin extends CI_Controller {
     parent::__construct();
 
     checkLoginAdmin();
+    $this->load->model('M_Admin');
   }
   
   public function index() {
-    $data['admin'] = $this->db->get_where('admin', [
-      'username' => $this->session->userdata('username'),
-    ])->row_array();
+    $username = $this->session->userdata('username');
+    $data['admin'] = $this->M_Admin->getAdmin($username);
+
     
-    $this->load->view('V_AdminProduct', $data['admin']);
+    $this->load->view('V_AdminHome', $data['admin']);
+  }
+
+  public function load_AdminProduct() {
+    $this->load->view('V_AdminProduct');
   }
   
 }

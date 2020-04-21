@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pembeli extends CI_Controller {
+class Buyer extends CI_Controller {
 
   public function __construct()
   {
@@ -15,7 +15,7 @@ class Pembeli extends CI_Controller {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
     
-    $this->load->view('Home', $data['buyer']);
+    $this->load->view('V_HomeLogin', $data['buyer']);
   }
 
   // show filename

@@ -4,49 +4,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TelyuPharmacy | About Us</title>
+	<title>TelyuPharmacy | AdminProduct</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-
-	<link rel="stylesheet" href="<?= base_url('assets/css/AboutUs.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/AboutUsLogin.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
 	<div class="container-fluid-0">
-		<div class="container-fluid" id="section0">
+	<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-				<div class="collapse navbar-collapse justify-content-start">
-					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-
+				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<ul class="navbar-nav" id="navbar2">
+					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Product') ?>">Product</a>
+							<form action="" class="navbar-form">
+								<div class="form-group input-group">
+									<input id="search" type="text" class="form-control" placeholder="Search">
+									<div class="input-group-btn">
+										<button type="button" id="icon" class="btn btn-outline-info">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
+						</li>
+						<li class="nav-item">
+							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
-
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-					<ul class="navbar-nav" id="navbar3">
-						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="" data-toggle="modal" data-target="#loginmodal">Sign
-								In</a>
-						</li>
-						<li class="nav-item" id="SignUp">
-							<a class="nav-link" id="a-item" href="<?= site_url('Auth/do_signUp') ?>">Sign Up</a>
-						</li>
-					</ul>
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<form class="form-inline ">
+						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>" class="rounded-circle d-block" /></a>
+					</form>
 				</div>
 			</nav>
 		</div>
@@ -154,40 +160,6 @@
 			</div>
 		</div>
 
-		<!-- Sign In Modal -->
-		<div class="container" id="SignIn">
-			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
-					<div class="modal-dialog bg-modal">
-						<div class="modal-content text-center">
-							<h5 id="tittle-sign">Sign In</h5>
-							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
-
-							<form action="<?= site_url('Auth') ?>" method="post">
-								<div class="form-group">
-									<input class="form-control" type="text" name="username" 
-										value="<?= set_value('username'); ?>" placeholder="Username"
-									/>
-									<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
-									<input class="form-control" type="password" name="password" placeholder="Password" />
-									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
-								</div>
-								<div class="form-group">
-									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
-									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
-									<p id="forgot">Don't have account? 
-										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
-									</p>
-								</div>
-							</form>
-
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 
 
@@ -217,16 +189,16 @@
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("Home") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Buyer"); ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("Product") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Product"); ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("Article") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Article"); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="#">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin") ?>">About Us</a>
 							</li>
 						</ul>
 					</div>

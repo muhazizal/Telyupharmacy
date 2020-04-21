@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar2">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('./Product') ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product') ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("./Article") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar3">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("") ?>" data-toggle="modal" data-target="#loginmodal">Sign
+							<a class="nav-link" id="a-item" href="" data-toggle="modal" data-target="#loginmodal">Sign
 								In</a>
 						</li>
 						<li class="nav-item" id="SignUp">
@@ -57,17 +57,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('signUp_success'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-			</div>
-    </div>
-    <?php } else if ($this->session->flashdata('signIn_success')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signIn_success'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -157,7 +146,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container" id="section3-1">
 				<div id="header">
 					<span id="Tittle">Best Seller</span>
-					<button type="button" class="btn btn-info">Lihat Semua</button>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
 				</div>
 				<div class="row" id="row1">
 					<div class="col-md-3" id="col-section-3">
@@ -365,16 +354,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home"); ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Product"); ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Article"); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUs"); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -403,13 +392,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Instagram</a>
+								<a class="nav-link" id="copyright" href="#">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Facebook</a>
+								<a class="nav-link" id="copyright" href="#">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("") ?>">Twitter</a>
+								<a class="nav-link" id="copyright" href="#">Twitter</a>
 							</li>
 						</ul>
 					</div>
@@ -439,7 +428,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
 									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
 									<p id="forgot">Don't have account? 
-										<a href="<?= site_url('./SignUp'); ?>" id="click">Sign Up Here</a>
+										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
 									</p>
 								</div>
 							</form>

@@ -16,7 +16,7 @@
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="<?= base_url(".Home") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
+				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -37,19 +37,19 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= base_url("./Product") ?>">Product</a>
+							<a style="border-bottom: 3px solid  #4BC2C5" class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./Article") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./AboutUs") ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href="<?= site_url('./Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>" class="rounded-circle d-block" /></a>
 					</form>
 				</div>
@@ -417,16 +417,16 @@
 								<span id="section5-header">Explore</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("./Home") ?>">Home</a>
+								<a class="nav-link" id="copyright" href="<?= site_url('Buyer'); ?>">Home</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("./Product") ?>">Product</a>
+								<a class="nav-link" id="copyright" href="<?= site_url('Product'); ?>">Product</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("./Article") ?>">Article</a>
+								<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= base_url("./AboutUs") ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -456,13 +456,13 @@
 								<span id="section5-header">Follow</span>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="https://www.instagram.com/">Instagram</a>
+								<a class="nav-link" id="copyright" href="#">Instagram</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="https://www.facebook.com/">Facebook</a>
+								<a class="nav-link" id="copyright" href="#">Facebook</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="https://twitter.com/">Twitter</a>
+								<a class="nav-link" id="copyright" href="#">Twitter</a>
 							</li>
 						</ul>
 					</div>
