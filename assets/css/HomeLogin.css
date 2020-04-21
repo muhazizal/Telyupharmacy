@@ -95,7 +95,7 @@
 	letter-spacing: 0.02em;
 }
 
-.rounded-circle {
+#section0 .rounded-circle {
 	width: 45px;
 	height: 45px;
 	cursor: pointer;
@@ -251,7 +251,7 @@
 	margin-top: 5%;
 }
 
-.text-center {
+.article {
 	margin-bottom: 5%;
 }
 
@@ -359,4 +359,49 @@
 	line-height: 25px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
+}
+
+
+
+/* profile */
+
+#Profile-1 .rounded-circle {
+	width: 80px;
+	height: 80px;
+	margin-top: 8%;
+	margin-left: 35%;
+	margin-bottom: 5%;
+}
+
+.profile-title {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+#Profile-1 button {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	width: 90%;
+	text-align: left;
+	margin-left: 5%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+
+	color: rgba(0, 0, 0, 0.35);
+}
+
+#Profile-1 {
+	width: 20%;
+}
+
+.modal-content {
+	transform: translate(230%, 30%);
+	width: 50%;
 }

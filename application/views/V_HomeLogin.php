@@ -54,9 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+						<a href="" data-toggle="modal" data-target="#Profile-2"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								class="rounded-circle d-block" /></a>
-						<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
+						<!-- <a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a> -->
 					</form>
 				</div>
 			</nav>
@@ -280,7 +280,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<!-- section4 -->
 		<div class="container" id="section4">
-			<h3 class="text-center">Article</h3>
+			<h3 class="text-center article">Article</h3>
 			<div class="row" id="row2">
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
@@ -412,6 +412,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<a class="nav-link" id="copyright" href="#">Twitter</a>
 							</li>
 						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Profile -->
+		<div class="container" id="Profile-1">
+			<div class="row">
+				<div class="modal fade" id="Profile-2" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<img src="<?= base_url('assets/image/kirito.jpg') ?>"
+								class="rounded-circle d-block" />
+							<h3 class="text-center profile-title">MaulGanteng</h3>
+							<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Change Password</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Log Out</button>
+						</div>
 					</div>
 				</div>
 			</div>
