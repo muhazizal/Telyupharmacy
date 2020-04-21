@@ -159,186 +159,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<span id="Tittle">Best Seller</span>
 					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
 				</div>
-				<div class="row" id="row1">
+
+				<!-- Show all product -->
+				<div class="row" id="row1">	
+					<?php 
+						foreach ($product as $row) {
+					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/') . $row['image'] ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
-									<h5><a id="label-section-3">Mylanta</a></h5>
+									<h5><a id="label-section-3"><?= $row['name'] ?></a></h5>
 								</div>
 								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
+									<div class="harga">Rp <?= $row['price'] ?></div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php } ?>
 				</div>
-				<div class="row" id="row2">
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3" id="col-section-3">
-						<div class="card">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-							<div class="card-block">
-								<div class="card-title">
-									<h5>Mylanta</h5>
-								</div>
-								<div class="card-text">
-									<div class="harga">Rp</div>
-									<div class="rating">rating</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 
 		<!-- section4 -->
 		<div class="container" id="section4">
 			<h3 class="text-center">Article</h3>
+
+			<!-- Show all article -->
 			<div class="row" id="row2">
+				<?php
+					foreach ($article as $row) {
+				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/') . $row['image']; ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
-								<h5>Mylanta</h5>
+								<h5><?= $row['title']; ?></h5>
 							</div>
 							<div class="card-text" id="text-section-4">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+								<?= $row['description']; ?>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3">
-					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block" id="body-title">
-							<div class="card-title">
-								<h5>Mylanta</h5>
-							</div>
-							<div class="card-text" id="text-section-4">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block" id="body-title">
-							<div class="card-title">
-								<h5>Mylanta</h5>
-							</div>
-							<div class="card-text" id="text-section-4">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block" id="body-title">
-							<div class="card-title">
-								<h5>Mylanta</h5>
-							</div>
-							<div class="card-text" id="text-section-4">
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
+
 		</div>
 
 		<!-- secction5 -->

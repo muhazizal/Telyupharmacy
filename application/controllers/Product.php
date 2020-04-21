@@ -11,8 +11,9 @@ class Product extends CI_Controller {
     
     public function index(){
         checkLoginBuyer();
+        
         $data['product'] = $this->M_Product->get_AllProduct();
-        $this->load->view("V_Product");
+        $this->load->view("V_Product", $data);
     }
    
     public function load_AdminProduct(){

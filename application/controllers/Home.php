@@ -5,6 +5,9 @@ class Home extends CI_Controller {
 
   function __construct() {
     parent::__construct();
+
+    $this->load->model('M_Product');
+    $this->load->model('M_Article');
   }
   
   public function index() {
@@ -18,7 +21,9 @@ class Home extends CI_Controller {
       }
     }
     
-    $this->load->view('V_Home');
+    $data['product'] = $this->M_Product->get_AllProduct();
+    $data['article'] = $this->M_Article->get_AllArticle();
+    $this->load->view('V_Home', $data);
   }
 
   public function load_AboutUs() {

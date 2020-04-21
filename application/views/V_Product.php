@@ -56,15 +56,6 @@
 			</nav>
 		</div>
 
-
-
-
-
-
-
-
-
-
 		<div class="container-fluid" id="section1">
 
 		</div>
@@ -72,6 +63,7 @@
 
 		<!-- section2 -->
 		<div class="container-fluid" id="section2">
+
 			<div class="row">
 				<div class="col-md-2" id="form">
 					<h1 id="tittle-section2">Search for more details</h1>
@@ -89,309 +81,27 @@
 						</form>
 					</div>
 				</div>
+
+				<?php
+					foreach ($product as $row) {
+				?>
 				<div class="col-md-2">
 					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/') . $row['image'] ?>" alt="" class="img-fluid">
 						<div class="card-block">
 							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
+								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $row['name'] ?></a></h5>
 							</div>
 							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
+								<div class="harga">Rp <?= $row['price'] ?></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
-
-
-			<div class="row">
-				<div class="col-md-2">
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="row">
-				<div class="col-md-2">
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-2">
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>">Mylanta</a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp</div>
-								<div class="rating">rating</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
+			
 		</div>
-
-
-
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
