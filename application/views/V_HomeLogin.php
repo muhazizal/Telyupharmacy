@@ -54,9 +54,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-						<a href="" data-toggle="modal" data-target="#Profile-2"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block" /></a>
-						<!-- <a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a> -->
+						<div class="dropdown">
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+								class="rounded-circle d-block top" /></a>
+
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
+								<form action="">
+									<img src="<?= base_url('') ?>"
+										class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title">MaulGanteng</h3>
+									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default">Log Out</a>
+								</form>
+							</div>	
+						</div>
 					</form>
 				</div>
 			</nav>
@@ -284,25 +297,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-
-		<!-- Profile Modal -->
-		<div class="container" id="Profile-1">
-			<div class="row">
-				<div class="modal fade" id="Profile-2" role="dialog">
-					<div class="modal-dialog bg-modal">
-						<div class="modal-content">
-							<img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block" />
-							<h3 class="text-center profile-title">MaulGanteng</h3>
-							<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-							<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-							<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-							<a href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default">Log Out</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 	</div>
 
