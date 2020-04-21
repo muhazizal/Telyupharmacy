@@ -68,8 +68,6 @@
 				<div class="col-lg-9">
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 							<h3 id="article"><?php echo $article['description'] ?></h3>
-								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras</h3>
 							<h2 id="category"><?php echo $article['category'] ?></h2>
 				</div>
 			</div>

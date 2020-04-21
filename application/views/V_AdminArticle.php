@@ -26,11 +26,11 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item"
-								href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
+						<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item"
+								href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
@@ -81,7 +81,7 @@
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditArticle<?php echo $article['id'] ?>">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
+							<button type="button" class="btn btn-danger" >Delete</button>
 						</td>
 						<td>
 							<div class="detail">
@@ -157,29 +157,27 @@
 				<div class="modal fade justify-content-center" id="addArticle" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Add New Article</h5>
-							<form action="" class="row">
+							<h5 id="tittle">Add New Article</h5>							
+							<form action="<?php echo site_url('Article/add_Article') ?>" method="post" enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url() ?>"
 										class="rounded-circle d-block" />
 										<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
-								</div>
+								</div>								
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
-									<div class="topic-title">Article Name</div>
+									<div class="topic-title">Category</div>
 									<a href=""><input type="text" class="form-control"></a>
 								</div>
-
 							</form>
 							<div class="topic-title desc">Description</div>
 							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
 							<div class="text-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Article</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New Article</button>
 								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Cancel</button>
+									data-dismiss="modal">Cancel</button>							
 							</div>
 						</div>
 					</div>
@@ -195,7 +193,7 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Edit Article</h5>
-							<form action="" class="row">
+							<form action="?php echo site_url('Article/add_Article') ?>" method="post" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url('assets/image/kirito.jpg') ?>"
@@ -223,14 +221,6 @@
 			</div>
 		</div>
 		<?php endforeach;  ?>
-	</div>
-
-
-
-
-
-
-
 	</div>
 
 
