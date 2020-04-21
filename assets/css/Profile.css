@@ -112,18 +112,18 @@
 
 
 #section1{
-    padding-top: 5%;
-    width: 98%;
-    position: absolute;
+	margin-top: 3%;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	padding: 2em;
+	position: relative;
+	width: 90%;
 }
 
-.form-container {
-	background: #FFFFFF;
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-	border-radius: 10px;
-	width: 70%;
-	margin-left: 20%;
-	position: relative;
+.form-group {
+	margin-top: 0%;
+	
 }
 
 .form-group input {
@@ -143,25 +143,22 @@ img{
 
 label{
     margin-bottom: 3%;
-    margin-left: -10%;
+    margin-left: 0%;
     
 }
 
 #inputEmail{
-    margin-top: -8%;
-    margin-right: 10%;
+    margin-top: -3%;
     position: absolute;
 }
 
 #inputUsername{
-    margin-top: -8%;
-    margin-right: 10%;
+    margin-top: -3%;
     position: absolute;
 }
 
 #inputName{
-    margin-top: -8%;
-    margin-right: 10%;
+    margin-top: -3%;
     position: absolute;
 }
 
@@ -170,12 +167,16 @@ label{
 }
 
 #vector6{
-    margin-left: -5%;
-    margin-top: 68%;
-    width: 45%;
+    margin-left: -40%;
+    margin-top: 50%;
+    width: 15%;
 }
 
 #vector7{
-    margin-left: 47.5%;
-    margin-top: -60%;
+	margin-left: 110%;
+	margin-top: -240%;
+}
+
+form{
+	margin-bottom: 0%;
 }

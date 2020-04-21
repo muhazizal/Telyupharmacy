@@ -23,7 +23,7 @@ class Home extends CI_Controller {
     
     $data['product'] = $this->M_Product->get_AllProduct();
     $data['article'] = $this->M_Article->get_AllArticle();
-    $this->load->view('V_Home', $data);
+    $this->load->view('V_Profile', $data);
   }
 
   public function load_AboutUs() {
