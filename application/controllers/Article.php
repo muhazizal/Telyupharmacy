@@ -6,11 +6,16 @@ class Article extends CI_Controller {
     public function __construct()
 	{
         parent::__construct();
+        
+        $this->load->model('M_Buyer');
 		$this->load->model('M_Article');
     }
 
     public function index(){
         checkLoginBuyer();
+        
+        $username = $this->session->userdata('username');
+        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
         $data['data_article'] = $this->M_Article->get_AllArticle();
         $this->load->view("V_Article",$data);
     }

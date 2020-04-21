@@ -6,6 +6,7 @@ class Home extends CI_Controller {
   function __construct() {
     parent::__construct();
 
+    $this->load->model('M_Buyer');
     $this->load->model('M_Product');
     $this->load->model('M_Article');
   }
@@ -31,7 +32,9 @@ class Home extends CI_Controller {
   }
 
   public function load_AboutUsLogin() {
-    $this->load->view('V_AboutUsLogin');
+    $username = $this->session->userdata('username');
+    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+    $this->load->view('V_AboutUsLogin', $data);
   }
 }
 

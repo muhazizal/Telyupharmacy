@@ -6,12 +6,17 @@ class Product extends CI_Controller {
     public function __construct()
 	{
         parent::__construct();
+
+        $this->load->model('M_Buyer');
         $this->load->model('M_Product');
     }
     
     public function index(){
-        checkLoginBuyer();        
-        $data['data_product'] = $this->M_Product->get_AllProduct();
+        checkLoginBuyer();
+        
+        $username = $this->session->userdata('username');
+        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+        $data['products'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_Product", $data);
     }
    

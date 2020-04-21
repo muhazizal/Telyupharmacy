@@ -57,13 +57,14 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>"
+								<img src="<?= base_url('assets/image/default.jpg') ?>"
 										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default">Log Out</a>
+									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>	
 						</div>
@@ -99,18 +100,19 @@
 				</div>
 
 				<?php
-					foreach ($product as $row) {
+					foreach ($products as $product) {
 				?>
 				<div class="col-md-2">
 					<div class="card">
-						<img src="<?= base_url('assets/image/') . $row['image'] ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
 						<div class="card-block">
 							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $row['name'] ?></a></h5>
+								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></h5>
 							</div>
 							<div class="card-text">
-								<div class="harga">Rp <?= $row['price'] ?></div>
+								<div class="harga">Rp <?= $product['price'] ?></div>
 							</div>
+							<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
 						</div>
 					</div>
 				</div>

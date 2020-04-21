@@ -20,8 +20,11 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
 				<div class="collapse navbar-collapse justify-content-start">
-					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span
+							id="Pharmacy-navbar">Pharmacy</span></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				</div>
@@ -35,7 +38,8 @@
 							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUs'); ?>">About Us</a>
+							<a style="border-bottom : 3px solid #4BC2C5" class="nav-link" id="a-item"
+								href="<?= site_url('Home/load_AboutUs'); ?>">About Us</a>
 						</li>
 					</ul>
 				</div>
@@ -157,44 +161,6 @@
 			</div>
 		</div>
 
-		<!-- Sign In Modal -->
-		<div class="container" id="SignIn">
-			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
-					<div class="modal-dialog bg-modal">
-						<div class="modal-content text-center">
-							<h5 id="tittle-sign">Sign In</h5>
-							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
-
-							<form action="<?= site_url('Auth') ?>" method="post">
-								<div class="form-group">
-									<input class="form-control" type="text" name="username" 
-										value="<?= set_value('username'); ?>" placeholder="Username"
-									/>
-									<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
-									<input class="form-control" type="password" name="password" placeholder="Password" />
-									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
-								</div>
-								<div class="form-group">
-									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
-									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
-									<p id="forgot">Don't have account? 
-										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
-									</p>
-								</div>
-							</form>
-
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -271,6 +237,49 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- Sign In Modal -->
+		<div class="container" id="SignIn">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="loginmodal" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content text-center">
+							<h5 id="tittle-sign">Sign In</h5>
+							<h4 id="Telyu">Telyu<span>Pharmacy</span></h4>
+
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group text-center">
+									<input class="form-control" type="text" name="username"
+										value="<?= set_value('username'); ?>" placeholder="Username" />
+									<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
+									<input class="form-control" type="password" name="password"
+										placeholder="Password" />
+									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
+								</div>
+								<div class="form-group">
+									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
+									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
+									<p id="forgot">Don't have account?
+										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
+									</p>
+								</div>
+							</form>
+
+							<button style="margin-left : 14%" type="submit" class="btn text-center" id="btn-close-modal" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
 	</div>
 
 
