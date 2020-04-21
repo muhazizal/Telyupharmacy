@@ -27,10 +27,10 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item"
-								href="<?= site_url("./Product") ?>">Product</a>
+								href="<?= site_url("./Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= base_url("./Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>

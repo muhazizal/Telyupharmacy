@@ -5,7 +5,7 @@ class Product extends CI_Controller {
     public function __construct()
 	{
         parent::__construct();		
-        $this->load->Model('M_Product');
+        $this->load->model('M_Product');
     }
     public function index(){
         $this->load->view("V_Product");
@@ -22,9 +22,13 @@ class Product extends CI_Controller {
     public function load_AboutUs(){
         $this->load->view("V_AboutUS"); 
     }
+    public function load_AdminProduct(){
+        $this->load->view("V_AdminProduct"); 
+    }
     public function form_addProduct(){
         $this->load->view("V_AdminProduct"); 
     }
+    
     public function add_Product(){
         $data = [
             "id" => $this->input->mt_rand(10000000000,99999999999),
@@ -45,7 +49,7 @@ class Product extends CI_Controller {
 		if($check){
             $this->session->set_flashdata('Product_Deleted', 'The selected product has been removed!');
         }else{
-            $this->session->set_flashdata('Product_notDeleted', 'There is a problem in removing the product!');
+            $this->session->set_flashdata('Product_notDeleted', 'There was a problem removing the product!');
         }
 		redirect('V_AdminProduct');
     }
@@ -65,7 +69,7 @@ class Product extends CI_Controller {
 		if($check){
             $this->session->set_flashdata('Product_Updated', 'The selected product detail(s) has been updated!');
         }else{
-            $this->session->set_flashdata('Product_notUpdated', 'There is a problem in updating the product detail(s)!');
+            $this->session->set_flashdata('Product_notUpdated', 'There was a problem updating the product detail(s)!');
         }            
 		redirect('V_AdminProduct');
     }
