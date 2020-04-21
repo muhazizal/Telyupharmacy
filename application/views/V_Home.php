@@ -330,7 +330,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<p id="forgot">Don't have account? 
 										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
 									</p>
-									<button type="button" class="btn btn-default text-white" id="btn-close-modal" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn text-white" id="btn-close-modal" data-dismiss="modal">Close</button>
 								</div>
 							</form>
 
