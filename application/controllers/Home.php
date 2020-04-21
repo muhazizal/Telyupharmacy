@@ -22,9 +22,15 @@ class Home extends CI_Controller {
       }
     }
     
+<<<<<<< HEAD
+    $data['products'] = $this->M_Product->get_AllProduct();
+    $data['articles'] = $this->M_Article->get_AllArticle();
+    $this->load->view('V_DetailArticle', $data);
+=======
     $data['product'] = $this->M_Product->get_AllProduct();
     $data['article'] = $this->M_Article->get_AllArticle();
     $this->load->view('V_Home', $data);
+>>>>>>> ef24d8618cc479c39fd0b0d6e674f1e437e93709
   }
 
   public function load_AboutUs() {

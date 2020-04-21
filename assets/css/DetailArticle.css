@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* universal */
+
+
+
+/* section0 */
+
+#section0 {
+	width: 100%;
+	/* padding-top: 10px; */
+}
+
+.link-product {
+	border-bottom: 2px solid black;
+}
+
+#navbarSupportedContent {
+	margin-top: 1%;
+}
+
+.navbar {
+	background: white !important;
+}
+
+#a-item {
+	color: black;
+}
+
+.collapse {
+	display: flex;
+}
+
+.nav-link:hover {
+	color: #4BC2C5 !important;
+}
+
+.navbar-brand {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	color: #4BC2C5 !important;
+}
+
+#Pharmacy {
+	color: black !important;
+	font-weight: normal;
+	font-family: Nunito Sans;
+}
+
+#search {
+	background: #EDEDED;
+	border-radius: 8px;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #ABABAB;
+}
+
+#icon {
+	border: none;
+
+}
+
+.input-group-btn {
+	margin-top: 2px;
+	margin-left: 2%;
+}
+
+#icon:hover {
+	background-color: white !important;
+}
+
+.fa-search {
+	cursor: pointer;
+	color: black;
+}
+
+#section0 ul {
+	margin-left: 2%;
+}
+
+.nav-item a {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+}
+
+.rounded-circle {
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+}
+
+.fa-shopping-cart {
+	transform: translate(-200%, 0%);
+	color: #ababab;
+	cursor: pointer;
+}
+
+
+/* section1 */
+
+#section1 {
+	margin-top: 3%;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	position: relative;
+	width: 60%;
+	padding: 3em;
+}
+
+#artittle {
+    margin-bottom: 3%;
+	font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    color: #000000;
+    border-bottom: 1px solid #E7EAEC
+
+}
+
+#category{
+    margin-bottom: 3%;
+	ont-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #ABABAB;
+    border-bottom: 1px solid #E7EAEC;
+
+}
+
+#deskripsi{
+    margin-bottom: 3%;
+	font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #ABABAB;
+    border-bottom: 1px solid #E7EAEC
+}
+
+#article{
+    margin-bottom: 3%;
+	font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #000000;
+
+}
+
+#photoarticle{
+    position: absolute;
+    width: 30%;
+    background: url(elevated-view-pills-blue-background_23-2147867081.jpg);
+    border-radius: 15px;
+}
+
+#section1 img {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    
+    border-radius: 15px;
+}
+
+#section1 input {
+	border-radius: 5px;
+	width: 80%;
+}
+
+#section1 form {
+	margin-top: 5%;
+}
+
+
+
+#vector8 {
+	position: absolute;
+	bottom: 30%;
+	/* width: 8.5%; */
+}
+
+#vector9 {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	/* width: 12.1%; */
+}
+
+
+
+
+/* section5 */
+
+#section5 {
+	background: #379194;
+	padding: 0;
+	margin: 0;
+	margin-top: 12%;
+	margin-bottom: 0;
+	padding-bottom: 5%;
+	/* border: 2px solid black; */
+}
+
+
+#section5-1 {
+	width: 90%;
+	padding-top: 3%;
+	/* border: 2px solid black; */
+}
+
+#section5 #Telyu {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: 0.02em;
+	color: #78FCFF;
+}
+
+#section5 #Pharmacy {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: 0.02em;
+	color: white !important;
+}
+
+#section5 ul {
+	list-style-type: none;
+}
+
+#copyright {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+}
+
+#section5-header {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+	padding-bottom: 5%;
+}
+
+
+#section5-li {
+	padding-bottom: 5%;
+}
+
+#section5-2-li {
+	padding-bottom: 4%;
+}
+
+#create {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
+}
+
+
+/* profile */
+
+.dropdown-menu {
+	width: 190px;
+}
+
+.dropdown-menu .bot {
+	width: 80px;
+	height: 80px;
+	margin-top: 8%;
+	margin-left: 30%;
+	margin-bottom: 5%;
+}
+
+.dropdown-menu a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgba(0, 0, 0, 0.35);
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
+}
+
+.profile-title {
+	margin-top: 2%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+	background-color: #4BC2C5;
+	color: white;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+	#vector8,
+	#vector9 {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
