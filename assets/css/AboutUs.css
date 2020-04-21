@@ -1,109 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/* sign in */
 
-
-/* section0 */
-
-#section0 {
-	width: 100%;
-	/* padding-top: 10px; */
+#SignIn {
+	align-self: center;
 }
 
-.link-product {
-	border-bottom: 2px solid black;
+.bg-modal {
+	align-items: center;
+	justify-content: center;
 }
 
-#navbarSupportedContent {
-	margin-top: 1%;
+#loginmodal {}
+
+.modal-content {
+	position: absolute;
+	width: 320px;
+	height: 429px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	transform: translate(30%, 30%);
+
 }
 
-.navbar {
-	background: white !important;
+#tittle-sign {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #9C9C9C;
+	margin-top: 5%;
 }
 
-#a-item {
-	color: black;
-}
-
-.collapse {
-	display: flex;
-}
-
-.nav-link:hover {
-	color: #4BC2C5 !important;
-}
-
-.navbar-brand {
+#Telyu {
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4BC2C5;
+	margin-top: 3%;
 }
 
-#Pharmacy {
-	color: black !important;
-	font-weight: normal;
+.form-group input {
+	width: 230px;
+	height: 44px;
+	border: 1px solid #8F8F8F;
+	box-sizing: border-box;
+	margin-left: 13%;
+	margin-top: 5%;
+}
+
+#forgot {
 	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	color: #000000;
 }
 
-#search {
-	background: #EDEDED;
-	border-radius: 8px;
+#click {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	color: #4BC2C5;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#click:hover {
+	color: grey;
+}
+
+#btn-Sign-In,
+#btn-close-modal {
+	width: 230px;
+	height: 44px;
+	background: #4BC2C5 !important;
+	border-radius: 10px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	margin-bottom: 5%;
+	color: #FFFFFF;
 }
 
-#icon {
-	border: none;
 
+/* section0 */
+
+#section0 {
+	margin-top: 15px;
 }
 
-.input-group-btn {
-	margin-top: 2px;
-	margin-left: 2%;
-}
-
-#icon:hover {
+.navbar {
 	background-color: white !important;
 }
 
+.nav-link:hover {
+	color: #4BC2C5 !important;
+}
 
+.collapse {
+	display: flex;
+}
 
-.fa-search {
-	cursor: pointer;
+#Telyu-navbar {
+	color: #4BC2C5;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.02em;
+	margin: 0;
+	padding: 0;
+}
+
+#Pharmacy-navbar {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-size: 24px;
+	font-weight: lighter;
+	line-height: 29px;
+	letter-spacing: 0.02em;
 	color: black;
+	margin: 0;
+
 }
 
-#section0 ul {
-	margin-left: 2%;
-}
-
-.nav-item a {
+#navbar2,
+#navbar3 {
+	font-size: 18px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
+
 }
 
-.rounded-circle {
-	width: 45px;
-	height: 45px;
-	cursor: pointer;
+
+.nav-item {
+	padding: 0 10px 0 10px;
+	margin-left: 10px;
 }
 
-.fa-shopping-cart {
-	transform: translate(-200%, 0%);
-	color: #ababab;
-	cursor: pointer;
+#a-item {
+	color: black;
+}
+
+#SignUp {
+	border: 0.5px solid black;
+	border-radius: 5px;
 }
 
 /* section1 */
@@ -302,44 +358,6 @@
 	line-height: 25px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
-}
-
-/* profile */
-
-.dropdown-menu {
-	width: 190px;
-}
-
-.dropdown-menu .bot {
-	width: 80px;
-	height: 80px;
-	margin-top: 8%;
-	margin-left: 30%;
-	margin-bottom: 5%;
-}
-
-.dropdown-menu a {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-	color: rgba(0, 0, 0, 0.35);
-	text-align: left;
-	width: 90%;
-	margin-left: 5%;
-}
-
-.profile-title {
-	margin-top: 2%;
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
-	line-height: 14px;
-	text-align: center;
-	color: rgba(0, 0, 0, 0.6);
 }
 
 

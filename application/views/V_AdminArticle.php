@@ -79,7 +79,7 @@
 				<thead>
 					<tr>
 						<th scope="col">Photo</th>
-						<th scope="col">Topic</th>
+						<th scope="col">Title</th>
 						<th scope="col">Category</th>
 						<th scope="col">Action</th>
 						<th scope="col">Details</th>
@@ -101,71 +101,15 @@
 						<td>
 							<div class="detail">
 								<a href="" data-toggle="modal"
-						data-target="#DetailsArticle"><img class="rounded-circle d-block" id="detail"
+						data-target="#DetailsArticle<?php echo $article['id'] ?>"><img class="rounded-circle d-block" id="detail"
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
 					</tr>
 					<?php endforeach;  ?>
-					<!-- <tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Article #2</td>
-						<td id="margin">Gangguan Pencernaan</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditArticle">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Article #3</td>
-						<td id="margin">Penyakit Kanker</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditArticle">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Article #4</td>
-						<td id="margin">Gangguan Penglihatan</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditArticle">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr> -->
 				</tbody>
 			</table>
 		</div>
-
-
 
 		<!-- Add Article -->
 		<div class="container" id="NewArticle">
@@ -183,13 +127,17 @@
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
+									<!-- <input type="text" class="form-control"> -->
+									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required']) ?>
 									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control"></a>
+									<!-- <a href=""><input type="text" class="form-control"></a> -->
+									<?= form_input(['name'=>'category','class'=>'form-control','required'=>'required']) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Article</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required']) ?>
+								<!-- <button type="button" class="btn btn-primary ">Add New Article</button> -->
+								<?= form_submit(['submit'=>'Sumbit','class'=>'btn btn-primary','value'=>'Add New Article']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -208,7 +156,7 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Edit Article</h5>
-							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+							<form action="<?php echo site_url('Article/edit_Article/'.$article['id']) ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -217,13 +165,17 @@
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
+									<!-- <input type="text" class="form-control"> -->
+									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['title']]) ?>
 									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control"></a>
+									<!-- <a href=""><input type="text" class="form-control"></a> -->
+									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Product</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required', 'value'=>$article['description']]) ?>
+								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
+								<?= form_submit(['submit'=>'Update','class'=>'btn btn-primary','value'=>'Update Article']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -236,12 +188,13 @@
 
 
 		<!-- detail article -->
+		<?php foreach($data_article as $article):  ?>
 		<div class="container" id="NewArticle">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="DetailsArticle" role="dialog">
+				<div class="modal fade justify-content-center" id="DetailsArticle<?php echo $article['id'] ?>" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Details Article</h5>
+							<h5 id="tittle">Article Details </h5>
 							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
@@ -251,21 +204,24 @@
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control" disabled="true">
+									<!-- <input type="text" class="form-control" disabled="true"> -->
+									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['title']]) ?>
 									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control" disabled="true"></a>
+									<!-- <a href=""><input type="text" class="form-control" disabled="true"></a> -->
+									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Article</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>-->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required', 'value'=>$article['description']]) ?>
 								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Cancel</button>
+									data-dismiss="modal">Close</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php endforeach;  ?>
 	</div>
 
 
