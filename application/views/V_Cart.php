@@ -84,6 +84,7 @@
 						<span id="tittle">Pilih Semua Produk</span>
 						<button id="Hapus" class="btn outline-info">Hapus</button>
 						<br>
+
 						<div class="card">
 							<div class="row">
 								<div class="col-md-4" id="md4">
@@ -104,6 +105,7 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -197,38 +199,40 @@
 			</div>
 		</div>
 
-
-
-
-
-
-
-
-
-
-
 	</div>
 	<!-- Bootstrap JS -->
 	<script src="<?= base_url("assets/js/cart.js") ?>"></script>
 	<script>
-        function checkAll() {
-            var parent = document.getElementById("parent");
-            var input = document.getElementsByTagName("input");
-            if (parent.checked === true) {
-                for (var i = 0; i < input.length; i++) {
-                    if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
-                        input[i].checked = true;
-                    }
-                }
-            } else if (parent.checked === false) {
-                for (var i = 0; i < input.length; i++) {
-                    if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
-                        input[i].checked = false;
-                    }
-                }
-            }
-        }
-    </script>
+		// function tambah() {
+		// 	var a = parseInt(document.getElementById("number").value);
+		// 	document.getElementById("number").value = a + 1;
+		// 	document.getElementById("number-checkout").value = a + 1;
+		// }
+
+		// function kurang() {
+		// 	var a = parseInt(document.getElementById("number").value);
+		// 	document.getElementById("number").value = a - 1;
+		// 	document.getElementById("number-checkout").value = a - 1;
+		// }
+
+		// function checkAll() {
+		// 	var parent = document.getElementById("parent");
+		// 	var input = document.getElementsByTagName("input");
+		// 	if (parent.checked === true) {
+		// 		for (var i = 0; i < input.length; i++) {
+		// 			if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
+		// 				input[i].checked = true;
+		// 			}
+		// 		}
+		// 	} else if (parent.checked === false) {
+		// 		for (var i = 0; i < input.length; i++) {
+		// 			if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
+		// 				input[i].checked = false;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	</script>
 	
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">

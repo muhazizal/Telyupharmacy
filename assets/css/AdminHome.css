@@ -93,10 +93,9 @@
 #vector5 {
 	display: flex;
 	position: absolute;
-	/* margin-left: 88.7%; */
-	top: 8.5%;
-	left: 83.5%;
-	width: 20%;
+	top: 0%;
+	left: 88.8%;
+	width: 11.2%;
 }
 
 #kartun {
@@ -157,4 +156,3 @@ body {
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
 }
-

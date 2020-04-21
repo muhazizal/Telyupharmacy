@@ -34,6 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUs'); ?>">About Us</a>
+						</li>
 					</ul>
 				</div>
 
@@ -156,14 +159,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
 				<div id="header">
-					<span id="Tittle">Best Seller</span>
+					<span id="Tittle">Product</span>
 					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
 				</div>
 
 				<!-- Show all product -->
 				<div class="row" id="row1">	
-					<?php 
-						foreach ($product as $row) {
+					<?php
+						$i = 0;
+						foreach ($products as $row) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
@@ -175,10 +179,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $row['price'] ?></div>
 								</div>
+								<a href="#" class="btn btn-large btn-block mt-3 text-white" >Buy</a>
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+					<?php 
+						$i += 1;
+						if ($i == 8) {
+							break;
+						}
+					} 
+					?>
 				</div>
 
 			</div>
@@ -191,7 +202,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					foreach ($article as $row) {
+					$i = 0;
+					foreach ($articles as $row) {
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
@@ -203,10 +215,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-text" id="text-section-4">
 								<?= $row['description']; ?>
 							</div>
+							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
 					</div>
 				</div>
-				<?php } ?>
+				<?php
+					$i += 1;
+					if ($i == 8) {
+						break;
+					}
+				}
+				?>
 			</div>
 
 		</div>
@@ -311,10 +330,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<p id="forgot">Don't have account? 
 										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
 									</p>
+									<button type="button" class="btn btn-default text-white" id="btn-close-modal" data-dismiss="modal">Close</button>
 								</div>
 							</form>
 
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							
 						</div>
 					</div>
 				</div>

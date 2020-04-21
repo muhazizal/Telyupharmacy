@@ -28,18 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
-								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
-									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" id="a-item"
 								href="<?= site_url('Product'); ?>">Product</a>
 						</li>
@@ -175,22 +163,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<div class="row" id="row1">	
 					<?php 
-						foreach ($product as $row) {
+						$i = 0;
+						foreach ($products as $product) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/image/') . $row['image'] ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
-									<h5><a id="label-section-3"><?= $row['name'] ?></a></h5>
+									<h5><a id="label-section-3"><?= $product['name'] ?></a></h5>
 								</div>
 								<div class="card-text">
-									<div class="harga">Rp <?= $row['price'] ?></div>
+									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+					<?php 
+						$i += 1;
+						if ($i == 8) {
+							break;
+						}
+					} 
+					?>
 				</div>
 
 			</div>
@@ -202,22 +197,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					foreach ($article as $row) {
+					$j = 0;
+					foreach ($articles as $article) {
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/') . $row['image']; ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/') . $article['image']; ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
-								<h5><?= $row['title']; ?></h5>
+								<h5><?= $article['title']; ?></h5>
 							</div>
 							<div class="card-text" id="text-section-4">
-								<?= $row['description']; ?>
+								<?= $article['description']; ?>
 							</div>
 						</div>
 					</div>
 				</div>
-				<?php } ?>
+				<?php 
+					$j += 1;
+					if ($j == 8) {
+						break;
+					}
+				}
+				?>
 			</div>
 		</div>
 

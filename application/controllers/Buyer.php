@@ -17,8 +17,8 @@ class Buyer extends CI_Controller {
   public function index() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-    $data['product'] = $this->M_Product->get_AllProduct();
-    $data['article'] = $this->M_Article->get_AllArticle();
+    $data['products'] = $this->M_Product->get_AllProduct();
+    $data['articles'] = $this->M_Article->get_AllArticle();
 
     $this->load->view('V_HomeLogin', $data);
   }
