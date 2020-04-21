@@ -64,7 +64,10 @@ class Auth extends CI_Controller {
         if (password_verify($password, $buyer['password'])) {
           $data = [
             'username' => $buyer['username'],
-            'status' => $buyer['status'],
+            'name'     => $buyer['name'],
+            'email'    => $buyer['email'],
+            'status'   => $buyer['status'],
+            'id'       => $buyer['id'],
           ];
           $this->session->set_userdata($data);
           $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$buyer['username']);

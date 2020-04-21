@@ -10,15 +10,15 @@ class Product extends CI_Controller {
     }
     
     public function index(){
-        checkLoginBuyer();
-        
-        $data['product'] = $this->M_Product->get_AllProduct();
+        checkLoginBuyer();        
+        $data['data_product'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_Product", $data);
     }
    
     public function load_AdminProduct(){
         checkLoginAdmin();
-        $this->load->view("V_AdminProduct"); 
+        $data['data_product'] = $this->M_Product->get_AllProduct();
+        $this->load->view("V_AdminProduct",$data); 
     }
     
     public function add_Product(){
@@ -28,10 +28,10 @@ class Product extends CI_Controller {
 			"price" => $this->input->post('price', true),
 			"description" => $this->input->post('description', true),
 			"image" => $this->input->post('image', true),
-			//"admin_id" => $this->input->post('admin_id', true),
+			"admin_id" => $this->session->userdata('id'),
         ];
         $this->M_Product->insert_Product($data);
-		redirect('V_AdminProduct');
+		redirect('Product/load_AdminProduct');
     }
     public function form_deleteProduct(){
         $this->load->view("V_AdminProduct"); 
@@ -43,7 +43,7 @@ class Product extends CI_Controller {
         }else{
             $this->session->set_flashdata('Product_notDeleted', 'There was a problem removing the product!');
         }
-		redirect('V_AdminProduct');
+		redirect('Product/load_AdminProduct');
     }
     public function form_editProduct(){
         $this->load->view("V_AdminProduct"); 
@@ -55,7 +55,7 @@ class Product extends CI_Controller {
 			"price" => $this->input->post('price', true),
 			"description" => $this->input->post('description', true),
 			"image" => $this->input->post('image', true),
-			//"admin_id" => $this->input->post('admin_id', true),
+			"admin_id" => $this->session->userdata('id'),
         ];
         $check = $this->M_Product->update_Product($id_product,$data);
 		if($check){
@@ -63,7 +63,7 @@ class Product extends CI_Controller {
         }else{
             $this->session->set_flashdata('Product_notUpdated', 'There was a problem updating the product detail(s)!');
         }            
-		redirect('V_AdminProduct');
+		redirect('Product/load_AdminProduct');
     }
 }
 ?>
