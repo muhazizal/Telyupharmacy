@@ -15,7 +15,6 @@ class Admin extends CI_Controller {
     $username = $this->session->userdata('username');
     $data['admin'] = $this->M_Admin->getAdmin($username);
 
-    
     $this->load->view('V_AdminHome', $data);
   }
   

@@ -156,14 +156,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
 				<div id="header">
-					<span id="Tittle">Best Seller</span>
+					<span id="Tittle">Product</span>
 					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
 				</div>
 
 				<!-- Show all product -->
 				<div class="row" id="row1">	
-					<?php 
-						foreach ($product as $row) {
+					<?php
+						$i = 0;
+						foreach ($products as $row) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
@@ -178,7 +179,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+					<?php 
+						$i += 1;
+						if ($i == 8) {
+							break;
+						}
+					} 
+					?>
 				</div>
 
 			</div>
@@ -191,7 +198,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					foreach ($article as $row) {
+					$i = 0;
+					foreach ($articles as $row) {
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
@@ -206,7 +214,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-				<?php } ?>
+				<?php
+					$i += 1;
+					if ($i == 8) {
+						break;
+					}
+				}
+				?>
 			</div>
 
 		</div>
