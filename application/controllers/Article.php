@@ -14,7 +14,9 @@ class Article extends CI_Controller {
         $data['data_article'] = $this->M_Article->get_AllArticle();
         $this->load->view("V_Article",$data);
     }
-
+    public function form_addArticle(){
+        $this->load->view("V_AdminArticle"); 
+    }
     public function load_AdminArticle(){
         checkLoginAdmin();
         $data['data_article'] = $this->M_Article->get_AllArticle();
@@ -28,14 +30,11 @@ class Article extends CI_Controller {
             "description" => $this->input->post('description', true),
             "category" => $this->input->post('description', true),
 			"image" => $this->input->post('image', true),
-			//"admin_id" => $this->input->post('admin_id', true),
+			"admin_id" => $this->session->userdata('id'),
         ];
         $this->M_Article->insert_Article($data);
         $this->session->set_flashdata('article_Inserted', 'The selected article has been added!');
 		redirect('V_AdminArticle');
-    }
-    public function form_deleteArticle(){
-        $this->load->view("V_AdminArticle"); 
     }
     public function delete_Article($id_article){
         $check = $this->M_Article->delete_Article($id_article);
@@ -56,7 +55,7 @@ class Article extends CI_Controller {
             "description" => $this->input->post('description', true),
             "category" => $this->input->post('description', true),
 			"image" => $this->input->post('image', true),
-			//"admin_id" => $this->input->post('admin_id', true),
+            "admin_id" => $this->session->userdata('id'),
         ];
         $check = $this->M_article->update_Article($id_article,$data);
 		if($check){
@@ -66,9 +65,5 @@ class Article extends CI_Controller {
         }            
 		redirect('V_AdminArticle');
     }
-
-
-
 }
-
 ?>
