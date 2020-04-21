@@ -60,7 +60,21 @@
 		</div>
 
 		<div class="container-fluid" id="section1">
+			<?php foreach($data_article as $article):  ?>
 			<div class="row text-left article">
+				<div class="col-lg-3">
+					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
+				</div>
+				<div class="col-lg-9">
+					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
+							<h3 id="article"><?php echo $article['description'] ?></h3>
+								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
+								at rhoncus quis eget cras</h3>
+							<h2 id="category"><?php echo $article['category'] ?></h2>
+				</div>
+			</div>
+			<?php endforeach;  ?>
+			<!-- <div class="row text-left article">
 				<div class="col-lg-3">
 					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
 				</div>
@@ -98,21 +112,8 @@
 								at rhoncus quis eget cras</h3>
 							<h2 id="category">category1</h2>
 				</div>
-			</div>
-			<div class="row text-left article">
-				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-9">
-					<h1 id="arttittle">Article Topik #1<h1>
-							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus.</h3>
-								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras</h3>
-							<h2 id="category">category1</h2>
-				</div>
-			</div>
-
+			</div> -->
+		</div>
 
 	</div>
 

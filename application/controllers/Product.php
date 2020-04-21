@@ -6,12 +6,12 @@ class Product extends CI_Controller {
     public function __construct()
 	{
         parent::__construct();		
-
         $this->load->model('M_Product');
     }
     
     public function index(){
         checkLoginBuyer();
+        $data['product'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_Product");
     }
    
@@ -22,7 +22,7 @@ class Product extends CI_Controller {
     
     public function add_Product(){
         $data = [
-            "id" => $this->input->mt_rand(10000000000,99999999999),
+            //"id" => $this->input->mt_rand(10000000000,99999999999),
 			"name" => $this->input->post('name', true),
 			"price" => $this->input->post('price', true),
 			"description" => $this->input->post('description', true),
