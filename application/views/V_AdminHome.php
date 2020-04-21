@@ -17,11 +17,7 @@
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<<<<<<< HEAD
 				<a class="navbar-brand" href="<?= site_url('Home'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
-=======
-				<a class="navbar-brand" href="<?= base_url("./Home") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
->>>>>>> c89c97bf75c9e44cb0a5a2c8acad7f0957c036b5
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
