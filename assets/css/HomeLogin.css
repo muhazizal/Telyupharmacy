@@ -95,7 +95,7 @@
 	letter-spacing: 0.02em;
 }
 
-#section0 .rounded-circle {
+#section0 .top {
 	width: 45px;
 	height: 45px;
 	cursor: pointer;
@@ -365,15 +365,33 @@
 
 /* profile */
 
-#Profile-1 .rounded-circle {
+.dropdown-menu {
+	width: 190px;
+}
+
+.dropdown-menu .bot {
 	width: 80px;
 	height: 80px;
 	margin-top: 8%;
-	margin-left: 35%;
+	margin-left: 30%;
 	margin-bottom: 5%;
 }
 
+.dropdown-menu a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgba(0, 0, 0, 0.35);
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
+}
+
 .profile-title {
+	margin-top: 2%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
@@ -381,27 +399,4 @@
 	line-height: 14px;
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
-}
-
-#Profile-1 button {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-	width: 90%;
-	text-align: left;
-	margin-left: 5%;
-	font-family: Nunito Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 16px;
-
-	color: rgba(0, 0, 0, 0.35);
-}
-
-#Profile-1 {
-	width: 20%;
-}
-
-.modal-content {
-	transform: translate(230%, 30%);
-	width: 50%;
 }

@@ -45,16 +45,34 @@
 								href="<?= site_url("Article") ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("Home/load_AboutUsLogin") ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Home/load_AboutUsLogin") ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<!-- <form class="form-inline "> -->
-					<a id="shoping" href="<?= site_url("./Cart") ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-					<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-							class="rounded-circle d-block" /></a>
-					<!-- </form> -->
+					<form class="form-inline ">
+						<a id="shoping" href="<?= site_url("./Cart") ?>"><i class="fa fa-shopping-cart"
+								aria-hidden="true"></i></a>
+						<div class="dropdown">
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									class="rounded-circle d-block top" /></a>
+
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
+								<form action="">
+									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title">MaulGanteng</h3>
+									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
+										class="btn btn-default">Log Out</a>
+								</form>
+							</div>
+						</div>
+					</form>
 				</div>
 			</nav>
 		</div>
@@ -148,7 +166,8 @@
 							<a class="nav-link" id="copyright" href="<?= site_url("Article") ?>">Article</a>
 						</li>
 						<li>
-							<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin") ?>">About Us</a>
+							<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin") ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
