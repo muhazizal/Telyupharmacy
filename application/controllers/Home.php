@@ -8,6 +8,16 @@ class Home extends CI_Controller {
   }
   
   public function index() {
+    if ($this->session->userdata('username')) {
+      if ($this->session->userdata('status') == 1) {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Admin');
+      } else {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Buyer');
+      }
+    }
+    
     $this->load->view('V_Home');
   }
 

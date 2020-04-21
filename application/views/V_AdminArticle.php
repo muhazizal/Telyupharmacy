@@ -17,7 +17,7 @@
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="<?= base_url("") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
+				<a class="navbar-brand" href="<?= site_url("Admin") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -27,10 +27,10 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item"
-								href="<?= site_url("./Product/load_AdminProduct") ?>">Product</a>
+								href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./Article/load_AdminArticle") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>

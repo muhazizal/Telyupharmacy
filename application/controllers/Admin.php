@@ -18,10 +18,6 @@ class Admin extends CI_Controller {
     
     $this->load->view('V_AdminHome', $data['admin']);
   }
-
-  public function load_AdminProduct() {
-    $this->load->view('V_AdminProduct');
-  }
   
 }
 

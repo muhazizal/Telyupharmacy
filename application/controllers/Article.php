@@ -7,31 +7,20 @@ class Article extends CI_Controller {
 	{
         parent::__construct();
         
-        checkLoginBuyer();
+        
 		$this->load->model('M_Article');
     }
 
     public function index(){
+        checkLoginBuyer();
         $this->load->view("V_Article");
     }
-    public function load_Home(){
-        $this->load->view("V_Home");
-    }
-    public function load_article(){
-        $this->load->view("V_article");
-    }
-    public function load_Artikel(){
-        $this->load->view("V_Article"); 
-    }
-    public function load_AboutUs(){
-        $this->load->view("V_AboutUS"); 
-    }
+
     public function load_AdminArticle(){
+        checkLoginAdmin();
         $this->load->view("V_AdminArticle"); 
     }
-    public function form_addArticle(){
-        $this->load->view("V_Adminarticle"); 
-    }
+    
     public function add_Article(){
         $data = [
             "id" => $this->input->mt_rand(10000000000,99999999999),

@@ -17,7 +17,7 @@
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<a class="navbar-brand" href="<?= site_url('Home'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
+				<a class="navbar-brand" href="<?= site_url('Admin'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -26,10 +26,10 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item" href="<?= site_url("./Product/load_AdminProduct") ?>">Product</a>
+							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= base_url("./Article/load_AdminArticle") ?>">Article</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
@@ -43,6 +43,31 @@
 				
 			</nav>
 		</div>
+
+		<!-- Flashdata -->
+		<?php if ($this->session->flashdata('signOutFirst')) { ?>
+    <div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('signOutFirst'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('notBuyer')) { ?>
+    <div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('notBuyer'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } ?>
 
 		<div class="container-fluid text-center" id="section1">
 			<div class="row">

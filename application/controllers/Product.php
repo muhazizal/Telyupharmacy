@@ -7,29 +7,16 @@ class Product extends CI_Controller {
 	{
         parent::__construct();		
 
-        checkLoginBuyer();
         $this->load->model('M_Product');
     }
     
     public function index(){
+        checkLoginBuyer();
         $this->load->view("V_Product");
     }
-    public function load_Home(){
-        $this->load->view("V_Home");
-    }
-    public function load_Product(){
-        $this->load->view("V_Product");
-    }
-    public function load_Artikel(){
-        $this->load->view("V_Article"); 
-    }
-    public function load_AboutUs(){
-        $this->load->view("V_AboutUS"); 
-    }
+   
     public function load_AdminProduct(){
-        $this->load->view("V_AdminProduct"); 
-    }
-    public function form_addProduct(){
+        checkLoginAdmin();
         $this->load->view("V_AdminProduct"); 
     }
     
