@@ -18,7 +18,7 @@ class Home extends CI_Controller {
       }
     }
     
-    $this->load->view('V_Home');
+    $this->load->view('V_Profile');
   }
 
   public function load_AboutUs() {
