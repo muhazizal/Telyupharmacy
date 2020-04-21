@@ -100,7 +100,8 @@
 						</td>
 						<td>
 							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
+								<a href=""  data-toggle="modal"
+						data-target="#DetailsProduct"><img class="rounded-circle d-block" id="detail"
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
@@ -197,41 +198,68 @@
 			</div>
 		</div>
 
-		<!-- Edit Product -->
+		<!-- Update Product -->
 		<div class="container" id="NewProduct">
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="EditProduct" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Add New Product</h5>
-							<form action="" class="row">
+							<h5 id="tittle">Update Product</h5>
+							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url('assets/image/kirito.jpg') ?>"
-										class="rounded-circle d-block" />
-
+									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
-									<div class="topic-title">Product Name</div>
-									<input type="text" class="form-control">
+									<div class="topic-title">Category</div>
+									<a href=""><input type="text" class="form-control"></a>
 								</div>
-
-							</form>
-							<div class="topic-title desc">Description</div>
-							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-							<div class="text-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Product</button>
+								<div class="topic-title desc">Description</div>
+								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+								<button type="button" class="btn btn-primary ">Add New Product</button>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<!-- detail produk -->
+		<div class="container" id="NewProduct">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="DetailsProduct" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle">Details Product</h5>
+							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+								enctype="multipart/form-data" class="row">
+								<div class="col-md-1"></div>
+								<div class="col-md-4">
+									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
+								</div>
+								<div class="col-md-7" id="inputan">
+									<div class="topic-title">Product Name</div>
+									<input type="text" class="form-control" disabled="true">
+									<div class="topic-title">Category</div>
+									<a href=""><input type="text" class="form-control" disabled="true"></a>
+								</div>
+								<div class="topic-title desc">Description</div>
+								<textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>
+								<button type="button" class="btn btn-primary ">Add New Article</button>
+								<button type="button" class="btn btn-outline-danger"
+									data-dismiss="modal">Cancel</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 	</div>
 
 

@@ -26,14 +26,14 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
 					<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
@@ -90,7 +90,7 @@
 				</div>  
 			</div>
 		</div>
-		<img class="text-center"id="vector5" src="<?= base_url('assets/image/Vector2_SignUp.png') ?>" alt="">
+		<img id="vector5" src="<?= base_url('assets/image/vector 5.png') ?>" alt="">
 		<img id="vector4" src="<?= base_url('assets/image/vector 4.png') ?>" alt="">
 		<img id="kartun" src="<?= base_url('assets/image/Rectangle 111.png') ?>" alt=""> 
 	</div>
