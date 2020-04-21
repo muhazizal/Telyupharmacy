@@ -14,6 +14,11 @@ class M_Article extends CI_Model {
     $this->db->where('id',$id_article);
     return $this->db->get('article')->row_array();
   }
+  public function get_ArticlebyName($name_product){
+    $this->db->like('title',$name_product);
+    $this->db->or_like('description',$name_product);
+    return $this->db->get('article')->row_array();
+  }
   public function insert_Article($data){     
     return $this->db->insert('article',$data);
   } 

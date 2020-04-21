@@ -14,6 +14,10 @@ class M_Product extends CI_Model {
     $this->db->where('id',$id_product);
     return $this->db->get('product')->row_array();
   }
+  public function get_ProductbyName($name_product){
+    $this->db->like('name',$name_product);
+    return $this->db->get('product')->row_array();
+  }
   public function insert_Product($data){     
     return $this->db->insert('product',$data);
   } 
