@@ -48,13 +48,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>"
+									<img src="<?= base_url('assets/image/default.jpg') ?>"
 										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default">Log Out</a>
+									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>	
 						</div>
@@ -162,7 +163,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 
 				<div class="row" id="row1">	
-					<?php 
+					<!-- Show all product -->
+					<?php
 						$i = 0;
 						foreach ($products as $product) {
 					?>
@@ -176,6 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
+								<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
 							</div>
 						</div>
 					</div>
@@ -210,6 +213,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-text" id="text-section-4">
 								<?= $article['description']; ?>
 							</div>
+							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
 					</div>
 				</div>

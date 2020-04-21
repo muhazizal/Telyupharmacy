@@ -365,6 +365,10 @@ hr {
 	color: rgba(0, 0, 0, 0.6);
 }
 
+a.btn {
+	background-color: #4BC2C5	;
+}
+
 
 @media screen and (max-width: 767px) {
 	#md4 {

@@ -6,6 +6,7 @@ class Home extends CI_Controller {
   function __construct() {
     parent::__construct();
 
+    $this->load->model('M_Buyer');
     $this->load->model('M_Product');
     $this->load->model('M_Article');
   }
@@ -21,9 +22,15 @@ class Home extends CI_Controller {
       }
     }
     
+<<<<<<< HEAD
     $data['product'] = $this->M_Product->get_AllProduct();
     $data['article'] = $this->M_Article->get_AllArticle();
     $this->load->view('V_Profile', $data);
+=======
+    $data['products'] = $this->M_Product->get_AllProduct();
+    $data['articles'] = $this->M_Article->get_AllArticle();
+    $this->load->view('V_Home', $data);
+>>>>>>> 4ae70cd195655c90418c4bc53886540158a6a871
   }
 
   public function load_AboutUs() {
@@ -31,7 +38,9 @@ class Home extends CI_Controller {
   }
 
   public function load_AboutUsLogin() {
-    $this->load->view('V_AboutUsLogin');
+    $username = $this->session->userdata('username');
+    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+    $this->load->view('V_AboutUsLogin', $data);
   }
 }
 

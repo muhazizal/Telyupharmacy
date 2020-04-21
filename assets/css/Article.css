@@ -62,7 +62,7 @@
 
 #icon {
 	border: none;
-
+	background-color: white;
 }
 
 .input-group-btn {
@@ -304,6 +304,10 @@
 	line-height: 14px;
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+	background-color: #4BC2C5	;
 }
 
 
