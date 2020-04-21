@@ -71,15 +71,16 @@
 					</tr>
 					</!-->
 				<tbody>
+				<?php foreach($data_article as $article):  ?>
 					<tr>
 						<td>
 							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Article #1</td>
-						<td id="margin">Gangguan Pernapasan</td>
+						<td id="margin"><?php echo $article['title'] ?></td>
+						<td id="margin"><?php echo $article['category'] ?></td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditArticle">Update</button>
+								data-target="#EditArticle<?php echo $article['id'] ?>">Update</button>
 							<button type="button" class="btn btn-danger">Delete</button>
 						</td>
 						<td>
@@ -89,7 +90,8 @@
 							</div>
 						</td>
 					</tr>
-					<tr>
+					<?php endforeach;  ?>
+					<!-- <tr>
 						<td>
 							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
@@ -142,7 +144,7 @@
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</table>
 		</div>
@@ -186,12 +188,13 @@
 		</div>
 
 		<!-- Edit Article -->
+		<?php foreach($data_article as $article):  ?>
 		<div class="container" id="NewArticle">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="EditArticle" role="dialog">
+				<div class="modal fade justify-content-center" id="EditArticle<?php echo $article['id'] ?>" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Add New Article</h5>
+							<h5 id="tittle">Edit Article</h5>
 							<form action="" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -201,17 +204,16 @@
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
-									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
+									<input type="text" class="form-control" value="<?php echo $article['title']?>">
+									<div class="topic-title">Category</div>
+									<input type="text" class="form-control" value="<?php echo $article['category']?>">
 								</div>
 
 							</form>
 							<div class="topic-title desc">Description</div>
-							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+							<input class="form-control" name="" id="" cols="30" rows="5" value="<?php echo $article['description']?>"></input>
 							<div class="text-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Article</button>
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</div>
@@ -220,6 +222,7 @@
 				</div>
 			</div>
 		</div>
+		<?php endforeach;  ?>
 	</div>
 
 
