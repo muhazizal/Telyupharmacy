@@ -34,6 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUs'); ?>">About Us</a>
+						</li>
 					</ul>
 				</div>
 
@@ -176,6 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $row['price'] ?></div>
 								</div>
+								<a href="#" class="btn btn-large btn-block mt-3 text-white" >Buy</a>
 							</div>
 						</div>
 					</div>
@@ -211,6 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-text" id="text-section-4">
 								<?= $row['description']; ?>
 							</div>
+							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -325,10 +330,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<p id="forgot">Don't have account? 
 										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
 									</p>
+									<button type="button" class="btn btn-default text-white" id="btn-close-modal" data-dismiss="modal">Close</button>
 								</div>
 							</form>
 
-							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							
 						</div>
 					</div>
 				</div>

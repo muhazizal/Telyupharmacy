@@ -34,6 +34,9 @@
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Article") ?>">Article</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUs'); ?>">About Us</a>
+						</li>
 					</ul>
 				</div>
 

@@ -26,7 +26,7 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a style="border-bottom: 3px solid #4BC2C5;" class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
