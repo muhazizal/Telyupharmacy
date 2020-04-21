@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<title>Article List</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | AdminArticle</title>
@@ -45,8 +46,8 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<h3 class="text-center profile-title">Nama</h3>
+									<h3 class="text-center profile-title">Email@email.com</h3>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
@@ -122,7 +123,7 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/image/defaultarticle.jpg") ?>" class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -137,7 +138,7 @@
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
 								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required']) ?>
 								<!-- <button type="button" class="btn btn-primary ">Add New Article</button> -->
-								<?= form_submit(['submit'=>'Sumbit','class'=>'btn btn-primary','value'=>'Add New Article']) ?>
+								<?= form_submit(['submit'=>'Submit','class'=>'btn btn-primary','value'=>'Add New Article']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -169,7 +170,7 @@
 									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['title']]) ?>
 									<div class="topic-title">Category</div>
 									<!-- <a href=""><input type="text" class="form-control"></a> -->
-									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
+									<?= form_input(['name'=>'category','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
@@ -208,7 +209,7 @@
 									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['title']]) ?>
 									<div class="topic-title">Category</div>
 									<!-- <a href=""><input type="text" class="form-control" disabled="true"></a> -->
-									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
+									<?= form_input(['name'=>'category','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>-->

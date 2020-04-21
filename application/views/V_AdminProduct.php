@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<title>Product List</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | AdminProduct</title>
@@ -93,11 +94,11 @@
 							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
 						<td id="margin"><?php echo $product['name'] ?></td>
-						<td id="margin"><?php echo $product['price'] ?></td>
+						<td id="margin">Rp <?php echo $product['price'] ?></td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
+								<button type="button" class="btn btn-danger">Delete</button>					
 						</td>
 						<td>
 							<div class="detail">
@@ -119,11 +120,11 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Add New Product</h5>
-							<form action="<?php echo site_url('Article/add_Product') ?>" method="post"
+							<form action="<?php echo site_url('Product/add_Product') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/image/defaultproduct.jpg") ?>" class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -138,7 +139,7 @@
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
 								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required']) ?>
 								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
-								<?= form_submit(['submit'=>'Sumbit','class'=>'btn btn-primary','value'=>'Add New Product']) ?>
+								<?= form_submit(['submit'=>'Submit','class'=>'btn btn-primary','value'=>'Add New Product']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -156,7 +157,7 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Edit Product</h5>
-							<form action="<?php echo site_url('Article/add_Product') ?>" method="post"
+							<form action="<?php echo site_url('Product/edit_Product/'.$product['id']) ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -175,7 +176,7 @@
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
 								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required','value'=>$product['description']]) ?>
 								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
-								<?= form_submit(['submit'=>'Sumbit','class'=>'btn btn-primary','value'=>'Update Product']) ?>
+								<?= form_submit(['submit'=>'Update','class'=>'btn btn-primary','value'=>'Update Product']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -237,6 +238,12 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script>
+	function deleteConfirm(url){
+		$('#btn-delete').attr('href', url);
+		$('#deleteModal').modal();
+	}
+	</script>
 </body>
 
 </html>
