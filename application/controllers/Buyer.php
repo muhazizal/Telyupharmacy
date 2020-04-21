@@ -8,14 +8,19 @@ class Buyer extends CI_Controller {
     parent::__construct();
 
     checkLoginBuyer();
+    
     $this->load->model('M_Buyer');
+    $this->load->model('M_Product');
+    $this->load->model('M_Article');
   }
   
   public function index() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-    
-    $this->load->view('V_HomeLogin', $data['buyer']);
+    $data['product'] = $this->M_Product->get_AllProduct();
+    $data['article'] = $this->M_Article->get_AllArticle();
+
+    $this->load->view('V_HomeLogin', $data);
   }
 
   // show filename

@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Buyer extends CI_Model {
 
-  function createBuyer($data) {
+  public function createBuyer($data) {
     $this->db->insert('buyer', $data);
   }
 
