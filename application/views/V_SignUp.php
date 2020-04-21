@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<button type="submit" name="btn_SignUp" class="btn btn-primary">Sign Up</button>
 						<br>
 						<span>By Registering, I agree</span>
-						<p><a href="" id="a">Terms and Conditions </a>and<a id="a" href=""> Privacy Policy</a></p>
+						<p><a href="#" id="a">Terms and Conditions </a>and<a id="a" href="#"> Privacy Policy</a></p>
 					</div>
 				</form>
 
