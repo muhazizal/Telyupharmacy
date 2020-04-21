@@ -108,75 +108,143 @@
 }
 
 
-/* section0 */
+/* section1 */
 
-
-#section1{
+#section1 {
 	margin-top: 3%;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-	border-radius: 5px;
-	padding: 2em;
+	border-radius: 15px;
 	position: relative;
+	width: 60%;
+	padding: 3em;
+}
+
+#section1 .tittle {
+	margin-top: 3%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	letter-spacing: 0.02em;
+	color: #000000;
+}
+
+#section1 img {
+	width: 88px;
+	height: 88px;
+	float: right;
+}
+
+#section1 input {
+	border-radius: 5px;
+	width: 80%;
+}
+
+#section1 form {
+	margin-top: 5%;
+}
+
+
+#section1 button {
+	margin-top: 5%;
+	border-radius: 5px;
 	width: 90%;
 }
 
-.form-group {
-	margin-top: 0%;
-	
+.btn-danger {
+	background: #F90000;
+	border-radius: 5px;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	text-align: center;
+	letter-spacing: 0.02em;
+
 }
 
-.form-group input {
-	width: 80%;
-	margin-left: 11%;
-	margin-top: 0%;
+.btn-info {
+	background: #4BC2C5;
+	border-radius: 5px;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+	color: #FFFFFF;
 }
 
-img{
-    left: 40%;
+#vector6 {
+	position: absolute;
+	bottom: 0%;
+	/* width: 8.5%; */
 }
 
-.btn{
-    margin-right: 2%;
-    margin-top: 5%;
+#vector7 {
+	position: absolute;
+	left: 87.9%;
+	bottom: 29%;
+	/* width: 12.1%; */
 }
 
-label{
-    margin-bottom: 3%;
-    margin-left: 0%;
-    
+.form-container {
+	position: relative;
 }
 
-#inputEmail{
-    margin-top: -3%;
-    position: absolute;
+
+/* profile */
+
+.dropdown-menu {
+	width: 190px;
 }
 
-#inputUsername{
-    margin-top: -3%;
-    position: absolute;
+.dropdown-menu .bot {
+	width: 80px;
+	height: 80px;
+	margin-top: 8%;
+	margin-left: 30%;
+	margin-bottom: 5%;
 }
 
-#inputName{
-    margin-top: -3%;
-    position: absolute;
+.dropdown-menu a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgba(0, 0, 0, 0.35);
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
 }
 
-.profilephoto{
-    margin-right: -50%;
+.profile-title {
+	margin-top: 2%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
 }
 
-#vector6{
-    margin-left: -40%;
-    margin-top: 50%;
-    width: 15%;
+
+@media screen and (max-width: 767px) {
+	#section1 img {
+		float: left;
+	}
 }
 
-#vector7{
-	margin-left: 110%;
-	margin-top: -240%;
-}
+@media screen and (max-width: 1024px) {
 
-form{
-	margin-bottom: 0%;
+	#vector6,
+	#vector7 {
+		display: none;
+	}
 }

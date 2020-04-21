@@ -77,33 +77,60 @@
 
 
 		<div class="container" id="section1">
-			<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
-			<form>
-				<div class="profilephoto">
+			<div class="row">
+				<div class="col-md-4">
 					<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-							class="rounded-circle d-block" /></a>
+						class="rounded-circle d-block" /></a>
 				</div>
-				<div class="form-group">
-					<label for="inputName">Name :</label>
-					<input type="text" class="form-control" id="inputName" placeholder="nama">
+				<div class="col-md-1"></div>
+				<div class="col-md-7 tittle">
+					<span id="tittle">Maul Ganteng</span>	
+				</div>
+			</div>
+			<form class="form-container">
+				<div class="form-group row">
+					<div class="col-lg-2"></div>
+					<label for="inputName" class="col-lg-2">Name:</label>
+					<div class="col-lg-7">
+					<input type="text" class="form-control" id="inputName" placeholder="Name">
+					</div>
+					<div class="col-lg-1"></div>
 				</div>
 
-				<div class="form-group">
-					<label for="inputUsername">Username :</label>
-					<input type="text" class="form-control" id="inputUsername" placeholder="username">
+				<div class="form-group row">
+					<div class="col-lg-2"></div>
+					<label for="inputName" class="col-lg-2">Username:</label>
+					<div class="col-lg-7">
+					<input type="text" class="form-control" id="inputName" placeholder="Username">
+					</div>
+					<div class="col-lg-1"></div>
 				</div>
 
-				<div class="form-group">
-					<label for="inputEmail">Email :</label>
-					<input type="email" class="form-control" id="inputEmail" placeholder="maol@example.com">
+				<div class="form-group row">
+					<div class="col-lg-2"></div>
+					<label for="inputName" class="col-lg-2">Email:</label>
+					<div class="col-lg-7">
+					<input type="text" class="form-control" id="inputName" placeholder="Email">
+					</div>
+					<div class="col-lg-1"></div>
 				</div>
-				<div class="row justify-content-md-center">
-					<button type="submit" class="btn btn-info">Submit</button>
-					<button type="button" class="btn btn-danger">Delete Account</button>
+
+				<div class="form-group row">
+					<div class="col-lg-4"></div>
+					<div class="col-lg-3">
+						<button type="button" class="btn btn-info">Submit</button>
+					</div>
+					<div class="col-lg-3">
+						<button type="button" class="btn btn-danger">Delete Account</button>
+					</div>
 				</div>
+					
 			</form>
-			<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
 		</div>
+
+		
+		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+		<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
