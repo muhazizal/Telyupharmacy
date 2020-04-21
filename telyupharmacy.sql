@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 01:09 PM
+-- Generation Time: Apr 20, 2020 at 05:50 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -35,6 +35,13 @@ CREATE TABLE `admin` (
   `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `status`) VALUES
+(1301180240, 'naufaladmin', 'naufaladmin', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -65,6 +72,13 @@ CREATE TABLE `buyer` (
   `image` varchar(128) NOT NULL,
   `status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `buyer`
+--
+
+INSERT INTO `buyer` (`id`, `username`, `password`, `email`, `name`, `image`, `status`) VALUES
+(123456, 'naufalharsap', 'naufalharsap', 'naufalharsap', 'naufalharsap', 'naufalharsap', 2);
 
 -- --------------------------------------------------------
 
@@ -142,16 +156,16 @@ ALTER TABLE `product`
 --
 ALTER TABLE `recite`
   ADD PRIMARY KEY (`buyer_id`,`article_id`),
-  ADD UNIQUE KEY `buyer_id` (`buyer_id`),
-  ADD UNIQUE KEY `article_id` (`article_id`);
+  ADD KEY `buyer_id` (`buyer_id`) USING BTREE,
+  ADD KEY `article_id` (`article_id`) USING BTREE;
 
 --
 -- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
   ADD PRIMARY KEY (`transaction_id`),
-  ADD UNIQUE KEY `id_buyer` (`id_buyer`),
-  ADD UNIQUE KEY `id_product` (`id_product`);
+  ADD KEY `id_product` (`id_product`) USING BTREE,
+  ADD KEY `id_buyer` (`id_buyer`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -161,7 +175,7 @@ ALTER TABLE `transaction`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1301180241;
 
 --
 -- AUTO_INCREMENT for table `article`
@@ -173,7 +187,7 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT for table `buyer`
 --
 ALTER TABLE `buyer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1301180241;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -185,37 +199,37 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `admin`
---
-ALTER TABLE `admin`
-  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id`) REFERENCES `article` (`admin_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `admin_ibfk_2` FOREIGN KEY (`id`) REFERENCES `product` (`admin_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
 -- Constraints for table `article`
 --
 ALTER TABLE `article`
-  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id`) REFERENCES `recite` (`article_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `buyer`
---
-ALTER TABLE `buyer`
-  ADD CONSTRAINT `buyer_ibfk_1` FOREIGN KEY (`id`) REFERENCES `transaction` (`id_buyer`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `buyer_ibfk_2` FOREIGN KEY (`id`) REFERENCES `recite` (`buyer_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`id`) REFERENCES `transaction` (`id_product`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `recite`
+--
+ALTER TABLE `recite`
+  ADD CONSTRAINT `recite_ibfk_1` FOREIGN KEY (`buyer_id`) REFERENCES `buyer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `recite_ibfk_2` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `transaction`
+--
+ALTER TABLE `transaction`
+  ADD CONSTRAINT `transaction_ibfk_1` FOREIGN KEY (`id_buyer`) REFERENCES `buyer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `transaction_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
