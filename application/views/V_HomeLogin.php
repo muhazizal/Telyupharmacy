@@ -28,18 +28,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
-								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
-									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" id="a-item"
 								href="<?= site_url('Product'); ?>">Product</a>
 						</li>
@@ -175,7 +163,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<div class="row" id="row1">	
 					<?php 
-						for ($i = 0; $i <= 7; $i++) {
+						$i = 0;
+						foreach ($products as $product) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
@@ -190,7 +179,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<?php } ?>
+					<?php 
+						$i += 1;
+						if ($i == 8) {
+							break;
+						}
+					} 
+					?>
 				</div>
 
 			</div>
@@ -202,7 +197,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					for ($j = 0; $j <= 7; $j++) {
+					$j = 0;
+					foreach ($articles as $article) {
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
@@ -217,7 +213,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</div>
 					</div>
 				</div>
-				<?php } ?>
+				<?php 
+					$j += 1;
+					if ($j == 8) {
+						break;
+					}
+				}
+				?>
 			</div>
 		</div>
 

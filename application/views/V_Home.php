@@ -183,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						$i += 1;
 						if ($i == 8) {
 							break;
-						}	
+						}
 					} 
 					?>
 				</div>
