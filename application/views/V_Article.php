@@ -62,13 +62,14 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+									<img src="<?= base_url('assets/image/default.jpg') ?>"
+										class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>
 						</div>
@@ -85,50 +86,12 @@
 				</div>
 				<div class="col-lg-9">
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
-							<h3 id="article"><?php echo $article['description'] ?></h3>
-							<h2 id="category"><?php echo $article['category'] ?></h2>
+					<h3 id="article"><?php echo $article['description'] ?></h3>
+					<h2 id="category"><?php echo $article['category'] ?></h2>
+					<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>
-			<!-- <div class="row text-left article">
-				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-9">
-					<h1 id="arttittle">Article Topik #1<h1>
-							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus.</h3>
-								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras</h3>
-							<h2 id="category">category1</h2>
-				</div>
-			</div>
-			<div class="row text-left article">
-				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-9">
-					<h1 id="arttittle">Article Topik #1<h1>
-							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus.</h3>
-								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras</h3>
-							<h2 id="category">category1</h2>
-				</div>
-			</div>
-			<div class="row text-left article">
-				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-9">
-					<h1 id="arttittle">Article Topik #1<h1>
-							<h3 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Vulputate faucibus.</h3>
-								<h3 id="article">sit amet, consectetur volutpat. Vulputate egestas
-								at rhoncus quis eget cras</h3>
-							<h2 id="category">category1</h2>
-				</div>
-			</div> -->
 		</div>
 
 	</div>

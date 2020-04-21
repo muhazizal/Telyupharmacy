@@ -26,18 +26,6 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
-								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
-									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url("Product") ?>">Product</a>
 						</li>
 						<li class="nav-item">
@@ -59,13 +47,13 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+									<img src="<?= base_url('assets/image/default.jpg') ?>"
+										class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+									<a type="button" class="btn btn-default mt-3 text-white" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default mt-3 text-white">Log Out</a>
 								</form>
 							</div>
 						</div>
