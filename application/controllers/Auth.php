@@ -12,10 +12,16 @@ class Auth extends CI_Controller {
 
   // Load sign in by default
   public function index() {
-    // if ($this->session->userdata('username')) {
-    //   redirect('')
-    // }
-    
+    if ($this->session->userdata('username')) {
+      if ($this->session->userdata('status') == 1) {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Admin');
+      } else {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Buyer');
+      }
+    }
+
     $this->form_validation->set_rules('username', 'Username', 'required|trim');
     $this->form_validation->set_rules('password', 'Password', 'required|trim');
     
@@ -79,9 +85,15 @@ class Auth extends CI_Controller {
 
   // Function sign up
   public function do_signUp() {
-    // if ($this->session->userdata('username')) {
-    //   redirect('')
-    // }
+    if ($this->session->userdata('username')) {
+      if ($this->session->userdata('status') == 1) {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Admin');
+      } else {
+        $this->session->set_flashdata('signOutFirst', 'Please sign out first!');
+        redirect('Buyer');
+      }
+    }
 
     // Set form_validation required
     $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[buyer.username]', [
