@@ -77,7 +77,8 @@
 	color: grey;
 }
 
-#btn-Sign-In {
+#btn-Sign-In, 
+#btn-close-modal {
 	width: 230px;
 	height: 44px;
 	background: #4BC2C5 !important;
@@ -88,7 +89,6 @@
 	font-size: 18px;
 	line-height: 25px;
 	margin-bottom: 5%;
-	/* margin-left: 3%; */
 	color: #FFFFFF;
 }
 
@@ -428,4 +428,8 @@
 	line-height: 25px;
 	letter-spacing: 0.02em;
 	color: #FFFFFF;
+}
+
+.btn {
+	background-color: #4BC2C5	;
 }
