@@ -93,10 +93,9 @@
 #vector5 {
 	display: flex;
 	position: absolute;
-	/* margin-left: 88.7%; */
 	top: 8.5%;
-	left: 83.5%;
-	width: 20%;
+	left: 80.5%;
+	/* width: 20%; */
 }
 
 #kartun {

@@ -30,16 +30,32 @@
 								href="<?= site_url("Product/load_AdminProduct") ?>">Product</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
+							<a class="nav-link" id="a-item"
+								href="<?= site_url("Article/load_AdminArticle") ?>">Article</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block" /></a>
+						<div class="dropdown">
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									class="rounded-circle d-block top" /></a>
+
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
+								<form action="">
+									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title">MaulGanteng</h3>
+									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
+										class="btn btn-default">Log Out</a>
+								</form>
+							</div>
+						</div>
 					</form>
-					<a class="btn btn-primary" href="<?= site_url('Auth/do_logout') ?>">Logout</a>
 				</div>
 
 			</nav>
@@ -156,29 +172,25 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Add New Product</h5>
-							<form action="" class="row">
+							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>"
-										class="rounded-circle d-block" />
-										<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
+									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Article Name</div>
 									<input type="text" class="form-control">
-									<div class="topic-title">Product Name</div>
+									<div class="topic-title">Category</div>
 									<a href=""><input type="text" class="form-control"></a>
 								</div>
-
-							</form>
-							<div class="topic-title desc">Description</div>
-							<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-							<div class="text-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Add New
-									Product</button>
+								<div class="topic-title desc">Description</div>
+								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+								<button type="button" class="btn btn-primary ">Add New Product</button>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -197,7 +209,7 @@
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url('assets/image/kirito.jpg') ?>"
 										class="rounded-circle d-block" />
-									
+
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Product Name</div>
