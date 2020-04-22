@@ -98,11 +98,8 @@
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
-							<form action="<?php echo site_url('Product/delete_Product/'.$product['id']) ?>" method="post"
-								enctype="multipart/form-data" class="row">
-								<!-- <button type="button" class="btn btn-danger">Delete</button>			 -->
-								<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
-							</form>
+							<button type="button" class="btn btn-danger" data-toggle="modal"	
+								data-target="DeleteProduct<?php echo $product['id'] ?>">Delete</button>	
 						</td>
 						<td>
 							<div class="detail">
@@ -228,6 +225,31 @@
 			</div>
 		</div>
 		<?php endforeach;  ?>
+
+	<!-- delete product -->
+	<?php foreach($data_product as $product):  ?>
+	<div class="modal fade" id="DeleteArticle<?php echo $product['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      	<div class="modal-header">
+        	<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+        	<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          	<span aria-hidden="true">×</span>
+        	</button>
+      	</div>
+      	<div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+      	<div class="modal-footer">
+						<form action="<?php echo site_url('Product/delete_Product/'.$product['id']) ?>" method="post"
+							enctype="multipart/form-data" class="row">
+        		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+						<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
+						<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+						</form>
+      	</div>
+    	</div>
+  	</div>
+	</div>
+	<?php endforeach;  ?>
 	</div>
 
 

@@ -95,12 +95,10 @@
 						<td id="margin"><?php echo $article['title'] ?></td>
 						<td id="margin"><?php echo $article['category'] ?></td>
 						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
+							<button type="button" class="btn btn-warning" data-toggle="modal"	
 								data-target="#EditArticle<?php echo $article['id'] ?>">Update</button>
-							<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
-								enctype="multipart/form-data" class="row">
-								<!-- <button type="button" class="btn btn-danger">Delete</button>			 -->
-								<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+							<button type="button" class="btn btn-danger" data-toggle="modal"	
+								data-target="DeleteArticle<?php echo $article['id'] ?>">Delete</button>			
 							</form>
 						</td>
 						<td>
@@ -227,7 +225,34 @@
 			</div>
 		</div>
 		<?php endforeach;  ?>
+
+<!-- delete article -->
+	<?php foreach($data_article as $article):  ?>
+	<div class="modal fade" id="DeleteArticle<?php echo $article['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+      	<div class="modal-header">
+        	<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+        	<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          	<span aria-hidden="true">×</span>
+        	</button>
+      	</div>
+      	<div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+      	<div class="modal-footer">
+					<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
+						enctype="multipart/form-data" class="row">
+        		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+						<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
+						<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+					</form>
+      	</div>
+    	</div>
+  	</div>
 	</div>
+	<?php endforeach;  ?>
+	
+
+</div>
 
 
 
