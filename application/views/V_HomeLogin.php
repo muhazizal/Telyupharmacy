@@ -367,7 +367,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn btn-info">Change Password</button>
+									<button type="submit" class="btn btn-info" >Change Password</button>
 									<button type="button" class="btn btn-outline-danger">Cancel</button>
 								</div>
 							</form>

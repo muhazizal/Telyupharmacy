@@ -62,10 +62,14 @@
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title">MaulGanteng</h3>
 									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a href="<?= site_url('Buyer/editProfile') ?>" type="button"
+										class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit
+										Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+										Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>
 						</div>
@@ -77,8 +81,8 @@
 		<div class="container" id="section1">
 			<form class="form-container">
 				<div class="row">
-					<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								alt="" /></div>
+					<div class="col-xl-5"><img class="img-fluid" src="<?= base_url('assets/image/kirito.jpg') ?>"
+							alt="" /></div>
 					<div class="col-xl-7">
 						<h1 id="artittle">Article</h1>
 						<h2 id="category">Category<span id="category">Antibiotik</span></h2>
@@ -93,12 +97,12 @@
 							Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id. Cursus hendrerit sem
 							varius platea. Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id.
 					</div>
-					
+
 				</div>
 			</form>
-        </div>
-        <img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
-		<img id="vector9" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
+		</div>
+		<img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+		<img class="img-fluid" id="vector9" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -177,20 +181,63 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+		<!-- change password -->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="oldPassword"
+										placeholder="Old Password" id="oldPassword" />
+									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click
+											Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="newPassword1"
+										placeholder="New Password" id="newPassword1" />
+									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="newPassword2"
+										placeholder="Confrim New Password" id="newPassword2" />
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger text"
+										data-dismiss="modal">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+		<!-- Bootstrap JS -->
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+		</script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </body>
 
 </html>

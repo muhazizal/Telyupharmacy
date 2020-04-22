@@ -63,7 +63,7 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
 									<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
-										class="rounded-circle d-block bot" />
+										class="rounded-circle d-block bot img-fluid" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
 									<a type="button" class="btn btn-default mt-3 text-white text-center" 
@@ -96,6 +96,38 @@
 				</div>
 			</div>
 			<?php endforeach;  ?>
+		</div>
+
+		<!-- Change Passowrd Modal-->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="password" placeholder="" />
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="" />
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="" />
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- secction5 -->
@@ -175,37 +207,7 @@
 			</div>
 		</div>
 
-		<!-- Change Passowrd Modal-->
-		<div class="container" id="Password">
-			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
-					<div class="modal-dialog bg-modal">
-						<div class="modal-content">
-							<h5 id="tittle-password" class="text-center">Change Password</h5>
-							<form action="<?= site_url('Auth') ?>" method="post">
-								<div class="form-group">
-									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="password" placeholder="" />
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
-								</div>
-								<div class="form-group">
-									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<button type="button" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 
 	</div>
 

@@ -3,7 +3,9 @@
 
 /* universal */
 
-
+.container-fluid-0 {
+	position: relative;
+}
 
 /* section0 */
 
@@ -205,15 +207,15 @@
 
 #vector8 {
 	position: absolute;
-	bottom: 5.5%;
+	bottom: 0%;
+	left: 0%;
 	/* width: 8.5%; */
 }
 
 #vector9 {
-	position: fixed;
+	position: absolute;
 	right: 0%;
 	top: 0%;
-
 }
 
 .btn-outline {
@@ -222,8 +224,8 @@
 	margin: 0%;
 	border-radius: 100px;
 	width: 26px;
-    height: 26px;
-    color: black;
+	height: 26px;
+	color: black;
 }
 
 
@@ -349,17 +351,61 @@
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.btn-row button{
-    width: 40%;
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
 }
 
-.btn-row .btn-outline-info{
-    
+/* password */
+
+#Password .modal-content {
+	width: 80%;
+	background: #FFFFFF;
+	border-radius: 10px;
+	padding-bottom: 5%;
 }
 
-.btn-row{
-    margin-top: 3%;
+.form-group {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2%;
 }
+
+.form-group .btn {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.form-group .btn-info {
+	background: #4BC2C5 !important;
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+.form-group .btn-outline-danger {
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+#tittle-password {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#Password input,
+.tittle {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ABABAB;
+}
+
+.tittle #a-item {
+	color: #4BC2C5;
+}
+
+
 
 
 

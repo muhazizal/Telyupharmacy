@@ -96,6 +96,7 @@
 	top: 0%;
 	left: 88.8%;
 	width: 11.2%;
+	/* z-index: -1; */
 }
 
 #kartun {
@@ -160,4 +161,10 @@ body {
 .dropdown-menu .btn {
 	background-color: #4BC2C5;
 	color: white;
+}
+
+@media screen and (max-width:768px) {
+	.navbar-toggler {
+		margin-right: 5%;
+	}
 }

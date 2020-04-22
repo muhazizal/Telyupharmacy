@@ -257,6 +257,11 @@ textarea {
 }
 
 
+/* delete */
+.btn-secondary {
+	transform: translate(-10%);
+}
+
 
 
 
