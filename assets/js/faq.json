@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Bagaimana cara mendaftarkan akun di TelyuPharmacy ?",
+    "solution": "Pilih menu Sign Up pada navbar bagian atas di Home Page, Isi semua data diri yang di perlukan untuk mendaftar."
+  },
+  {
+    "title": "Bagaimana cara mendapatkan password jika lupa dengan password akun?",
+    "solution": "Klik link action 'Forgot Password' pada page Sign In, Isi username untuk mendapatkan password akun anda."
+  },
+  {
+    "title": "Bagaimana cara mengubah profile akun?",
+    "solution": "Pilih menu Profile (gambar photo), Pilih ubah profile dan isi data yang ingin diubah."
+  },
+  {
+    "title": "Bagaimana cara mencari produk di Telyupharmacy",
+    "solution": "Pilih menu Product pada navbar bagian atas di Home Page, Cari produk lewat search box dengan mengisi nama produk yang dicari."
+  },
+  {
+    "title": "Bagaimana cara mencari artikel kesehatan di Telyupharmacy?",
+    "solution": "Pilih menu Article pada navbar bagian atas Home Page, Cari artikel yang ingin anda baca."
+  }
+]
