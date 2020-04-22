@@ -165,7 +165,7 @@
 							<button type="button" class="btn btn-warning" data-toggle="modal"	
 								data-target="#EditArticle<?php echo $article['id'] ?>">Update</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal"	
-								data-target="DeleteArticle<?php echo $article['id'] ?>">Delete</button>			
+								data-target="#DeleteArticle<?php echo $article['id'] ?>">Delete</button>			
 							</form>
 						</td>
 						<td>

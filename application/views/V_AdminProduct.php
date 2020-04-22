@@ -166,7 +166,7 @@
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal"	
-								data-target="DeleteProduct<?php echo $product['id'] ?>">Delete</button>	
+								data-target="#DeleteProduct<?php echo $product['id'] ?>">Delete</button>	
 						</td>
 						<td>
 							<div class="detail">
@@ -295,7 +295,7 @@
 
 	<!-- delete product -->
 	<?php foreach($data_product as $product):  ?>
-	<div class="modal fade" id="DeleteArticle<?php echo $product['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="DeleteProduct<?php echo $product['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   	<div class="modal-dialog" role="document">
     	<div class="modal-content">
       	<div class="modal-header">
@@ -331,12 +331,6 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script>
-	function deleteConfirm(url){
-		$('#btn-delete').attr('href', url);
-		$('#deleteModal').modal();
-	}
-	</script>
 </body>
 
 </html>
