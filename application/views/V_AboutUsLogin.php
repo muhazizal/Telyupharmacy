@@ -10,7 +10,6 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/AboutUsLogin.css')?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
@@ -67,109 +66,23 @@
 		<div class="container-fluid" id="section1">
 			<div class="col" id="tittle">About Us</div>
 			<div class="row text-center" id="team">
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
-							class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
-							class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
-							class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
-							class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<img id="team-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt=""
-							class="img-fluid rounded-circle">
-						<h3 id="nama">Naufal Harsa Pratama</h3>
-						<h3 id="nim">1301180240</h3>
-					</div>
-				</div>
+				<!-- Jquery JSON Team -->
 			</div>
 		</div>
-
 
 		<div id="section2">
 			<div class="row">
 				<div id="margin" class="col-md-7">
 					<div class="col" id="tittle">FAQ</div>
-					<ol>
-						<li>Bagaimana cara mendaftarkan akun di TelyuPharmacy ?
-							<ul>
-								<li><span>Pilih menu Sign Up pada navbar bagian atas di Home Page,</span></li>
-								<li><span>Isi semua data diri yang di perlukan untuk mendaftar.</span></li>
-							</ul>
-						</li>
-						<li>Bagaimana cara mendapatkan password jika lupa dengan password akun?
-							<ul>
-								<li><span>Klik link action 'Forgot Password' pada page Sign In,</span></li>
-								<li><span>Isi username untuk mendapatkan password akun anda.</span></li>
-							</ul>
-						</li>
-						<li>Bagaimana cara mengubah profile akun?
-							<ul>
-								<li><span>Pilih menu Profile (gambar photo)</span></li>
-								<li><span>Pilih ubah profile dan isi data yang ingin diubah.</span></li>
-							</ul>
-						</li>
-						<li>Bagaimana cara membeli produk di Telyupharmacy
-							<ul>
-								<li><span>Pilih menu Product pada navbar bagian atas di Home Page</span></li>
-								<li><span>Cari produk lewat search box dengan mengisi nama produk yang dicari</span>
-								</li>
-								<li><span>Anda juga dapat mencari produk berdasarkan rating dan harga produk</span></li>
-								<li><span>Pilih produk sesuai yang diinginkan di tampilan produk</span></li>
-								<li><span>Produk akan masuk ke dalam cart yang ada di navbar bagian atas Home
-										Page</span></li>
-								<li><span>Checkout pembelian produk yang ada di cart.</span></li>
-							</ul>
-						</li>
-						<li>Bagaimana cara mencari artikel kesehatan di Telyupharmacy?
-							<ul>
-								<li><span>Pilih menu Article pada navbar bagian atas Home Page</span></li>
-								<li><span>Cari artikel yang ingin anda baca</span></li>
-								<li><span>Anda juga bisa mensorting artikel berdasarkan kategori dan waktu.</span></li>
-							</ul>
-						</li>
-
-					</ol>
+					<table id="faq-table" class="table table-borderless">
+						<!-- Jquery JSON FAQ -->
+					</table>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-4">
 					<img id="orang" src="<?= base_url('assets/image/AboutUs.svg') ?>" alt="">
 				</div>
 			</div>
 		</div>
-
-
-
-
-
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -248,23 +161,6 @@
 		</div>
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
@@ -275,6 +171,46 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+	<!-- Load FAQ Table JSON -->
+	<script>
+		$(document).ready( () => {
+
+			$.getJSON("<?= base_url('assets/js/faq.json'); ?>", data => {
+				let dataFAQ = '';
+				$.each(data, (key, value) => {
+					dataFAQ += `
+						<tr>
+							<th> ${value.title} </th>
+						</tr>
+						<tr>
+							<td> ${value.solution} </td>
+						</tr>
+					`;
+				});
+				$('#faq-table').append(dataFAQ);
+			});
+
+			$.getJSON("<?= base_url('assets/js/team.json'); ?>", data => {
+				let dataTeam = '';
+				$.each(data, (key, value) => {
+					dataTeam += `
+					<div class="card">
+						<div class="card-body">
+							<img id="team-photo" src="<?= base_url("assets/image/");?>${value.image}" alt=""
+								class="img-fluid rounded-circle">
+							<h3 id="nama"> ${value.name} </h3>
+							<h3 id="nim"> ${value.nim} </h3>
+						</div>
+					</div>
+					`
+				});
+				$('#team').append(dataTeam);
+			});
+
+		});
+	</script>
 </body>
 
 </html>
