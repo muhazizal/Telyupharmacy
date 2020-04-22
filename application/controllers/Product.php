@@ -25,13 +25,21 @@ class Product extends CI_Controller {
         $data['data_product'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_AdminProduct",$data); 
     }
+    public function search_Product(){
+        $name_product    =   $this->input->post('name_product');
+        $data2['data_product']  = $this->M_Product->get_ProductbyName($name_product);
+        $this->load->view('V_AdminProduct',$data2);
+    }
     public function add_Product(){
+        $this->form_validation->set_rules('name', 'Name', 'required|trim');
+		$this->form_validation->set_rules('price', 'Price', 'required|trim');
+		$this->form_validation->set_rules('desciption', 'Description', 'required|trim');
         $data = [
             //"id" => $this->input->mt_rand(10000000000,99999999999),
 			"name" => $this->input->post('name', true),
 			"price" => $this->input->post('price', true),
 			"description" => $this->input->post('description', true),
-			"image" => "gambardefault.jpg",//$this->input->post('image', true),
+			"image" => $this->uploadimage(),
 			"admin_id" => $this->session->userdata('id'),
         ];
         $check = $this->M_Product->insert_Product($data);
@@ -58,38 +66,80 @@ class Product extends CI_Controller {
         $this->load->view("V_AdminProduct"); 
     }
     public function edit_Product($id_product){
-        $data = [
-            "id" => $id_product,
-			"name" => $this->input->post('name', true),
-			"price" => $this->input->post('price', true),
-			"description" => $this->input->post('description', true),
-			"image" => "gambardefault.jpg",//$this->input->post('image', true),
-			"admin_id" => $this->session->userdata('id'),
-        ];
-        $check = $this->M_Product->update_Product($id_product,$data);
-		if($check){
-            $this->session->set_flashdata('Product_Updated', 'The selected product detail(s) has been updated!');
-        }else{
-            $this->session->set_flashdata('Product_notUpdated', 'There was a problem updating the product detail(s)!');
-        }            
-		redirect('Product/load_AdminProduct');
-    }
-    public function upload_Productimage(){
-        $config['upload_path']          =  './assets/uploads/'; 
-        $config['allowed_types']        =  'jpg|png';     
-        $config['max_size']             =  '1024';             
-        $config['max_width']            =  '600';           
-        $config['max_height']           =  '600';   
-        $config['overwrite']			= true;  
+        $data['data_product'] = $this->M_product->get_ProductId($id_product);
 
-        $this->load->library('upload', $config);
-        if(!$this->upload->do_upload('userfile')){
-            $error = array('error' => $this->upload->display_errors());
-            $this->load->view('v_upload', $error);                
-        }else{
-            $data = array('upload_data' => $this->upload->data());
-            $this->load->view('v_upload_success', $data);
+        $this->form_validation->set_rules('name', 'Name', 'required|trim');
+		$this->form_validation->set_rules('price', 'Price', 'required|trim');
+		$this->form_validation->set_rules('desciption', 'Description', 'required|trim');
+
+        if($this->form_validation->run()==false){
+			$this->load_AdminArticle();
+		}else{
+            $id = $this->session->userdata('id');
+            $upload_image = $_FILES['image']['name'];
+            
+            if($upload_image){
+				$config = [
+					'upload_path'             =>  './assets/uploads/article/',
+					'allowed_types'      	  =>  'gif|jpg|png',
+					'max_size'           	  =>  '5120',             
+					'max_width'          	  =>  '600',           
+					'max_height'         	  =>  '600',   
+					'overwrite'               =>  'true',
+                ];
+                
+                $this->load->library('upload', $config);
+
+                if($this->upload->upload('image')){
+					$old_image = $data['data_product']['image'];
+
+					if ($old_image != 'defaultproduct.jpg') {
+							unlink(FCPATH . 'assets/uploads/product/' . $old_image);                    
+					}
+					$new_image = $this->upload->data('file_name');
+					$data = [
+                        "id"            => $id_product,
+                        "name"          => $this->input->post('name', true),
+                        "price"         => $this->input->post('price', true),
+                        "description"   => $this->input->post('description', true),
+                        "image"         => $new_image,
+                        "admin_id"      => $this->session->userdata('id'),
+					];
+				}
+            }
+            else{
+                $data = [
+                    "id"            => $id_product,
+                    "name"          => $this->input->post('name', true),
+                    "price"         => $this->input->post('price', true),
+                    "description"   => $this->input->post('description', true),
+                    "admin_id"      => $this->session->userdata('id'),
+				];
+            }
+            $check = $this->M_Product->update_Product($id_product,$data);
+            if($check){
+				$this->session->set_flashdata('Product_Updated', 'The selected product detail(s) has been updated!');
+			}else{
+				$this->session->set_flashdata('Product_notUpdated', 'There was a problem updating the product detail(s)!');
+			}            
+			redirect('Article/load_AdminProduct');
         }
     }
+	public function uploadimage(){
+		$config = [
+			'upload_path'			  =>  './assets/uploads/article/',
+			'allowed_types'      	  =>  'gif|jpg|png',
+			'max_size'           	  =>  '5120',             
+			'max_width'          	  =>  '2000',           
+			'max_height'         	  =>  '2000',   
+			'overwrite'               =>  'true',
+		];
+		$this->load->library('upload', $config);
+		if($this->upload->do_upload('image')){
+			return $this->upload->data("file_name");
+		}else {
+			return "defaultproduct.jpg";
+		}
+	}
 }
 ?>
