@@ -353,22 +353,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-<<<<<<< HEAD
-									<input class="form-control" type="password" name="password" placeholder="" />
-									<span class="tittle">Forgot the password?<a href=""> Click Here</a></span>
-								</div>
-								<div class="form-group">
-									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="" />
-								</div>
-								<div class="form-group">
-									<button type="button" class="btn btn-info" >Change Password</button>
-									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
-=======
 									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
 									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
@@ -385,7 +369,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="form-group">
 									<button type="submit" class="btn btn-info">Change Password</button>
 									<button type="button" class="btn btn-outline-danger">Cancel</button>
->>>>>>> b6d91e345f2992f264fe74c9f3cd1da14bcf2b68
 								</div>
 							</form>
 						</div>
