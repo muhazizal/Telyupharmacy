@@ -43,12 +43,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/image/default.jpg') ?>"
+									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
@@ -158,8 +160,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
 				<div id="header">
-					<span id="Tittle">Best Seller</span>
-					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
+					<span id="Tittle">Product</span>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All</a>
 				</div>
 
 				<div class="row" id="row1">	
@@ -200,7 +202,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					$j = 0;
+					$i = 0;
 					foreach ($articles as $article) {
 				?>
 				<div class="col-md-3">
@@ -218,8 +220,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</div>
 				<?php 
-					$j += 1;
-					if ($j == 8) {
+					$i += 1;
+					if ($i == 8) {
 						break;
 					}
 				}

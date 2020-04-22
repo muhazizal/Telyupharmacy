@@ -6,7 +6,6 @@ class M_Article extends CI_Model {
   function __construct(){
     parent::__construct();
   }
-
   public function get_AllArticle(){
     return $this->db->get('article')->result_array();
   } 

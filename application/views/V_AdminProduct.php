@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+	<title>Product List</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | AdminProduct</title>
@@ -46,8 +47,8 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<h3 class="text-center profile-title">Nama</h3>
+									<h3 class="text-center profile-title">email</h3>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
@@ -87,84 +88,30 @@
 					</tr>
 					</!-->
 				<tbody>
+					<?php foreach($data_product as $product):  ?>
 					<tr>
 						<td>
 							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
 						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
+						<td id="margin"><?php echo $product['name'] ?></td>
+						<td id="margin">Rp <?php echo $product['price'] ?></td>
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
+								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
+								<button type="button" class="btn btn-danger">Delete</button>					
 						</td>
 						<td>
 							<div class="detail">
 								<a href=""  data-toggle="modal"
-						data-target="#DetailsProduct"><img class="rounded-circle d-block" id="detail"
+						data-target="#DetailsProduct<?php echo $product['id'] ?>"><img class="rounded-circle d-block" id="detail"
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<img src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
-						</td>
-						<td id="margin">Kirito</td>
-						<td id="margin">Rp 15,000</td>
-						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"
-								data-target="#EditProduct">Update</button>
-							<button type="button" class="btn btn-danger">Delete</button>
-						</td>
-						<td>
-							<div class="detail">
-								<a href=""><img class="rounded-circle d-block" id="detail"
-										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
-							</div>
-						</td>
-					</tr>
+					<?php endforeach;  ?>					
 				</tbody>
 			</table>
 		</div>
-
-
 
 		<!-- Add Product -->
 		<div class="container" id="NewProduct">
@@ -173,22 +120,26 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Add New Product</h5>
-							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+							<form action="<?php echo site_url('Product/add_Product') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/image/defaultproduct.jpg") ?>" class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
-									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control"></a>
+									<div class="topic-title">Product Name</div>
+									<!-- <input type="text" class="form-control"> -->
+									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required']) ?>
+									<div class="topic-title">Price</div>
+									<!-- <a href=""><input type="text" class="form-control"></a> -->
+									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required']) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Product</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required']) ?>
+								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
+								<?= form_submit(['submit'=>'Submit','class'=>'btn btn-primary','value'=>'Add New Product']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -199,13 +150,14 @@
 		</div>
 
 		<!-- Update Product -->
+		<?php foreach($data_product as $product):  ?>
 		<div class="container" id="NewProduct">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="EditProduct" role="dialog">
+				<div class="modal fade justify-content-center" id="EditProduct<?php echo $product['id'] ?>" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Update Product</h5>
-							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+							<h5 id="tittle">Edit Product</h5>
+							<form action="<?php echo site_url('Product/edit_Product/'.$product['id']) ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
@@ -213,14 +165,18 @@
 									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="topic-title">Article Name</div>
-									<input type="text" class="form-control">
-									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control"></a>
+									<div class="topic-title">Product Name</div>
+									<!-- <input type="text" class="form-control"> -->
+									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required','value'=>$product['name']]) ?>
+									<div class="topic-title">Price</div>
+									<!-- <a href=""><input type="text" class="form-control"></a> -->
+									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required','value'=>$product['price']]) ?>
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Product</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required','value'=>$product['description']]) ?>
+								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
+								<?= form_submit(['submit'=>'Update','class'=>'btn btn-primary','value'=>'Update Product']) ?>
 								<button type="button" class="btn btn-outline-danger"
 									data-dismiss="modal">Cancel</button>
 							</form>
@@ -228,15 +184,17 @@
 					</div>
 				</div>
 			</div>
+			<?php endforeach;  ?>
 		</div>
 
 		<!-- detail produk -->
+		<?php foreach($data_product as $product):  ?>
 		<div class="container" id="NewProduct">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="DetailsProduct" role="dialog">
+				<div class="modal fade justify-content-center" id="DetailsProduct<?php echo $product['id'] ?>" role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
-							<h5 id="tittle">Details Product</h5>
+							<h5 id="tittle">Product Details</h5>
 							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
@@ -246,45 +204,27 @@
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Product Name</div>
-									<input type="text" class="form-control" disabled="true">
-									<div class="topic-title">Category</div>
-									<a href=""><input type="text" class="form-control" disabled="true"></a>
+									<!-- <input type="text" class="form-control" disabled="true"> -->
+									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required','value'=>$product['name']]) ?>
+									<div class="topic-title">Price</div>
+									<!-- <a href=""><input type="text" class="form-control" disabled="true"></a> -->
+									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required','value'=>$product['price']]) ?>
+
 								</div>
 								<div class="topic-title desc">Description</div>
-								<textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>
-								<button type="button" class="btn btn-primary ">Add New Article</button>
+								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea> -->
+								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required','value'=>$product['description']]) ?>
+								<!-- <button type="button" class="btn btn-primary ">Add New Article</button> -->
 								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Cancel</button>
+									data-dismiss="modal">Close</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<?php endforeach;  ?>
 	</div>
-
-
-
-
-
-
-
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -298,6 +238,12 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script>
+	function deleteConfirm(url){
+		$('#btn-delete').attr('href', url);
+		$('#deleteModal').modal();
+	}
+	</script>
 </body>
 
 </html>

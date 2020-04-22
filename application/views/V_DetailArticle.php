@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | Product</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/Product.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/DetailArticle.css')?>">
 </head>
 
 <body>
 	<div class="container-fluid-0">
-	<div class="container-fluid" id="section0">
+		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -37,91 +37,69 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" style="border-bottom : 3px solid #4BC2C5"
-								href="<?= site_url('Product'); ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
-								class="rounded-circle d-block top" />
-							</a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-								<img src="<?= base_url('assets/image/default.jpg') ?>"
-										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
-									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title">MaulGanteng</h3>
+									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
+										class="btn btn-default">Log Out</a>
 								</form>
-							</div>	
+							</div>
 						</div>
 					</form>
 				</div>
 			</nav>
 		</div>
 
-		<div class="container-fluid" id="section1">
-
-		</div>
-
-
-		<!-- section2 -->
-		<div class="container-fluid" id="section2">
-
-			<div class="row">
-				<div class="col-md-2" id="form">
-					<h1 id="tittle-section2">Search for more details</h1>
-					<div class="card" id="PriceRange">
-						<h6>Price Range</h6>
-						<form action="">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-								placeholder="Minimum price">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-								placeholder="Maximum price">
-							<button type="btn" class="btn btn-outline-info text-white" id="submit">Submit</button>
-							<!-- <button type="btn" class="btn btn-outline-info" id="submit1">25rb - 50rb</button>
-							<button type="btn" class="btn btn-outline-info" id="submit2">50rb - 100rb</button>
-							<button type="btn" class="btn btn-outline-info">100rb - 200rb</button> -->
-						</form>
+		<div class="container" id="section1">
+			<form class="form-container">
+				<div class="form-group row">
+					<div class="col-lg-4"><img id="photoarticle" src="<?= base_url('assets/image/kirito.jpg') ?>"
+                                alt="" /></div>
+                    <div class="col-lg-1"></div>
+					<div class="col-lg-7">
+						<h1 id="artittle">Article</h1>
+						<h2 id="category">Category</h2>
+						<h2 id="deskripsi">Deskripsi</h2>
+						<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
+							lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
+							elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
+							Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
+							consectetur varius in. Amet ut facilisi volutpat id. Ut senectus pellentesque turpis rhoncus
+							dui. Ultricies elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget
+							placerat amet. Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea.
+							Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id. Cursus hendrerit sem
+							varius platea. Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id.
 					</div>
+					
 				</div>
-
-				<?php
-					foreach ($products as $product) {
-				?>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp <?= $product['price'] ?></div>
-							</div>
-							<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
-						</div>
-					</div>
-				</div>
-				<?php } ?>
-			</div>
-			
-		</div>
+			</form>
+        </div>
+        <img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+		<img id="vector9" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -156,7 +134,8 @@
 								<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+								<a class="nav-link" id="copyright"
+									href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>

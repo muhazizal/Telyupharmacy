@@ -167,17 +167,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="row" id="row1">	
 					<?php
 						$i = 0;
-						foreach ($products as $row) {
+						foreach ($products as $product) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/image/') . $row['image'] ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
-									<h5><a id="label-section-3"><?= $row['name'] ?></a></h5>
+									<h5><a id="label-section-3"><?= $product['name'] ?></a></h5>
 								</div>
 								<div class="card-text">
-									<div class="harga">Rp <?= $row['price'] ?></div>
+									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
 								<a href="#" class="btn btn-large btn-block mt-3 text-white" >Buy</a>
 							</div>
@@ -203,17 +203,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="row" id="row2">
 				<?php
 					$i = 0;
-					foreach ($articles as $row) {
+					foreach ($articles as $article) {
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/') . $row['image']; ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/image/') . $article['image']; ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
-								<h5><?= $row['title']; ?></h5>
+								<h5><?= $article['title']; ?></h5>
 							</div>
 							<div class="card-text" id="text-section-4">
-								<?= $row['description']; ?>
+								<?= $article['description']; ?>
 							</div>
 							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
