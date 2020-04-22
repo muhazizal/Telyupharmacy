@@ -37,7 +37,7 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item"
+							<a class="nav-link" id="a-item" style="border-bottom : 3px solid #4BC2C5"
 								href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
@@ -52,8 +52,10 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">

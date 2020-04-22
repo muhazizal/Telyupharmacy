@@ -55,10 +55,10 @@
 						<a id="shoping" href="<?= site_url("./Cart") ?>"><i class="fa fa-shopping-cart"
 								aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
-									class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
