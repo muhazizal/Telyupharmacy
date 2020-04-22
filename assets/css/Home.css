@@ -11,8 +11,6 @@
 	justify-content: center;
 }
 
-#loginmodal {}
-
 .modal-content {
 	position: absolute;
 	width: 320px;
@@ -176,6 +174,7 @@
 	margin-left: 2%;
 	margin-top: 15%;
 	position: relative;
+	z-index: 5;
 }
 
 #tittle-section1-2 {
@@ -195,9 +194,10 @@
 	height: auto;
 }
 
-#vector1 {
+img#vector1 {
 	display: flex;
 	visibility: 1;
+	z-index: -1;
 	width: 15%;
 	position: absolute;
 	height: auto;
@@ -295,8 +295,6 @@
 	color: magenta;
 	cursor: pointer;
 }
-
-.card-text {}
 
 /* section4 */
 

@@ -43,19 +43,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/image/default.jpg') ?>"
+									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>	
 						</div>
@@ -104,14 +111,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section1">
 			<div class="row">
 				<div class="col-lg-6">
-					<h2 id="tittle-section1-1">Lorem ipsum dolor sit amet, consectetur adipiscieng elit</h2>
-					<p id="tittle-section1-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui
-						repellendus voluptates
-						rerum
-						ea
-						ducimus reiciendis nisi quae perspiciatis quas inventore architecto, iste commodi dignissimos
-						nostrum
-						dolorum placeat libero vel.
+					<h2 id="tittle-section1-1">Creating Your Healty, For Your Future</h2>
+					<p id="tittle-section1-2">
+					</p>
 				</div>
 				<div class="col-lg-6">
 					<img id="orang" src="<?= base_url('assets/image/Dokter1.png') ?>" alt="">
@@ -123,26 +125,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- section2 -->
 		<div class=" container-fluid" id="section2">
 			<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-				</ol>
+				
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="<?= base_url('assets/image/pohon1.jpg') ?>" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>First slide label</h5>
-							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-						</div>
+						<img src="<?= base_url('assets/image/banner-1.png') ?>" class="d-block w-100" alt="...">
 					</div>
+
 					<div class="carousel-item">
-						<img src="<?= base_url('assets/image/pohon2.jpg') ?>" class="d-block w-100" alt="...">
-						<div class="carousel-caption d-none d-md-block">
-							<h5>Second slide label</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
+						<img src="<?= base_url('assets/image/banner-2.png') ?>" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item">
+						<img src="<?= base_url('assets/image/banner-3.png') ?>" class="d-block w-100" alt="...">
 					</div>
 				</div>
+				
 				<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
@@ -158,8 +155,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
 				<div id="header">
-					<span id="Tittle">Best Seller</span>
-					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Lihat Semua</a>
+					<span id="Tittle">Product</span>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All Product</a>
 				</div>
 
 				<div class="row" id="row1">	
@@ -178,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
-								<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
+								<button type="button" class="btn btn-large btn-block mt-3 text-white">Buy</button>
 							</div>
 						</div>
 					</div>
@@ -200,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<!-- Show all article -->
 			<div class="row" id="row2">
 				<?php
-					$j = 0;
+					$i = 0;
 					foreach ($articles as $article) {
 				?>
 				<div class="col-md-3">
@@ -213,17 +210,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-text" id="text-section-4">
 								<?= $article['description']; ?>
 							</div>
-							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
 					</div>
 				</div>
 				<?php 
-					$j += 1;
-					if ($j == 8) {
+					$i += 1;
+					if ($i == 4) {
 						break;
 					}
 				}
 				?>
+			<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" >Show All Article</a>
 			</div>
 		</div>
 
@@ -303,6 +300,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
+		<!-- Change Passowrd Modal-->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Old Password" />
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="New Password" />
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</div>
 

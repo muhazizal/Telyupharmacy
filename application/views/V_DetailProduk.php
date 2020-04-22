@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | Product</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/Product.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/DetailProduk.css')?>">
 </head>
 
 <body>
@@ -37,91 +37,77 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" style="border-bottom : 3px solid #4BC2C5"
-								href="<?= site_url('Product'); ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
-						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
-								class="rounded-circle d-block top" />
-							</a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-								<img src="<?= base_url('assets/image/default.jpg') ?>"
-										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
-									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
-									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
-									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out
-									</a>
+									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title">MaulGanteng</h3>
+									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
+									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
+										class="btn btn-default">Log Out</a>
 								</form>
-							</div>	
+							</div>
 						</div>
 					</form>
 				</div>
 			</nav>
 		</div>
 
-		<!-- section2 -->
-		<div class="container-fluid" id="section2">
-			<div class="row">
-
-				<div class="col-md-2" id="form">
-					<h1 id="tittle-section2">Search for more details</h1>
-					<div class="card" id="PriceRange">
-						<h6>Price Range</h6>
-						<form action="">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-								placeholder="Minimum price">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
-								placeholder="Maximum price">
-							<button type="btn" class="btn btn-outline-info text-white" id="submit">Submit</button>
-							<!-- <button type="btn" class="btn btn-outline-info" id="submit1">25rb - 50rb</button>
-							<button type="btn" class="btn btn-outline-info" id="submit2">50rb - 100rb</button>
-							<button type="btn" class="btn btn-outline-info">100rb - 200rb</button> -->
-						</form>
+		<div class="container" id="section1">
+			<form class="form-container">
+				<div class="row">
+					<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+								alt="" /></div>
+					<div class="col-xl-7">
+						<h1 id="artittle">Antasida 60 ml - Obat Maag</h1>
+                        <h2 id="category">Category<span id="category">Rp 15000</span></h2>
+                        <h2 id="category">Jumlah
+                            <span>
+                                <button onclick="kurang()" type="button" class="btn btn-outline">-</button>
+                                <input type="text" id="number" value="1" disabled="true">
+                                <button onclick="tambah();" type="button" class="btn btn-outline">+</button>
+                                </span>
+                        </h2>
+						<h2 id="deskripsi">Deskripsi</h2>
+						<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
+							lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
+							elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
+							Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
+							consectetur varius in.
 					</div>
-				</div>
-
-				<?php
-					foreach ($products as $product) {
-				?>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
-						<div class="card-block">
-							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></h5>
-							</div>
-							<div class="card-text">
-								<div class="harga">Rp <?= $product['price'] ?></div>
-							</div>
-							<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
-						</div>
-					</div>
-				</div>
-				<?php } ?>
-
-			</div>
-		</div>
+                </div>
+                <div class="row btn-row">
+                    <div class="col-xl-5"></div>
+                    <div class="col-xl-7">
+                        <button class="btn btn-outline-info">Beli Sekarang</button>
+                        <button class="btn btn-info">Tambah Keranjang</button>
+                    </div>
+                </div>
+			</form>
+        </div>
+        <img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+		<img id="vector9" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -156,7 +142,8 @@
 								<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+								<a class="nav-link" id="copyright"
+									href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -199,43 +186,42 @@
 				</div>
 			</div>
 		</div>
-		
-		<!-- Change Passowrd Modal-->
-		<div class="container" id="Password">
-			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
-					<div class="modal-dialog bg-modal">
-						<div class="modal-content">
-							<h5 id="tittle-password" class="text-center">Change Password</h5>
-							<form action="<?= site_url('Auth') ?>" method="post">
-								<div class="form-group">
-									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Old Password" />
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
-								</div>
-								<div class="form-group">
-									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="New Password" />
-								</div>
-								<div class="form-group">
-									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
-								</div>
-								<div class="form-group">
-									<button type="button" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger">Cancel</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 	</div>
 
 	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
+    <script src="<?= base_url("assets/js/cart.js") ?>"></script>
+    <script>
+        function tambah() {
+			var a = parseInt(document.getElementById("number").value);
+			document.getElementById("number").value = a + 1;
+			document.getElementById("number-checkout").value = a + 1;
+		}
+
+		function kurang() {
+			var a = parseInt(document.getElementById("number").value);
+			document.getElementById("number").value = a - 1;
+			document.getElementById("number-checkout").value = a - 1;
+		}
+
+		function checkAll() {
+			var parent = document.getElementById("parent");
+			var input = document.getElementsByTagName("input");
+			if (parent.checked === true) {
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
+						input[i].checked = true;
+					}
+				}
+			} else if (parent.checked === false) {
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
+						input[i].checked = false;
+					}
+				}
+			}
+		}
+    </script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>

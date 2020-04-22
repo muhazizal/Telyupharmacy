@@ -11,8 +11,6 @@
 	justify-content: center;
 }
 
-#loginmodal {}
-
 .modal-content {
 	position: absolute;
 	width: 320px;
@@ -272,14 +270,21 @@
 	color: black;
 }
 
+#faq-table{
+	margin: 30px 15px 30px 15px;
+}
+
+#faq-table th {
+	color: #4BC2C5;
+	border-bottom: 0;
+}
+
 #orang {
 	width: 100%;
 	position: absolute;
 	top: 20%;
-	right: 5%;
 	display: flex;
 }
-
 
 /* section5 */
 

@@ -76,13 +76,12 @@
 
 		<div class="container" id="section1">
 			<form class="form-container">
-				<div class="form-group row">
-					<div class="col-lg-4"><img id="photoarticle" src="<?= base_url('assets/image/kirito.jpg') ?>"
-                                alt="" /></div>
-                    <div class="col-lg-1"></div>
-					<div class="col-lg-7">
+				<div class="row">
+					<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+								alt="" /></div>
+					<div class="col-xl-7">
 						<h1 id="artittle">Article</h1>
-						<h2 id="category">Category</h2>
+						<h2 id="category">Category<span id="category">Antibiotik</span></h2>
 						<h2 id="deskripsi">Deskripsi</h2>
 						<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
 							lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies

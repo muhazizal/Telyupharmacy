@@ -29,6 +29,13 @@ class Buyer extends CI_Controller {
   //   $(this).next('.custom-file-label').addClass("selected").html(filename);
   // });
 
+  public function load_editProfile() {
+    $username = $this->session->userdata('username');
+    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+    
+    $this->load->view('V_EditProfile', $data);
+  }
+
   public function do_editProfile() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);

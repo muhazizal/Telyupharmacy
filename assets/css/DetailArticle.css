@@ -116,73 +116,70 @@
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 	position: relative;
-	width: 60%;
+	width: 70%;
 	padding: 3em;
 }
 
 #artittle {
-    margin-bottom: 3%;
+	padding-bottom: 3%;
 	font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: 0.02em;
-    color: #000000;
-    border-bottom: 1px solid #E7EAEC
-
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 33px;
+	letter-spacing: 0.02em;
+	color: #000000;
+	border-bottom: 1px solid #E7EAEC
 }
 
-#category{
-    margin-bottom: 3%;
-	ont-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #ABABAB;
-    border-bottom: 1px solid #E7EAEC;
-
+#section1 span {
+	margin-left: 10%;
 }
 
-#deskripsi{
-    margin-bottom: 3%;
+#category {
+	padding-bottom: 4%;
+	margin-top: 4%;
 	font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #ABABAB;
-    border-bottom: 1px solid #E7EAEC
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	color: #ABABAB;
+	border-bottom: 1px solid #E7EAEC;
+
 }
 
-#article{
-    margin-bottom: 3%;
+#deskripsi {
+	margin-top: 4%;
+	margin-bottom: 4%;
 	font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	color: #ABABAB;
 
 }
 
-#photoarticle{
-    position: absolute;
-    width: 30%;
-    background: url(elevated-view-pills-blue-background_23-2147867081.jpg);
-    border-radius: 15px;
+#article {
+	margin-bottom: 2%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0.02em;
+	color: #000000;
+
 }
+
 
 #section1 img {
-    position: absolute;
-    width: 100%;
-    height: 55%;
-    
-    border-radius: 15px;
+	width: 90%;
+	height: 90%;
+	border-radius: 15px;
 }
 
 #section1 input {
@@ -190,23 +187,18 @@
 	width: 80%;
 }
 
-#section1 form {
-	margin-top: 5%;
-}
-
-
 
 #vector8 {
 	position: absolute;
-	bottom: 30%;
+	bottom:5.5%;
 	/* width: 8.5%; */
 }
 
 #vector9 {
-	position: absolute;
+	position: fixed;
 	right: 0%;
 	top: 0%;
-	/* width: 12.1%; */
+
 }
 
 
@@ -334,7 +326,6 @@
 }
 
 .btn {
-	background-color: #4BC2C5;
 	color: white;
 }
 
@@ -351,12 +342,3 @@
 		display: none;
 	}
 }
-
-
-
-
-
-
-
-
-

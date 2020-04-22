@@ -169,7 +169,7 @@ h6 {
 	font-weight: normal;
 	font-size: 12px;
 	line-height: 16px;
-	color: black !important;
+	color: white !important;
 }
 
 #section2 button:hover {
@@ -358,6 +358,52 @@ h6 {
 	line-height: 14px;
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
+}
+
+/* password */
+
+#Password .modal-content {
+	width: 80%;
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+
+.form-group {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.form-group .btn {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.form-group .btn-info {
+	background: #4BC2C5 !important;
+	border-radius: 5px;
+}
+
+.form-group .btn-outline-danger {
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+#tittle-password {
+	margin-top: 5%;
+}
+
+#Password input,
+.tittle {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ABABAB;
+}
+
+.tittle #a-item {
+	color: #4BC2C5;
 }
 
 .btn {

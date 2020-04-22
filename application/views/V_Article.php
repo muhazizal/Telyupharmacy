@@ -55,10 +55,10 @@
 						<a id="shoping" href="<?= site_url("./Cart") ?>"><i class="fa fa-shopping-cart"
 								aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
-									class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
@@ -66,10 +66,15 @@
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>
 						</div>
@@ -88,90 +93,120 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>
 		</div>
 
-	</div>
-
-	<!-- secction5 -->
-	<div class="container-fluid" id="section5">
-		<div class="container-fluid" id="section5-1">
-			<div class="row">
-				<div class="col-md-4">
-					<span id="Telyu">Telyu</span>
-					<span id="Pharmacy">Pharmacy</span>
-					<br>
-					<span id="create">Creating Your healty,</span>
-					<br>
-					<span id="create">For Your Future</span>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<p id="copyright">2020 TelyuPharmacy. All Rights Reserved</p>
-				</div>
-				<div class="col-md-2">
-					<ul class="navbar-nav">
-						<li id="section5-li">
-							<span id="section5-header">Explore</span>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="<?= site_url("Buyer") ?>">Home</a>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="<?= site_url("Product") ?>">Product</a>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="<?= site_url("Article") ?>">Article</a>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin") ?>">About
-								Us</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="navbar-nav">
-						<li id="section5-2-li">
-							<span id="section5-header">Visit</span>
-						<li>
-						<li> <span id="copyright">TelyuPharmacy</span>
-							<span id="copyright">Jl Telekomunikasi, Sukapura, Kec.Dayeuhklot,</span>
-							<span id="copyright">Bandung, Jawa Barat</span><br>
-							<span id="copyright">40257</span>
-						</li>
-						<li>
-							<a id="section5-header">New Business</a>
-						</li>
-						<li>
-							<span id="copyright">telyupharmacy@gmail.com</span><br>
-							<span id="copyright">+62 227 565 930</span>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-2">
-					<ul class="navbar-nav">
-						<li id="section5-li">
-							<span id="section5-header">Follow</span>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="#">Instagram</a>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="#">Facebook</a>
-						</li>
-						<li>
-							<a class="nav-link" id="copyright" href="#">Twitter</a>
-						</li>
-					</ul>
+		<!-- secction5 -->
+		<div class="container-fluid" id="section5">
+			<div class="container-fluid" id="section5-1">
+				<div class="row">
+					<div class="col-md-4">
+						<span id="Telyu">Telyu</span>
+						<span id="Pharmacy">Pharmacy</span>
+						<br>
+						<span id="create">Creating Your healty,</span>
+						<br>
+						<span id="create">For Your Future</span>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<p id="copyright">2020 TelyuPharmacy. All Rights Reserved</p>
+					</div>
+					<div class="col-md-2">
+						<ul class="navbar-nav">
+							<li id="section5-li">
+								<span id="section5-header">Explore</span>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="<?= site_url("Buyer") ?>">Home</a>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="<?= site_url("Product") ?>">Product</a>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="<?= site_url("Article") ?>">Article</a>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin") ?>">About
+									Us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="navbar-nav">
+							<li id="section5-2-li">
+								<span id="section5-header">Visit</span>
+							<li>
+							<li> <span id="copyright">TelyuPharmacy</span>
+								<span id="copyright">Jl Telekomunikasi, Sukapura, Kec.Dayeuhklot,</span>
+								<span id="copyright">Bandung, Jawa Barat</span><br>
+								<span id="copyright">40257</span>
+							</li>
+							<li>
+								<a id="section5-header">New Business</a>
+							</li>
+							<li>
+								<span id="copyright">telyupharmacy@gmail.com</span><br>
+								<span id="copyright">+62 227 565 930</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-2">
+						<ul class="navbar-nav">
+							<li id="section5-li">
+								<span id="section5-header">Follow</span>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="#">Instagram</a>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="#">Facebook</a>
+							</li>
+							<li>
+								<a class="nav-link" id="copyright" href="#">Twitter</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+
+		<!-- Change Passowrd Modal-->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Old Password" />
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="New Password" />
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 
