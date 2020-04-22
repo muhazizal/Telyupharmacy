@@ -104,7 +104,7 @@
 								id="number-checkout" type="text" value="1" disabled="true">)</span>
 						<hr>
 						<span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 65.000</span>
-						<a id="checkout" class="btn btn-info" href="<?= base_url("") ?>" role="button">Checkout</a>
+						<a id="checkout" class="btn btn-info" href="#" role="button">Checkout</a>
 					</form>
 				</div>
 			</div>

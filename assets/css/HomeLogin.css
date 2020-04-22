@@ -142,7 +142,7 @@
 	height: auto;
 }
 
-#vector1 {
+img#vector1 {
 	display: flex;
 	visibility: 1;
 	z-index: -1;
@@ -448,4 +448,8 @@
 
 .tittle #a-item {
 	color: #4BC2C5;
+}
+
+.btn {
+	background-color: #4BC2C5;
 }

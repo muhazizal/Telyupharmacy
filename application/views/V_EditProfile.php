@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TelyuPharmacy | Product</title>
+	<title>TelyuPharmacy | Edit Profile</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -24,18 +24,6 @@
 				</button>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
-						<li class="nav-item">
-							<form action="" class="navbar-form">
-								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
-									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
@@ -73,8 +61,6 @@
 				</div>
 			</nav>
 		</div>
-
-
 
 		<div class="container" id="section1">
 			<div class="row">

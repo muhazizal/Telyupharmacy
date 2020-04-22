@@ -14,7 +14,7 @@
 
 <body>
 	<div class="container-fluid-0">
-	<div class="container-fluid" id="section0">
+		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -63,10 +63,15 @@
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>	
 						</div>
@@ -75,15 +80,10 @@
 			</nav>
 		</div>
 
-		<div class="container-fluid" id="section1">
-
-		</div>
-
-
 		<!-- section2 -->
 		<div class="container-fluid" id="section2">
-
 			<div class="row">
+
 				<div class="col-md-2" id="form">
 					<h1 id="tittle-section2">Search for more details</h1>
 					<div class="card" id="PriceRange">
@@ -119,8 +119,8 @@
 					</div>
 				</div>
 				<?php } ?>
+
 			</div>
-			
 		</div>
 
 		<!-- secction5 -->
@@ -199,6 +199,39 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- Change Passowrd Modal-->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Auth') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Old Password" />
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="New Password" />
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 
 	<!-- Bootstrap JS -->

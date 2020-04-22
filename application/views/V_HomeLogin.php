@@ -54,10 +54,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>	
 						</div>
@@ -106,14 +111,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section1">
 			<div class="row">
 				<div class="col-lg-6">
-					<h2 id="tittle-section1-1">Lorem ipsum dolor sit amet, consectetur adipiscieng elit</h2>
-					<p id="tittle-section1-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae qui
-						repellendus voluptates
-						rerum
-						ea
-						ducimus reiciendis nisi quae perspiciatis quas inventore architecto, iste commodi dignissimos
-						nostrum
-						dolorum placeat libero vel.
+					<h2 id="tittle-section1-1">Creating Your Healty, For Your Future</h2>
+					<p id="tittle-section1-2">
+					</p>
 				</div>
 				<div class="col-lg-6">
 					<img id="orang" src="<?= base_url('assets/image/Dokter1.png') ?>" alt="">
@@ -156,7 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="container" id="section3-1">
 				<div id="header">
 					<span id="Tittle">Product</span>
-					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All</a>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All Product</a>
 				</div>
 
 				<div class="row" id="row1">	
@@ -175,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
-								<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
+								<button type="button" class="btn btn-large btn-block mt-3 text-white">Buy</button>
 							</div>
 						</div>
 					</div>
@@ -210,17 +210,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="card-text" id="text-section-4">
 								<?= $article['description']; ?>
 							</div>
-							<a href="#" class="btn btn-block mt-3 text-white">Read More</a>
 						</div>
 					</div>
 				</div>
 				<?php 
 					$i += 1;
-					if ($i == 8) {
+					if ($i == 4) {
 						break;
 					}
 				}
 				?>
+			<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" >Show All Article</a>
 			</div>
 		</div>
 
@@ -300,7 +300,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-
 		<!-- Change Passowrd Modal-->
 		<div class="container" id="Password">
 			<div class="row justify-content-center">
@@ -327,8 +326,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<button type="button" class="btn btn-outline-danger">Cancel</button>
 								</div>
 							</form>
-
-							
 						</div>
 					</div>
 				</div>
