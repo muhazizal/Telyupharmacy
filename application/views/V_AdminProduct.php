@@ -56,7 +56,6 @@
 						</div>
 					</form>
 				</div>
-
 			</nav>
 		</div>
 
@@ -132,11 +131,11 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="product">Product</span>
-			<form action="" class="navbar-form">
+			<form action="<?php echo site_url('Product/search_Product/') ?>" class="navbar-form"  method="get">
 				<div class="form-group input-group">
-					<input id="search" type="text" class="form-control col-md-3" placeholder="Search">
+					<input id="search" name="name_product" type="text" class="form-control col-md-3" placeholder="Search Product" >
 					<div class="input-group-btn">
-						<button type="button" id="icon" class="btn btn-outline-info">
+						<button type="submit" id="icon" class="btn btn-outline-info">
 							<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 					</div>
@@ -153,12 +152,12 @@
 						<th scope="col">Action</th>
 						<th scope="col">Details</th>
 					</tr>
-					</!-->
+					</!--> 
 				<tbody>
 					<?php foreach($data_product as $product):  ?>
 					<tr>
 						<td>
-							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
+							<img id="image" src="<?= base_url("assets/uploads/product/") . $product['image']?>" alt="">
 						</td>
 						<td id="margin"><?php echo $product['name'] ?></td>
 						<td id="margin">Rp <?php echo $product['price'] ?></td>
@@ -192,7 +191,7 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url("assets/image/defaultproduct.jpg") ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/uploads/product/defaultproduct.jpg")?>" class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -229,7 +228,7 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/uploads/product/") . $product['image']?>" class="rounded-circle d-block" />
 									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -267,7 +266,7 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/uploads/product/") . $product['image']?>" class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -318,8 +317,6 @@
 	</div>
 	<?php endforeach;  ?>
 </div>
-
-
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">

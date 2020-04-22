@@ -131,11 +131,11 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="article">Article</span>
-			<form action="" class="navbar-form">
+			<form action="<?php echo site_url('Product/search_Product/') ?>" class="navbar-form">
 				<div class="form-group input-group">
-					<input id="search" type="text" class="form-control col-md-3" placeholder="Search">
+					<input id="search" type="text" class="form-control col-md-3" placeholder="Search Article">
 					<div class="input-group-btn">
-						<button type="button" id="icon" class="btn btn-outline-info">
+						<button type="submit" id="icon" class="btn btn-outline-info">
 							<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 					</div>
@@ -157,7 +157,7 @@
 					<?php foreach($data_article as $article):  ?>
 					<tr>
 						<td>
-							<img id="image" src="<?= base_url("assets/image/kirito.jpg") ?>" alt="">
+							<img id="image" src="<?= base_url('assets/uploads/article/') . $article['image'] ?>" alt="">
 						</td>
 						<td id="margin"><?php echo $article['title'] ?></td>
 						<td id="margin"><?php echo $article['category'] ?></td>
@@ -193,9 +193,9 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url("assets/image/defaultarticle.jpg") ?>"
+									<img id="addImage" src="<?= base_url("assets/uploads/article/defaultarticle.jpg") ?>"
 										class="rounded-circle d-block" />
-									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
+									<input type='file' href=""><i class="fa fa-camera" aria-hidden="true" name='image' ></i></input>
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
@@ -232,8 +232,9 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
-									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
+									<img id="addImage" src="<?= base_url('assets/uploads/article/') . $article['image'] ?>" class="rounded-circle d-block" />
+									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
+									<input type='file' href=""><i class="fa fa-camera" aria-hidden="true"></i></input>
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
@@ -258,7 +259,6 @@
 		</div>
 		<?php endforeach;  ?>
 
-
 		<!-- detail article -->
 		<?php foreach($data_article as $article):  ?>
 		<div class="container" id="NewArticle">
@@ -272,7 +272,7 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url() ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url('assets/uploads/article/') . $article['image'] ?>" class="rounded-circle d-block" />
 									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -294,8 +294,6 @@
 			</div>
 		</div>
 		<?php endforeach;  ?>
-
-
 
 		<!-- delete article -->
 		<?php foreach($data_article as $article):  ?>
@@ -323,8 +321,6 @@
 		</div>
 		<?php endforeach;  ?>
 	</div>
-
-
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
