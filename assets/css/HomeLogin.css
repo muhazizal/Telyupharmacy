@@ -46,7 +46,7 @@
 	color: #4BC2C5 !important;
 }
 
-#Pharmacy {
+#section0 #Pharmacy {
 	color: black !important;
 	font-weight: normal;
 	font-family: Nunito Sans;
@@ -360,8 +360,6 @@ img#vector1 {
 	color: #FFFFFF;
 }
 
-
-
 /* profile */
 
 .dropdown-menu {
@@ -410,11 +408,13 @@ img#vector1 {
 	width: 80%;
 	background: #FFFFFF;
 	border-radius: 10px;
+	padding-bottom: 5%;
 }
 
 .form-group {
 	width: 80%;
 	margin-left: 10%;
+	margin-bottom: 2%;
 }
 
 .form-group .btn {
@@ -425,6 +425,7 @@ img#vector1 {
 .form-group .btn-info {
 	background: #4BC2C5 !important;
 	border-radius: 5px;
+	margin-top: 5%;
 }
 
 .form-group .btn-outline-danger {
@@ -434,6 +435,7 @@ img#vector1 {
 
 #tittle-password {
 	margin-top: 5%;
+	margin-bottom: 10%;
 }
 
 #Password input,
@@ -448,8 +450,4 @@ img#vector1 {
 
 .tittle #a-item {
 	color: #4BC2C5;
-}
-
-.btn {
-	background-color: #4BC2C5;
 }

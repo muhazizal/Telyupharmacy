@@ -36,7 +36,7 @@
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<form class="form-inline ">
+				<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
@@ -46,16 +46,21 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
+									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Change Password</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
-							</div>
+							</div>	
 						</div>
 					</form>
 				</div>
@@ -170,20 +175,20 @@
 							<form action="<?= site_url('Auth') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Old Password" />
+									<input class="form-control" type="password" name="password" placeholder="" />
 									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="New Password" />
+									<input class="form-control" type="password" name="password" placeholder="" />
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+									<input class="form-control" type="password" name="password" placeholder="" />
 								</div>
 								<div class="form-group">
 									<button type="button" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger">Cancel</button>
+									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
@@ -191,6 +196,8 @@
 				</div>
 			</div>
 		</div>
+
+		
 
 	</div>
 

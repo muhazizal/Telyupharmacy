@@ -156,3 +156,8 @@ body {
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
 }
+
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
+	color: white;
+}

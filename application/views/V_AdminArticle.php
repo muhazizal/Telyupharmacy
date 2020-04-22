@@ -45,13 +45,11 @@
 									class="rounded-circle d-block top" /></a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
+									<img src="<?= base_url('') ?>"
+										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title">Nama Admin</h3>
 									<h3 class="text-center profile-title">Id Admin</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>
 						</div>

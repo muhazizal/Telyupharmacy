@@ -360,17 +360,23 @@ h6 {
 	color: rgba(0, 0, 0, 0.6);
 }
 
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
+}
+
 /* password */
 
 #Password .modal-content {
 	width: 80%;
 	background: #FFFFFF;
 	border-radius: 10px;
+	padding-bottom: 5%;
 }
 
 .form-group {
 	width: 80%;
 	margin-left: 10%;
+	margin-bottom: 2%;
 }
 
 .form-group .btn {
@@ -381,6 +387,7 @@ h6 {
 .form-group .btn-info {
 	background: #4BC2C5 !important;
 	border-radius: 5px;
+	margin-top: 5%;
 }
 
 .form-group .btn-outline-danger {
@@ -390,6 +397,7 @@ h6 {
 
 #tittle-password {
 	margin-top: 5%;
+	margin-bottom: 10%;
 }
 
 #Password input,
@@ -404,9 +412,4 @@ h6 {
 
 .tittle #a-item {
 	color: #4BC2C5;
-}
-
-.btn {
-	background-color: #4BC2C5;
-	color: white;
 }

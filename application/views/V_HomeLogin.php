@@ -310,20 +310,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<form action="<?= site_url('Auth') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Old Password" />
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+									<input class="form-control" type="password" name="password" placeholder="" />
+									<span class="tittle">Forgot the password?<a href=""> Click Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="New Password" />
+									<input class="form-control" type="password" name="password" placeholder="" />
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+									<input class="form-control" type="password" name="password" placeholder="" />
 								</div>
 								<div class="form-group">
-									<button type="button" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger">Cancel</button>
+									<button type="button" class="btn btn-info" >Change Password</button>
+									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>

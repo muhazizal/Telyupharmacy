@@ -218,7 +218,7 @@
 	color: black;
 }
 
-#faq-table{
+#faq-table {
 	margin: 30px 15px 30px 15px;
 }
 
@@ -314,7 +314,6 @@
 	color: #FFFFFF;
 }
 
-
 /* profile */
 
 .dropdown-menu {
@@ -353,8 +352,58 @@
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.btn {
-	background-color: #4BC2C5	;
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
+}
+
+/* password */
+
+#Password .modal-content {
+	width: 80%;
+	background: #FFFFFF;
+	border-radius: 10px;
+	padding-bottom: 5%;
+}
+
+.form-group {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+
+.form-group .btn {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.form-group .btn-info {
+	background: #4BC2C5 !important;
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+.form-group .btn-outline-danger {
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+#tittle-password {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#Password input,
+.tittle {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ABABAB;
+}
+
+.tittle #a-item {
+	color: #4BC2C5;
 }
 
 @media screen and (max-width:767px) {

@@ -203,8 +203,9 @@ textarea {
 	margin-left: 15%;
 }
 
-.fa-camera {
+#NewProduct a .fa-camera {
 	transform: translate(500%, -550%);
+	color: black !important;
 }
 
 .form-control:disabled,
@@ -212,7 +213,6 @@ textarea {
 	background-color: #FFE7E7;
 	opacity: 1;
 }
-
 
 /* profile */
 
@@ -251,6 +251,12 @@ textarea {
 	text-align: center;
 	color: rgba(0, 0, 0, 0.6);
 }
+
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
+}
+
+
 
 
 
