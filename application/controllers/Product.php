@@ -16,6 +16,7 @@ class Product extends CI_Controller {
         $username = $this->session->userdata('username');
         $data['buyer'] = $this->M_Buyer->checkBuyer($username);
         $data['products'] = $this->M_Product->get_AllProduct();
+        
         $this->load->view("V_Product", $data,array('error' => ' ' ));
     }
 

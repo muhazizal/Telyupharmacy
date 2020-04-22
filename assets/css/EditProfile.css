@@ -188,6 +188,7 @@
 	position: absolute;
 	left: 87.9%;
 	bottom: 29%;
+	z-index: -1;
 	/* width: 12.1%; */
 }
 
@@ -234,6 +235,9 @@
 	color: rgba(0, 0, 0, 0.6);
 }
 
+.dropdown-menu a {
+	background-color: #4BC2C5;
+}
 
 @media screen and (max-width: 767px) {
 	#section1 img {

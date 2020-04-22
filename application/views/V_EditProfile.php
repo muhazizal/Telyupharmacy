@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/Profile.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/EditProfile.css')?>">
 </head>
 
 <body>
@@ -40,20 +40,26 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
-									class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="">
-									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+								<form action="" >
+									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+										class="rounded-circle d-block bot" />
+									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>
 						</div>
@@ -62,23 +68,44 @@
 			</nav>
 		</div>
 
-		<div class="container" id="section1">
-			<div class="row">
-				<div class="col-md-4">
-					<a href=""><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-						class="rounded-circle d-block" /></a>
-				</div>
-				<div class="col-md-1"></div>
-				<div class="col-md-7 tittle">
-					<span id="tittle">Maul Ganteng</span>	
+		<!-- Flashdata -->
+		<?php if ($this->session->flashdata('editSuccess')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('editSuccess'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 				</div>
 			</div>
-			<form class="form-container">
+		</div>
+		<?php } ?>
+
+		<div class="container" id="section1">
+			<div class="row">
+				<div class="col-md-12 text-center mb-0">
+					<p class="mb-0">Fill the form bellow to edit your profile, <?= $buyer['username'] ?></p>
+				</div>
+			</div>
+			<form action="<?= site_url('Buyer/editProfile'); ?>" method="post" enctype="multipart/form-data" class="form-container">
+
+				<div class="form-group row d-flex align-items-center">
+					<div class="col-md-4">
+						<img src="<?= base_url('assets/image/') . $buyer['image']; ?>" class="rounded-circle d-block"/>
+					</div>
+					<div class="custom-file col-md-5 ml-3">
+						<input type="file" class="custom-file-input" id="customFile" name="image">
+						<label class="custom-file-label" for="customFile">Choose file</label>
+					</div>
+				</div>
+				
 				<div class="form-group row">
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Name:</label>
 					<div class="col-lg-7">
-					<input type="text" class="form-control" id="inputName" placeholder="Name">
+						<input type="text" name="name" class="form-control" id="inputName" value="<?= $buyer['name']; ?>">
+						<?= form_error('name', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
 				</div>
@@ -87,7 +114,8 @@
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Username:</label>
 					<div class="col-lg-7">
-					<input type="text" class="form-control" id="inputName" placeholder="Username">
+						<input type="text" name="username" class="form-control" id="inputName" value="<?= $buyer['username']; ?>">
+						<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
 				</div>
@@ -96,7 +124,8 @@
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Email:</label>
 					<div class="col-lg-7">
-					<input type="text" class="form-control" id="inputName" placeholder="Email">
+						<input type="text" name="email" class="form-control" id="inputName" value="<?= $buyer['email']; ?>">
+						<?= form_error('email', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
 				</div>
@@ -104,7 +133,7 @@
 				<div class="form-group row">
 					<div class="col-lg-4"></div>
 					<div class="col-lg-3">
-						<button type="button" class="btn btn-info">Submit</button>
+						<button type="submit" class="btn btn-info">Submit</button>
 					</div>
 					<div class="col-lg-3">
 						<button type="button" class="btn btn-danger">Delete Account</button>
@@ -113,7 +142,6 @@
 					
 			</form>
 		</div>
-
 		
 		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
 		<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
@@ -129,6 +157,14 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+	<script>
+		$('.custom-file-input').on('change', () => {
+			let filename = $(this).val().split('\\').pop();
+			$(this).next('.custom-file-label').addClass("selected").html(filename);
+		});
+	</script>
 </body>
 
 </html>

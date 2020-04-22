@@ -13,8 +13,9 @@ class M_Buyer extends CI_Model {
     ])->row_array();
   }
   
-  public function editBuyer() {
-    
+  public function editBuyer($id, $data) {
+    $this->db->where('id', $id);
+    return $this->db->update('buyer', $data);
   }
 }
 

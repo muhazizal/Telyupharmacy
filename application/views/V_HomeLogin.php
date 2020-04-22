@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
 									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
 									<a type="button" class="btn btn-default mt-3 text-white text-center" 
 										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password

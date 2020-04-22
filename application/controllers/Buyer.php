@@ -23,22 +23,57 @@ class Buyer extends CI_Controller {
     $this->load->view('V_HomeLogin', $data);
   }
 
-  // show filename
-  // $('.custom-file-input').on('change', () => {
-  //   let filename = $(this).val().split('\\').pop();
-  //   $(this).next('.custom-file-label').addClass("selected").html(filename);
-  // });
-
-  public function load_editProfile() {
+  public function editProfile() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-    
-    $this->load->view('V_EditProfile', $data);
-  }
 
-  public function do_editProfile() {
-    $username = $this->session->userdata('username');
-    $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+    $this->form_validation->set_rules('name', 'Name', 'required|trim');
+    $this->form_validation->set_rules('username', 'Username', 'required|trim');
+    $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+
+    if ($this->form_validation->run() == FALSE) {
+      $this->load->view('V_EditProfile', $data);
+    } else {
+      $id = $this->session->userdata('id');
+      $upload_image = $_FILES['image']['name'];
+
+      if ($upload_image) {
+        $config = [
+          'allowed_types' => 'gif|jpg|png',
+          'max-size' => '2048',
+          'upload_path' => './assets/image/',
+        ];
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('image')) {
+          $old_image = $data['buyer']['image'];
+
+          if ($old_image != 'default.jpg') {
+            unlink(FCPATH . 'assets/image/' . $old_image);
+          }
+
+          $new_image = $this->upload->data('file_name');
+          $data = [
+            'username' => $this->input->post('username', true),
+            'email' => $this->input->post('email', true),
+            'name' => $this->input->post('name', true),
+            'image' => $new_image
+          ];
+        } 
+      } else {
+        $data = [
+          'username' => $this->input->post('username', true),
+          'email' => $this->input->post('email', true),
+          'name' => $this->input->post('name', true),
+        ];
+      }
+
+      $this->M_Buyer->editBuyer($id, $data);
+      $this->session->set_userdata($data);
+      $this->session->set_flashdata('editSuccess', 'Your profile has been updated!');
+      redirect('Buyer/editProfile');
+    }
   }
   
 }
