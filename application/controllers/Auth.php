@@ -68,6 +68,7 @@ class Auth extends CI_Controller {
             'email'    => $buyer['email'],
             'status'   => $buyer['status'],
             'id'       => $buyer['id'],
+            'password' => $buyer['password']
           ];
           $this->session->set_userdata($data);
           $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$buyer['username']);

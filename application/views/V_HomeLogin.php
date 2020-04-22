@@ -104,6 +104,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('changePasswordFailed')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('changePasswordFailed'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('changePasswordSame')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('changePasswordSame'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('changePasswordSuccess')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('changePasswordSuccess'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('mustInputPassword')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('mustInputPassword'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
     </div>
 		<?php } ?>
 
@@ -187,7 +231,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					} 
 					?>
 				</div>
-
 			</div>
 		</div>
 
@@ -307,22 +350,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle-password" class="text-center">Change Password</h5>
-							<form action="<?= site_url('Auth') ?>" method="post">
+							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Old Password" />
+									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
+									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
 									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="New Password" />
+									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
+									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="password" placeholder="Confrim New Password" />
+									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
 								</div>
 								<div class="form-group">
-									<button type="button" class="btn btn-info">Change Password</button>
+									<button type="submit" class="btn btn-info">Change Password</button>
 									<button type="button" class="btn btn-outline-danger">Cancel</button>
 								</div>
 							</form>
