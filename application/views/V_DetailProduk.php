@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/DetailArticle.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/DetailProduk.css')?>">
 </head>
 
 <body>
@@ -80,21 +80,30 @@
 					<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
 								alt="" /></div>
 					<div class="col-xl-7">
-						<h1 id="artittle">Article</h1>
-						<h2 id="category">Category<span id="category">Antibiotik</span></h2>
+						<h1 id="artittle">Antasida 60 ml - Obat Maag</h1>
+                        <h2 id="category">Category<span id="category">Rp 15000</span></h2>
+                        <h2 id="category">Jumlah
+                            <span>
+                                <button onclick="kurang()" type="button" class="btn btn-outline">-</button>
+                                <input type="text" id="number" value="1" disabled="true">
+                                <button onclick="tambah();" type="button" class="btn btn-outline">+</button>
+                                </span>
+                        </h2>
 						<h2 id="deskripsi">Deskripsi</h2>
 						<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
 							lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
 							elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
 							Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
-							consectetur varius in. Amet ut facilisi volutpat id. Ut senectus pellentesque turpis rhoncus
-							dui. Ultricies elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget
-							placerat amet. Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea.
-							Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id. Cursus hendrerit sem
-							varius platea. Auctor ut eget consectetur varius in. Amet ut facilisi volutpat id.
+							consectetur varius in.
 					</div>
-					
-				</div>
+                </div>
+                <div class="row btn-row">
+                    <div class="col-xl-5"></div>
+                    <div class="col-xl-7">
+                        <button class="btn btn-outline-info">Beli Sekarang</button>
+                        <button class="btn btn-info">Tambah Keranjang</button>
+                    </div>
+                </div>
 			</form>
         </div>
         <img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
@@ -180,7 +189,39 @@
 	</div>
 
 	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
+    <!-- Bootstrap JS -->
+    <script src="<?= base_url("assets/js/cart.js") ?>"></script>
+    <script>
+        function tambah() {
+			var a = parseInt(document.getElementById("number").value);
+			document.getElementById("number").value = a + 1;
+			document.getElementById("number-checkout").value = a + 1;
+		}
+
+		function kurang() {
+			var a = parseInt(document.getElementById("number").value);
+			document.getElementById("number").value = a - 1;
+			document.getElementById("number-checkout").value = a - 1;
+		}
+
+		function checkAll() {
+			var parent = document.getElementById("parent");
+			var input = document.getElementsByTagName("input");
+			if (parent.checked === true) {
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
+						input[i].checked = true;
+					}
+				}
+			} else if (parent.checked === false) {
+				for (var i = 0; i < input.length; i++) {
+					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
+						input[i].checked = false;
+					}
+				}
+			}
+		}
+    </script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
