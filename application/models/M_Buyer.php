@@ -17,6 +17,12 @@ class M_Buyer extends CI_Model {
     $this->db->where('id', $id);
     return $this->db->update('buyer', $data);
   }
+
+  public function changePassword($id, $newPassword) {
+    $this->db->set('password', $newPassword);
+    $this->db->where('id', $id);
+    return $this->db->update('buyer');
+  } 
 }
 
 ?>

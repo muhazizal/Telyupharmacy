@@ -75,6 +75,36 @@ class Buyer extends CI_Controller {
       redirect('Buyer/editProfile');
     }
   }
+
+  public function changePassword() {
+    $this->form_validation->set_rules('oldPassword', 'Old Password', 'required|trim');
+    $this->form_validation->set_rules('newPassword1', 'New Password', 'required|trim|min_length[8]|matches[newPassword2]');
+    $this->form_validation->set_rules('newPassword2', 'Confirm New Password', 'required|trim|min_length[8]|matches[newPassword1]');
+
+    if ($this->form_validation->run() == FALSE) {
+      $this->session->set_flashdata('mustInputPassword', 'You must input the field!');
+      redirect('Buyer');
+    } else {
+      $id = $this->session->userdata('id');
+      $oldPassword = $this->input->post('oldPassword');
+      $newPassword = $this->input->post('newPassword1');
+
+      if (!password_verify($oldPassword, $this->session->userdata('password'))) {
+        $this->session->set_flashdata('changePasswordFailed', 'You have input the wrong password!');
+        redirect('Buyer');
+      } else {
+        if ($oldPassword == $newPassword) {
+          $this->session->set_flashdata('changePasswordSame', 'You have input the same password!');
+          redirect('Buyer');
+        } else {
+          $passwordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+          $this->M_Buyer->changePassword($id, $passwordHash);
+          $this->session->set_flashdata('changePasswordSuccess', 'Your password has been changed!');
+          redirect('Buyer');
+        }
+      }
+    }
+  }
   
 }
 

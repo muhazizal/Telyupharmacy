@@ -46,7 +46,11 @@
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
+<<<<<<< HEAD
 									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+=======
+								<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+>>>>>>> b6d91e345f2992f264fe74c9f3cd1da14bcf2b68
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
