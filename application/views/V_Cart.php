@@ -42,18 +42,24 @@
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 									class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
+								<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white" data-dismiss="modal">Change Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default mt-3 text-white">Log Out</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
+									</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+										class="btn btn-default mt-3 text-white text-center">Log Out
+									</a>
 								</form>
 							</div>
 						</div>
