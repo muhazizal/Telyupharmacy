@@ -298,6 +298,11 @@ textarea {
 	background-color: #4BC2C5;
 }
 
+/* delete */
+.btn-secondary {
+	transform: translate(-10%);
+}
+
 
 
 /* media screen */

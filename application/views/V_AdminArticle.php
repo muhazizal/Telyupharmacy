@@ -45,11 +45,11 @@
 									class="rounded-circle d-block top" /></a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('') ?>"
-										class="rounded-circle d-block bot" />
+									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title">Nama Admin</h3>
 									<h3 class="text-center profile-title">Id Admin</h3>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" class="btn btn-default mt-3 text-white text-center">Log Out</a>
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>
 						</div>
@@ -60,7 +60,7 @@
 		</div>
 
 		<!-- Flashdata -->
-    <?php if ($this->session->flashdata('article_Inserted')) { ?>
+		<?php if ($this->session->flashdata('article_Inserted')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
@@ -92,7 +92,7 @@
 					</button>
 				</div>
 			</div>
-    </div>
+		</div>
 		<?php } else if ($this->session->flashdata('article_notDeleted')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -103,7 +103,7 @@
 					</button>
 				</div>
 			</div>
-    </div>
+		</div>
 		<?php } else if ($this->session->flashdata('article_Updated')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -114,7 +114,7 @@
 					</button>
 				</div>
 			</div>
-    </div>
+		</div>
 		<?php } else if ($this->session->flashdata('article_notUpdated')) { ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -125,7 +125,7 @@
 					</button>
 				</div>
 			</div>
-    </div>
+		</div>
 		<?php } ?>
 
 		<!-- section1 -->
@@ -162,16 +162,17 @@
 						<td id="margin"><?php echo $article['title'] ?></td>
 						<td id="margin"><?php echo $article['category'] ?></td>
 						<td id="margin">
-							<button type="button" class="btn btn-warning" data-toggle="modal"	
+							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditArticle<?php echo $article['id'] ?>">Update</button>
-							<button type="button" class="btn btn-danger" data-toggle="modal"	
-								data-target="DeleteArticle<?php echo $article['id'] ?>">Delete</button>			
+							<button type="button" class="btn btn-danger" data-toggle="modal"
+								data-target="#DeleteArticle<?php echo $article['id'] ?>">Delete</button>
 							</form>
 						</td>
 						<td>
 							<div class="detail">
 								<a href="" data-toggle="modal"
-						data-target="#DetailsArticle<?php echo $article['id'] ?>"><img class="rounded-circle d-block" id="detail"
+									data-target="#DetailsArticle<?php echo $article['id'] ?>"><img
+										class="rounded-circle d-block" id="detail"
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
@@ -192,7 +193,8 @@
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
-									<img id="addImage" src="<?= base_url("assets/image/defaultarticle.jpg") ?>" class="rounded-circle d-block" />
+									<img id="addImage" src="<?= base_url("assets/image/defaultarticle.jpg") ?>"
+										class="rounded-circle d-block" />
 									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
@@ -261,7 +263,8 @@
 		<?php foreach($data_article as $article):  ?>
 		<div class="container" id="NewArticle">
 			<div class="row justify-content-center">
-				<div class="modal fade justify-content-center" id="DetailsArticle<?php echo $article['id'] ?>" role="dialog">
+				<div class="modal fade justify-content-center" id="DetailsArticle<?php echo $article['id'] ?>"
+					role="dialog">
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Article Details </h5>
@@ -283,8 +286,7 @@
 								<div class="topic-title desc">Description</div>
 								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>-->
 								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required', 'value'=>$article['description']]) ?>
-								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
 							</form>
 						</div>
 					</div>
@@ -294,32 +296,33 @@
 		<?php endforeach;  ?>
 
 
-		
-<!-- delete article -->
-	<?php foreach($data_article as $article):  ?>
-	<div class="modal fade" id="DeleteArticle<?php echo $article['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  	<div class="modal-dialog" role="document">
-    	<div class="modal-content">
-      	<div class="modal-header">
-        	<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
-        	<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          	<span aria-hidden="true">×</span>
-        	</button>
-      	</div>
-      	<div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
-      	<div class="modal-footer">
-					<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
-						enctype="multipart/form-data" class="row">
-        		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-						<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
-						<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
-					</form>
-      	</div>
-    	</div>
-  	</div>
+
+		<!-- delete article -->
+		<?php foreach($data_article as $article):  ?>
+		<div class="modal fade" id="DeleteArticle<?php echo $article['id'] ?>" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+					<div class="modal-footer">
+						<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
+							enctype="multipart/form-data" class="row">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+							<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
+							<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php endforeach;  ?>
 	</div>
-	<?php endforeach;  ?>
-</div>
 
 
 

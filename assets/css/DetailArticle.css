@@ -3,7 +3,9 @@
 
 /* universal */
 
-
+.container-fluid-0 {
+	position: relative;
+}
 
 /* section0 */
 
@@ -190,15 +192,15 @@
 
 #vector8 {
 	position: absolute;
-	bottom:5.5%;
+	bottom: 32.5%;
+	left: 0%;
 	/* width: 8.5%; */
 }
 
 #vector9 {
-	position: fixed;
+	position: absolute;
 	right: 0%;
 	top: 0%;
-
 }
 
 
@@ -325,12 +327,99 @@
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.btn {
-	color: white;
+
+
+/* profile */
+
+.dropdown-menu {
+	width: 190px;
 }
 
+.dropdown-menu .bot {
+	width: 80px;
+	height: 80px;
+	margin-top: 8%;
+	margin-left: 30%;
+	margin-bottom: 5%;
+}
 
+.dropdown-menu a {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	color: rgba(0, 0, 0, 0.35);
+	text-align: left;
+	width: 90%;
+	margin-left: 5%;
+}
 
+.profile-title {
+	margin-top: 2%;
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-menu .btn {
+	background-color: #4BC2C5;
+}
+
+/* password */
+
+#Password .modal-content {
+	width: 80%;
+	background: #FFFFFF;
+	border-radius: 10px;
+	padding-bottom: 5%;
+}
+
+.form-group {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+
+.form-group .btn {
+	margin-left: 10%;
+	width: 80%;
+}
+
+.form-group .btn-info {
+	background: #4BC2C5 !important;
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+.form-group .btn-outline-danger {
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+#tittle-password {
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#Password input,
+.tittle {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 11px;
+	line-height: 15px;
+	color: #ABABAB;
+}
+
+.tittle #a-item {
+	color: #4BC2C5;
+}
 
 
 

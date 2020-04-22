@@ -166,7 +166,7 @@
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
 							<button type="button" class="btn btn-danger" data-toggle="modal"	
-								data-target="DeleteProduct<?php echo $product['id'] ?>">Delete</button>	
+								data-target="#DeleteProduct<?php echo $product['id'] ?>">Delete</button>	
 						</td>
 						<td>
 							<div class="detail">

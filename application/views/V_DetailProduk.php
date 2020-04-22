@@ -62,137 +62,186 @@
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title">MaulGanteng</h3>
 									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
-									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
+									<a href="<?= site_url('Buyer/editProfile') ?>" type="button"
+										class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit
+										Profile</a>
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+										Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default">Log Out</a>
+										class="btn btn-default mt-3 text-white text-center">Log Out</a>
 								</form>
 							</div>
 						</div>
 					</form>
 				</div>
-			</nav>
 		</div>
+		</form>
+	</div>
+	</nav>
+	</div>
 
-		<div class="container" id="section1">
-			<form class="form-container">
-				<div class="row">
-					<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
-								alt="" /></div>
-					<div class="col-xl-7">
-						<h1 id="artittle">Antasida 60 ml - Obat Maag</h1>
-                        <h2 id="category">Category<span id="category">Rp 15000</span></h2>
-                        <h2 id="category">Jumlah
-                            <span>
-                                <button onclick="kurang()" type="button" class="btn btn-outline">-</button>
-                                <input type="text" id="number" value="1" disabled="true">
-                                <button onclick="tambah();" type="button" class="btn btn-outline">+</button>
-                                </span>
-                        </h2>
-						<h2 id="deskripsi">Deskripsi</h2>
-						<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
-							lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
-							elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
-							Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
-							consectetur varius in.
-					</div>
-                </div>
-                <div class="row btn-row">
-                    <div class="col-xl-5"></div>
-                    <div class="col-xl-7">
-                        <button class="btn btn-outline-info">Beli Sekarang</button>
-                        <button class="btn btn-info">Tambah Keranjang</button>
-                    </div>
-                </div>
-			</form>
-        </div>
-        <img id="vector8" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
-		<img id="vector9" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
+	<div class="container" id="section1">
+		<form class="form-container">
+			<div class="row">
+				<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" /></div>
+				<div class="col-xl-7">
+					<h1 id="artittle">Antasida 60 ml - Obat Maag</h1>
+					<h2 id="category">Category<span id="category">Rp 15000</span></h2>
+					<h2 id="category">Jumlah
+						<span>
+							<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
+							<input type="text" id="number" value="1" disabled="true">
+							<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
+						</span>
+					</h2>
+					<h2 id="deskripsi">Deskripsi</h2>
+					<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
+						lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
+						elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
+						Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
+						consectetur varius in.
+				</div>
+			</div>
+			<div class="row btn-row">
+				<div class="col-xl-5"></div>
+				<div class="col-xl-7">
+					<button class="btn btn-outline-info">Beli Sekarang</button>
+					<button class="btn btn-info">Tambah Keranjang</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<img id="vector8" class="img-fluid" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+	<img id="vector9" class="img-fluid" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
 
-		<!-- secction5 -->
-		<div class="container-fluid" id="section5">
-			<div class="container-fluid" id="section5-1">
-				<div class="row">
-					<div class="col-md-4">
-						<span id="Telyu">Telyu</span>
-						<span id="Pharmacy">Pharmacy</span>
-						<br>
-						<span id="create">Creating Your healty,</span>
-						<br>
-						<span id="create">For Your Future</span>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<p id="copyright">2020 TelyuPharmacy. All Rights Reserved</p>
-					</div>
-					<div class="col-md-2">
-						<ul class="navbar-nav">
-							<li id="section5-li">
-								<span id="section5-header">Explore</span>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Buyer'); ?>">Home</a>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Product'); ?>">Product</a>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright"
-									href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul class="navbar-nav">
-							<li id="section5-2-li">
-								<span id="section5-header">Visit</span>
-							<li>
-							<li>
-								<span id="copyright">TelyuPharmacy</span>
-								<span id="copyright">Jl Telekomunikasi, Sukapura, Kec.Dayeuhklot,</span>
-								<span id="copyright">Bandung, Jawa Barat</span><br>
-								<span id="copyright">40257</span>
-							</li>
-							<li>
-								<a id="section5-header">New Business</a>
-							</li>
-							<li>
-								<span id="copyright">telyupharmacy@gmail.com</span><br>
-								<span id="copyright">+62 227 565 930</span>
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-2">
-						<ul class="navbar-nav">
-							<li id="section5-li">
-								<span id="section5-header">Follow</span>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="#">Instagram</a>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="#">Facebook</a>
-							</li>
-							<li>
-								<a class="nav-link" id="copyright" href="#">Twitter</a>
-							</li>
-						</ul>
-					</div>
+	<!-- secction5 -->
+	<div class="container-fluid" id="section5">
+		<div class="container-fluid" id="section5-1">
+			<div class="row">
+				<div class="col-md-4">
+					<span id="Telyu">Telyu</span>
+					<span id="Pharmacy">Pharmacy</span>
+					<br>
+					<span id="create">Creating Your healty,</span>
+					<br>
+					<span id="create">For Your Future</span>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p id="copyright">2020 TelyuPharmacy. All Rights Reserved</p>
+				</div>
+				<div class="col-md-2">
+					<ul class="navbar-nav">
+						<li id="section5-li">
+							<span id="section5-header">Explore</span>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="<?= site_url('Buyer'); ?>">Home</a>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="<?= site_url('Product'); ?>">Product</a>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About
+								Us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="navbar-nav">
+						<li id="section5-2-li">
+							<span id="section5-header">Visit</span>
+						<li>
+						<li>
+							<span id="copyright">TelyuPharmacy</span>
+							<span id="copyright">Jl Telekomunikasi, Sukapura, Kec.Dayeuhklot,</span>
+							<span id="copyright">Bandung, Jawa Barat</span><br>
+							<span id="copyright">40257</span>
+						</li>
+						<li>
+							<a id="section5-header">New Business</a>
+						</li>
+						<li>
+							<span id="copyright">telyupharmacy@gmail.com</span><br>
+							<span id="copyright">+62 227 565 930</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-2">
+					<ul class="navbar-nav">
+						<li id="section5-li">
+							<span id="section5-header">Follow</span>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="#">Instagram</a>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="#">Facebook</a>
+						</li>
+						<li>
+							<a class="nav-link" id="copyright" href="#">Twitter</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- change password -->
+	<div class="container" id="Password">
+		<div class="row justify-content-center">
+			<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+				<div class="modal-dialog bg-modal">
+					<div class="modal-content">
+						<h5 id="tittle-password" class="text-center">Change Password</h5>
+						<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
+							<div class="form-group">
+								<span class="tittle">Old Password</span>
+								<input class="form-control" type="password" name="oldPassword"
+									placeholder="Old Password" id="oldPassword" />
+								<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
+								<span class="tittle">Forgot the password?<a id="a-item" href=""> Click
+										Here</a></span>
+							</div>
+							<div class="form-group">
+								<span class="tittle">New Password</span>
+								<input class="form-control" type="password" name="newPassword1"
+									placeholder="New Password" id="newPassword1" />
+								<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
+							</div>
+							<div class="form-group">
+								<span class="tittle">Confrim New Password</span>
+								<input class="form-control" type="password" name="newPassword2"
+									placeholder="Confrim New Password" id="newPassword2" />
+							</div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-info">Change Password</button>
+								<button type="button" class="btn btn-outline-danger text"
+									data-dismiss="modal">Cancel</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
 	<!-- Bootstrap JS -->
-    <!-- Bootstrap JS -->
-    <script src="<?= base_url("assets/js/cart.js") ?>"></script>
-    <script>
-        function tambah() {
+	<!-- Bootstrap JS -->
+	<script src="<?= base_url("assets/js/cart.js") ?>"></script>
+	<script>
+		function tambah() {
 			var a = parseInt(document.getElementById("number").value);
 			document.getElementById("number").value = a + 1;
 			document.getElementById("number-checkout").value = a + 1;
@@ -221,7 +270,8 @@
 				}
 			}
 		}
-    </script>
+
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
