@@ -22,7 +22,7 @@ class M_Product extends CI_Model {
   } 
   public function update_Product($id_product,$data){
     $this->db->where('id',$id_product);
-    return $this->db->get('product',$data);
+    return $this->db->update('product',$data);
   }
   public function delete_Product($id_product){
     $this->db->where('id',$id_product);

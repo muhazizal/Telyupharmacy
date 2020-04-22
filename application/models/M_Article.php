@@ -23,7 +23,7 @@ class M_Article extends CI_Model {
   } 
   public function update_Article($id_article,$data){
     $this->db->where('id',$id_article);
-    return $this->db->get('article',$data);
+    return $this->db->update('article',$data);
   }
   public function delete_Article($id_article){
     $this->db->where('id',$id_article);
