@@ -47,8 +47,8 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">Nama</h3>
-									<h3 class="text-center profile-title">email</h3>
+									<h3 class="text-center profile-title">Nama Admin</h3>
+									<h3 class="text-center profile-title">Id Admin</h3>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
@@ -62,6 +62,75 @@
 			</nav>
 		</div>
 
+		<!-- Flashdata -->
+		<?php if ($this->session->flashdata('product_Inserted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('product_Inserted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('product_notInserted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_notInserted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('Product_Deleted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_Deleted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('product_notDeleted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('product_notDeleted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('product_Updated')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('product_Updated'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('product_notUpdated')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('product_notUpdated'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } ?>
+		
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="product">Product</span>
@@ -250,7 +319,7 @@
   	</div>
 	</div>
 	<?php endforeach;  ?>
-	</div>
+</div>
 
 
 

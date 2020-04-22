@@ -46,8 +46,8 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
 									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">Nama</h3>
-									<h3 class="text-center profile-title">Email@email.com</h3>
+									<h3 class="text-center profile-title">Nama Admin</h3>
+									<h3 class="text-center profile-title">Id Admin</h3>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Edit Profile</a>
 									<a type="button" class="btn btn-default" data-dismiss="modal">Change Password</a>
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
@@ -60,6 +60,75 @@
 
 			</nav>
 		</div>
+
+		<!-- Flashdata -->
+    <?php if ($this->session->flashdata('article_Inserted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_Inserted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('article_notInserted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_notInserted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<?php } else if ($this->session->flashdata('article_Deleted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_Deleted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('article_notDeleted')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_notDeleted'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('article_Updated')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_Updated'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } else if ($this->session->flashdata('article_notUpdated')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('article_notUpdated'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+    </div>
+		<?php } ?>
 
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
@@ -226,6 +295,8 @@
 		</div>
 		<?php endforeach;  ?>
 
+
+		
 <!-- delete article -->
 	<?php foreach($data_article as $article):  ?>
 	<div class="modal fade" id="DeleteArticle<?php echo $article['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -250,8 +321,6 @@
   	</div>
 	</div>
 	<?php endforeach;  ?>
-	
-
 </div>
 
 
