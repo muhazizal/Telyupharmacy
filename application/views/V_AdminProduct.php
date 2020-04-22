@@ -98,7 +98,11 @@
 						<td id="margin">
 							<button type="button" class="btn btn-warning" data-toggle="modal"
 								data-target="#EditProduct<?php echo $product['id'] ?>">Update</button>
-								<button type="button" class="btn btn-danger">Delete</button>					
+							<form action="<?php echo site_url('Product/delete_Product/'.$product['id']) ?>" method="post"
+								enctype="multipart/form-data" class="row">
+								<!-- <button type="button" class="btn btn-danger">Delete</button>			 -->
+								<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+							</form>
 						</td>
 						<td>
 							<div class="detail">
