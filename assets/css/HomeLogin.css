@@ -145,6 +145,7 @@
 #vector1 {
 	display: flex;
 	visibility: 1;
+	z-index: -1;
 	width: 15%;
 	position: absolute;
 	height: auto;
@@ -242,8 +243,6 @@
 	color: magenta;
 	cursor: pointer;
 }
-
-.card-text {}
 
 /* section4 */
 
