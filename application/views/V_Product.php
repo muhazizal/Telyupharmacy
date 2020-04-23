@@ -130,7 +130,7 @@
 										<a href="<?= site_url('Product/showDetailProduct/' . $product['id']); ?>" 
 											class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
 										</a>
-										<button type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
+										<button id="btnAddToCart" type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
 									</div>
 								</div>
 							</div>
@@ -255,7 +255,6 @@
 	</div>
 
 	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 	</script>
@@ -266,6 +265,9 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+	<script src="<?= base_url('assets/js/product.js');?>"></script>
 </body>
 
 </html>
