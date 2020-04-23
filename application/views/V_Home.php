@@ -161,7 +161,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
 				<div id="header">
-					<span id="Tittle">Product</span>
+					<span id="Tittle">Our Products</span>
 					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All Product</a>
 				</div>
 
@@ -197,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<!-- section4 -->
 		<div class="container" id="section4">
-			<h3 class="text-center">Article</h3>
+			<h3 class="text-center">Our Articles</h3>
 
 			<!-- Show all article -->
 			<div class="row" id="row2">

@@ -70,7 +70,7 @@
 	</div>
 
 	<div class="container" id="section1">
-		<form class="form-container">
+		<div class="form-container">
 			<div class="row">
 				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>" alt="" /></div>
 				<div class="col-xl-7">
@@ -93,7 +93,7 @@
 					<button class="btn btn-info mt-2">Add to Cart</button>
 				</div>
 			</div>
-		</form>
+		</div>
 	</div>
 	<img id="vector8" class="img-fluid" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
 	<img id="vector9" class="img-fluid" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">

@@ -103,7 +103,7 @@
 								placeholder="Minimum price">
 							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
 								placeholder="Maximum price">
-							<button type="btn" class="btn btn-info text-white" id="submit">Submit</button>
+							<button type="btn" class="btn btn-info text-white" id="submit">Search</button>
 						</form>
 					</div>
 				</div>
