@@ -5,10 +5,11 @@ class Article extends CI_Controller {
 
 	public function __construct()
 	{
-			parent::__construct();
+		parent::__construct();
 			
-			$this->load->model('M_Buyer');
-	$this->load->model('M_Article');
+		$this->load->model('M_Admin');
+		$this->load->model('M_Buyer');
+		$this->load->model('M_Article');
 	}
 
 	public function index(){
@@ -24,6 +25,9 @@ class Article extends CI_Controller {
 	}
 	public function load_AdminArticle(){
 			checkLoginAdmin();
+
+			$username = $this->session->userdata('username');
+			$data['admin'] = $this->M_Admin->getAdmin($username);
 			$data['data_article'] = $this->M_Article->get_AllArticle();
 			$this->load->view("V_AdminArticle",$data); 
 	}

@@ -7,6 +7,7 @@ class Product extends CI_Controller {
 	{
         parent::__construct();
 
+        $this->load->model('M_Admin');
         $this->load->model('M_Buyer');
         $this->load->model('M_Product');
     }
@@ -22,6 +23,9 @@ class Product extends CI_Controller {
 
     public function load_AdminProduct(){
         checkLoginAdmin();
+
+        $username = $this->session->userdata('username');
+        $data['admin'] = $this->M_Admin->getAdmin($username);
         $data['data_product'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_AdminProduct",$data); 
     }
