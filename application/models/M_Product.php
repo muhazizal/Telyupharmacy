@@ -18,7 +18,7 @@ class M_Product extends CI_Model {
 
   public function get_ProductbyName($name_product){
     $this->db->like('name',$name_product);
-    return $this->db->get('product')->row_array();
+    return $this->db->get('product')->result_array();
   }
 
   public function insert_Product($data){     
@@ -35,11 +35,5 @@ class M_Product extends CI_Model {
     return $this->db->delete('product');
   }
 
-  public function getProductName($name) {
-    $this->db->select('*');
-    $this->db->from('product');
-    $this->db->like('name', $name);
-    return $this->db->get()->result_array();
-  }
 }
 ?>

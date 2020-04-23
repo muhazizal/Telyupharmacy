@@ -18,8 +18,8 @@ class M_Article extends CI_Model {
 
   public function get_ArticlebyName($name_product){
     $this->db->like('title',$name_product);
-    $this->db->or_like('description',$name_product);
-    return $this->db->get('article')->row_array();
+    $this->db->or_like('category',$name_product);
+    return $this->db->get('article')->result_array();
   }
 
   public function insert_Article($data){     
@@ -34,13 +34,6 @@ class M_Article extends CI_Model {
   public function delete_Article($id_article){
     $this->db->where('id',$id_article);
     return $this->db->delete('article');
-  }
-
-  public function getArticleTitle($title) {
-    $this->db->select('*');
-    $this->db->from('article');
-    $this->db->like('title', $title);
-    return $this->db->get()->result_array();
   }
 
 }
