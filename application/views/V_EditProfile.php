@@ -235,13 +235,6 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
-	<script>
-		$('.custom-file-input').on('change', () => {
-			let filename = $(this).val().split('\\').pop();
-			$(this).next('.custom-file-label').addClass("selected").html(filename);
-		});
-
-	</script>
 </body>
 
 </html>

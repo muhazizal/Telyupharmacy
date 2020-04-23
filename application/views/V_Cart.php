@@ -227,8 +227,7 @@
 		</div>
 
 	</div>
-	<!-- Bootstrap JS -->
-	<script src="<?= base_url("assets/js/cart.js") ?>"></script>
+
 	<script>
 		// function tambah() {
 		// 	var a = parseInt(document.getElementById("number").value);
