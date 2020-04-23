@@ -11,6 +11,7 @@ class Product extends CI_Controller {
         $this->load->model('M_Buyer');
         $this->load->model('M_Product');
     }
+
     public function index(){
         checkLoginBuyer();
         
@@ -29,11 +30,13 @@ class Product extends CI_Controller {
         $data['data_product'] = $this->M_Product->get_AllProduct();
         $this->load->view("V_AdminProduct",$data); 
     }
+
     public function search_Product(){
         $name_product    =   $this->input->post('name_product');
         $data2['data_product']  = $this->M_Product->get_ProductbyName($name_product);
         $this->load->view('V_AdminProduct',$data2);
     }
+
     public function add_Product(){
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
 		$this->form_validation->set_rules('price', 'Price', 'required|trim');
@@ -54,9 +57,11 @@ class Product extends CI_Controller {
         }
 		redirect('Product/load_AdminProduct');
     }
+
     public function form_deleteProduct(){
         $this->load->view("V_AdminProduct"); 
     }
+
     public function delete_Product($id_product){
         $check = $this->M_Product->delete_Product($id_product);
 		if($check){
@@ -66,9 +71,11 @@ class Product extends CI_Controller {
         }
 		redirect('Product/load_AdminProduct');
     }
+
     public function form_editProduct(){
         $this->load->view("V_AdminProduct"); 
     }
+
     public function edit_Product($id_product){
         $data['data_product'] = $this->M_product->get_ProductId($id_product);
 
@@ -144,6 +151,30 @@ class Product extends CI_Controller {
 		}else {
 			return "defaultproduct.jpg";
 		}
+    }
+    
+    // Search product by name in buyer page
+    public function searchProductBuyer() {
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
+		$searchValue = $this->input->get('searchProduct');
+		if ($searchValue) {
+			$data['products'] = $this->M_Product->getProductName($searchValue);
+		} else {
+			$data['products'] = $this->M_Product->get_AllProduct();
+		}
+
+		$this->load->view("V_Product", $data);
+	}
+
+    // Show detail product in buyer page
+    public function showDetailProduct($id_product) {
+        $username = $this->session->userdata('username');
+        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+        $data['product'] = $this->M_Product->get_ProductbyId($id_product);
+
+        $this->load->view('V_DetailProduct', $data);
 	}
 }
 ?>

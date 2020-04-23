@@ -147,7 +147,7 @@ class Article extends CI_Controller {
 		$this->load->view('V_AdminArticle', $data2);
 	}
 
-	// Aziz, Search article by title in buyer
+	// Search article by title in buyer page
 	public function searchArticleBuyer() {
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
@@ -162,6 +162,7 @@ class Article extends CI_Controller {
 		$this->load->view("V_Article", $data);
 	}
 
+	// Show detail article in buyer page
 	public function showDetailArticle($id_article) {
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);

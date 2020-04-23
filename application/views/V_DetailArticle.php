@@ -74,7 +74,7 @@
 					<div class="col-xl-7">
 						<h1 id="artittle"><?= $article['title']; ?></h1>
 						<h2 id="category">Category<span id="category"><?= $article['category']; ?></span></h2>
-						<h2 id="deskripsi">Deskripsi</h2>
+						<h2 id="deskripsi">Description</h2>
 						<h2 id="article"><?= $article['description']; ?></h2>
 					</div>
 				</div>

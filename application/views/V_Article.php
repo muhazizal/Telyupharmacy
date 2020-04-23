@@ -26,14 +26,14 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<!-- Search Article -->
+							<!-- Search Article Name -->
 							<form action="<?= site_url('Article/searchArticleBuyer') ?>" method="GET" class="navbar-form">
 								<div class="form-group input-group">
 									<?php
 										if (array_key_exists("title", $_GET)) {
 									?>
 										<input id="search" type="text" name="searchArticle" value="<?= $_GET["title"] ?>" 
-										class="form-control" placeholder="Search">
+										class="form-control" placeholder="<?= $_GET["title"] ?>">
 									<?php
 										} else {
 									?>
@@ -101,7 +101,9 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="<?= site_url('Article/showDetailArticle/'.$article['id']); ?>" class="btn btn-large btn-info mt-3 text-white">Show Detail</a>
+					<a href="<?= site_url('Article/showDetailArticle/'.$article['id']); ?>" 
+						class="btn btn-large btn-info mt-3 text-white">Read Article Detail
+					</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>

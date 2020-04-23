@@ -25,11 +25,21 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
+							<!-- Search Product Name -->
+							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET" class="navbar-form">
 								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
+									<?php
+										if (array_key_exists("name", $_GET)) {
+									?>
+										<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>" 
+										class="form-control" placeholder="<?= $_GET["name"] ?>">
+									<?php
+										} else {
+									?>
+										<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search">
+									<?php } ?>
 									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
+										<button type="submit" id="icon" class="btn btn-outline-info">
 											<i class="fa fa-search" aria-hidden="true"></i>
 										</button>
 									</div>
@@ -109,18 +119,20 @@
 							<div class="card-title">
 								<span id="label-section-3"> <?= $product['name'] ?></span>
 							</div>
+
 							<div class="card-text">
 								<span class="harga">Rp <?= $product['price'] ?></span>
 							</div>
-							<div>
-								<a href="#" class="btn btn-large btn-block btn-outline-info mt-3">Show Detail</a>
-								<button type="btn" class="btn btn-large btn-block btn-info mt-3">Buy</button>
-							</div>
 							
+							<div>
+								<a href="<?= site_url('Product/showDetailProduct/' . $product['id']); ?>" 
+									class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
+								</a>
+								<button type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
+							</div>
 						</div>
-						
-					</div>
 
+					</div>
 				</div>
 				<?php } ?>
 

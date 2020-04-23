@@ -72,30 +72,25 @@
 	<div class="container" id="section1">
 		<form class="form-container">
 			<div class="row">
-				<div class="col-xl-5"><img src="<?= base_url('assets/image/kirito.jpg') ?>" alt="" /></div>
+				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>" alt="" /></div>
 				<div class="col-xl-7">
-					<h1 id="artittle">Antasida 60 ml - Obat Maag</h1>
-					<h2 id="category">Category<span id="category">Rp 15000</span></h2>
-					<h2 id="category">Jumlah
+					<h1 id="artittle"><?= $product['name'] ?></h1>
+					<h2 id="category">Category<span id="category">Rp <?= $product['price'] ?></span></h2>
+					<h2 id="category">Quantity
 						<span>
 							<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
 							<input type="text" id="number" value="1" disabled="true">
 							<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
 						</span>
 					</h2>
-					<h2 id="deskripsi">Deskripsi</h2>
-					<h2 id="article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, proin posuere
-						lectus tellus volutpat mauris. Ut senectus pellentesque turpis rhoncus dui. Ultricies
-						elementum massa felis adipiscing sed. Eget elit, sit iaculis cursus in eget placerat amet.
-						Pulvinar ullamcorper neque, hac in. Cursus hendrerit sem varius platea. Auctor ut eget
-						consectetur varius in.
+					<h2 id="deskripsi">Description</h2>
+					<h2 id="article"><?= $product['description']; ?></h2>
 				</div>
 			</div>
 			<div class="row btn-row">
 				<div class="col-xl-5"></div>
 				<div class="col-xl-7">
-					<button class="btn btn-outline-info">Beli Sekarang</button>
-					<button class="btn btn-info">Tambah Keranjang</button>
+					<button class="btn btn-info mt-2">Add to Cart</button>
 				</div>
 			</div>
 		</form>
