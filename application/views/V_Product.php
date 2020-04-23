@@ -111,7 +111,7 @@
 							<div class="card-text">
 								<div class="harga">Rp <?= $product['price'] ?></div>
 							</div>
-							<a href="#" class="btn btn-large btn-block mt-3 text-white">Buy</a>
+							<a href="#" class="btn btn-large btn-block mt-3 text-white">Show Detail</a>
 						</div>
 					</div>
 				</div>

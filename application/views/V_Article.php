@@ -26,7 +26,8 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
+							<!-- Search Article -->
+							<form action="<?= site_url('Article/search_Article') ?>" method="GET" class="navbar-form">
 								<div class="form-group input-group">
 									<input id="search" type="text" class="form-control" placeholder="Search">
 									<div class="input-group-btn">
@@ -93,6 +94,7 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
+					<a href="#" class="btn btn-large btn-block mt-3 text-white">Show Detail</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>
