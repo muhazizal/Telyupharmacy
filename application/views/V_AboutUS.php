@@ -199,44 +199,9 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
-	<!-- Load FAQ Table JSON -->
-	<script>
-		$(document).ready( () => {
-
-			$.getJSON("<?= base_url('assets/js/faq.json'); ?>", data => {
-				let dataFAQ = '';
-				$.each(data, (key, value) => {
-					dataFAQ += `
-						<tr>
-							<th> ${value.title} </th>
-						</tr>
-						<tr>
-							<td> ${value.solution} </td>
-						</tr>
-					`;
-				});
-				$('#faq-table').append(dataFAQ);
-			});
-
-			$.getJSON("<?= base_url('assets/js/team.json'); ?>", data => {
-				let dataTeam = '';
-				$.each(data, (key, value) => {
-					dataTeam += `
-					<div class="card">
-						<div class="card-body">
-							<img id="team-photo" src="<?= base_url("assets/uploads/profile/");?>${value.image}" alt=""
-								class="img-fluid rounded-circle">
-							<h3 id="nama"> ${value.name} </h3>
-							<h3 id="nim"> ${value.nim} </h3>
-						</div>
-					</div>
-					`
-				});
-				$('#team').append(dataTeam);
-			});
-
-		});
-	</script>
+	<!-- Load JSON -->
+	<script src="<?= base_url('assets/js/team.js')?>"></script>
+	<script src="<?= base_url('assets/js/faq.js')?>"></script>
 </body>
 
 </html>
