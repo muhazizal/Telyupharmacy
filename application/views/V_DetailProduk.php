@@ -25,18 +25,6 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<form action="" class="navbar-form">
-								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
-									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
@@ -52,25 +40,25 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
-								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
-									class="rounded-circle d-block top" /></a>
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
+								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								class="rounded-circle d-block top" />
+							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="">
-									<img src="<?= base_url('') ?>" class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title">MaulGanteng</h3>
-									<h3 class="text-center profile-title">MaulGanteng@gmail.com</h3>
-									<a href="<?= site_url('Buyer/editProfile') ?>" type="button"
-										class="btn btn-default mt-3 text-white text-center" data-dismiss="modal">Edit
-										Profile</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center"
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
-										Password</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
-										class="btn btn-default mt-3 text-white text-center">Log Out</a>
-								</form>
+							<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
+									class="rounded-circle d-block bot img-fluid" />
+								<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+								<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
+								</a>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+								</a>
+								<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									class="btn btn-default mt-3 text-white text-center">Log Out
+								</a>
 							</div>
 						</div>
 					</form>

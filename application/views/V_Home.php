@@ -313,7 +313,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
-									<p id="forgot">Forgot the password? <a href="#" id="click">Click Here</a></p>
 									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
 									<p id="forgot">Don't have account? 
 										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>

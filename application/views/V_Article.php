@@ -71,21 +71,19 @@
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="">
-									<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
-										class="rounded-circle d-block bot img-fluid" />
-									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
-									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
-									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
-									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out
-									</a>
-								</form>
+								<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
+									class="rounded-circle d-block bot img-fluid" />
+								<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+								<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
+								</a>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+								</a>
+								<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									class="btn btn-default mt-3 text-white text-center">Log Out
+								</a>
 							</div>
 						</div>
 					</form>
@@ -103,7 +101,7 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="#" class="btn btn-large btn-info mt-3 text-white">Show Detail</a>
+					<a href="<?= site_url('Article/showDetailArticle/'.$article['id']); ?>" class="btn btn-large btn-info mt-3 text-white">Show Detail</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>

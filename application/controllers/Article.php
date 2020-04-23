@@ -162,5 +162,13 @@ class Article extends CI_Controller {
 		$this->load->view("V_Article", $data);
 	}
 
+	public function showDetailArticle($id_article) {
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+		$data['article'] = $this->M_Article->get_ArticlebyId($id_article);
+
+		$this->load->view('V_DetailArticle', $data);
+	}
+
 }
 ?>
