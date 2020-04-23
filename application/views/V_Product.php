@@ -112,7 +112,7 @@
 							<div class="card-text">
 								<span class="harga">Rp <?= $product['price'] ?></span>
 							</div>
-							<div>								
+							<div>
 								<a href="#" class="btn btn-large btn-block btn-outline-info mt-3">Show Detail</a>
 								<button type="btn" class="btn btn-large btn-block btn-info mt-3">Buy</button>
 							</div>
