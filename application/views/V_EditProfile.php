@@ -148,13 +148,14 @@
 				</div>
 
 				<div class="form-group row">
-					<div class="col-lg-4"></div>
-					<div class="col-lg-3">
+					<div class="col-lg-2"></div>
+					<div class="col-lg-4">
 						<button type="submit" class="btn btn-info">Submit</button>
 					</div>
-					<div class="col-lg-3">
-						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteAccount">Delete Account</button>
+					<div class="col-lg-4">
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteAccount">Delete Account</>
 					</div>
+					<div class="col-lg-2"></div>
 				</div>
 
 			</form>

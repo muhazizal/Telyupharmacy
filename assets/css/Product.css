@@ -237,6 +237,14 @@ h6 {
 	border-radius: 10px 10px 0px 0px;
 }
 
+.harga {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	color: #4BC2C5;
+}
 
 
 

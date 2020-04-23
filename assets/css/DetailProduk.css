@@ -207,7 +207,7 @@
 
 #vector8 {
 	position: absolute;
-	bottom: 0%;
+	bottom: 30%;
 	left: 0%;
 	/* width: 8.5%; */
 }
@@ -228,7 +228,14 @@
 	color: black;
 }
 
-
+.harga {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	color: #4BC2C5;
+}
 
 /* section5 */
 

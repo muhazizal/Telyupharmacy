@@ -88,7 +88,7 @@
 								</div>
 								<div class="col-md-8" id="md8">
 									<p>Antasida 60ml</p>
-									<p>Rp. 15,000</p>
+									<p class="harga">Rp. 15,000</p>
 									<div class="">
 										<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
 										<input type="text" id="number" value="1" disabled="true">

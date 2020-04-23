@@ -305,6 +305,15 @@ img#vector1 {
 	cursor: pointer;
 }
 
+.harga {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 19px;
+	color: #4BC2C5;
+}
+
 /* section4 */
 
 #section4 {
