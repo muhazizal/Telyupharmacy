@@ -211,7 +211,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<span><a id="label-section-3"><?= $product['name'] ?></a></span>
@@ -244,7 +244,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/image/') . $article['image']; ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt="" class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
 								<h5><?= $article['title']; ?></h5>
