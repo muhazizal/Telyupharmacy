@@ -342,7 +342,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-		<!-- Change Passowrd Modal-->
+		<!-- Change Password Modal-->
 		<div class="container" id="Password">
 			<div class="row justify-content-center">
 				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">

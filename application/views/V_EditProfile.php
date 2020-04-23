@@ -52,7 +52,7 @@
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
 									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" href="<?= site_url('Buyer/load_editProfile') ?>">Edit Profile
+										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
 									<a type="button" class="btn btn-default mt-3 text-white text-center" 
 										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
@@ -141,6 +141,40 @@
 				</div>
 					
 			</form>
+		</div>
+
+		<!-- Change Password Modal-->
+		<div class="container" id="Password">
+			<div class="row justify-content-center">
+				<div class="modal fade justify-content-center" id="ChangePassword" role="dialog">
+					<div class="modal-dialog bg-modal">
+						<div class="modal-content">
+							<h5 id="tittle-password" class="text-center">Change Password</h5>
+							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
+								<div class="form-group">
+									<span class="tittle">Old Password</span>
+									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
+									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+								</div>
+								<div class="form-group">
+									<span class="tittle">New Password</span>
+									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
+									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
+								</div>
+								<div class="form-group">
+									<span class="tittle">Confrim New Password</span>
+									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
