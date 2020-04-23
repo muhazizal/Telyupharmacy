@@ -107,7 +107,7 @@
 						
 						<div class="card-block">
 							<div class="card-title">
-								<span><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></span>
+								<span id="label-section-3"> <?= $product['name'] ?></span>
 							</div>
 							<div class="card-text">
 								<span class="harga">Rp <?= $product['price'] ?></span>
