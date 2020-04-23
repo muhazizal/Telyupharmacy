@@ -262,7 +262,7 @@ img#vector1 {
 	letter-spacing: 0.02em;
 	background: #4BC2C5;
 	border-radius: 10px;
-	float: right;
+	width: 30%;
 }
 
 .card {

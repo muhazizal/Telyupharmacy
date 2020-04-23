@@ -114,7 +114,7 @@
 /* section2 */
 
 #section2 {
-	padding-top: 5%;
+	padding-top: 3%;
 	width: 98%;
 }
 
@@ -144,9 +144,19 @@ h6 {
 	border-radius: 5px;
 }
 
-.card {
-	width: 100%;
+.col-md-2 .card{
 	border-radius: 10px;
+}
+
+.col-md-10 .row{
+	justify-content: space-around;
+}
+
+.col-md-10 .card {
+	width: 200px;
+	border-radius: 10px;
+	margin-top: 2%;
+	margin-bottom: 2%;
 }
 
 #min {

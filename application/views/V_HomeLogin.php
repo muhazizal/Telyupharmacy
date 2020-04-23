@@ -198,9 +198,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- section3 -->
 		<div class="container-fluid" id="section3">
 			<div class="container" id="section3-1">
-				<div id="header">
-					<span id="Tittle">Our Products</span>
-					<a href="<?= site_url('Product'); ?>" class="btn btn-info">Show All Product</a>
+				<div id="header" class="row">
+					<span id="Tittle" class="col-md-10">Our Products</span>
+					<a href="<?= site_url('Product'); ?>" class="btn btn-info col-md-2">Show All Product</a>
 				</div>
 
 				<div class="row" id="row1">	

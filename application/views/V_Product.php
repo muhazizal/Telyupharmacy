@@ -108,33 +108,36 @@
 					</div>
 				</div>
 
-				<?php
-					foreach ($products as $product) {
-				?>
-				<div class="col-md-2">
-					<div class="card">
-						<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
-						
-						<div class="card-block">
-							<div class="card-title">
-								<span id="label-section-3"> <?= $product['name'] ?></span>
-							</div>
+				<div class="col-md-10">
+					<div class="container">
+						<div class="row">
+						<?php
+							foreach ($products as $product) {
+						?>
+							<div class="card">								
+								<div class="card-block">
+									<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
 
-							<div class="card-text">
-								<span class="harga">Rp <?= $product['price'] ?></span>
+									<div class="card-title">
+										<span id="label-section-3"> <?= $product['name'] ?></span>
+									</div>
+
+									<div class="card-text">
+										<span class="harga">Rp <?= $product['price'] ?></span>
+									</div>
+									
+									<div>
+										<a href="<?= site_url('Product/showDetailProduct/' . $product['id']); ?>" 
+											class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
+										</a>
+										<button type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
+									</div>
+								</div>
 							</div>
-							
-							<div>
-								<a href="<?= site_url('Product/showDetailProduct/' . $product['id']); ?>" 
-									class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
-								</a>
-								<button type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
-							</div>
+							<?php } ?>
 						</div>
-
 					</div>
 				</div>
-				<?php } ?>
 
 			</div>
 		</div>
