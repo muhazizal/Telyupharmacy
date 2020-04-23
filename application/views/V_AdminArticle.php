@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	< class="container-fluid-0">
+	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url("Admin") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -36,7 +36,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"

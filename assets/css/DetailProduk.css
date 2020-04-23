@@ -207,9 +207,8 @@
 
 #vector8 {
 	position: absolute;
-	bottom: 30%;
+	bottom: -4%;
 	left: 0%;
-	/* width: 8.5%; */
 }
 
 #vector9 {
@@ -411,10 +410,6 @@
 .tittle #a-item {
 	color: #4BC2C5;
 }
-
-
-
-
 
 
 

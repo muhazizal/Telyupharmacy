@@ -211,7 +211,6 @@ textarea {
 .form-control:disabled,
 .form-control[readonly] {
 	background-color: #FFE7E7;
-	opacity: 1;
 }
 
 /* profile */
