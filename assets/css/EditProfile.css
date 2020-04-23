@@ -192,12 +192,16 @@
 	position: absolute;
 	left: 87.9%;
 	bottom: 20%;
-	/* z-index: -1; */
+	z-index: 0;
 	/* width: 12.1%; */
 }
 
 .form-container {
 	position: relative;
+}
+
+.alert {
+	z-index: 1;
 }
 
 
