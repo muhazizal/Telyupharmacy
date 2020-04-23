@@ -40,24 +40,26 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
-								class="rounded-circle d-block top" />
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="" >
+								<form action="">
 									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
 										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+										Password
 									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
 										class="btn btn-default mt-3 text-white text-center">Log Out
 									</a>
 								</form>
@@ -88,23 +90,25 @@
 					<p class="mb-0">Fill the form bellow to edit your profile, <?= $buyer['username'] ?></p>
 				</div>
 			</div>
-			<form action="<?= site_url('Buyer/editProfile'); ?>" method="post" enctype="multipart/form-data" class="form-container">
+			<form action="<?= site_url('Buyer/editProfile'); ?>" method="post" enctype="multipart/form-data"
+				class="form-container">
 
 				<div class="form-group row d-flex align-items-center">
 					<div class="col-md-4">
-						<img src="<?= base_url('assets/image/') . $buyer['image']; ?>" class="rounded-circle d-block"/>
+						<img src="<?= base_url('assets/image/') . $buyer['image']; ?>" class="rounded-circle d-block" />
 					</div>
 					<div class="custom-file col-md-5 ml-3">
 						<input type="file" class="custom-file-input" id="customFile" name="image">
 						<label class="custom-file-label" for="customFile">Choose file</label>
 					</div>
 				</div>
-				
+
 				<div class="form-group row">
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Name:</label>
 					<div class="col-lg-7">
-						<input type="text" name="name" class="form-control" id="inputName" value="<?= $buyer['name']; ?>">
+						<input type="text" name="name" class="form-control" id="inputName"
+							value="<?= $buyer['name']; ?>">
 						<?= form_error('name', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
@@ -114,7 +118,8 @@
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Username:</label>
 					<div class="col-lg-7">
-						<input type="text" name="username" class="form-control" id="inputName" value="<?= $buyer['username']; ?>">
+						<input type="text" name="username" class="form-control" id="inputName"
+							value="<?= $buyer['username']; ?>">
 						<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
@@ -124,7 +129,8 @@
 					<div class="col-lg-2"></div>
 					<label for="inputName" class="col-lg-2">Email:</label>
 					<div class="col-lg-7">
-						<input type="text" name="email" class="form-control" id="inputName" value="<?= $buyer['email']; ?>">
+						<input type="text" name="email" class="form-control" id="inputName"
+							value="<?= $buyer['email']; ?>">
 						<?= form_error('email', '<p class="text-danger">', '</p>'); ?>
 					</div>
 					<div class="col-lg-1"></div>
@@ -136,10 +142,10 @@
 						<button type="submit" class="btn btn-info">Submit</button>
 					</div>
 					<div class="col-lg-3">
-						<button type="button" class="btn btn-danger">Delete Account</button>
+						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteAccount">Delete Account</button>
 					</div>
 				</div>
-					
+
 			</form>
 		</div>
 
@@ -153,22 +159,26 @@
 							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
+									<input class="form-control" type="password" name="oldPassword"
+										placeholder="Old Password" id="oldPassword" />
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
+									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click
+											Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
+									<input class="form-control" type="password" name="newPassword1"
+										placeholder="New Password" id="newPassword1" />
 									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
+									<input class="form-control" type="password" name="newPassword2"
+										placeholder="Confrim New Password" id="newPassword2" />
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger">Cancel</button>
+									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
@@ -176,7 +186,32 @@
 				</div>
 			</div>
 		</div>
-		
+
+
+		<!-- delete Account -->
+		<div class="modal fade" id="DeleteAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Data yang di hapus tidak dapat di kembalikan, anda yakin ?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
 		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
 		<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
 	</div>
@@ -198,6 +233,7 @@
 			let filename = $(this).val().split('\\').pop();
 			$(this).next('.custom-file-label').addClass("selected").html(filename);
 		});
+
 	</script>
 </body>
 
