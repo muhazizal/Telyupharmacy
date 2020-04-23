@@ -103,7 +103,7 @@
 				?>
 				<div class="col-md-2">
 					<div class="card">
-						<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
 						
 						<div class="card-block">
 							<div class="card-title">
