@@ -103,10 +103,7 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-<<<<<<< HEAD
 					<a href="#" class="btn btn-large btn-info mt-3 text-white">Show Detail</a>
-=======
->>>>>>> d941692dcd38b8bacca2e11982fdd81d956e143e
 				</div>
 			</div>
 			<?php endforeach;  ?>
