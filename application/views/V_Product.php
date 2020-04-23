@@ -222,7 +222,7 @@
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger">Cancel</button>
+									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
