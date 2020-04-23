@@ -95,7 +95,7 @@
 			<?php foreach($data_article as $article) : ?>
 			<div class="row text-left article">
 				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/uploads/product/") . $article['image']; ?>" alt="" class="img-fluid">
+					<img id="article-photo" src="<?= base_url("assets/uploads/article/") . $article['image']; ?>" alt="" class="img-fluid">
 				</div>
 				<div class="col-lg-9">
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>

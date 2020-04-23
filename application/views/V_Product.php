@@ -112,7 +112,7 @@
 					<div class="container">
 						<div class="row">
 						<?php
-							foreach ($products as $product) {
+							foreach ($data_product as $product) {
 						?>
 							<div class="card">								
 								<div class="card-block">

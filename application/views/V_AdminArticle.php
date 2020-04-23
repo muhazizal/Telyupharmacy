@@ -41,10 +41,10 @@
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									src="<?= base_url('assets/uploads/profile/admindefault.jpg') ?>"
 									class="rounded-circle d-block top" /></a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<img src="<?= base_url('assets/image/kirito.jpg'); ?>"
+								<img src="<?= base_url('assets/uploads/profile/admindefault.jpg'); ?>"
 									class="rounded-circle d-block bot" />
 								<h3 class="text-center profile-title"><?= $admin['username']; ?></h3>
 								<h3 class="text-center profile-title"><?= $admin['id']; ?></h3>
@@ -126,9 +126,18 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="article">Article</span>
-			<form action="<?php echo site_url('Article/search_Article') ?>" method="get" class="navbar-form">
+			<form action="<?php echo site_url('Article/searchArticleAdmin') ?>" method="get" class="navbar-form">
 				<div class="form-group input-group">
-					<input type="text" name="searchArticle" id="search" class="form-control col-md-3" placeholder="Search Article">
+				<?php
+					if (array_key_exists("title", $_GET)) {
+				?>
+					<input id="search" type="text" name="searchArticle" value="<?= $_GET["title"] ?>" 
+					class="form-control" placeholder="<?= $_GET["title"] ?>">
+				<?php
+					} else {
+				?>
+					<input id="search" type="text" name="searchArticle col-md-3" class="form-control" placeholder="Search Article">
+				<?php } ?>
 					<div class="input-group-btn">
 						<button type="submit" id="icon" class="btn btn-outline-info">
 							<i class="fa fa-search" aria-hidden="true"></i>
@@ -203,7 +212,6 @@
 								</div>
 								<div class="topic-title desc">Description</div>
 								<textarea form="formInput" name="description" cols="30" rows="5" class="form-control"></textarea>
-
 								<button type="submit" class="btn btn-primary ">Add New Article</button>
 								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 							</form>
@@ -260,24 +268,20 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Article Details </h5>
-							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+							<form action="<?php echo site_url('Article/load_AdminArticle') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url('assets/uploads/article/') . $article['image'] ?>" class="rounded-circle d-block" />
-									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Article Name</div>
-									<!-- <input type="text" class="form-control" disabled="true"> -->
-									<?= form_input(['name'=>'title','class'=>'form-control','required'=>'required','value'=>$article['title']]) ?>
+									<input type="text" name="title" class="form-control" disabled="true" value="<?= $article['title'] ?>">
 									<div class="topic-title">Category</div>
-									<!-- <a href=""><input type="text" class="form-control" disabled="true"></a> -->
-									<?= form_input(['name'=>'category','class'=>'form-control','required'=>'required','value'=>$article['category']]) ?>
+									<input type="text" name="category" class="form-control" disabled="true" value="<?= $article['category'] ?>">
 								</div>
 								<div class="topic-title desc">Description</div>
-								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea>-->
-								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required', 'value'=>$article['description']]) ?>
+								<textarea class="form-control" name="description" id="formDetail" cols="30" rows="5" disabled="true"><?=$article['description']?></textarea>
 								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
 							</form>
 						</div>
@@ -304,8 +308,7 @@
 						<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
 							enctype="multipart/form-data" class="row">
 							<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-							<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
-							<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+							<button type="submit" class="btn btn-danger">Delete</button>
 						</form>
 					</div>
 				</div>

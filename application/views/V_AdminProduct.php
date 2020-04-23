@@ -41,11 +41,11 @@
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/kirito.jpg') ?>"
+									src="<?= base_url('assets/uploads/profile/admindefault.jpg') ?>"
 									class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<img src="<?= base_url('assets/image/kirito.jpg'); ?>"
+								<img src="<?= base_url('assets/uploads/profile/admindefault.jpg'); ?>"
 									class="rounded-circle d-block bot" />
 								<h3 class="text-center profile-title"><?= $admin['username']; ?></h3>
 								<h3 class="text-center profile-title"><?= $admin['id']; ?></h3>
@@ -75,7 +75,7 @@
 		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('article_notInserted'); ?></strong>
+					<strong><?= $this->session->flashdata('product_notInserted'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -86,7 +86,7 @@
 		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('article_Deleted'); ?></strong>
+					<strong><?= $this->session->flashdata('Product_Deleted'); ?></strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -131,9 +131,18 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="product">Product</span>
-			<form action="<?php echo site_url('Product/search_Product/') ?>" class="navbar-form"  method="get">
+			<form action="<?php echo site_url('Product/searchProductAdmin') ?>" class="navbar-form"  method="get">
 				<div class="form-group input-group">
-					<input id="search" name="name_product" type="text" class="form-control col-md-3" placeholder="Search Product" >
+				<?php
+					if (array_key_exists("name", $_GET)) {
+				?>
+					<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>" 
+					class="form-control" placeholder="<?= $_GET["title"] ?>">
+				<?php
+					} else {
+				?>
+					<input id="search" type="text" name="searchProduct" class="form-control col-md-3" placeholder="Search Product" >
+				<?php } ?>
 					<div class="input-group-btn">
 						<button type="submit" id="icon" class="btn btn-outline-info">
 							<i class="fa fa-search" aria-hidden="true"></i>
@@ -170,7 +179,7 @@
 						<td>
 							<div class="detail">
 								<a href=""  data-toggle="modal"
-						data-target="#DetailsProduct<?php echo $product['id'] ?>"><img class="rounded-circle d-block" id="detail"
+									data-target="#DetailsProduct<?php echo $product['id'] ?>"><img class="rounded-circle d-block" id="detail"
 										src="<?= base_url("assets/image/details.svg") ?>" alt=""></a>
 							</div>
 						</td>
@@ -187,28 +196,26 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Add New Product</h5>
-							<form action="<?php echo site_url('Product/add_Product') ?>" method="post"
-								enctype="multipart/form-data" class="row">
+							<form action="<?= site_url('Product/add_Product') ?>" method="post" enctype="multipart/form-data" 
+							class="row" id="formInput">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url("assets/uploads/product/defaultproduct.jpg")?>" class="rounded-circle d-block" />
-									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
+									<div class="custom-file col-md-9 mb-2">
+										<input type="file" class="custom-file-input" id="customFile" name="image">
+										<label class="custom-file-label" for="customFile">Choose Image</label>
+									</div>
 									<div class="topic-title">Product Name</div>
-									<!-- <input type="text" class="form-control"> -->
-									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required']) ?>
+									<input type="text" name="name" class="form-control">
 									<div class="topic-title">Price</div>
-									<!-- <a href=""><input type="text" class="form-control"></a> -->
-									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required']) ?>
+									<input type="number" name="price" class="form-control">
 								</div>
 								<div class="topic-title desc">Description</div>
-								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
-								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required']) ?>
-								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
-								<?= form_submit(['submit'=>'Submit','class'=>'btn btn-primary','value'=>'Add New Product']) ?>
-								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Cancel</button>
+								<textarea form="formInput" name="description" class="form-control" cols="30" rows="5"></textarea>
+								<button type="submit" class="btn btn-primary ">Add New Product</button>							
+								<button type="button" class="btn btn-outline-danger"data-dismiss="modal">Cancel</button>
 							</form>
 						</div>
 					</div>
@@ -224,35 +231,33 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Edit Product</h5>
-							<form action="<?php echo site_url('Product/edit_Product/'.$product['id']) ?>" method="post"
+							<form action="<?php echo site_url('Product/update_Product/'.$product['id']) ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url("assets/uploads/product/") . $product['image']?>" class="rounded-circle d-block" />
-									<!-- <a href=""><i class="fa fa-camera" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="col-md-7" id="inputan">
+									<div class="custom-file col-md-9 mb-2">
+										<input type="file" class="custom-file-input" id="customFile" name="image">
+										<label class="custom-file-label" for="customFile">Choose Image</label>
+									</div>
 									<div class="topic-title">Product Name</div>
-									<!-- <input type="text" class="form-control"> -->
-									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required','value'=>$product['name']]) ?>
+									<input type="text" name="name" value="<?= $product['name'] ?>" class="form-control">
 									<div class="topic-title">Price</div>
-									<!-- <a href=""><input type="text" class="form-control"></a> -->
-									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required','value'=>$product['price']]) ?>
+									<input type="number" name="price" value="<?= $product['price'] ?>" class="form-control">
 								</div>
 								<div class="topic-title desc">Description</div>
-								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea> -->
-								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required','value'=>$product['description']]) ?>
-								<!-- <button type="button" class="btn btn-primary ">Add New Product</button> -->
-								<?= form_submit(['submit'=>'Update','class'=>'btn btn-primary','value'=>'Update Product']) ?>
-								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Cancel</button>
+								<textarea class="form-control" name="description" id="formEdit" cols="30" rows="5"><?= $product['description']; ?></textarea>								
+								<button type="submit" class="btn btn-primary ">Update Product</button>
+								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-			<?php endforeach;  ?>
 		</div>
+		<?php endforeach;  ?>
 
 		<!-- detail produk -->
 		<?php foreach($data_product as $product):  ?>
@@ -262,28 +267,22 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle">Product Details</h5>
-							<form action="<?php echo site_url('Article/add_Article') ?>" method="post"
+							<form action="<?php echo site_url('Product/load_AdminProduct') ?>" method="post"
 								enctype="multipart/form-data" class="row">
 								<div class="col-md-1"></div>
 								<div class="col-md-4">
 									<img id="addImage" src="<?= base_url("assets/uploads/product/") . $product['image']?>" class="rounded-circle d-block" />
-									<a href=""><i class="fa fa-camera" aria-hidden="true"></i></a>
 								</div>
 								<div class="col-md-7" id="inputan">
 									<div class="topic-title">Product Name</div>
-									<!-- <input type="text" class="form-control" disabled="true"> -->
-									<?= form_input(['name'=>'name','class'=>'form-control','required'=>'required','value'=>$product['name']])?>
+									<input type="text" name="name" class="form-control" disabled="true" value="<?= $product['name'] ?>">
 									<div class="topic-title">Price</div>
-									<!-- <a href=""><input type="text" class="form-control" disabled="true"></a> -->
-									<?= form_input(['name'=>'price','type'=>"number",'class'=>'form-control','required'=>'required','value'=>$product['price']]) ?>
+									<input type="text" name="price" class="form-control" disabled="true" value="<?= $product['price'] ?>">
 
 								</div>
 								<div class="topic-title desc">Description</div>
-								<!-- <textarea class="form-control" name="" id="" cols="30" rows="5" disabled="true"></textarea> -->
-								<?= form_textarea(['name'=>'description','class'=>'form-control','cols'=>'30','rows'=>'5','required'=>'required','value'=>$product['description']]) ?>
-								<!-- <button type="button" class="btn btn-primary ">Add New Article</button> -->
-								<button type="button" class="btn btn-outline-danger"
-									data-dismiss="modal">Close</button>
+								<textarea class="form-control" name="description" id="formDetail" cols="30" rows="5" disabled="true"><?=$product['description']?></textarea>
+								<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
 							</form>
 						</div>
 					</div>
@@ -308,8 +307,7 @@
 						<form action="<?php echo site_url('Product/delete_Product/'.$product['id']) ?>" method="post"
 							enctype="multipart/form-data" class="row">
         		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-						<!-- <a id="btn-delete" class="btn btn-danger" href="#">Delete</a> -->
-						<?= form_submit(['submit'=>'Delete','class'=>'btn btn-danger','value'=>'Delete']) ?>
+						<button type="submit" class="btn btn-danger">Delete</button>
 						</form>
       	</div>
     	</div>

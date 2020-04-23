@@ -69,7 +69,7 @@
 		<div class="container" id="section1">
 			<form class="form-container">
 				<div class="row">
-					<div class="col-xl-5"><img class="img-fluid" src="<?= base_url('assets/uploads/article') . $article['image'] ?>"
+					<div class="col-xl-5"><img class="img-fluid" src="<?= base_url('assets/uploads/article/') . $article['image'] ?>"
 							alt="" /></div>
 					<div class="col-xl-7">
 						<h1 id="artittle"><?= $article['title']; ?></h1>

@@ -36,11 +36,11 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<form class="form-inline ">
 					<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/image/kirito.jpg') ?>"
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/admindefault.jpg') ?>"
 								class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<img src="<?= base_url('assets/image/kirito.jpg'); ?>"
+								<img src="<?= base_url('assets/uploads/profile/admindefault.jpg'); ?>"
 									class="rounded-circle d-block bot" />
 								<h3 class="text-center profile-title"><?= $admin['username']; ?></h3>
 								<h3 class="text-center profile-title"><?= $admin['id']; ?></h3>
@@ -82,7 +82,7 @@
 		<div class="container-fluid text-center" id="section1">
 			<div class="row">
 				<div class="col-md-12" id="welcome">
-					<h3 id="tittle-section1-1">Halo Maol Bucin,</h3>
+					<h3 id="tittle-section1-1">Halo <?= $admin['username'] ?>,</h3>
 					<h2 id="tittle-section1-2">Selamat Datang di Dashboard Admin!</h2>    
 				</div>  
 			</div>
