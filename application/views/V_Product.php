@@ -94,9 +94,6 @@
 							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
 								placeholder="Maximum price">
 							<button type="btn" class="btn btn-outline-info text-white" id="submit">Submit</button>
-							<!-- <button type="btn" class="btn btn-outline-info" id="submit1">25rb - 50rb</button>
-							<button type="btn" class="btn btn-outline-info" id="submit2">50rb - 100rb</button>
-							<button type="btn" class="btn btn-outline-info">100rb - 200rb</button> -->
 						</form>
 					</div>
 				</div>

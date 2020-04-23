@@ -82,7 +82,7 @@ class Buyer extends CI_Controller {
     $this->form_validation->set_rules('newPassword2', 'Confirm New Password', 'required|trim|min_length[8]|matches[newPassword1]');
 
     if ($this->form_validation->run() == FALSE) {
-      $this->session->set_flashdata('mustInputPassword', 'You must input the field!');
+      $this->session->set_flashdata('mustInputPassword', 'You must input the field correctly!');
       redirect('Buyer');
     } else {
       $id = $this->session->userdata('id');

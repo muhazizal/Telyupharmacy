@@ -219,7 +219,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<div class="card-text">
 									<div class="harga">Rp <?= $product['price'] ?></div>
 								</div>
-								<button type="button" class="btn btn-large btn-block mt-3 text-white">Buy</button>
 							</div>
 						</div>
 					</div>
