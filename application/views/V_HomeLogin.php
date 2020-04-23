@@ -262,7 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 				}
 				?>
-			<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" >Show All Article</a>
+			<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" id="btnShowAllArticle">Show All Article</a>
 			</div>
 		</div>
 

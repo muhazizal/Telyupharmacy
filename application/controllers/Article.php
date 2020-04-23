@@ -147,5 +147,9 @@ class Article extends CI_Controller {
 		$this->load->view('V_AdminArticle', $data2);
 	}
 
+	public function searchArticle() {
+		$searchValue = $this->input->get('searchArticle');
+	}
+
 }
 ?>
