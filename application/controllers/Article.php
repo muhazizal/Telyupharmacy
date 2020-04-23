@@ -13,21 +13,22 @@ class Article extends CI_Controller {
 	}
 
 	public function index(){
-			checkLoginBuyer();
-			
-			$username = $this->session->userdata('username');
-			$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-			$data['data_article'] = $this->M_Article->get_AllArticle();
-			$this->load->view("V_Article",$data,array('error' => ' ' ));
+		checkLoginBuyer();
+		
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+		$data['data_article'] = $this->M_Article->get_AllArticle();
+
+		$this->load->view("V_Article",$data,array('error' => ' ' ));
 	}
 
 	public function load_AdminArticle(){
-			checkLoginAdmin();
+		checkLoginAdmin();
 
-			$username = $this->session->userdata('username');
-			$data['admin'] = $this->M_Admin->getAdmin($username);
-			$data['data_article'] = $this->M_Article->get_AllArticle();
-			$this->load->view("V_AdminArticle",$data); 
+		$username = $this->session->userdata('username');
+		$data['admin'] = $this->M_Admin->getAdmin($username);
+		$data['data_article'] = $this->M_Article->get_AllArticle();
+		$this->load->view("V_AdminArticle",$data); 
 	}
 
 	public function add_Article(){
@@ -36,15 +37,16 @@ class Article extends CI_Controller {
 		$this->form_validation->set_rules('description', 'Description', 'required');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('article_notInserted', 'You must input field correctly!');
+			$this->session->set_flashdata('article_notInserted', 'Please fill out the field correctly!');
 			redirect('Article/load_AdminArticle');
-    } else {
+		} 
+		else {
 			$upload_image = $_FILES['image']['name'];
 
 			if ($upload_image) {
 				$config = [
           'allowed_types' => 'gif|jpg|png',
-          'max-size' => '2048',
+          'max-size' => '10240',
           'upload_path' => './assets/uploads/article/'
         ];
 
@@ -71,7 +73,7 @@ class Article extends CI_Controller {
 			}
 
 			$this->M_Article->insert_Article($data);
-      $this->session->set_flashdata('article_Inserted', 'Your article has been uploaded!');
+      $this->session->set_flashdata('article_Inserted', 'The selected article has been added!');
       redirect('Article/load_AdminArticle');
 		}
 	}
@@ -102,8 +104,8 @@ class Article extends CI_Controller {
 			if ($upload_image) {
 				$config = [
           'allowed_types' => 'gif|jpg|png',
-          'max-size' => '2048',
-          'upload_path' => './assets/uploads/article/'
+          'max-size' 			=> '10240',
+					'upload_path' 	=> './assets/uploads/article/'
         ];
 
         $this->load->library('upload', $config);
@@ -112,7 +114,7 @@ class Article extends CI_Controller {
 					$old_image = $data['data_article']['image'];
 
 					if ($old_image != 'defaultarticle.jpg') {
-							unlink(FCPATH . 'assets/uploads/article/' . $old_image);                    
+						unlink(FCPATH . 'assets/uploads/article/' . $old_image);                    
 					}
 
 					$new_image = $this->upload->data('file_name');
@@ -141,12 +143,6 @@ class Article extends CI_Controller {
 		}
 	}
 
-	public function search_Article(){
-		$name_article = $this->input->post('searchArticle');
-		$data2['data_article'] = $this->M_Article->get_ArticlebyName($name_article);
-		$this->load->view('V_AdminArticle', $data2);
-	}
-
 	// Search article by title in buyer page
 	public function searchArticleBuyer() {
 		$username = $this->session->userdata('username');
@@ -154,12 +150,28 @@ class Article extends CI_Controller {
 
 		$searchValue = $this->input->get('searchArticle');
 		if ($searchValue) {
-			$data['data_article'] = $this->M_Article->getArticleTitle($searchValue);
+			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
 		} else {
 			$data['data_article'] = $this->M_Article->get_AllArticle();
 		}
 
 		$this->load->view("V_Article", $data);
+	}
+
+	// Search article by title in admin page
+	public function searchArticleAdmin() {
+		$username = $this->session->userdata('username');
+		$password = $this->session->userdata('password');
+		$data['admin'] = $this->M_Admin->checkAdmin($username,$password);
+
+		$searchValue = $this->input->get('searchArticle');
+		if ($searchValue) {
+			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
+		} else {
+			$data['data_article'] = $this->M_Article->get_AllArticle();
+		}
+
+		$this->load->view("V_AdminArticle", $data);
 	}
 
 	// Show detail article in buyer page

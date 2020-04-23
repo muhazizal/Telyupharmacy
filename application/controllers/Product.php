@@ -3,178 +3,185 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Product extends CI_Controller {
     
-    public function __construct()
+  public function __construct()
 	{
-        parent::__construct();
+		parent::__construct();
 
-        $this->load->model('M_Admin');
-        $this->load->model('M_Buyer');
-        $this->load->model('M_Product');
-    }
+		$this->load->model('M_Admin');
+		$this->load->model('M_Buyer');
+		$this->load->model('M_Product');
+  }
 
-    public function index(){
-        checkLoginBuyer();
+  public function index(){
+    checkLoginBuyer();
         
-        $username = $this->session->userdata('username');
-        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-        $data['products'] = $this->M_Product->get_AllProduct();
+	  $username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+		$data['data_product'] = $this->M_Product->get_AllProduct();
         
-        $this->load->view("V_Product", $data,array('error' => ' ' ));
-    }
+		$this->load->view("V_Product", $data,array('error' => ' ' ));
+  }
 
-    public function load_AdminProduct(){
-        checkLoginAdmin();
+  public function load_AdminProduct(){
+		checkLoginAdmin();
 
-        $username = $this->session->userdata('username');
-        $data['admin'] = $this->M_Admin->getAdmin($username);
-        $data['data_product'] = $this->M_Product->get_AllProduct();
-        $this->load->view("V_AdminProduct",$data); 
-    }
+		$username = $this->session->userdata('username');
+		$data['admin'] = $this->M_Admin->getAdmin($username);
+		$data['data_product'] = $this->M_Product->get_AllProduct();
+		$this->load->view("V_AdminProduct",$data); 
+  }
 
-    public function search_Product(){
-        $name_product    =   $this->input->post('name_product');
-        $data2['data_product']  = $this->M_Product->get_ProductbyName($name_product);
-        $this->load->view('V_AdminProduct',$data2);
-    }
+  public function add_Product(){
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('price', 'Price', 'required');
+		$this->form_validation->set_rules('description', 'Description', 'required');
 
-    public function add_Product(){
-        $this->form_validation->set_rules('name', 'Name', 'required|trim');
-		$this->form_validation->set_rules('price', 'Price', 'required|trim');
-		$this->form_validation->set_rules('desciption', 'Description', 'required|trim');
-        $data = [
-            //"id" => $this->input->mt_rand(10000000000,99999999999),
-			"name" => $this->input->post('name', true),
-			"price" => $this->input->post('price', true),
-			"description" => $this->input->post('description', true),
-			"image" => $this->uploadimage(),
-			"admin_id" => $this->session->userdata('id'),
-        ];
-        $check = $this->M_Product->insert_Product($data);
-        if($check){
-            $this->session->set_flashdata('product_Inserted', 'The selected product has been added!');
-        }else{
-            $this->session->set_flashdata('product_notInserted', 'There was a problem adding the product!');
-        }
-		redirect('Product/load_AdminProduct');
-    }
+		if($this->form_validation->run()==false){
+			$this->session->set_flashdata('product_notInserted', 'Please fill out the field correctly!');
+			redirect('Product/load_AdminProduct');
+		}
+		else{
+			$upload_image = $_FILES['image']['name'];
 
-    public function form_deleteProduct(){
-        $this->load->view("V_AdminProduct"); 
-    }
-
-    public function delete_Product($id_product){
-        $check = $this->M_Product->delete_Product($id_product);
-		if($check){
-            $this->session->set_flashdata('Product_Deleted', 'The selected product has been removed!');
-        }else{
-            $this->session->set_flashdata('Product_notDeleted', 'There was a problem removing the product!');
-        }
-		redirect('Product/load_AdminProduct');
-    }
-
-    public function form_editProduct(){
-        $this->load->view("V_AdminProduct"); 
-    }
-
-    public function edit_Product($id_product){
-        $data['data_product'] = $this->M_product->get_ProductId($id_product);
-
-        $this->form_validation->set_rules('name', 'Name', 'required|trim');
-		$this->form_validation->set_rules('price', 'Price', 'required|trim');
-		$this->form_validation->set_rules('desciption', 'Description', 'required|trim');
-
-        if($this->form_validation->run()==false){
-			// $this->load_AdminArticle();
-		}else{
-            $id = $this->session->userdata('id');
-            $upload_image = $_FILES['image']['name'];
-            
-            if($upload_image){
+			if($upload_image){
 				$config = [
-					'upload_path'             =>  './assets/uploads/article/',
+					'upload_path'             =>  './assets/uploads/product/',
 					'allowed_types'      	  =>  'gif|jpg|png',
 					'max_size'           	  =>  '5120',             
-					'max_width'          	  =>  '600',           
-					'max_height'         	  =>  '600',   
-					'overwrite'               =>  'true',
-                ];
-                
-                $this->load->library('upload', $config);
+				];
 
-                if($this->upload->upload('image')){
+				$this->load->library('upload',$config);
+
+				if($this->upload->do_upload('image')){
+					$new_image = $this->upload->data('file_name');
+					$data = [					
+						"name" => $this->input->post('name', true),
+						"price" => $this->input->post('price', true),
+						"description" => $this->input->post('description', true),
+						"image" => $new_image,
+						"admin_id" => $this->session->userdata('id'),
+					];
+				}
+			}
+			else{
+				$data = [
+				"name" => $this->input->post('name', true),
+				"price" => $this->input->post('price', true),
+				"description" => $this->input->post('description', true),
+				"image" =>"defaultproduct.jpg",
+				"admin_id" => $this->session->userdata('id'),
+				];
+			}
+		
+		$this->M_Product->insert_Product($data);
+		$this->session->set_flashdata('product_Inserted', 'The selected product has been added!');
+		redirect('Product/load_AdminProduct');
+		}
+  }
+
+	public function delete_Product($id_product){
+		$check = $this->M_Product->delete_Product($id_product);
+		if($check){
+			$this->session->set_flashdata('Product_Deleted', 'The selected product has been removed!');
+		}else{
+			$this->session->set_flashdata('Product_notDeleted', 'There was a problem removing the product!');
+		}
+		redirect('Product/load_AdminProduct');
+	}
+
+	public function update_Product($id_product){
+		$data['data_product'] = $this->M_Product->get_ProductbyId($id_product);
+
+		$this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('price', 'Price', 'required');
+		$this->form_validation->set_rules('description', 'Description', 'required');
+
+		if($this->form_validation->run() == FALSE){
+			$this->session->set_flashdata('product_notUpdated', 'There was a problem updating the product detail(s)!');
+			redirect('Product/load_AdminProduct');
+		}else{
+			$upload_image = $_FILES['image']['name'];
+					
+			if($upload_image){
+				$config = [
+					'upload_path'			=>  './assets/uploads/article/',
+					'allowed_types'		=>  'gif|jpg|png',
+					'max_size'				=>  '5120',                
+				];
+							
+				$this->load->library('upload', $config);
+
+				if($this->upload->upload('image')){
 					$old_image = $data['data_product']['image'];
 
 					if ($old_image != 'defaultproduct.jpg') {
-							unlink(FCPATH . 'assets/uploads/product/' . $old_image);                    
+						unlink(FCPATH . 'assets/uploads/product/' . $old_image);                    
 					}
+
 					$new_image = $this->upload->data('file_name');
 					$data = [
-                        "id"            => $id_product,
-                        "name"          => $this->input->post('name', true),
-                        "price"         => $this->input->post('price', true),
-                        "description"   => $this->input->post('description', true),
-                        "image"         => $new_image,
-                        "admin_id"      => $this->session->userdata('id'),
+						"id"            => $id_product,
+						"name"          => $this->input->post('name', true),
+						"price"         => $this->input->post('price', true),
+						"description"   => $this->input->post('description', true),
+						"image"         => $new_image,
+						"admin_id"      => $this->session->userdata('id'),
 					];
 				}
-            }
-            else{
-                $data = [
-                    "id"            => $id_product,
-                    "name"          => $this->input->post('name', true),
-                    "price"         => $this->input->post('price', true),
-                    "description"   => $this->input->post('description', true),
-                    "admin_id"      => $this->session->userdata('id'),
+			}
+			else{
+				$data = [
+					"id"            => $id_product,
+					"name"          => $this->input->post('name', true),
+					"price"         => $this->input->post('price', true),
+					"description"   => $this->input->post('description', true),
+					"admin_id"      => $this->session->userdata('id'),
 				];
-            }
-            $check = $this->M_Product->update_Product($id_product,$data);
-            if($check){
-				$this->session->set_flashdata('Product_Updated', 'The selected product detail(s) has been updated!');
-			}else{
-				$this->session->set_flashdata('Product_notUpdated', 'There was a problem updating the product detail(s)!');
-			}            
-			redirect('Article/load_AdminProduct');
-        }
-    }
-	public function uploadimage(){
-		$config = [
-			'upload_path'			  =>  './assets/uploads/article/',
-			'allowed_types'      	  =>  'gif|jpg|png',
-			'max_size'           	  =>  '5120',             
-			'max_width'          	  =>  '2000',           
-			'max_height'         	  =>  '2000',   
-			'overwrite'               =>  'true',
-		];
-		$this->load->library('upload', $config);
-		if($this->upload->do_upload('image')){
-			return $this->upload->data("file_name");
-		}else {
-			return "defaultproduct.jpg";
+			}
+			$this->M_Product->update_Product($id_product,$data);
+			$this->session->set_flashdata('product_Updated', 'The selected product detail(s) has been updated!'); 
+			redirect('Product/load_AdminProduct');
 		}
-    }
-    
-    // Search product by name in buyer page
-    public function searchProductBuyer() {
+	}
+		
+  // Search product by name in buyer page
+  public function searchProductBuyer() {
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
 		$searchValue = $this->input->get('searchProduct');
 		if ($searchValue) {
-			$data['products'] = $this->M_Product->getProductName($searchValue);
+			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
 		} else {
-			$data['products'] = $this->M_Product->get_AllProduct();
+			$data['data_product'] = $this->M_Product->get_AllProduct();
 		}
 
 		$this->load->view("V_Product", $data);
 	}
 
-    // Show detail product in buyer page
-    public function showDetailProduct($id_product) {
-        $username = $this->session->userdata('username');
-        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-        $data['product'] = $this->M_Product->get_ProductbyId($id_product);
+	// Search product by name in admin page
+	public function searchProductAdmin() {
+		$username = $this->session->userdata('username');
+		$password = $this->session->userdata('password');
+		$data['admin'] = $this->M_Admin->checkAdmin($username,$password);
 
-        $this->load->view('V_DetailProduct', $data);
+		$searchValue = $this->input->get('searchProduct');
+		if ($searchValue) {
+			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
+		} else {
+			$data['data_product'] = $this->M_Product->get_AllProduct();
+		}
+
+		$this->load->view("V_AdminProduct", $data);
+	}
+
+  // Show detail product in buyer page
+  public function showDetailProduct($id_product) {
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+		$data['product'] = $this->M_Product->get_ProductbyId($id_product);
+
+		$this->load->view('V_DetailProduct', $data);
 	}
 }
 ?>
