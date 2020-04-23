@@ -106,6 +106,26 @@ class Buyer extends CI_Controller {
     }
   }
   
+  public function deleteAccount($id_buyer) {
+    $id_buyer = $this->session->userdata('id');
+
+    $result = $this->M_Buyer->deleteAccount($id_buyer);
+
+    if ($result) {
+      $this->session->unset_userdata('username');
+      $this->session->unset_userdata('name');
+      $this->session->unset_userdata('email');
+      $this->session->unset_userdata('status');
+      $this->session->unset_userdata('id');
+      $this->session->unset_userdata('password');
+      $this->session->set_flashdata('deleteAccountSuccess', 'Your account has been deleted!');
+      redirect('Home');
+    } else {
+      $this->session->set_flashdata('deleteAccountFailed', 'Oops, something wrong!');
+      redirect('Buyer/editProfile');
+    }
+    
+  }
 }
 
 ?>

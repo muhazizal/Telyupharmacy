@@ -22,7 +22,12 @@ class M_Buyer extends CI_Model {
     $this->db->set('password', $newPassword);
     $this->db->where('id', $id);
     return $this->db->update('buyer');
-  } 
+  }
+
+  public function deleteAccount($id) {
+    $this->db->where('id', $id);
+    return $this->db->delete('buyer');
+  }
 }
 
 ?>

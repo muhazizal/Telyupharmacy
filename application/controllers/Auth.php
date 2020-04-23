@@ -32,7 +32,6 @@ class Auth extends CI_Controller {
     }
   }
 
-  // Function sign in
   private function _do_signIn() {
     $username = $this->input->post('username');
     $password = $this->input->post('password');
@@ -88,7 +87,6 @@ class Auth extends CI_Controller {
     }
   }
 
-  // Function sign up
   public function do_signUp() {
     if ($this->session->userdata('username')) {
       if ($this->session->userdata('status') == 1) {
@@ -135,10 +133,22 @@ class Auth extends CI_Controller {
     }
   }
 
-  // Function logout
   public function do_logout() {
-    $this->session->unset_userdata('username');
-    $this->session->unset_userdata('status');
+    if ($this->session->userdata('status') == 1) {
+      $this->session->unset_userdata('username');
+      $this->session->unset_userdata('status');
+      $this->session->unset_userdata('id');
+    }
+
+    if ($this->session->userdata('status') == 2) {
+      $this->session->unset_userdata('username');
+      $this->session->unset_userdata('name');
+      $this->session->unset_userdata('email');
+      $this->session->unset_userdata('status');
+      $this->session->unset_userdata('id');
+      $this->session->unset_userdata('password');
+    }
+    
     $this->session->set_flashdata('logout', 'Logout success!');
     redirect('Home');
   }

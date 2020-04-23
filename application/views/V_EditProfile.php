@@ -82,6 +82,17 @@
 				</div>
 			</div>
 		</div>
+		<?php } else if ($this->session->flashdata('deleteAccountFailed')) { ?>
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+					<strong><?= $this->session->flashdata('deleteAccountFailed'); ?></strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
 		<?php } ?>
 
 		<div class="container" id="section1">
@@ -162,8 +173,6 @@
 									<input class="form-control" type="password" name="oldPassword"
 										placeholder="Old Password" id="oldPassword" />
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click
-											Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
@@ -194,23 +203,21 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<div class="modal-body">
-						Data yang di hapus tidak dapat di kembalikan, anda yakin ?
+						Are you sure to delete your account, <?= $buyer['username']; ?> ?
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-danger">Delete</button>
+						<a type="button" href="<?= site_url('Buyer/deleteAccount/'.$buyer['id'])?>" class="btn btn-danger">Delete</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 
 		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
 		<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">

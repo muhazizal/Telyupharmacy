@@ -177,7 +177,6 @@
 									<span class="tittle">Old Password</span>
 									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
-									<span class="tittle">Forgot the password?<a id="a-item" href=""> Click Here</a></span>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
