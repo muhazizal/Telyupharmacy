@@ -41,7 +41,7 @@ class Buyer extends CI_Controller {
         $config = [
           'allowed_types' => 'gif|jpg|png',
           'max-size' => '2048',
-          'upload_path' => './assets/image/',
+          'upload_path' => './assets/uploads/profile/',
         ];
 
         $this->load->library('upload', $config);
@@ -50,7 +50,7 @@ class Buyer extends CI_Controller {
           $old_image = $data['buyer']['image'];
 
           if ($old_image != 'default.jpg') {
-            unlink(FCPATH . 'assets/image/' . $old_image);
+            unlink(FCPATH . 'assets/uploads/profile/' . $old_image);
           }
 
           $new_image = $this->upload->data('file_name');

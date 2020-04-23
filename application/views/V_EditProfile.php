@@ -42,13 +42,13 @@
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+									src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
 									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+									<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
@@ -106,7 +106,7 @@
 
 				<div class="form-group row d-flex align-items-center">
 					<div class="col-md-4">
-						<img src="<?= base_url('assets/image/') . $buyer['image']; ?>" class="rounded-circle d-block" />
+						<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>" class="rounded-circle d-block" />
 					</div>
 					<div class="custom-file col-md-5 ml-3">
 						<input type="file" class="custom-file-input" id="customFile" name="image">

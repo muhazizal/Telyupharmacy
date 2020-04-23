@@ -53,13 +53,13 @@
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/image/') . $buyer['image']; ?>"
+								data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
 								class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-								<img src="<?= base_url('assets/image/') . $buyer['image'] ?>"
+								<img src="<?= base_url('assets/uploads/profile/') . $buyer['image'] ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
