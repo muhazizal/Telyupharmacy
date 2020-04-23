@@ -144,11 +144,11 @@ h6 {
 	border-radius: 5px;
 }
 
-.col-md-2 .card{
+.col-md-2 .card {
 	border-radius: 10px;
 }
 
-.col-md-10 .row{
+.col-md-10 .row {
 	justify-content: space-around;
 }
 
@@ -157,6 +157,11 @@ h6 {
 	border-radius: 10px;
 	margin-top: 2%;
 	margin-bottom: 2%;
+}
+
+.col-md-10 .img-fluid {
+	width: 200px;
+	height: 150px;
 }
 
 #min {
