@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div class="container-fluid-0">
+	<class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -72,7 +72,7 @@
 
 		<!-- Flashdata -->
 		<?php if ($this->session->flashdata('editSuccess')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('editSuccess'); ?></strong>
@@ -81,9 +81,8 @@
 					</button>
 				</div>
 			</div>
-		</div>
 		<?php } else if ($this->session->flashdata('deleteAccountFailed')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('deleteAccountFailed'); ?></strong>
@@ -92,7 +91,6 @@
 					</button>
 				</div>
 			</div>
-		</div>
 		<?php } ?>
 
 		<div class="container" id="section1">
@@ -220,8 +218,8 @@
 			</div>
 		</div>
 
-		<img id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
-		<img id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
+		<img class="img-fluid" id="vector6" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
+		<img class="img-fluid" id="vector7" src="<?= base_url('assets/image/Vector7.png') ?>" alt="">
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

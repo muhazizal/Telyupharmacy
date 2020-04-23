@@ -183,7 +183,7 @@
 
 #vector6 {
 	position: absolute;
-	top: 70%;
+	/* top: 70%; */
 	bottom: 0%;
 	/* width: 8.5%; */
 }
@@ -191,7 +191,7 @@
 #vector7 {
 	position: absolute;
 	left: 87.9%;
-	bottom: 20%;
+	bottom: 28.9%;
 	z-index: 0;
 	/* width: 12.1%; */
 }

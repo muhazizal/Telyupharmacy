@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div class="container-fluid-0">
+	< class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url("Admin") ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -61,7 +61,7 @@
 
 		<!-- Flashdata -->
 		<?php if ($this->session->flashdata('product_Inserted')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('product_Inserted'); ?></strong>
@@ -70,9 +70,9 @@
 					</button>
 				</div>
 			</div>
-		</div>
+		
 		<?php } else if ($this->session->flashdata('product_notInserted')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('article_notInserted'); ?></strong>
@@ -81,9 +81,9 @@
 					</button>
 				</div>
 			</div>
-		</div>
+		
 		<?php } else if ($this->session->flashdata('Product_Deleted')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('article_Deleted'); ?></strong>
@@ -92,9 +92,9 @@
 					</button>
 				</div>
 			</div>
-    </div>
+    
 		<?php } else if ($this->session->flashdata('product_notDeleted')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('product_notDeleted'); ?></strong>
@@ -103,9 +103,9 @@
 					</button>
 				</div>
 			</div>
-    </div>
+    
 		<?php } else if ($this->session->flashdata('product_Updated')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('product_Updated'); ?></strong>
@@ -114,9 +114,9 @@
 					</button>
 				</div>
 			</div>
-    </div>
+    
 		<?php } else if ($this->session->flashdata('product_notUpdated')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('product_notUpdated'); ?></strong>
@@ -125,7 +125,7 @@
 					</button>
 				</div>
 			</div>
-    </div>
+    
 		<?php } ?>
 		
 		<!-- section1 -->

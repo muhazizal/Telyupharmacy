@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TelyuPharmacy | Admin Home</title>
+	<title>TelyuPharmacy | Admin Product</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<div class="container-fluid-0">
+	< class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Admin'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -57,7 +57,7 @@
 
 		<!-- Flashdata -->
 		<?php if ($this->session->flashdata('signOutFirst')) { ?>
-    <div class="row">
+    
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('signOutFirst'); ?></strong>
@@ -66,9 +66,9 @@
 					</button>
 				</div>
 			</div>
-		</div>
+
 		<?php } else if ($this->session->flashdata('notBuyer')) { ?>
-    <div class="row">
+    
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('notBuyer'); ?></strong>
@@ -77,7 +77,6 @@
 					</button>
 				</div>
 			</div>
-    </div>
 		<?php } ?>
 
 		<div class="container-fluid text-center" id="section1">

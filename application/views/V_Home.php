@@ -9,19 +9,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | Home</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Home.css') ?>">
 </head>
 
 <body>
-	<div class="container-fluid-0">
+	<class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
 				<div class="collapse navbar-collapse justify-content-start">
-					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span id="Pharmacy-navbar">Pharmacy</span></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span
+							id="Pharmacy-navbar">Pharmacy</span></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 				</div>
@@ -56,58 +59,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<!-- Flashdata -->
 		<?php if ($this->session->flashdata('signUp_success')) { ?>
-    <div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signUp_success'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('signUp_success'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-    </div>
+		</div>
 		<?php } else if ($this->session->flashdata('signIn_failed')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('signIn_failed'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 		<?php } else if ($this->session->flashdata('logout')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('logout'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('logout'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 		<?php } else if ($this->session->flashdata('signInFirst')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signInFirst'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('signInFirst'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 		<?php } else if ($this->session->flashdata('deleteAccountSuccess')) { ?>
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('deleteAccountSuccess'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('deleteAccountSuccess'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 		<?php } ?>
@@ -118,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="col-lg-6">
 					<h2 id="tittle-section1-1">Creating Your Healty, For Your Future</h2>
 					<p id="tittle-section1-2">
-						
+
 					</p>
 				</div>
 				<div class="col-lg-6">
@@ -131,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- section2 -->
 		<div class=" container-fluid" id="section2">
 			<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-				
+
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="<?= base_url('assets/image/banner-1.png') ?>" class="d-block w-100" alt="...">
@@ -166,14 +159,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 
 				<!-- Show all product -->
-				<div class="row" id="row1">	
+				<div class="row" id="row1">
 					<?php
 						$i = 0;
 						foreach ($products as $product) {
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt=""
+								class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<span><a id="label-section-3"><?= $product['name'] ?></a></span>
@@ -207,7 +201,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt=""
+							class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
 								<h5><?= $article['title']; ?></h5>
@@ -225,7 +220,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 				}
 				?>
-				<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" >Show All Article</a>
+				<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white">Show All Article</a>
 			</div>
 		</div>
 
@@ -262,7 +257,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<a class="nav-link" id="copyright" href="<?= site_url("Article"); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUs"); ?>">About Us</a>
+								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUs"); ?>">About
+									Us</a>
 							</li>
 						</ul>
 					</div>
@@ -316,19 +312,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 							<form action="<?= site_url('Auth') ?>" method="post">
 								<div class="form-group">
-									<input class="form-control" type="text" name="username" 
-										value="<?= set_value('username'); ?>" placeholder="Username"
-									/>
+									<input class="form-control" type="text" name="username"
+										value="<?= set_value('username'); ?>" placeholder="Username" />
 									<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
-									<input class="form-control" type="password" name="password" placeholder="Password" />
+									<input class="form-control" type="password" name="password"
+										placeholder="Password" />
 									<?= form_error('password', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-info" id="btn-Sign-In">Sign In</button>
-									<p id="forgot">Don't have account? 
+									<p id="forgot">Don't have account?
 										<a href="<?= site_url('Auth/do_SignUp'); ?>" id="click">Sign Up Here</a>
 									</p>
-									<button type="submit" class="btn text-white" id="btn-close-modal" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn text-white" id="btn-close-modal"
+										data-dismiss="modal">Close</button>
 								</div>
 							</form>
 
@@ -338,15 +335,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			</div>
 		</div>
 
-	</div>
+		</div>
 
-	<!-- Bootstrap JS -->
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-	</script>
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-	</script>
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+		</script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+		</script>
 </body>
 
 </html>

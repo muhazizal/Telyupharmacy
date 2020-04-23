@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-	<div class="container-fluid-0">
+	<class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<!-- Flashdata -->
     <?php if ($this->session->flashdata('signIn_success')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('signIn_success'); ?></strong>
@@ -82,9 +82,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-		</div>
+	
 		<?php } else if ($this->session->flashdata('signOutFirst')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('signOutFirst'); ?></strong>
@@ -93,9 +93,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-		</div>
+	
 		<?php } else if ($this->session->flashdata('notAdmin')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('notAdmin'); ?></strong>
@@ -104,9 +104,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-		</div>
+	
 		<?php } else if ($this->session->flashdata('changePasswordFailed')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('changePasswordFailed'); ?></strong>
@@ -115,9 +115,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-		</div>
+	
 		<?php } else if ($this->session->flashdata('changePasswordSame')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('changePasswordSame'); ?></strong>
@@ -126,9 +126,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-    </div>
+
 		<?php } else if ($this->session->flashdata('changePasswordSuccess')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('changePasswordSuccess'); ?></strong>
@@ -137,9 +137,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-    </div>
+
 		<?php } else if ($this->session->flashdata('mustInputPassword')) { ?>
-		<div class="row">
+		
 			<div class="col-lg-12 text-center">
 				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
 					<strong><?= $this->session->flashdata('mustInputPassword'); ?></strong>
@@ -148,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 				</div>
 			</div>
-    </div>
+
 		<?php } ?>
 
 		<!-- section1 -->
