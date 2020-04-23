@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-	<class="container-fluid-0">
+	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				<a class="navbar-brand" href="<?= site_url('Buyer'); ?>">Telyu<span id="Pharmacy">Pharmacy</span></a>
@@ -28,14 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item"
-								href="<?= site_url('Product'); ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
@@ -43,9 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
-								class="rounded-circle d-block top" />
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
+									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
@@ -54,17 +55,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
 										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+										Password
 									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
 										class="btn btn-default mt-3 text-white text-center">Log Out
 									</a>
 								</form>
-							</div>	
+							</div>
 						</div>
 					</form>
 				</div>
@@ -72,82 +74,82 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<!-- Flashdata -->
-    <?php if ($this->session->flashdata('signIn_success')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signIn_success'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+		<?php if ($this->session->flashdata('signIn_success')) { ?>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('signIn_success'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-	
+		</div>
+
 		<?php } else if ($this->session->flashdata('signOutFirst')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('signOutFirst'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('signOutFirst'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-	
+		</div>
+
 		<?php } else if ($this->session->flashdata('notAdmin')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('notAdmin'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('notAdmin'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-	
+		</div>
+
 		<?php } else if ($this->session->flashdata('changePasswordFailed')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('changePasswordFailed'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('changePasswordFailed'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
-	
+		</div>
+
 		<?php } else if ($this->session->flashdata('changePasswordSame')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('changePasswordSame'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('changePasswordSame'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+		</div>
 
 		<?php } else if ($this->session->flashdata('changePasswordSuccess')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('changePasswordSuccess'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('changePasswordSuccess'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+		</div>
 
 		<?php } else if ($this->session->flashdata('mustInputPassword')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('mustInputPassword'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('mustInputPassword'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+		</div>
 
 		<?php } ?>
 
@@ -169,7 +171,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<!-- section2 -->
 		<div class=" container-fluid" id="section2">
 			<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-				
+
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="<?= base_url('assets/image/banner-1.png') ?>" class="d-block w-100" alt="...">
@@ -183,7 +185,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<img src="<?= base_url('assets/image/banner-3.png') ?>" class="d-block w-100" alt="...">
 					</div>
 				</div>
-				
+
 				<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Previous</span>
@@ -203,7 +205,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<a href="<?= site_url('Product'); ?>" class="btn btn-info col-md-2">Show All Product</a>
 				</div>
 
-				<div class="row" id="row1">	
+				<div class="row" id="row1">
 					<!-- Show all product -->
 					<?php
 						$i = 0;
@@ -211,7 +213,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					?>
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
-							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
+							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt=""
+								class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
 									<span><a id="label-section-3"><?= $product['name'] ?></a></span>
@@ -244,7 +247,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
-						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt="" class="img-fluid">
+						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt=""
+							class="img-fluid">
 						<div class="card-block" id="body-title">
 							<div class="card-title" id="card-title-section4">
 								<h5><?= $article['title']; ?></h5>
@@ -262,7 +266,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 				}
 				?>
-			<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white" id="btnShowAllArticle">Show All Article</a>
+				<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white"
+					id="btnShowAllArticle">Show All Article</a>
 			</div>
 		</div>
 
@@ -299,7 +304,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<a class="nav-link" id="copyright" href="<?= site_url("Article"); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url("Home/load_AboutUsLogin"); ?>">About Us</a>
+								<a class="nav-link" id="copyright"
+									href="<?= site_url("Home/load_AboutUsLogin"); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -352,21 +358,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
+									<input class="form-control" type="password" name="oldPassword"
+										placeholder="Old Password" id="oldPassword" />
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
+									<input class="form-control" type="password" name="newPassword1"
+										placeholder="New Password" id="newPassword1" />
 									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
+									<input class="form-control" type="password" name="newPassword2"
+										placeholder="Confrim New Password" id="newPassword2" />
 								</div>
 								<div class="form-group">
-									<button type="submit" class="btn btn-info" >Change Password</button>
-									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+									<button type="submit" class="btn btn-info">Change Password</button>
+									<button type="button" class="btn btn-outline-danger"
+										data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
