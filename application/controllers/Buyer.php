@@ -27,7 +27,7 @@ class Buyer extends CI_Controller {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-    $this->form_validation->set_rules('name', 'Name', 'required|trim');
+    $this->form_validation->set_rules('name', 'Name', 'required');
     $this->form_validation->set_rules('username', 'Username', 'required|trim');
     $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
 

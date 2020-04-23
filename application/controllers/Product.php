@@ -77,7 +77,7 @@ class Product extends CI_Controller {
 		$this->form_validation->set_rules('desciption', 'Description', 'required|trim');
 
         if($this->form_validation->run()==false){
-			$this->load_AdminArticle();
+			// $this->load_AdminArticle();
 		}else{
             $id = $this->session->userdata('id');
             $upload_image = $_FILES['image']['name'];
