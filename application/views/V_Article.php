@@ -27,11 +27,20 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<!-- Search Article -->
-							<form action="<?= site_url('Article/search_Article') ?>" method="GET" class="navbar-form">
+							<form action="<?= site_url('Article/searchArticleBuyer') ?>" method="GET" class="navbar-form">
 								<div class="form-group input-group">
-									<input id="search" type="text" class="form-control" placeholder="Search">
+									<?php
+										if (array_key_exists("title", $_GET)) {
+									?>
+										<input id="search" type="text" name="searchArticle" value="<?= $_GET["title"] ?>" 
+										class="form-control" placeholder="Search">
+									<?php
+										} else {
+									?>
+										<input id="search" type="text" name="searchArticle" class="form-control" placeholder="Search">
+									<?php } ?>
 									<div class="input-group-btn">
-										<button type="button" id="icon" class="btn btn-outline-info">
+										<button type="submit" id="icon" class="btn btn-outline-info">
 											<i class="fa fa-search" aria-hidden="true"></i>
 										</button>
 									</div>
@@ -85,7 +94,7 @@
 		</div>
 
 		<div class="container-fluid" id="section1">
-			<?php foreach($data_article as $article):  ?>
+			<?php foreach($data_article as $article) : ?>
 			<div class="row text-left article">
 				<div class="col-lg-3">
 					<img id="article-photo" src="<?= base_url("assets/image/kirito.jpg")?>" alt="" class="img-fluid">
@@ -94,7 +103,6 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="#" class="btn btn-large btn-block mt-3 text-white">Show Detail</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>

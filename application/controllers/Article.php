@@ -147,8 +147,19 @@ class Article extends CI_Controller {
 		$this->load->view('V_AdminArticle', $data2);
 	}
 
-	public function searchArticle() {
+	// Aziz, Search article by title in buyer
+	public function searchArticleBuyer() {
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
 		$searchValue = $this->input->get('searchArticle');
+		if ($searchValue) {
+			$data['data_article'] = $this->M_Article->getArticleTitle($searchValue);
+		} else {
+			$data['data_article'] = $this->M_Article->get_AllArticle();
+		}
+
+		$this->load->view("V_Article", $data);
 	}
 
 }

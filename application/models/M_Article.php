@@ -36,5 +36,12 @@ class M_Article extends CI_Model {
     return $this->db->delete('article');
   }
 
+  public function getArticleTitle($title) {
+    $this->db->select('*');
+    $this->db->from('article');
+    $this->db->like('title', $title);
+    return $this->db->get()->result_array();
+  }
+
 }
 ?>
