@@ -229,6 +229,15 @@ img#vector1 {
 	margin: 10%;
 }
 
+.card-text {
+	font-family: Nunito Sans;
+	font-style: normal;
+	/* font-weight: bold; */
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+}
+
 .card-title {
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -240,7 +249,7 @@ img#vector1 {
 }
 
 #label-section-3:hover {
-	color: magenta;
+	color: #4BC2C5;
 	cursor: pointer;
 }
 

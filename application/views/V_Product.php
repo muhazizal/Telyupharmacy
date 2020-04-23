@@ -93,7 +93,7 @@
 								placeholder="Minimum price">
 							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
 								placeholder="Maximum price">
-							<button type="btn" class="btn btn-outline-info text-white" id="submit">Submit</button>
+							<button type="btn" class="btn btn-info text-white" id="submit">Submit</button>
 						</form>
 					</div>
 				</div>
@@ -104,16 +104,23 @@
 				<div class="col-md-2">
 					<div class="card">
 						<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
+						
 						<div class="card-block">
 							<div class="card-title">
-								<h5><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></h5>
+								<span><a id="label-section-3" href="<?= base_url('') ?>"><?= $product['name'] ?></a></span>
 							</div>
 							<div class="card-text">
-								<div class="harga">Rp <?= $product['price'] ?></div>
+								<span class="harga">Rp <?= $product['price'] ?></span>
 							</div>
-							<a href="#" class="btn btn-large btn-block mt-3 text-white">Show Detail</a>
+							<div>								
+								<a href="#" class="btn btn-large btn-block btn-outline-info mt-3">Show Detail</a>
+								<button type="btn" class="btn btn-large btn-block btn-info mt-3">Buy</button>
+							</div>
+							
 						</div>
+						
 					</div>
+
 				</div>
 				<?php } ?>
 

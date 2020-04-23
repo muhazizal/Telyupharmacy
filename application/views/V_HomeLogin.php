@@ -214,7 +214,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<img src="<?= base_url('assets/image/') . $product['image'] ?>" alt="" class="img-fluid">
 							<div class="card-block">
 								<div class="card-title">
-									<h5><a id="label-section-3"><?= $product['name'] ?></a></h5>
+									<span><a id="label-section-3"><?= $product['name'] ?></a></span>
 								</div>
 								<div class="card-text">
 									<div class="harga">Rp <?= $product['price'] ?></div>

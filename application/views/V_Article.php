@@ -94,7 +94,7 @@
 					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
 					<h3 id="article"><?php echo $article['description'] ?></h3>
 					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="#" class="btn btn-large btn-block mt-3 text-white">Show Detail</a>
+					<a href="#" class="btn btn-large btn-info mt-3 text-white">Show Detail</a>
 				</div>
 			</div>
 			<?php endforeach;  ?>
