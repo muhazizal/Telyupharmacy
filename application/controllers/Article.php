@@ -175,7 +175,7 @@ class Article extends CI_Controller {
 		checkLoginAdmin();
 		$username = $this->session->userdata('username');
 		$password = $this->session->userdata('password');
-		$data['admin'] = $this->M_Admin->checkAdmin($username,$password);
+		$data['admin'] = $this->M_Admin->getAdmin($username,$password);
 
 		$searchValue = $this->input->get('searchArticle');
 		if ($searchValue) {
