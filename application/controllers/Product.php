@@ -88,6 +88,15 @@ class Product extends CI_Controller {
 		echo json_encode($insert);
 	}
 
+	public function load_Checkout(){
+		checkLoginBuyer();
+
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Admin->getAdmin($username);
+		//$data['data_product'] = $this->M_Product->get_AllProduct();
+		$this->load->view("V_Checkout",$data); 
+  }
+
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
   public function load_AdminProduct(){
