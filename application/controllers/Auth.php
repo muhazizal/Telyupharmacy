@@ -41,7 +41,7 @@ class Auth extends CI_Controller {
 
     // if admin avail
     if ($admin) {
-      // if admin true
+      // if status true
       if ($admin['status'] == 1) {
         $data = [
           'username' => $admin['username'],
@@ -57,7 +57,7 @@ class Auth extends CI_Controller {
       }
     // if buyer avail
     } else if ($buyer) {
-      // if buyer true
+      // if status true
       if ($buyer['status'] == 2) {
         // if password true
         if (password_verify($password, $buyer['password'])) {
@@ -98,7 +98,6 @@ class Auth extends CI_Controller {
       }
     }
 
-    // Set form_validation required
     $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[buyer.username]', [
       'is_unique' => 'This username already used!'
     ]);
@@ -114,7 +113,6 @@ class Auth extends CI_Controller {
       'min_length' => 'Password minimal 8 characters!'
     ]);
     
-    // Check form input
     if ($this->form_validation->run() == FALSE) {
       $this->load->view('V_SignUp');
     } else {

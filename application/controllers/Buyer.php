@@ -40,8 +40,8 @@ class Buyer extends CI_Controller {
       if ($upload_image) {
         $config = [
           'allowed_types' => 'gif|jpg|png',
-          'max-size' => '2048',
-          'upload_path' => './assets/uploads/profile/',
+          'max-size'      => '2048',
+          'upload_path'   => './assets/uploads/profile/',
         ];
 
         $this->load->library('upload', $config);
@@ -55,17 +55,17 @@ class Buyer extends CI_Controller {
 
           $new_image = $this->upload->data('file_name');
           $data = [
-            'username' => $this->input->post('username', true),
-            'email' => $this->input->post('email', true),
-            'name' => $this->input->post('name', true),
-            'image' => $new_image
+            'username'  => $this->input->post('username', true),
+            'email'     => $this->input->post('email', true),
+            'name'      => $this->input->post('name', true),
+            'image'     => $new_image
           ];
         } 
       } else {
         $data = [
           'username' => $this->input->post('username', true),
-          'email' => $this->input->post('email', true),
-          'name' => $this->input->post('name', true),
+          'email'    => $this->input->post('email', true),
+          'name'     => $this->input->post('name', true),
         ];
       }
 

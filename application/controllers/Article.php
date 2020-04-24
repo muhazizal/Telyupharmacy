@@ -12,9 +12,9 @@ class Article extends CI_Controller {
 		$this->load->model('M_Article');
 	}
 
+	// ---------------------------------- BUYER ---------------------------------------------------- //
 	public function index(){
 		checkLoginBuyer();
-		
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 		$data['data_article'] = $this->M_Article->get_AllArticle();
@@ -22,16 +22,42 @@ class Article extends CI_Controller {
 		$this->load->view("V_Article",$data,array('error' => ' ' ));
 	}
 
+	public function searchArticleBuyer() {
+		checkLoginBuyer();
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
+		$searchValue = $this->input->get('searchArticle');
+		if ($searchValue) {
+			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
+		} else {
+			$data['data_article'] = $this->M_Article->get_AllArticle();
+		}
+
+		$this->load->view("V_Article", $data);
+	}
+
+	public function showDetailArticle($id_article) {
+		checkLoginBuyer();
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+		$data['article'] = $this->M_Article->get_ArticlebyId($id_article);
+
+		$this->load->view('V_DetailArticle', $data);
+	}
+
+	// ---------------------------------- ADMIN ---------------------------------------------------- //
 	public function load_AdminArticle(){
 		checkLoginAdmin();
-
 		$username = $this->session->userdata('username');
 		$data['admin'] = $this->M_Admin->getAdmin($username);
 		$data['data_article'] = $this->M_Article->get_AllArticle();
+
 		$this->load->view("V_AdminArticle",$data); 
 	}
 
 	public function add_Article(){
+		checkLoginAdmin();
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('category', 'Category', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
@@ -46,8 +72,8 @@ class Article extends CI_Controller {
 			if ($upload_image) {
 				$config = [
           'allowed_types' => 'gif|jpg|png',
-          'max-size' => '10240',
-          'upload_path' => './assets/uploads/article/'
+          'max-size' 			=> '10240',
+          'upload_path' 	=> './assets/uploads/article/'
         ];
 
         $this->load->library('upload', $config);
@@ -55,20 +81,20 @@ class Article extends CI_Controller {
         if ($this->upload->do_upload('image')) {
 					$new_image = $this->upload->data('file_name');
           $data = [
-						"title" => $this->input->post('title', true),
+						"title" 			=> $this->input->post('title', true),
 						"description" => $this->input->post('description', true),
-						"category" => $this->input->post('category', true),
-						"image"     => $new_image,
-						"admin_id" => $this->session->userdata('id'),
+						"category"		=> $this->input->post('category', true),
+						"image"     	=> $new_image,
+						"admin_id" 		=> $this->session->userdata('id'),
 					];
 				}
 			} else {
 				$data = [
-					"title" => $this->input->post('title', true),
+					"title" 			=> $this->input->post('title', true),
 					"description" => $this->input->post('description', true),
-					"category" => $this->input->post('category', true),
-					"image"     => "defaultarticle.jpg",
-					"admin_id" => $this->session->userdata('id'),
+					"category" 		=> $this->input->post('category', true),
+					"image"     	=> "defaultarticle.jpg",
+					"admin_id" 		=> $this->session->userdata('id'),
 				];
 			}
 
@@ -79,6 +105,7 @@ class Article extends CI_Controller {
 	}
 
 	public function delete_Article($id_article){
+		checkLoginAdmin();
 		$check = $this->M_Article->delete_Article($id_article);
 		if ($check) {
 			$this->session->set_flashdata('article_Deleted', 'The selected article has been removed!');
@@ -89,6 +116,7 @@ class Article extends CI_Controller {
 	}
 
 	public function update_Article($id_article){
+		checkLoginAdmin();
 		$data['data_article'] = $this->M_Article->get_ArticlebyId($id_article);
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
@@ -143,23 +171,8 @@ class Article extends CI_Controller {
 		}
 	}
 
-	// Search article by title in buyer page
-	public function searchArticleBuyer() {
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-
-		$searchValue = $this->input->get('searchArticle');
-		if ($searchValue) {
-			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
-		} else {
-			$data['data_article'] = $this->M_Article->get_AllArticle();
-		}
-
-		$this->load->view("V_Article", $data);
-	}
-
-	// Search article by title in admin page
 	public function searchArticleAdmin() {
+		checkLoginAdmin();
 		$username = $this->session->userdata('username');
 		$password = $this->session->userdata('password');
 		$data['admin'] = $this->M_Admin->checkAdmin($username,$password);
@@ -173,15 +186,6 @@ class Article extends CI_Controller {
 
 		$this->load->view("V_AdminArticle", $data);
 	}
-
-	// Show detail article in buyer page
-	public function showDetailArticle($id_article) {
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['article'] = $this->M_Article->get_ArticlebyId($id_article);
-
-		$this->load->view('V_DetailArticle', $data);
-	}
-
+	
 }
 ?>
