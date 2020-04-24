@@ -63,7 +63,14 @@
 			</div>
 		</div>
 
-		<div id="section2">
+		<div class="container-fluid" id="section3">
+			<div class="col" id="tittle">Deskripsi</div>
+			<table id="deskripsi-table" class="table table-borderless">
+				<!-- Jquery Json Deskripsi -->
+			</table>
+		</div>
+
+		<div class="container-fluid" id="section2">
 			<div class="row">
 				<div id="margin" class="col-md-7">
 					<div class="col" id="tittle">FAQ</div>

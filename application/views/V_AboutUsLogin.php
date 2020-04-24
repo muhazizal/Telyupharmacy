@@ -67,7 +67,7 @@
 			</nav>
 		</div>
 
-
+		<div class="container"></div>
 		<div class="container-fluid" id="section1">
 			<div class="col" id="tittle">About Us</div>
 			<div class="row text-center" id="team">
@@ -75,7 +75,15 @@
 			</div>
 		</div>
 
-		<div id="section2">
+
+		<div class="container-fluid" id="section3">
+			<div class="col" id="tittle">Deskripsi</div>
+			<table id="deskripsi-table" class="table table-borderless">
+				<!-- Jquery Json Deskripsi -->
+			</table>
+		</div>
+
+		<div class="container-fluid" id="section2">
 			<div class="row">
 				<div id="margin" class="col-md-7">
 					<div class="col" id="tittle">FAQ</div>
@@ -88,6 +96,8 @@
 				</div>
 			</div>
 		</div>
+
+		
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">

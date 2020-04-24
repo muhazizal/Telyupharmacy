@@ -286,6 +286,25 @@
 	display: flex;
 }
 
+
+/* section3 */
+#section3 {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	width: 95%;
+	padding-bottom: 5%;
+	margin-left: 2.5%;
+	margin-bottom: 5%;
+}
+
+#section3 p{
+	margin-top: 1%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+
 /* section5 */
 
 #section5 {
