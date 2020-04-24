@@ -113,7 +113,7 @@
 						<div class="row" id="productContainer">
 						  <!-- Load Product Using AJAX Fetch -->
 						</div>
-						<input type="hidden" id="hiddenId" value="<?= $buyer['id'] ?>" />
+						<input type="hidden" id="hiddenIdBuyer" value="<?= $buyer['id'] ?>" />
 					</div>
 				</div>
 
@@ -243,8 +243,10 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
-	<script src="<?= base_url('assets/js/test.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/product.js'); ?>"></script>
 </body>
 
 </html>

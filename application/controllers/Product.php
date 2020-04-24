@@ -10,6 +10,7 @@ class Product extends CI_Controller {
 		$this->load->model('M_Admin');
 		$this->load->model('M_Buyer');
 		$this->load->model('M_Product');
+		$this->load->model('M_Cart');
   }
 
 	// ---------------------------------- BUYER ---------------------------------------------------- //
@@ -71,11 +72,22 @@ class Product extends CI_Controller {
 		echo json_encode($dataProduct);
 	}
 
-	public function getProductById($id_product) {
+	public function addProductToCart($id_product) {
 		checkLoginBuyer();
-		$dataProduct = $this->M_Product->get_ProductbyId($id_product)->result();
-		echo json_encode($dataProduct);
+
+		$data['product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
+		$insert = [
+			'quantity'      => 1,
+			'date'          => date('y-m-d'),
+			'total_price'   => $data['product']['price'],
+			'id_buyer'      => $this->session->userdata('id'),
+			'id_product'    => $data['product']['id']
+		];
+
+		$this->M_Product->addProductToCart($insert);
+		echo json_encode($insert);
 	}
+
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
   public function load_AdminProduct(){
