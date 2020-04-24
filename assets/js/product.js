@@ -9,7 +9,7 @@ const getProduct = () => {
     .then(response => {
       return response.json();
     })
-    .then (responseJson => {
+    .then(responseJson => {
       if (responseJson.error) {
         console.log('error');
       } else {
@@ -78,7 +78,6 @@ const renderProduct = (products) => {
     `;
   });
 
-  
   const hiddenPrice = document.querySelector('#hiddenPrice');
   const addToCart = document.querySelectorAll('#btnAddToCart');
 
