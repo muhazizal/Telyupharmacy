@@ -21,6 +21,18 @@ class M_Product extends CI_Model {
     return $this->db->get('product')->result_array();
   }
 
+  public function get_ProductbyPrice($lowprice_product,$highprice_product){
+    if($highprice_product==null){
+      $this->db->where('price >=',$lowprice_product);
+    }elseif ($lowprice_product==null){
+      $this->db->where('price <=',$highprice_product);
+    }else{
+      $this->db->where('price >=',$lowprice_product);
+      $this->db->where('price <=',$highprice_product);
+    }
+    return $this->db->get('product')->result_array();
+  }
+
   public function insert_Product($data){     
     return $this->db->insert('product',$data);
   } 

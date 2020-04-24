@@ -98,12 +98,12 @@
 					<h1 id="tittle-section2">Search for more details</h1>
 					<div class="card" id="PriceRange">
 						<h6>Price Range</h6>
-						<form action="">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
+						<form action="<?= site_url('Product/searchProductPrice') ?>" name="checkPrice" method="get" >
+							<input id="price" type="number" min="0" name="ProductPriceMin" class="form-control" id="inlineFormInputGroup"
 								placeholder="Minimum price">
-							<input id="price" type="text" class="form-control" id="inlineFormInputGroup"
+							<input id="price" type="number" min ="0" name="ProductPriceMax" class="form-control" id="inlineFormInputGroup"
 								placeholder="Maximum price">
-							<button type="btn" class="btn btn-info text-white" id="submit">Search</button>
+							<button type="submit" class="btn btn-info text-white" id="submit">Search</button>
 						</form>
 					</div>
 				</div>

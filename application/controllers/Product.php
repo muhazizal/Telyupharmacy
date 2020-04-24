@@ -38,6 +38,23 @@ class Product extends CI_Controller {
 		$this->load->view("V_Product", $data);
 	}
 
+	public function searchProductPrice() {
+		checkLoginBuyer();
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
+		$searchValue1 = $this->input->get('ProductPriceMin');
+		$searchValue2 = $this->input->get('ProductPriceMax');
+
+		if ($searchValue1 or $searchValue2) {
+			$data['data_product'] = $this->M_Product->get_ProductbyPrice($searchValue1,$searchValue2);
+		} else {
+			$data['data_product'] = $this->M_Product->get_AllProduct();
+		}
+
+		$this->load->view("V_Product", $data);
+	}
+
 	public function showDetailProduct($id_product) {
 		checkLoginBuyer();
 		$username = $this->session->userdata('username');
