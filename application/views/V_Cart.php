@@ -10,7 +10,6 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Cart.css')?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
@@ -37,7 +36,6 @@
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<!-- <form class="form-inline "> -->
 						<a id="shoping" href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
@@ -46,24 +44,20 @@
 									class="rounded-circle d-block top" /></a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="">
-								<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
-										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
-									<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
-									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
-									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
-										class="btn btn-default mt-3 text-white text-center">Log Out
-									</a>
-								</form>
+								<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>" class="rounded-circle d-block bot" />
+								<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
+								<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
+								</a>
+								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+								</a>
+								<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									class="btn btn-default mt-3 text-white text-center">Log Out
+								</a>
 							</div>
 						</div>
-					<!-- </form> -->
 				</div>
 			</nav>
 		</div>
@@ -79,38 +73,17 @@
 						<button id="Hapus" class="btn outline-info">Hapus</button>
 						<br>
 
-						<div class="card">
-							<div class="row">
-								<div class="col-md-4" id="md4">
-									<input class="form-check-input" type="checkbox" value="" id="anak" >
-									<img id="Barang" src="<?= base_url('assets/image/kirito.jpg') ?>" alt=""
-										class="img-fluid">
-								</div>
-								<div class="col-md-8" id="md8">
-									<p>Antasida 60ml</p>
-									<p class="harga">Rp. 15,000</p>
-									<div class="">
-										<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
-										<input type="text" id="number" value="1" disabled="true">
-										<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
-										<button type="button" class="btn btn-outline"><i class="fa fa-trash"
-												aria-hidden="true"></i></button>
-									</div>
-								</div>
-							</div>
+						<!-- Cart  -->
+						<div id="cartContainer">
+							<!-- Show by Jquery AJAX -->
 						</div>
 						
 					</div>
 				</div>
 				<div class="col-md-5">
-					<form class="form-container">
-						<span id="tittle-section-2">Ringkasan Belanja</span>
-						<hr>
-						<span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-1">(<input
-								id="number-checkout" type="text" value="1" disabled="true">)</span>
-						<hr>
-						<span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 65.000</span>
-						<a id="checkout" class="btn btn-info" href="#" role="button">Checkout</a>
+					<!-- Summary -->
+					<form class="form-container" id="summaryContainer">
+						<!-- SHow by Jquery AJAX -->
 					</form>
 				</div>
 			</div>
@@ -258,6 +231,25 @@
 		// 		}
 		// 	}
 		// }
+
+		// checkout
+		// const checkAll = document.querySelector('#parent');
+		// parent.addEventListener('click', () => {
+		// 	const input = document.getElementsByTagName('input');
+		// 	if (parent.checked === true) {
+		// 		for (let i = 0; i < input.length; i++) {
+		// 			if (input[i].type == 'checkbox' && input[i].id == 'anak' && input[i].checked === false) {
+		// 				input[i].checked = true;
+		// 			}
+		// 		}
+		// 	} else if (parent.checked === false) {
+		// 		for (let i = 0; i < input.length; i++) {
+		// 			if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked === true) {
+		// 				input[i].checked = false;
+		// 			}
+		// 		}
+		// 	}
+		// });
 	</script>
 	
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -270,7 +262,9 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/cart.js'); ?>"></script>
 </body>
 
 </html>

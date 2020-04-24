@@ -7,12 +7,20 @@ class Cart extends CI_Controller {
 		parent::__construct();
         
         checkLoginBuyer();
+        $this->load->model('M_Cart');
         $this->load->model('M_Buyer');
     }
+
     public function index(){
         $username = $this->session->userdata('username');
         $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
         $this->load->view("V_Cart", $data);
+    }
+
+    public function getCart() {
+        $dataCart = $this->M_Cart->getCart();
+        echo json_encode($dataCart);
     }
 }
 

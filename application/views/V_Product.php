@@ -265,9 +265,7 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-
-	<script src="<?= base_url('assets/js/product.js');?>"></script>
+	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 </body>
 
 </html>
