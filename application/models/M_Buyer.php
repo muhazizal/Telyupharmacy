@@ -28,6 +28,7 @@ class M_Buyer extends CI_Model {
     $this->db->where('id', $id);
     return $this->db->delete('buyer');
   }
+
 }
 
 ?>

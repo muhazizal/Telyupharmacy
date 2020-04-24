@@ -13,7 +13,7 @@ class M_Product extends CI_Model {
   
   public function get_ProductbyId($id_product){
     $this->db->where('id',$id_product);
-    return $this->db->get('product')->row_array();
+    return $this->db->get('product');
   }
 
   public function get_ProductbyName($name_product){

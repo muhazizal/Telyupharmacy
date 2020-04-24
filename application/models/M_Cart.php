@@ -9,6 +9,10 @@ class M_Cart extends CI_Model {
     $this->db->join('product', 'product.id = transaction.id_product');
     return $this->db->get()->result();
   }
+
+  public function addProductToCart($data) {
+    return $this->db->insert('transaction', $data);
+  }
   
 }
 

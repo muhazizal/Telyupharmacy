@@ -110,32 +110,10 @@
 
 				<div class="col-md-10">
 					<div class="container">
-						<div class="row">
-						<?php
-							foreach ($data_product as $product) {
-						?>
-							<div class="card">								
-								<div class="card-block">
-									<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt="" class="img-fluid">
-
-									<div class="card-title">
-										<span id="label-section-3"> <?= $product['name'] ?></span>
-									</div>
-
-									<div class="card-text">
-										<span class="harga">Rp <?= $product['price'] ?></span>
-									</div>
-									
-									<div>
-										<a href="<?= site_url('Product/showDetailProduct/' . $product['id']); ?>" 
-											class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
-										</a>
-										<button id="btnAddToCart" type="button" class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
-									</div>
-								</div>
-							</div>
-							<?php } ?>
+						<div class="row" id="productContainer">
+						  <!-- Load Product Using AJAX Fetch -->
 						</div>
+						<input type="hidden" id="hiddenId" value="<?= $buyer['id'] ?>" />
 					</div>
 				</div>
 
@@ -266,6 +244,7 @@
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/test.js'); ?>"></script>
 </body>
 
 </html>
