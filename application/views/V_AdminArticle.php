@@ -136,7 +136,7 @@
 				<?php
 					} else {
 				?>
-					<input id="search" type="text" name="searchArticle col-md-3" class="form-control" placeholder="Search Article">
+					<input id="search" type="text" name="searchArticle" class="form-control col-md-3" placeholder="Search Article">
 				<?php } ?>
 					<div class="input-group-btn">
 						<button type="submit" id="icon" class="btn btn-outline-info">
@@ -298,7 +298,7 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this item?</h5>
 						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">×</span>
 						</button>
