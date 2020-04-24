@@ -8,6 +8,7 @@ class Cart extends CI_Controller {
         
         checkLoginBuyer();
         $this->load->model('M_Cart');
+        $this->load->model('M_Product');
         $this->load->model('M_Buyer');
     }
 
@@ -22,6 +23,21 @@ class Cart extends CI_Controller {
         $dataCart = $this->M_Cart->getCart();
         echo json_encode($dataCart);
     }
+
+    public function addToCart($idProduct) {
+        checkLoginBuyer();
+        $product = $this->M_Product->get_ProductbyId($idProduct)->row_array();
+        echo var_dump($product);
+        die;
+        $data = [
+            'quantity'      => 1,
+            'date'          => date('y-m-d'),
+            'total_price'   => $product['price'],
+            'id_buyer'      => $this->session->userdata('id'),
+            'id_product'    => $idProduct
+        ];
+        $this->M_Cart->addProductToCart($data);
+	}
 }
 
 ?>

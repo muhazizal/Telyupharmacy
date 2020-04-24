@@ -59,9 +59,22 @@ class Product extends CI_Controller {
 		checkLoginBuyer();
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['product'] = $this->M_Product->get_ProductbyId($id_product);
+		$data['product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
 
 		$this->load->view('V_DetailProduct', $data);
+	}
+
+	public function showAllProduct() {
+		checkLoginBuyer();
+
+		$dataProduct = $this->M_Product->get_AllProduct();
+		echo json_encode($dataProduct);
+	}
+
+	public function getProductById($id_product) {
+		checkLoginBuyer();
+		$dataProduct = $this->M_Product->get_ProductbyId($id_product)->result();
+		echo json_encode($dataProduct);
 	}
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
@@ -136,7 +149,7 @@ class Product extends CI_Controller {
 
 	public function update_Product($id_product){
 		checkLoginAdmin();
-		$data['data_product'] = $this->M_Product->get_ProductbyId($id_product);
+		$data['data_product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('price', 'Price', 'required');

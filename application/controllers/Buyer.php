@@ -124,8 +124,8 @@ class Buyer extends CI_Controller {
       $this->session->set_flashdata('deleteAccountFailed', 'Oops, something wrong!');
       redirect('Buyer/editProfile');
     }
-    
   }
+
 }
 
 ?>
