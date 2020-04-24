@@ -176,6 +176,7 @@ h6 {
 
 #section2 #PriceRange button {
 	width: 80%;
+	padding: 5% 0 5% 0;
 	margin-left: 5%;
 	margin-top: 5%;
 	border: 1px solid #E7EAEC !important;
@@ -183,7 +184,7 @@ h6 {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 16px;
 	color: white !important;
 }
@@ -194,7 +195,7 @@ h6 {
 
 #submit {
 	margin-bottom: 10%;
-	margin-top: 0;
+	padding: 1em;
 }
 
 #price {

@@ -107,6 +107,7 @@
 #icon {
 	border: none;
 	color: black;
+	transform: translate(10%);
 }
 
 #icon:hover {
@@ -267,25 +268,35 @@ textarea {
 /* media screen */
 
 
+/* media screen */
+
+
 @media screen and (max-width:530px) {
 	#section1 .btn-primary {
 		margin-top: 5%;
-
+		transform: translate(-120%);
 	}
-}
 
-@media screen and (max-width: 1023px) {
 	#margin {
-		transform: translate(0%, 0%);
-	}
-
-	.btb-outline {
-		margin-top: 0%;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.btn-danger {
-		margin-top: 5%;
+		margin-top: 0%;
 	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	#margin {
+		/* transform: translate(0%, 0%); */
+	}
+
+	.btn-warning {
+		margin-bottom: 2%;
+	}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -307,7 +318,6 @@ textarea {
 
 	.btn-danger {
 		margin-left: 3%;
-
 	}
 
 	.btn-danger,

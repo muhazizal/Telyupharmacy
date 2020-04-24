@@ -107,6 +107,7 @@
 #icon {
 	border: none;
 	color: black;
+	transform: translate(10%);
 }
 
 #icon:hover {
@@ -115,13 +116,14 @@
 
 
 #section1 .btn-primary {
-	margin-left: 55%;
+	margin-left: 65%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 20px;
 	color: #FFFFFF;
+	transform: translate(-50%);
 }
 
 
@@ -141,9 +143,9 @@ td {
 	transform: translate(0%, 20%);
 }
 
-.btn-danger {
-	/* margin-left: 15px; */
-}
+/* .btn-danger,.btn-warning {
+	width: 10%;
+} */
 
 .detail {
 	width: 40px;
@@ -311,22 +313,29 @@ textarea {
 @media screen and (max-width:530px) {
 	#section1 .btn-primary {
 		margin-top: 5%;
-
+		transform: translate(-150%);
 	}
-}
 
-@media screen and (max-width: 1023px) {
 	#margin {
-		transform: translate(0%, 0%);
-	}
-
-	.btb-outline {
-		margin-top: 0%;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.btn-danger {
-		margin-top: 5%;
+		margin-top: 0%;
 	}
+
+}
+
+@media screen and (max-width: 1024px) {
+	#margin {
+		/* transform: translate(0%, 0%); */
+	}
+
+	.btn-warning {
+		margin-bottom: 2%;
+	}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -348,7 +357,6 @@ textarea {
 
 	.btn-danger {
 		margin-left: 3%;
-
 	}
 
 	.btn-danger,

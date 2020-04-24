@@ -24,7 +24,7 @@ class Home extends CI_Controller {
     
     $data['products'] = $this->M_Product->get_AllProduct();
     $data['articles'] = $this->M_Article->get_AllArticle();
-    $this->load->view('V_Checkout', $data);
+    $this->load->view('V_Home', $data);
   }
 
   public function load_AboutUs() {
