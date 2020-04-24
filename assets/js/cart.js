@@ -51,7 +51,7 @@ const getCart = () => {
         </span>
         <hr>
         <span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP ${totalPrice}</span>
-        <a id="checkout" class="btn btn-info" href="#" role="button">Checkout</a>
+        <a id="checkout" class="btn btn-info" href="${baseURL}Product/load_Checkout/" role="button">Checkout</a>
       `
       $('#summaryContainer').html(summary);
 		}
