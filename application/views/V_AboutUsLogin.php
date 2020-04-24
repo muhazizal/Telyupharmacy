@@ -67,7 +67,7 @@
 			</nav>
 		</div>
 
-
+		<div class="container"></div>
 		<div class="container-fluid" id="section1">
 			<div class="col" id="tittle">About Us</div>
 			<div class="row text-center" id="team">
@@ -75,7 +75,13 @@
 			</div>
 		</div>
 
-		<div id="section2">
+
+		<div class="container-fluid" id="section3">
+			<div class="col" id="tittle">Deskripsi</div>
+			<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet praesentium labore deleniti in minima, iure accusantium nemo dolorum animi dignissimos perspiciatis eos non. Natus ullam at, labore reiciendis adipisci quam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum possimus nemo obcaecati magni, aliquid esse. Eum aperiam cupiditate saepe cum, eveniet facere, eos sit, distinctio minima vel ut accusamus a.</p>
+		</div>
+
+		<div class="container-fluid" id="section2">
 			<div class="row">
 				<div id="margin" class="col-md-7">
 					<div class="col" id="tittle">FAQ</div>
@@ -88,6 +94,8 @@
 				</div>
 			</div>
 		</div>
+
+		
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
