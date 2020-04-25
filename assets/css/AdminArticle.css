@@ -93,7 +93,10 @@
 }
 
 
-#search {
+.navbar-form .form-control {
+	border: 2px solid black;
+	width: 50%;
+	display: inline;
 	border: none;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -107,7 +110,7 @@
 #icon {
 	border: none;
 	color: black;
-	transform: translate(10%);
+	/* transform: translate(10%); */
 }
 
 #icon:hover {
@@ -116,14 +119,12 @@
 
 
 #section1 .btn-primary {
-	margin-left: 65%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 20px;
 	color: #FFFFFF;
-	transform: translate(-50%);
 }
 
 
@@ -226,6 +227,10 @@ td {
 	width: 80%;
 }
 
+#costum-file{
+	width: 80% !important;
+}
+
 #inputan {
 	margin-top: 5%;
 }
@@ -310,10 +315,9 @@ textarea {
 /* media screen */
 
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:575px) {
 	#section1 .btn-primary {
 		margin-top: 5%;
-		transform: translate(-150%);
 	}
 
 	#margin {

@@ -131,7 +131,7 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<span id="product">Product</span>
-			<form action="<?php echo site_url('Product/searchProductAdmin') ?>" class="navbar-form"  method="get">
+			<form action="<?php echo site_url('Product/searchProductAdmin') ?>" class="navbar-form row"  method="get">
 				<div class="form-group input-group">
 				<?php
 					if (array_key_exists("name", $_GET)) {
@@ -140,15 +140,15 @@
 					class="form-control" placeholder="<?= $_GET["title"] ?>">
 				<?php
 					} else {
-				?>
-					<input id="search" type="text" name="searchProduct" class="form-control col-md-3" placeholder="Search Product" >
-				<?php } ?>
-					<div class="input-group-btn">
+				?>	<div class="col-sm-5 col" >
+						<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search Product" >
 						<button type="submit" id="icon" class="btn btn-outline-info">
-							<i class="fa fa-search" aria-hidden="true"></i>
+								<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 					</div>
-					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary" data-toggle="modal"
+				<?php } ?>
+					<div class="col-sm-5"></div>
+					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary col-sm-2"  " data-toggle="modal"
 						data-target="#addProduct">Add New Product</a>
 				</div>
 			</form>
@@ -203,7 +203,8 @@
 									<img id="addImage" src="<?= base_url("assets/uploads/product/defaultproduct.jpg")?>" class="rounded-circle d-block" />
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="custom-file col-md-9 mb-2">
+									
+									<div class="custom-file col-md-9 mb-2" id="costum-file">
 										<input type="file" class="custom-file-input" id="customFile" name="image">
 										<label class="custom-file-label" for="customFile">Choose Image</label>
 									</div>
@@ -238,7 +239,7 @@
 									<img id="addImage" src="<?= base_url("assets/uploads/product/") . $product['image']?>" class="rounded-circle d-block" />
 								</div>
 								<div class="col-md-7" id="inputan">
-									<div class="custom-file col-md-9 mb-2">
+									<div class="custom-file col-md-9 mb-2" id="costum-file">
 										<input type="file" class="custom-file-input" id="customFile" name="image">
 										<label class="custom-file-label" for="customFile">Choose Image</label>
 									</div>

@@ -227,6 +227,8 @@
 	<!-- Load JSON -->
 	<script src="<?= base_url('assets/js/team.js')?>"></script>
 	<script src="<?= base_url('assets/js/faq.js')?>"></script>
+	<script src="<?= base_url('assets/js/deskripsi.js') ?>"></script>
+
 </body>
 
 </html>
