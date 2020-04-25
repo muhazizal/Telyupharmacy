@@ -22,12 +22,10 @@ class M_Product extends CI_Model {
   }
 
   public function get_ProductbyPrice($lowprice_product, $highprice_product){
-    if ($highprice_product == null) {
+    if($highprice_product == null || $highprice_product == '' ){
       $this->db->where('price >=', $lowprice_product);
-    } else if ($lowprice_product == null) {
-      $this->db->where('price <=', $highprice_product);
-    } else {
-      $this->db->where('price >=', $lowprice_product);
+    }
+    if($lowprice_product == null || $lowprice_product == '' ){
       $this->db->where('price <=', $highprice_product);
     }
     return $this->db->get('product');
