@@ -24,43 +24,29 @@ class Product extends CI_Controller {
 		$this->load->view("V_Product", $data,array('error' => ' ' ));
 	}
 	
-	public function searchProductBuyer() {
+	public function searchProductName($searchValue) {
 		checkLoginBuyer();
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-		$searchValue = $this->input->get('searchProduct');
 		if ($searchValue) {
-			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
-		} else {
-			$data['data_product'] = $this->M_Product->get_AllProduct();
+			$data = $this->M_Product->get_ProductbyName($searchValue);
+			echo json_encode($data);
 		}
-
-		$this->load->view("V_Product", $data);
 	}
 
-	public function searchProductPrice() {
+	public function searchProductPrice($minPrice, $maxPrice) {
 		checkLoginBuyer();
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-		$searchValue1 = $this->input->get('ProductPriceMin');
-		$searchValue2 = $this->input->get('ProductPriceMax');
-
-		if ($searchValue1 or $searchValue2) {
-			$data['data_product'] = $this->M_Product->get_ProductbyPrice($searchValue1,$searchValue2);
-		} else {
-			$data['data_product'] = $this->M_Product->get_AllProduct();
+		if ($minPrice or $maxPrice) {
+			$data = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice)->result_array();
+			echo json_encode($data);
 		}
-
-		$this->load->view("V_Product", $data);
 	}
 
 	public function showDetailProduct($id_product) {
 		checkLoginBuyer();
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
+		$data['product'] = $this->M_Product->get_ProductbyId($id_product);
 
 		$this->load->view('V_DetailProduct', $data);
 	}
@@ -75,7 +61,7 @@ class Product extends CI_Controller {
 	public function addProductToCart($id_product) {
 		checkLoginBuyer();
 
-		$data['product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
+		$data['product'] = $this->M_Product->get_ProductbyId($id_product);
 		$insert = [
 			'quantity'      => 1,
 			'date'          => date('y-m-d'),
@@ -87,6 +73,15 @@ class Product extends CI_Controller {
 		$this->M_Product->addProductToCart($insert);
 		echo json_encode($insert);
 	}
+
+	public function load_Checkout(){
+		checkLoginBuyer();
+
+		$username = $this->session->userdata('username');
+		$data['buyer'] = $this->M_Admin->getAdmin($username);
+		//$data['data_product'] = $this->M_Product->get_AllProduct();
+		$this->load->view("V_Checkout",$data); 
+  }
 
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
@@ -116,7 +111,7 @@ class Product extends CI_Controller {
 				$config = [
 					'upload_path'    =>  './assets/uploads/product/',
 					'allowed_types'  =>  'gif|jpg|png',
-					'max_size'       =>  '5120',             
+					'max_size'       =>  '10240',             
 				];
 
 				$this->load->library('upload',$config);
@@ -161,7 +156,7 @@ class Product extends CI_Controller {
 
 	public function update_Product($id_product){
 		checkLoginAdmin();
-		$data['data_product'] = $this->M_Product->get_ProductbyId($id_product)->row_array();
+		$data['data_product'] = $this->M_Product->get_ProductbyId($id_product);
 
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('price', 'Price', 'required');
@@ -175,14 +170,14 @@ class Product extends CI_Controller {
 					
 			if($upload_image){
 				$config = [
-					'upload_path'			=>  './assets/uploads/article/',
+					'upload_path'			=>  './assets/uploads/product/',
 					'allowed_types'		=>  'gif|jpg|png',
-					'max_size'				=>  '5120',                
+					'max_size'				=>  '10240',                
 				];
 							
 				$this->load->library('upload', $config);
 
-				if($this->upload->upload('image')){
+				if($this->upload->do_upload('image')){
 					$old_image = $data['data_product']['image'];
 
 					if ($old_image != 'defaultproduct.jpg') {
@@ -219,7 +214,7 @@ class Product extends CI_Controller {
 		checkLoginAdmin();
 		$username = $this->session->userdata('username');
 		$password = $this->session->userdata('password');
-		$data['admin'] = $this->M_Admin->checkAdmin($username,$password);
+		$data['admin'] = $this->M_Admin->getAdmin($username,$password);
 
 		$searchValue = $this->input->get('searchProduct');
 		if ($searchValue) {
@@ -230,6 +225,6 @@ class Product extends CI_Controller {
 
 		$this->load->view("V_AdminProduct", $data);
 	}
-
+	
 }
 ?>

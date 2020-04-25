@@ -26,18 +26,9 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<!-- Search Product Name -->
-							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET" class="navbar-form">
+							<form id="formSearchName" method="GET" class="navbar-form">
 								<div class="form-group input-group">
-									<?php
-										if (array_key_exists("name", $_GET)) {
-									?>
-										<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>" 
-										class="form-control" placeholder="<?= $_GET["name"] ?>">
-									<?php
-										} else {
-									?>
-										<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search">
-									<?php } ?>
+									<input id="search" type="text" name="searchProduct"	class="form-control" placeholder="Search">
 									<div class="input-group-btn">
 										<button type="submit" id="icon" class="btn btn-outline-info">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -68,7 +59,6 @@
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-								<form action="">
 								<img src="<?= base_url('assets/uploads/profile/') . $buyer['image'] ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
@@ -82,7 +72,6 @@
 									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
 										class="btn btn-default mt-3 text-white text-center">Log Out
 									</a>
-								</form>
 							</div>	
 						</div>
 					</form>
@@ -98,10 +87,10 @@
 					<h1 id="tittle-section2">Search for more details</h1>
 					<div class="card" id="PriceRange">
 						<h6>Price Range</h6>
-						<form action="<?= site_url('Product/searchProductPrice') ?>" name="checkPrice" method="get" >
-							<input id="price" type="number" min="0" name="ProductPriceMin" class="form-control" id="inlineFormInputGroup"
+						<form id="formSearchPrice" method="GET" >
+							<input id="minPrice" type="number" min="0" name="minPrice" class="form-control price" id="inlineFormInputGroup"
 								placeholder="Minimum price">
-							<input id="price" type="number" min ="0" name="ProductPriceMax" class="form-control" id="inlineFormInputGroup"
+							<input id="maxPrice" type="number" min ="0" name="maxPrice" class="form-control price" id="inlineFormInputGroup"
 								placeholder="Maximum price">
 							<button type="submit" class="btn btn-info text-white" id="submit">Search</button>
 						</form>

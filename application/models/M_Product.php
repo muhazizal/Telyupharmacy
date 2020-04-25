@@ -13,7 +13,7 @@ class M_Product extends CI_Model {
   
   public function get_ProductbyId($id_product){
     $this->db->where('id', $id_product);
-    return $this->db->get('product');
+    return $this->db->get('product')->row_array();
   }
 
   public function get_ProductbyName($name_product){
@@ -21,19 +21,19 @@ class M_Product extends CI_Model {
     return $this->db->get('product')->result_array();
   }
 
-  public function get_ProductbyPrice($lowprice_product,$highprice_product){
-    if($highprice_product==null){
-      $this->db->where('price >=',$lowprice_product);
-    }elseif ($lowprice_product==null){
-      $this->db->where('price <=',$highprice_product);
-    }else{
-      $this->db->where('price >=',$lowprice_product);
-      $this->db->where('price <=',$highprice_product);
+  public function get_ProductbyPrice($lowprice_product, $highprice_product){
+    if ($highprice_product == null) {
+      $this->db->where('price >=', $lowprice_product);
+    } else if ($lowprice_product == null) {
+      $this->db->where('price <=', $highprice_product);
+    } else {
+      $this->db->where('price >=', $lowprice_product);
+      $this->db->where('price <=', $highprice_product);
     }
-    return $this->db->get('product')->result_array();
+    return $this->db->get('product');
   }
 
-  public function insert_Product($data){     
+  public function insert_Product($data) {
     return $this->db->insert('product',$data);
   } 
 

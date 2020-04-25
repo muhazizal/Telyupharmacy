@@ -44,8 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav" id="navbar3">
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="" data-toggle="modal" data-target="#loginmodal">Sign
-								In</a>
+							<a class="nav-link" id="a-item" href="" data-toggle="modal" data-target="#loginmodal">Sign In</a>
 						</li>
 						<li class="nav-item" id="SignUp">
 							<a class="nav-link" id="a-item" href="<?= site_url('Auth/do_signUp') ?>">Sign Up</a>

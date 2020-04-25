@@ -234,8 +234,6 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 
-	<script src="<?= base_url('assets/js/article.js'); ?>"></script>
-
 </body>
 
 </html>

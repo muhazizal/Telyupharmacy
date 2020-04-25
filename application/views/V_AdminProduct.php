@@ -211,7 +211,7 @@
 									<div class="topic-title">Product Name</div>
 									<input type="text" name="name" class="form-control">
 									<div class="topic-title">Price</div>
-									<input type="number" name="price" class="form-control">
+									<input type="number" min="0" name="price" class="form-control">
 								</div>
 								<div class="topic-title desc">Description</div>
 								<textarea form="formInput" name="description" class="form-control" cols="30" rows="5"></textarea>
@@ -246,7 +246,7 @@
 									<div class="topic-title">Product Name</div>
 									<input type="text" name="name" value="<?= $product['name'] ?>" class="form-control">
 									<div class="topic-title">Price</div>
-									<input type="number" name="price" value="<?= $product['price'] ?>" class="form-control">
+									<input type="number" min="0" name="price" value="<?=$product['price'] ?>" class="form-control">
 								</div>
 								<div class="topic-title desc">Description</div>
 								<textarea class="form-control" name="description" id="formEdit" cols="30" rows="5"><?= $product['description']; ?></textarea>								
@@ -278,7 +278,7 @@
 									<div class="topic-title">Product Name</div>
 									<input type="text" name="name" class="form-control" disabled="true" value="<?= $product['name'] ?>">
 									<div class="topic-title">Price</div>
-									<input type="text" name="price" class="form-control" disabled="true" value="<?= $product['price'] ?>">
+									<input type="text" name="price" class="form-control" disabled="true" value="<?="Rp " . $product['price'] ?>">
 
 								</div>
 								<div class="topic-title desc">Description</div>
@@ -298,7 +298,7 @@
   	<div class="modal-dialog" role="document">
     	<div class="modal-content">
       	<div class="modal-header">
-        	<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+        	<h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this item?</h5>
         	<button class="close" type="button" data-dismiss="modal" aria-label="Close">
           	<span aria-hidden="true">×</span>
         	</button>
