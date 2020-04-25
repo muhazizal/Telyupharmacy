@@ -207,9 +207,15 @@
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 
 	<!-- Load JSON -->
+<<<<<<< HEAD
 	<script src="<?= base_url('assets/js/team.js')?>"></script>
 	<script src="<?= base_url('assets/js/faq.js')?>"></script>
 	<script src="<?= base_url('assets/js/deskripsi.js')?>"></script>
+=======
+	<script src="<?= base_url('assets/js/team.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/faq.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/deskripsi.js'); ?>"></script>
+>>>>>>> 4e8bfd8425a755d469bfe02b2b0f144c7a8c3713
 </body>
 
 </html>

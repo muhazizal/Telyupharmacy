@@ -202,18 +202,6 @@
 	</div>
 
 	<script>
-		// function tambah() {
-		// 	var a = parseInt(document.getElementById("number").value);
-		// 	document.getElementById("number").value = a + 1;
-		// 	document.getElementById("number-checkout").value = a + 1;
-		// }
-
-		// function kurang() {
-		// 	var a = parseInt(document.getElementById("number").value);
-		// 	document.getElementById("number").value = a - 1;
-		// 	document.getElementById("number-checkout").value = a - 1;
-		// }
-
 		// function checkAll() {
 		// 	var parent = document.getElementById("parent");
 		// 	var input = document.getElementsByTagName("input");

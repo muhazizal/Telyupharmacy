@@ -225,9 +225,9 @@
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 
 	<!-- Load JSON -->
-	<script src="<?= base_url('assets/js/team.js')?>"></script>
-	<script src="<?= base_url('assets/js/faq.js')?>"></script>
-	<script src="<?= base_url('assets/js/deskripsi.js') ?>"></script>
+	<script src="<?= base_url('assets/js/team.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/faq.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/deskripsi.js'); ?>"></script>
 
 </body>
 

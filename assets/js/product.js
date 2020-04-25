@@ -42,7 +42,7 @@ const formSearchName = document.querySelector('#formSearchName');
 formSearchName.addEventListener('submit', (e) => {
   e.preventDefault();
   const inputValue = document.querySelector('#search').value;
-  if (inputValue === '' || inputValue === null) {
+  if (inputValue === '' || inputValue === null || inputValue === undefined) {
     getProduct();
   }
   searchProductName(inputValue);
@@ -132,7 +132,6 @@ const renderProduct = (products) => {
           </div>
           
           <div>
-            <input type="hidden" id="hiddenPrice" value="${product.price}">
             <a href="${baseURL}Product/showDetailProduct/${product.id}"
               class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
             </a>
