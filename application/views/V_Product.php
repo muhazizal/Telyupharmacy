@@ -26,18 +26,9 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<!-- Search Product Name -->
-							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET" class="navbar-form">
+							<form id="formSearchName" method="GET" class="navbar-form">
 								<div class="form-group input-group">
-									<?php
-										if (array_key_exists("name", $_GET)) {
-									?>
-										<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>" 
-										class="form-control" placeholder="<?= $_GET["name"] ?>">
-									<?php
-										} else {
-									?>
-										<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search">
-									<?php } ?>
+									<input id="search" type="text" name="searchProduct"	class="form-control" placeholder="Search">
 									<div class="input-group-btn">
 										<button type="submit" id="icon" class="btn btn-outline-info">
 											<i class="fa fa-search" aria-hidden="true"></i>

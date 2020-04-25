@@ -10,13 +10,45 @@ const getProduct = () => {
       return response.json();
     })
     .then(responseJson => {
-      if (responseJson.error) {
-        console.log('error');
-      } else {
+      if (responseJson) {
         renderProduct(responseJson);
+      } else {
+        console.log('error');
       }
     })
 }
+
+const searchProduct = (keyword) => {
+  fetch(`${baseURL}Product/searchProductName/${keyword}`)
+    .then(response => {
+      return response.json();
+    }) 
+    .then(responseJson => {
+      if (responseJson) {
+        renderProduct(responseJson);
+      } else {
+        Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Product not found!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      }
+    })
+}
+
+const formSearchName = document.querySelector('#formSearchName');
+formSearchName.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const inputValue = document.querySelector('#search').value;
+  console.log(inputValue);
+  if (inputValue === '' || inputValue === null) {
+    getProduct();
+  } else {
+    searchProduct(inputValue);
+  }
+});
 
 const addProduct = (product) => {
   fetch(`${baseURL}Product/addProductToCart/${product.idProduct}`, {
@@ -38,7 +70,7 @@ const addProduct = (product) => {
   })
   .catch(() => {
     Swal.fire({
-      position: 'mid',
+      position: 'center',
       icon: 'error',
       title: 'Oops, something wrong!',
       showConfirmButton: false,

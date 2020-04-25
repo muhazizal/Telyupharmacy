@@ -8,7 +8,7 @@ class M_Product extends CI_Model {
   }
 
   public function get_AllProduct(){
-    return $this->db->get('product')->result_array();
+    return $this->db->get('product');
   }
   
   public function get_ProductbyId($id_product){
@@ -18,7 +18,7 @@ class M_Product extends CI_Model {
 
   public function get_ProductbyName($name_product){
     $this->db->like('name',$name_product);
-    return $this->db->get('product')->result_array();
+    return $this->db->get('product');
   }
 
   public function get_ProductbyPrice($lowprice_product,$highprice_product){
