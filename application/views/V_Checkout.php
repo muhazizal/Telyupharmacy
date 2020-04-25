@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TelyuPharmacy | Product</title>
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Checkout.css')?>">
 </head>
@@ -26,17 +26,19 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<!-- Search Product Name -->
-							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET" class="navbar-form">
+							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET"
+								class="navbar-form">
 								<div class="form-group input-group">
 									<?php
 										if (array_key_exists("name", $_GET)) {
 									?>
-										<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>" 
+									<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>"
 										class="form-control" placeholder="<?= $_GET["name"] ?>">
 									<?php
 										} else {
 									?>
-										<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search">
+									<input id="search" type="text" name="searchProduct" class="form-control"
+										placeholder="Search">
 									<?php } ?>
 									<div class="input-group-btn">
 										<button type="submit" id="icon" class="btn btn-outline-info">
@@ -47,14 +49,14 @@
 							</form>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" 
-								href="<?= site_url('Product'); ?>">Product</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Article'); ?>">Article</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+							<a class="nav-link" id="a-item" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About
+								Us</a>
 						</li>
 					</ul>
 				</div>
@@ -62,28 +64,30 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/')  ?>"
-								class="rounded-circle d-block top" />
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/uploads/profile/')  ?>"
+									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-								<img src="<?= base_url('assets/uploads/profile/') ?>"
+									<img src="<?= base_url('assets/uploads/profile/') ?>"
 										class="rounded-circle d-block bot" />
 									<h3 class="text-center profile-title"></h3>
 									<h3 class="text-center profile-title"></h3>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
 										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
-									<a type="button" class="btn btn-default mt-3 text-white text-center" 
-										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+									<a type="button" class="btn btn-default mt-3 text-white text-center"
+										data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+										Password
 									</a>
-									<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+									<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
 										class="btn btn-default mt-3 text-white text-center">Log Out
 									</a>
 								</form>
-							</div>	
+							</div>
 						</div>
 					</form>
 				</div>
@@ -91,74 +95,76 @@
 		</div>
 
 
-        <!-- section1 -->
-        <div class="container-fluid" id="section1">
-            <div class="title text-center">Silahkan check barang anda </div>
-            <div class="row">
+		<!-- section1 -->
+		<div class="container-fluid " id="section1">
+			<div class="title text-center">Silahkan check barang anda </div>
+			<div class="d-flex justify-content-center">
+				<div class="col d-flex justify-content-center">
 
-                <div class="card">
-                    <div class="card-block">
-					    <img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-                        <div class="card-title">
-                            <span>Mylanta</span>
-                        </div>
-                        <div class="card-text">
-                            <span>Rp.1500</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-block">
-					    <img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-                        <div class="card-title">
-                            <span>Mylanta</span>
-                        </div>
-                        <div class="card-text">
-                            <span>Rp.1500</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-block">
-					    <img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-                        <div class="card-title">
-                            <span>Mylanta</span>
-                        </div>
-                        <div class="card-text">
-                            <span>Rp.1500</span>
-                        </div>
-                    </div>
-                </div>     
-                <div class="card">
-                    <div class="card-block">
-					    <img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-                        <div class="card-title">
-                            <span>Mylanta</span>
-                        </div>
-                        <div class="card-text">
-                            <span>Rp.1500</span>
-                        </div>
-                    </div>
-                </div>     
-                <div class="card">
-                    <div class="card-block">
-					    <img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-                        <div class="card-title">
-                            <span>Mylanta</span>
-                        </div>
-                        <div class="card-text">
-                            <span>Rp.1500</span>
-                        </div>
-                    </div>
-                </div>        
-            
-            </div>
-            <div class="button-group text-center">
-                <button class="btn btn-info " type="button">Konfirmasi</button>
-            </div>
-        </div>
+					<div class="card">
+						<div class="card-block">
+							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+							<div class="card-title">
+								<span>Mylanta</span>
+							</div>
+							<div class="card-text">
+								<span>Rp.1500</span>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-block">
+							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+							<div class="card-title">
+								<span>Mylanta</span>
+							</div>
+							<div class="card-text">
+								<span>Rp.1500</span>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-block">
+							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+							<div class="card-title">
+								<span>Mylanta</span>
+							</div>
+							<div class="card-text">
+								<span>Rp.1500</span>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-block">
+							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+							<div class="card-title">
+								<span>Mylanta</span>
+							</div>
+							<div class="card-text">
+								<span>Rp.1500</span>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-block">
+							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+							<div class="card-title">
+								<span>Mylanta</span>
+							</div>
+							<div class="card-text">
+								<span>Rp.1500</span>
+							</div>
+						</div>
+					</div>
 
-		
+				</div>
+			</div>
+			<div class="button-group text-center">
+				<button class="btn btn-info " type="button">Konfirmasi</button>
+			</div>
+		</div>
+
+
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -193,7 +199,8 @@
 								<a class="nav-link" id="copyright" href="<?= site_url('Article'); ?>">Article</a>
 							</li>
 							<li>
-								<a class="nav-link" id="copyright" href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
+								<a class="nav-link" id="copyright"
+									href="<?= site_url('Home/load_AboutUsLogin'); ?>">About Us</a>
 							</li>
 						</ul>
 					</div>
@@ -236,7 +243,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Change Password Modal-->
 		<div class="container" id="Password">
 			<div class="row justify-content-center">
@@ -247,21 +254,25 @@
 							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
-									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
+									<input class="form-control" type="password" name="oldPassword"
+										placeholder="Old Password" id="oldPassword" />
 									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
-									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
+									<input class="form-control" type="password" name="newPassword1"
+										placeholder="New Password" id="newPassword1" />
 									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>
-									<input class="form-control" type="password" name="newPassword2" placeholder="Confrim New Password" id="newPassword2"/>
+									<input class="form-control" type="password" name="newPassword2"
+										placeholder="Confrim New Password" id="newPassword2" />
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+									<button type="button" class="btn btn-outline-danger"
+										data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
