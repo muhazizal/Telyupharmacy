@@ -137,7 +137,7 @@
 					} else {
 				?>
 				<div class="col-sm-5 col">
-					<input id="search" type="text" name="searchArticle col-md-3" class="form-control"
+					<input id="search" type="text" name="searchArticle" class="form-control"
 						placeholder="Search Article">
 					<button type="submit" id="icon" class="btn btn-outline-info">
 						<i class="fa fa-search" aria-hidden="true"></i>
