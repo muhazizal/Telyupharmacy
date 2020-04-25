@@ -19,7 +19,7 @@ class Product extends CI_Controller {
         
 	  $username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['data_product'] = $this->M_Product->get_AllProduct()->result_array();
+		$data['data_product'] = $this->M_Product->get_AllProduct();
         
 		$this->load->view("V_Product", $data,array('error' => ' ' ));
 	}
@@ -28,29 +28,24 @@ class Product extends CI_Controller {
 		checkLoginBuyer();
 
 		if ($searchValue) {
-			$data = $this->M_Product->get_ProductbyName($searchValue)->result_array();
+			$data = $this->M_Product->get_ProductbyName($searchValue);
 		} else {
-			$data = $this->M_Product->get_AllProduct()->result_array();
+			$data = $this->M_Product->get_AllProduct();
 		}
 
 		echo json_encode($data);
 	}
 
-	public function searchProductPrice() {
+	public function searchProductPrice($minPrice, $maxPrice) {
 		checkLoginBuyer();
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-		$searchValue1 = $this->input->get('ProductPriceMin');
-		$searchValue2 = $this->input->get('ProductPriceMax');
-
-		if ($searchValue1 or $searchValue2) {
-			$data['data_product'] = $this->M_Product->get_ProductbyPrice($searchValue1,$searchValue2);
+		if ($minPrice or $maxPrice) {
+			$data = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice);
 		} else {
-			$data['data_product'] = $this->M_Product->get_AllProduct()->result_array();
+			$data = $this->M_Product->get_AllProduct();
 		}
 
-		$this->load->view("V_Product", $data);
+		echo json_encode($data);
 	}
 
 	public function showDetailProduct($id_product) {
@@ -65,7 +60,7 @@ class Product extends CI_Controller {
 	public function showAllProduct() {
 		checkLoginBuyer();
 
-		$dataProduct = $this->M_Product->get_AllProduct()->result();
+		$dataProduct = $this->M_Product->get_AllProduct();
 		echo json_encode($dataProduct);
 	}
 
@@ -101,7 +96,7 @@ class Product extends CI_Controller {
 
 		$username = $this->session->userdata('username');
 		$data['admin'] = $this->M_Admin->getAdmin($username);
-		$data['data_product'] = $this->M_Product->get_AllProduct()->result_array();
+		$data['data_product'] = $this->M_Product->get_AllProduct();
 		$this->load->view("V_AdminProduct",$data); 
   }
 
@@ -229,9 +224,9 @@ class Product extends CI_Controller {
 
 		$searchValue = $this->input->get('searchProduct');
 		if ($searchValue) {
-			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue)->result_array();
+			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
 		} else {
-			$data['data_product'] = $this->M_Product->get_AllProduct()->result_array();
+			$data['data_product'] = $this->M_Product->get_AllProduct();
 		}
 
 		$this->load->view("V_AdminProduct", $data);

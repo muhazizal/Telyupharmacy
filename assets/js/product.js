@@ -4,6 +4,7 @@ $(document).ready( () => {
 
 const baseURL = window.location.origin + '/Telyupharmacy/';
 
+// Show all product
 const getProduct = () => {
   fetch(`${baseURL}Product/showAllProduct`)
     .then(response => {
@@ -18,7 +19,8 @@ const getProduct = () => {
     })
 }
 
-const searchProduct = (keyword) => {
+// Search product by name
+const searchProductName = (keyword) => {
   fetch(`${baseURL}Product/searchProductName/${keyword}`)
     .then(response => {
       return response.json();
@@ -26,30 +28,63 @@ const searchProduct = (keyword) => {
     .then(responseJson => {
       if (responseJson) {
         renderProduct(responseJson);
-      } else {
+      } else if (responseJson === null || responseJson === undefined) {
         Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'Product not found!',
-        showConfirmButton: false,
-        timer: 2000
-      });
+          position: 'center',
+          icon: 'error',
+          title: 'Product not found!',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      } else {
+        
       }
     })
 }
-
 const formSearchName = document.querySelector('#formSearchName');
 formSearchName.addEventListener('submit', (e) => {
   e.preventDefault();
   const inputValue = document.querySelector('#search').value;
-  console.log(inputValue);
   if (inputValue === '' || inputValue === null) {
     getProduct();
   } else {
-    searchProduct(inputValue);
+    searchProductName(inputValue);
   }
 });
 
+// Search product by price
+const searchProductPrice = (min, max) => {
+  fetch(`${baseURL}Product/searchProductPrice?minPrice=${min}&maxPrice=${max}`)
+    .then(response => {
+      response.json();
+    })
+    .then(responseJson => {
+      if (responseJson) {
+        renderProduct(responseJson);
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Product not found!',
+          showConfirmButton: false,
+          timer: 2000
+        });
+      }
+    })
+}
+const formSearchPrice = document.querySelector('#formSearchPrice');
+formSearchPrice.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const minPrice = document.querySelector('#minPrice').value;
+  const maxPrice = document.querySelector('#maxPrice').value;
+  if (minPrice === '' || maxPrice === null || minPrice === '' || maxPrice === null) {
+    getProduct();
+  } else {
+    searchProductPrice(minPrice, maxPrice);
+  }
+});
+
+// Add product to cart
 const addProduct = (product) => {
   fetch(`${baseURL}Product/addProductToCart/${product.idProduct}`, {
     method: 'POST',
@@ -79,6 +114,7 @@ const addProduct = (product) => {
   })
 }
 
+// Insert product html element
 const renderProduct = (products) => {
   const productElement = document.querySelector("#productContainer");
   productElement.innerHTML = "";
