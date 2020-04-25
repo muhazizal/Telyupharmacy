@@ -93,7 +93,10 @@
 }
 
 
-#search {
+.navbar-form .form-control {
+	border: 2px solid black;
+	width: 50%;
+	display: inline;
 	border: none;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -107,7 +110,7 @@
 #icon {
 	border: none;
 	color: black;
-	transform: translate(10%);
+	/* transform: translate(10%); */
 }
 
 #icon:hover {
@@ -116,7 +119,6 @@
 
 
 #section1 .btn-primary {
-	margin-left: 55%;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
@@ -182,6 +184,10 @@ td {
 
 .form-control {
 	width: 80%;
+}
+
+#costum-file{
+	width: 80% !important;
 }
 
 #inputan {
@@ -271,10 +277,9 @@ textarea {
 /* media screen */
 
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:575px) {
 	#section1 .btn-primary {
 		margin-top: 5%;
-		transform: translate(-120%);
 	}
 
 	#margin {
@@ -285,7 +290,9 @@ textarea {
 	.btn-danger {
 		margin-top: 0%;
 	}
-
+	.costum-file{
+		width: 80% !important;
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -306,10 +313,6 @@ textarea {
 
 	td {
 		display: flex;
-	}
-
-	.btn-primary {
-		margin: 0;
 	}
 
 	#detail {

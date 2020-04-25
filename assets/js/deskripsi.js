@@ -4,8 +4,8 @@ $(document).ready(() => {
 		let dataDESKRIPSI = '';
 		$.each(data, (key, value) => {
 			dataDESKRIPSI += `
-          <tr>
-            <th> ${value.deskripsi} </th>
+		  <tr class="text-center" >
+            <td> ${value.deskripsi} </td>
           </tr>
         `;
 		});
