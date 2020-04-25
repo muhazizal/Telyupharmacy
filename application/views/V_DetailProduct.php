@@ -70,17 +70,20 @@
 	</div>
 
 	<div class="container" id="section1">
-		<div class="form-container">
+		<form class="form-container">
 			<div class="row">
 				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>" alt="" /></div>
 				<div class="col-xl-7">
 					<h1 id="artittle"><?= $product['name'] ?></h1>
-					<h2 id="category">Category<span class="harga" id="category">Rp <?= $product['price'] ?></span></h2>
+					<h2 id="category">Price<span class="harga" id="category">Rp <?= $product['price'] ?></span></h2>
 					<h2 id="category">Quantity
 						<span>
-							<button onclick="kurang()" type="button" class="btn btn-outline">-</button>
+							<input type="hidden" id="hiddenIdBuyer" value="<?= $buyer['id'] ?>" />
+							<input type="hidden" id="hiddenPrice" value="<?= $product['price']; ?>">
+							
+							<button id="minusProduct" type="button" class="btn btn-outline">-</button>
 							<input type="text" id="number" value="1" disabled="true">
-							<button onclick="tambah();" type="button" class="btn btn-outline">+</button>
+							<button id="plusProduct" type="button" class="btn btn-outline">+</button>
 						</span>
 					</h2>
 					<h2 id="deskripsi">Description</h2>
@@ -90,10 +93,10 @@
 			<div class="row btn-row">
 				<div class="col-xl-5"></div>
 				<div class="col-xl-7">
-					<button class="btn btn-info mt-2">Add to Cart</button>
+					<button id="btnAddToCart" type="button" value="<?= $product['id'] ?>" class="btn btn-info mt-2">Add to Cart</button>
 				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 	<img id="vector8" class="img-fluid" src="<?= base_url('assets/image/Vector6.png') ?>" alt="">
 	<img id="vector9" class="img-fluid" src="<?= base_url('assets/image/Vector9.png') ?>" alt="">
@@ -219,39 +222,6 @@
 	</div>
 
 	<!-- Bootstrap JS -->
-	<!-- Bootstrap JS -->
-	<script src="<?= base_url("assets/js/cart.js") ?>"></script>
-	<script>
-		function tambah() {
-			var a = parseInt(document.getElementById("number").value);
-			document.getElementById("number").value = a + 1;
-			document.getElementById("number-checkout").value = a + 1;
-		}
-
-		function kurang() {
-			var a = parseInt(document.getElementById("number").value);
-			document.getElementById("number").value = a - 1;
-			document.getElementById("number-checkout").value = a - 1;
-		}
-
-		function checkAll() {
-			var parent = document.getElementById("parent");
-			var input = document.getElementsByTagName("input");
-			if (parent.checked === true) {
-				for (var i = 0; i < input.length; i++) {
-					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == false) {
-						input[i].checked = true;
-					}
-				}
-			} else if (parent.checked === false) {
-				for (var i = 0; i < input.length; i++) {
-					if (input[i].type == "checkbox" && input[i].id == "anak" && input[i].checked == true) {
-						input[i].checked = false;
-					}
-				}
-			}
-		}
-
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -263,6 +233,10 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/detailProduct.js'); ?>"></script>
 </body>
 
 </html>

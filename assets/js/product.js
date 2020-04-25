@@ -52,9 +52,9 @@ formSearchName.addEventListener('submit', (e) => {
 
 // Search product by price
 const searchProductPrice = (min, max) => {
-  fetch(`${baseURL}Product/searchProductPrice/minPrice=${min}&maxPrice=${max}`)
+  fetch(`${baseURL}Product/searchProductPrice/?minPrice=${min}&maxPrice=${max}`)
     .then(response => {
-      response.json();
+      return response.json();
     })
     .then(responseJson => {
       console.log(responseJson);
@@ -84,10 +84,10 @@ formSearchPrice.addEventListener('submit', (e) => {
 });
 
 // Add product to cart
-const addProduct = (product) => {
-  fetch(`${baseURL}Product/addProductToCart/${product.idProduct}`, {
+const addProduct = (idProduct) => {
+  fetch(`${baseURL}Product/addProductToCart/${idProduct}`, {
     method: 'POST',
-    body: JSON.stringify(product)
+    body: JSON.stringify(idProduct)
   })
   .then(response => {
       return response.json();
@@ -95,7 +95,7 @@ const addProduct = (product) => {
   .then(responseJson => {
     if (responseJson) {
       Swal.fire({
-        position: 'mid',
+        position: 'center',
         icon: 'success',
         title: 'Your item has been added to cart!',
         showConfirmButton: false,
@@ -146,21 +146,13 @@ const renderProduct = (products) => {
     `;
   });
 
-  const hiddenPrice = document.querySelector('#hiddenPrice');
   const addToCart = document.querySelectorAll('#btnAddToCart');
 
   addToCart.forEach(button => {
     button.addEventListener('click', () => {
-      const time = new Date();
-      const product = {
-        quantity: 1,
-        date: `${time.getDate()}-${time.getMonth()}-${time.getFullYear()}`,
-        totalPrice: 1 * hiddenPrice.value,
-        idBuyer: document.querySelector('#hiddenIdBuyer').value,
-        idProduct: button.value
-      }
+      idProduct = button.value;
       
-      addProduct(product);
+      addProduct(idProduct);
     });
   })
   
