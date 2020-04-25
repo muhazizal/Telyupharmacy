@@ -10,6 +10,10 @@ class M_Cart extends CI_Model {
     return $this->db->get()->result();
   }
   
+  public function getProductById($idProduct) {
+    $this->db->where('id_product', $idProduct);
+    return $this->db->get('transaction')->row_array();
+  }
 }
 
 ?>

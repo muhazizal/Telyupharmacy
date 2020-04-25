@@ -84,7 +84,6 @@ formSearchPrice.addEventListener('submit', (e) => {
     maxPrice = 99999999999;
   }
   searchProductPrice(minPrice, maxPrice);
-  
 });
 
 // Add product to cart
@@ -96,26 +95,26 @@ const addProduct = (idProduct) => {
   .then(response => {
       return response.json();
   })
-  .then(responseJson => {
-    if (responseJson) {
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Your item has been added to cart!',
-        showConfirmButton: false,
-        timer: 2000
-      });
-      getProduct();
-    } else {
-      Swal.fire({
-        position: 'center',
-        icon: 'error',
-        title: 'Oops, something wrong!',
-        showConfirmButton: false,
-        timer: 2000
-      });
-    }
-  });
+  .then(() => {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your item has been added to cart!',
+      showConfirmButton: false,
+      timer: 2000
+    });
+    getProduct();
+  })
+  .catch(() => {
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: 'Your selected item already in cart!',
+      showConfirmButton: false,
+      timer: 2000
+    });
+    getProduct();
+  })
 }
 
 // Insert product html element
