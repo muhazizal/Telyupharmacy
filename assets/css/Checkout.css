@@ -160,14 +160,54 @@
 	letter-spacing: 0.02em;
 }
 
-.row {
-	justify-content: space-evenly;
-}
+.row {}
 
 .button-group {
 	margin-top: 2%;
 }
 
+#section1 .info {
+	/* border: 2px solid black; */
+	/* margin-top: 10%; */
+
+}
+
+#section1 h3 {
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+
+}
+
+#section1 h4{
+	font-family: Nunito Sans;
+	font-style: normal;
+	font-weight:bold;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.02em;
+}
+
+#section1 .total {
+	margin-top: 2%;
+	font-weight: bold;
+}
+
+#section1 .info{
+	margin-top: 2%;
+}
+
+.box {
+	margin-top: 2%;
+	padding: 1em;
+}
+
+#section1 .col-md-2{
+	border-bottom: 2px solid #ABABAB;
+}
 
 
 /* section5 */

@@ -96,74 +96,32 @@
 
 
 		<!-- section1 -->
-		<div class="container-fluid " id="section1">
-			<div class="title text-center">Silahkan check barang anda </div>
-			<div class="d-flex">
-				<div class="col ">
-
-					<div class="card col-md-6">
-						<div class="card-block">
-							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-							<div class="card-title">
-								<span>Mylanta</span>
-							</div>
-							<div class="card-text">
-								<span>Rp.1500</span>
-							</div>
+		<div class="container-fluid" id="section1">
+			<div class="title text-center">Ringkasan Pembelian </div>
+			<div class="col justify-content-center">
+				<div class="row box align-content-center">
+					<div class="col-md-4"></div>
+					<div class=" col-md-2">
+						<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
+					</div>
+					<div class="col-md-2 ">
+						<div class="info">
+							<h3>Nama Barang : <span>0</span></h3>
+							<h3>Harga Barang : <span>0</span></h3>
+							<h3>Jumlah barang : <span>0</span></h3>
+							<h3>Jumlah Harga : <span>0</span></h3>
 						</div>
 					</div>
-					<div class="col-md-6">
-						
-					</div>
-					<div class="card">
-						<div class="card-block">
-							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-							<div class="card-title">
-								<span>Mylanta</span>
-							</div>
-							<div class="card-text">
-								<span>Rp.1500</span>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-block">
-							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-							<div class="card-title">
-								<span>Mylanta</span>
-							</div>
-							<div class="card-text">
-								<span>Rp.1500</span>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-block">
-							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-							<div class="card-title">
-								<span>Mylanta</span>
-							</div>
-							<div class="card-text">
-								<span>Rp.1500</span>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-block">
-							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-							<div class="card-title">
-								<span>Mylanta</span>
-							</div>
-							<div class="card-text">
-								<span>Rp.1500</span>
-							</div>
-						</div>
-					</div>
-
+					<div class="col-md-3"></div>
 				</div>
+			</div>
+			<div class="col text-center total">
+				<h4>Total Barang : <span>0</span></h4>
+				<h4>Total Harga : <span>0</span></h4>
 			</div>
 			<div class="button-group text-center">
 				<button class="btn btn-info " type="button">Konfirmasi</button>
+				<button class="btn btn-danger " type="button">Cancel</button>
 			</div>
 		</div>
 
