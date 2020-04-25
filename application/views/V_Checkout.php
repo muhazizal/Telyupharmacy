@@ -98,10 +98,10 @@
 		<!-- section1 -->
 		<div class="container-fluid " id="section1">
 			<div class="title text-center">Silahkan check barang anda </div>
-			<div class="d-flex justify-content-center">
-				<div class="col d-flex justify-content-center">
+			<div class="d-flex">
+				<div class="col ">
 
-					<div class="card">
+					<div class="card col-md-6">
 						<div class="card-block">
 							<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
 							<div class="card-title">
@@ -111,6 +111,9 @@
 								<span>Rp.1500</span>
 							</div>
 						</div>
+					</div>
+					<div class="col-md-6">
+						
 					</div>
 					<div class="card">
 						<div class="card-block">
