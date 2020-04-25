@@ -46,6 +46,12 @@ class Article extends CI_Controller {
 		$this->load->view('V_DetailArticle', $data);
 	}
 
+	public function showAllArticle() {
+		checkLoginBuyer();
+		$data = $this->M_Article->get_AllArticle();
+		echo json_encode($data);
+	}
+
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
 	public function load_AdminArticle(){
 		checkLoginAdmin();

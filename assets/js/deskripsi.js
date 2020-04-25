@@ -1,6 +1,6 @@
 $(document).ready(() => {
 	const baseURL = window.location.origin + '/Telyupharmacy/';
-	$.getJSON(`${baseURL}assets/js/deskripsi.json`, data => {
+	$.getJSON(`${baseURL}assets/json/deskripsi.json`, data => {
 		let dataDESKRIPSI = '';
 		$.each(data, (key, value) => {
 			dataDESKRIPSI += `

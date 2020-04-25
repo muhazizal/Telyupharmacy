@@ -4,20 +4,21 @@ $(document).ready( () => {
 
 const baseURL = window.location.origin + '/Telyupharmacy/';
 
+// Show cart
 const getCart = () => {
   fetch(`${baseURL}Cart/getCart`)
     .then(response => {
       return response.json();
     })
     .then(responseJson => {
-      if (responseJson.error) {
-        console.log('error');
-      } else {
-        renderCart(responseJson);
-      }
+      renderCart(responseJson);
+    })
+    .catch(() => {
+      console.log('error');
     });
 }
 
+// Insert cart html element
 const renderCart = (carts) => {
   const cartElement = document.querySelector('#cartContainer');
   cartElement.innerHTML = "";

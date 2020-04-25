@@ -1,5 +1,6 @@
 const baseURL = window.location.origin + '/Telyupharmacy/';
 
+// Add product to cart
 const addProduct = (quantity, totalPrice, idProduct) => {
   fetch(`${baseURL}Product/addProductDetailToCart/${quantity}/${totalPrice}/${idProduct}`, {
     method: 'POST',
@@ -34,13 +35,14 @@ let oldValue = parseInt(document.querySelector('#number').value);
 newValue = 1;
 qty = document.querySelector('#number');
 
+// Button minus product
 minusProduct.addEventListener('click', () => {
   if (newValue > 1) {
     newValue -= 1;
     qty.value = newValue;
   }
 });
-
+// Button plus product
 plusProduct.addEventListener('click', () => {
   newValue = newValue + parseInt(oldValue);
   qty.value = newValue;
@@ -48,7 +50,7 @@ plusProduct.addEventListener('click', () => {
 
 const hiddenPrice = document.querySelector('#hiddenPrice');
 const addToCart = document.querySelector('#btnAddToCart');
-
+// Button add to cart
 addToCart.addEventListener('click', () => {
   const quantity = newValue;
   const totalPrice = newValue * hiddenPrice.value;

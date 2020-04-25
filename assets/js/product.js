@@ -61,10 +61,11 @@ const searchProductPrice = (min, max) => {
       Swal.fire({
         position: 'center',
         icon: 'error',
-        title: 'There is no product at that range!',
+        title: 'There is no product at this range!',
         showConfirmButton: false,
         timer: 2000
       });
+      getProduct();
     })
 };
 const formSearchPrice = document.querySelector('#formSearchPrice');

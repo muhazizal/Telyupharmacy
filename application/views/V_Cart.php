@@ -72,12 +72,10 @@
 						<span id="tittle">Pilih Semua Produk</span>
 						<button id="Hapus" class="btn outline-info">Hapus</button>
 						<br>
-
 						<!-- Cart  -->
 						<div id="cartContainer">
 							<!-- Show by Jquery AJAX -->
 						</div>
-						
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -88,7 +86,6 @@
 				</div>
 			</div>
 		</div>
-
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">

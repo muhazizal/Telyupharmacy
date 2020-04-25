@@ -10,7 +10,6 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Article.css')?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
 </head>
 
 <body>
@@ -92,21 +91,7 @@
 		</div>
 
 		<div class="container-fluid" id="section1">
-			<?php foreach($data_article as $article) : ?>
-			<div class="row text-left article">
-				<div class="col-lg-3">
-					<img id="article-photo" src="<?= base_url("assets/uploads/article/") . $article['image']; ?>" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-9">
-					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
-					<h3 id="article"><?php echo $article['description'] ?></h3>
-					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="<?= site_url('Article/showDetailArticle/'.$article['id']); ?>" 
-						class="btn btn-large btn-info mt-3 text-white">Read Article Detail
-					</a>
-				</div>
-			</div>
-			<?php endforeach;  ?>
+		  <!-- Show article with ajax -->
 		</div>
 
 		<!-- Change Password Modal-->
@@ -233,6 +218,7 @@
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/article.js'); ?>"></script>
 
 </body>
 
