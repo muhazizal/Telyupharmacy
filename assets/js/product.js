@@ -16,8 +16,8 @@ const getProduct = () => {
       } else {
         console.log('error');
       }
-    })
-}
+    });
+};
 
 // Search product by name
 const searchProductName = (keyword) => {
@@ -28,7 +28,7 @@ const searchProductName = (keyword) => {
     .then(responseJson => {
       if (responseJson) {
         renderProduct(responseJson);
-      } else if (responseJson === null || responseJson === undefined) {
+      } else {
         Swal.fire({
           position: 'center',
           icon: 'error',
@@ -36,11 +36,9 @@ const searchProductName = (keyword) => {
           showConfirmButton: false,
           timer: 2000
         });
-      } else {
-        
       }
-    })
-}
+    });
+};
 const formSearchName = document.querySelector('#formSearchName');
 formSearchName.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -54,11 +52,12 @@ formSearchName.addEventListener('submit', (e) => {
 
 // Search product by price
 const searchProductPrice = (min, max) => {
-  fetch(`${baseURL}Product/searchProductPrice?minPrice=${min}&maxPrice=${max}`)
+  fetch(`${baseURL}Product/searchProductPrice/minPrice=${min}&maxPrice=${max}`)
     .then(response => {
       response.json();
     })
     .then(responseJson => {
+      console.log(responseJson);
       if (responseJson) {
         renderProduct(responseJson);
       } else {
@@ -70,8 +69,8 @@ const searchProductPrice = (min, max) => {
           timer: 2000
         });
       }
-    })
-}
+    });
+};
 const formSearchPrice = document.querySelector('#formSearchPrice');
 formSearchPrice.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -93,25 +92,26 @@ const addProduct = (product) => {
   .then(response => {
       return response.json();
   })
-  .then(() => {
-    Swal.fire({
-      position: 'mid',
-      icon: 'success',
-      title: 'Your item has been added to cart!',
-      showConfirmButton: false,
-      timer: 2000
-    });
-    getProduct();
-  })
-  .catch(() => {
-    Swal.fire({
-      position: 'center',
-      icon: 'error',
-      title: 'Oops, something wrong!',
-      showConfirmButton: false,
-      timer: 2000
-    });
-  })
+  .then(responseJson => {
+    if (responseJson) {
+      Swal.fire({
+        position: 'mid',
+        icon: 'success',
+        title: 'Your item has been added to cart!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      getProduct();
+    } else {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Oops, something wrong!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+    }
+  });
 }
 
 // Insert product html element

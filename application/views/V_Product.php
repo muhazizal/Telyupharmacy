@@ -87,11 +87,11 @@
 					<h1 id="tittle-section2">Search for more details</h1>
 					<div class="card" id="PriceRange">
 						<h6>Price Range</h6>
-						<form id="formSearchPrice" method="get" >
+						<form id="formSearchPrice" method="GET" >
 							<input id="minPrice" type="number" min="0" name="minPrice" class="form-control price" id="inlineFormInputGroup"
-								placeholder="Minimum price" required>
+								placeholder="Minimum price">
 							<input id="maxPrice" type="number" min ="0" name="maxPrice" class="form-control price" id="inlineFormInputGroup"
-								placeholder="Maximum price" required>
+								placeholder="Maximum price">
 							<button type="submit" class="btn btn-info text-white" id="submit">Search</button>
 						</form>
 					</div>

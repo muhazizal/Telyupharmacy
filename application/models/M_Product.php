@@ -30,7 +30,7 @@ class M_Product extends CI_Model {
       $this->db->where('price >=', $lowprice_product);
       $this->db->where('price <=', $highprice_product);
     }
-    return $this->db->get('product')->result_array();
+    return $this->db->get('product');
   }
 
   public function insert_Product($data) {

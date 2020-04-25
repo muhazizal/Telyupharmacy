@@ -29,23 +29,17 @@ class Product extends CI_Controller {
 
 		if ($searchValue) {
 			$data = $this->M_Product->get_ProductbyName($searchValue);
-		} else {
-			$data = $this->M_Product->get_AllProduct();
+			echo json_encode($data);
 		}
-
-		echo json_encode($data);
 	}
 
 	public function searchProductPrice($minPrice, $maxPrice) {
 		checkLoginBuyer();
 
 		if ($minPrice or $maxPrice) {
-			$data = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice);
-		} else {
-			$data = $this->M_Product->get_AllProduct();
+			$data = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice)->result_array();
+			echo json_encode($data);
 		}
-
-		echo json_encode($data);
 	}
 
 	public function showDetailProduct($id_product) {
