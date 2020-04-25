@@ -76,7 +76,7 @@ formSearchPrice.addEventListener('submit', (e) => {
   e.preventDefault();
   const minPrice = document.querySelector('#minPrice').value;
   const maxPrice = document.querySelector('#maxPrice').value;
-  if (minPrice === '' || maxPrice === null || minPrice === '' || maxPrice === null) {
+  if ((minPrice === null && maxPrice === null)||(minPrice === '' && maxPrice === '')) {
     getProduct();
   } else {
     searchProductPrice(minPrice, maxPrice);
