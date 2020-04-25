@@ -52,8 +52,9 @@ formSearchName.addEventListener('submit', (e) => {
 
 // Search product by price
 const searchProductPrice = (min, max) => {
-  fetch(`${baseURL}Product/searchProductPrice/?minPrice=${min}&maxPrice=${max}`)
+  fetch(`${baseURL}Product/searchProductPrice/${min}/${max}`)
     .then(response => {
+      console.log(response);
       return response.json();
     })
     .then(responseJson => {
@@ -74,13 +75,16 @@ const searchProductPrice = (min, max) => {
 const formSearchPrice = document.querySelector('#formSearchPrice');
 formSearchPrice.addEventListener('submit', (e) => {
   e.preventDefault();
-  const minPrice = document.querySelector('#minPrice').value;
-  const maxPrice = document.querySelector('#maxPrice').value;
-  if ((minPrice === null && maxPrice === null)||(minPrice === '' && maxPrice === '')) {
-    getProduct();
-  } else {
-    searchProductPrice(minPrice, maxPrice);
+  let minPrice = document.querySelector('#minPrice').value;
+  let maxPrice = document.querySelector('#maxPrice').value;
+  if (minPrice === null || minPrice === '' || minPrice === undefined) {
+    minPrice = 0;
   }
+  if (maxPrice === null || maxPrice === '' || maxPrice === undefined) {
+    maxPrice = 99999999999;
+  }
+  searchProductPrice(minPrice, maxPrice);
+  
 });
 
 // Add product to cart

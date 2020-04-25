@@ -1,7 +1,7 @@
 const baseURL = window.location.origin + '/Telyupharmacy/';
 
 const addProduct = (product) => {
-  fetch(`${baseURL}Product/addProductToCart/${product.idProduct}`, {
+  fetch(`${baseURL}Product/addProductDetailToCart/${product.quantity}`, {
     method: 'POST',
     body: JSON.stringify(product)
   })
@@ -31,31 +31,44 @@ const addProduct = (product) => {
 
 const minusProduct = document.querySelector('#minusProduct');
 const plusProduct = document.querySelector('#plusProduct');
-let qty = document.querySelector('#number').value;
+let oldValue = parseInt(document.querySelector('#number').value);
+newValue = 1;
+qty = document.querySelector('#number');
 
 minusProduct.addEventListener('click', () => {
-  if (qty > 1) {
-    qty -= 1;
-  }
-  console.log(qty);
-});
-plusProduct.addEventListener('click', () => {
-  qty += 1;
-  console.log(qty);
-});
-
-const hiddenPrice = document.querySelector('#hiddenPrice');
-const addToCart = document.querySelector('#btnAddToCart');
-
-addToCart.addEventListener('click', () => {
-  const time = new Date();
-  const product = {
-    quantity: qty,
-    date: `${time.getDate()}-${time.getMonth()}-${time.getFullYear()}`,
-    totalPrice: qty * hiddenPrice.value,
-    idBuyer: document.querySelector('#hiddenIdBuyer').value,
-    idProduct: addToCart.value
-  }
+  if (newValue > 1) {
+    newValue -= 1;
+    console.log(newValue);
+    qty.value = newValue;
   
-  addProduct(product);
+    const hiddenPrice = document.querySelector('#hiddenPrice');
+    const addToCart = document.querySelector('#btnAddToCart');
+  
+    addToCart.addEventListener('click', () => {
+      const product = {
+        quantity: newValue,
+        totalPrice: newValue * hiddenPrice.value,
+        idProduct: addToCart.value
+      }
+      addProduct(product);
+    });
+  }
+});
+
+plusProduct.addEventListener('click', () => {
+  newValue = newValue + parseInt(oldValue);
+  console.log(newValue);
+  qty.value = newValue;
+
+  const hiddenPrice = document.querySelector('#hiddenPrice');
+  const addToCart = document.querySelector('#btnAddToCart');
+
+  addToCart.addEventListener('click', () => {
+    const product = {
+      quantity: newValue,
+      totalPrice: newValue * hiddenPrice.value,
+      idProduct: addToCart.value
+    }
+    addProduct(product);
+  });
 });

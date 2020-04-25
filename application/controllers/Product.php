@@ -74,15 +74,14 @@ class Product extends CI_Controller {
 		echo json_encode($insert);
 	}
 
-	public function addProductDetailToCart($id_product) {
+	public function addProductDetailToCart($id, $quantity) {
 		checkLoginBuyer();
 
-
-		$data['product'] = $this->M_Product->get_ProductbyId($id_product);
+		$data['product'] = $this->M_Product->get_ProductbyId($id);
 		$insert = [
-			'quantity'      => 1,
+			'quantity'      => $quantity,
 			'date'          => date('y-m-d'),
-			'total_price'   => $data['product']['price'],
+			'total_price'   => $quantity * $data['product']['price'],
 			'id_buyer'      => $this->session->userdata('id'),
 			'id_product'    => $data['product']['id']
 		];
