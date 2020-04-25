@@ -60,16 +60,16 @@ class Product extends CI_Controller {
 
 	public function addProductToCart($id_product) {
 		checkLoginBuyer();
-		$checkProduct = $this->M_Cart->getProductById($id_product);
+		$check = $this->M_Cart->getProductById($id_product);
 
-		if (!$checkProduct) {
-			$data['product'] = $this->M_Product->get_ProductbyId($id_product);
+		if (!$check) {
+			$product = $this->M_Product->get_ProductbyId($id_product);
 			$insert = [
 				'quantity'      => 1,
 				'date'          => date('y-m-d'),
-				'total_price'   => $data['product']['price'],
+				'total_price'   => $product['price'],
 				'id_buyer'      => $this->session->userdata('id'),
-				'id_product'    => $data['product']['id']
+				'id_product'    => $product['id']
 			];
 	
 			$this->M_Product->addProductToCart($insert);
@@ -77,20 +77,22 @@ class Product extends CI_Controller {
 		}
 	}
 
-	public function addProductDetailToCart($id, $quantity) {
+	public function addProductDetailToCart($quantity, $totalPrice, $id_product) {
 		checkLoginBuyer();
 
-		$data['product'] = $this->M_Product->get_ProductbyId($id);
-		$insert = [
-			'quantity'      => $quantity,
-			'date'          => date('y-m-d'),
-			'total_price'   => $quantity * $data['product']['price'],
-			'id_buyer'      => $this->session->userdata('id'),
-			'id_product'    => $data['product']['id']
-		];
-
-		$this->M_Product->addProductToCart($insert);
-		echo json_encode($insert);
+		$check = $this->M_Cart->getProductById($id_product);
+		if (!$check) {
+			$insert = [
+				'quantity'      => $quantity,
+				'date'          => date('y-m-d'),
+				'total_price'   => $totalPrice,
+				'id_buyer'      => $this->session->userdata('id'),
+				'id_product'    => $id_product
+			];
+	
+			$this->M_Product->addProductToCart($insert);
+			echo json_encode($insert);
+		}
 	}
 
 	public function load_Checkout(){
