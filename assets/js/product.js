@@ -11,11 +11,10 @@ const getProduct = () => {
       return response.json();
     })
     .then(responseJson => {
-      if (responseJson) {
-        renderProduct(responseJson);
-      } else {
-        console.log('error');
-      }
+      renderProduct(responseJson);
+    })
+    .catch(() => {
+      console.log('error');
     });
 };
 
@@ -26,17 +25,17 @@ const searchProductName = (keyword) => {
       return response.json();
     }) 
     .then(responseJson => {
-      if (responseJson) {
-        renderProduct(responseJson);
-      } else {
-        Swal.fire({
-          position: 'center',
-          icon: 'error',
-          title: 'Product not found!',
-          showConfirmButton: false,
-          timer: 2000
-        });
-      }
+      renderProduct(responseJson);
+    })
+    .catch(() => {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Product not found!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      getProduct();
     });
 };
 const formSearchName = document.querySelector('#formSearchName');
@@ -45,32 +44,28 @@ formSearchName.addEventListener('submit', (e) => {
   const inputValue = document.querySelector('#search').value;
   if (inputValue === '' || inputValue === null) {
     getProduct();
-  } else {
-    searchProductName(inputValue);
   }
+  searchProductName(inputValue);
 });
 
 // Search product by price
 const searchProductPrice = (min, max) => {
   fetch(`${baseURL}Product/searchProductPrice/${min}/${max}`)
     .then(response => {
-      console.log(response);
       return response.json();
     })
     .then(responseJson => {
-      console.log(responseJson);
-      if (responseJson) {
-        renderProduct(responseJson);
-      } else {
-        Swal.fire({
-          position: 'center',
-          icon: 'error',
-          title: 'Product not found!',
-          showConfirmButton: false,
-          timer: 2000
-        });
-      }
-    });
+      renderProduct(responseJson);
+    })
+    .catch(() => {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'There is no product at that range!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+    })
 };
 const formSearchPrice = document.querySelector('#formSearchPrice');
 formSearchPrice.addEventListener('submit', (e) => {

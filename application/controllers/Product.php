@@ -27,18 +27,18 @@ class Product extends CI_Controller {
 	public function searchProductName($searchValue) {
 		checkLoginBuyer();
 
-		if ($searchValue) {
-			$data = $this->M_Product->get_ProductbyName($searchValue);
-			echo json_encode($data);
+		$result = $this->M_Product->get_ProductbyName($searchValue);
+		if ($result) {
+			echo json_encode($result);
 		}
 	}
 
 	public function searchProductPrice($minPrice, $maxPrice) {
 		checkLoginBuyer();
 
-		if ($minPrice or $maxPrice) {
-			$data = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice)->result_array();
-			echo json_encode($data);
+		$result = $this->M_Product->get_ProductbyPrice($minPrice, $maxPrice);
+		if ($result) {
+			echo json_encode($result);
 		}
 	}
 
