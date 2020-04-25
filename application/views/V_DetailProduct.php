@@ -78,9 +78,7 @@
 					<h2 id="category">Price<span class="harga" id="category">Rp <?= $product['price'] ?></span></h2>
 					<h2 id="category">Quantity
 						<span>
-							<input type="hidden" id="hiddenIdBuyer" value="<?= $buyer['id'] ?>" />
 							<input type="hidden" id="hiddenPrice" value="<?= $product['price']; ?>">
-							
 							<button id="minusProduct" type="button" class="btn btn-outline">-</button>
 							<input type="text" id="number" value="1" disabled="true">
 							<button id="plusProduct" type="button" class="btn btn-outline">+</button>

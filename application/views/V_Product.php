@@ -102,7 +102,6 @@
 						<div class="row" id="productContainer">
 						  <!-- Load Product Using AJAX Fetch -->
 						</div>
-						<input type="hidden" id="hiddenIdBuyer" value="<?= $buyer['id'] ?>" />
 					</div>
 				</div>
 

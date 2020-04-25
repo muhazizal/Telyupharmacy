@@ -37,14 +37,12 @@ qty = document.querySelector('#number');
 minusProduct.addEventListener('click', () => {
   if (newValue > 1) {
     newValue -= 1;
-    console.log(newValue);
     qty.value = newValue;
   }
 });
 
 plusProduct.addEventListener('click', () => {
   newValue = newValue + parseInt(oldValue);
-  console.log(newValue);
   qty.value = newValue;
 });
 
