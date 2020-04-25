@@ -120,8 +120,7 @@
 				<h4>Total Harga : <span>0</span></h4>
 			</div>
 			<div class="button-group text-center">
-				<button class="btn btn-info " type="button">Konfirmasi</button>
-				<button class="btn btn-danger " type="button">Cancel</button>
+				<button class="btn btn-outline-primary " type="button">Back To Home</button>
 			</div>
 		</div>
 

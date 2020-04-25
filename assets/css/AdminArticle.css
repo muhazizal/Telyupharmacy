@@ -227,7 +227,7 @@ td {
 	width: 80%;
 }
 
-#costum-file{
+#costum-file {
 	width: 80% !important;
 }
 
@@ -359,7 +359,7 @@ textarea {
 		margin: 0% 0% 0% 40%;
 	}
 
-	.btn-danger {
+	#section1 .btn-danger {
 		margin-left: 3%;
 	}
 

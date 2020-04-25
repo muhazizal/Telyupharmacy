@@ -307,7 +307,7 @@
       	<div class="modal-footer">
 						<form action="<?php echo site_url('Product/delete_Product/'.$product['id']) ?>" method="post"
 							enctype="multipart/form-data" class="row">
-        		<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
 						<button type="submit" class="btn btn-danger">Delete</button>
 						</form>
       	</div>

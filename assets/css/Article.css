@@ -126,9 +126,7 @@
 
 }
 
-.row {
-	
-}
+.row {}
 
 #tittle {
 	padding-top: 3%;
@@ -325,7 +323,7 @@
 	margin-bottom: 2%;
 }
 
-.form-group .btn {
+#Password .form-group .btn {
 	margin-left: 10%;
 	width: 80%;
 }
