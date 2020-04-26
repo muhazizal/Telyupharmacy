@@ -7,13 +7,46 @@ const baseURL = window.location.origin + '/Telyupharmacy/';
 const getArticle = () => {
   fetch(`${baseURL}Article/showAllArticle`)
     .then(response => {
-      response.json();
+      return response.json();
     })
     .then(responseJson => {
       renderArticle(responseJson);
     })
-    .catch(console.log('error'));
+    .catch(() => {
+      console.log('error');
+    });
 };
+
+const searchArticle = (keyword) => {
+  fetch(`${baseURL}Article/searchArticleName/${keyword}`)
+    .then(response => {
+      return response.json();
+    })
+    .then(responseJson => {
+      renderArticle(responseJson);
+    })
+    .catch(() => {
+      Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: 'Article not found!',
+        showConfirmButton: false,
+        timer: 2000
+      });
+      getArticle();
+      document.querySelector('#search').value = '';
+    });
+}
+const formSearchArticle = document.querySelector('#formSearchArticle');
+formSearchArticle.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const inputSearch = document.querySelector('#search').value;
+  if (inputSearch === '' || inputSearch === null || inputSearch === undefined) {
+    getArticle();
+  } else {
+    searchArticle(inputSearch);
+  }
+})
 
 const renderArticle = (articles) => {
   const articleElement = document.querySelector('#section1');
@@ -23,7 +56,7 @@ const renderArticle = (articles) => {
     articleElement.innerHTML += `
       <div class="row text-left article">
         <div class="col-lg-3">
-          <img id="article-photo" src="${baseURL}assets/uploads/product/${article.image}" alt="" class="img-fluid">
+          <img id="article-photo" src="${baseURL}assets/uploads/article/${article.image}" alt="" class="img-fluid">
         </div>
         <div class="col-lg-9">
           <h1 id="arttittle">${article.title}<h1>

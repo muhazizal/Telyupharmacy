@@ -16,9 +16,9 @@ class M_Article extends CI_Model {
     return $this->db->get('article')->row_array();
   }
 
-  public function get_ArticlebyName($name_product){
-    $this->db->like('title',$name_product);
-    $this->db->or_like('category',$name_product);
+  public function get_ArticlebyName($keyword){
+    $this->db->like('title',$keyword);
+    $this->db->or_like('category',$keyword);
     return $this->db->get('article')->result_array();
   }
 

@@ -4,19 +4,27 @@
 		"solution": "Pilih menu Sign Up pada navbar bagian atas di Home Page, Isi semua data diri yang di perlukan untuk mendaftar."
 	},
 	{
-		"title": "Bagaimana cara mendapatkan password jika lupa dengan password akun?",
-		"solution": "Klik link action 'Forgot Password' pada page Sign In, Isi username untuk mendapatkan password akun anda."
+		"title": "Bagaimana cara login di Telyupharmacy?",
+		"solution": "Masuk ke halaman home, pilih menu Sign In pada navbar bagian atas, Isi data yang diperlukan untuk login."
 	},
 	{
 		"title": "Bagaimana cara mengubah profile akun?",
-		"solution": "Pilih menu Profile (gambar photo), Pilih ubah profile dan isi data yang ingin diubah."
+		"solution": "Pilih menu Profile (gambar photo), Pilih menu edit profile dan isi data yang ingin diubah."
+	},
+	{
+		"title": "Bagaimana cara mengubah password akun?",
+		"solution": "Pilih menu Profile (gambar photo), Pilih menu change password dan isi data yang yang diperlukan."
 	},
 	{
 		"title": "Bagaimana cara mencari produk di Telyupharmacy",
-		"solution": "Pilih menu Product pada navbar bagian atas di Home Page, Cari produk lewat search box dengan mengisi nama produk yang dicari."
+		"solution": "Pilih menu Product pada navbar bagian atas di Home Page, Cari produk lewat search box dengan mengisi nama produk atau harga produk yang dicari."
 	},
 	{
 		"title": "Bagaimana cara mencari artikel kesehatan di Telyupharmacy?",
-		"solution": "Pilih menu Article pada navbar bagian atas Home Page, Cari artikel yang ingin anda baca."
+		"solution": "Pilih menu Article pada navbar bagian atas Home Page, Cari judul atau category artikel yang ingin anda baca."
+	},
+	{
+		"title": "Bagaimana cara melihat produk yang telah ditambahkan ke cart?",
+		"solution": "Pilih icon keranjang (cart) yang ada dibagian navbar sebelah kanan."
 	}
 ]

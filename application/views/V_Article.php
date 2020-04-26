@@ -26,18 +26,9 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<!-- Search Article Name -->
-							<form action="<?= site_url('Article/searchArticleBuyer') ?>" method="GET" class="navbar-form">
+							<form action="" method="GET" id="formSearchArticle" class="navbar-form">
 								<div class="form-group input-group">
-									<?php
-										if (array_key_exists("title", $_GET)) {
-									?>
-										<input id="search" type="text" name="searchArticle" value="<?= $_GET["title"] ?>" 
-										class="form-control" placeholder="<?= $_GET["title"] ?>">
-									<?php
-										} else {
-									?>
-										<input id="search" type="text" name="searchArticle" class="form-control" placeholder="Search">
-									<?php } ?>
+									<input id="search" type="text" name="searchArticle" class="form-control" placeholder="Search">
 									<div class="input-group-btn">
 										<button type="submit" id="icon" class="btn btn-outline-info">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -217,6 +208,8 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 	<script src="<?= base_url('assets/js/article.js'); ?>"></script>
 

@@ -36,6 +36,7 @@ const searchProductName = (keyword) => {
         timer: 2000
       });
       getProduct();
+      document.querySelector('#search').value = '';
     });
 };
 const formSearchName = document.querySelector('#formSearchName');
@@ -44,8 +45,9 @@ formSearchName.addEventListener('submit', (e) => {
   const inputValue = document.querySelector('#search').value;
   if (inputValue === '' || inputValue === null || inputValue === undefined) {
     getProduct();
+  } else {
+    searchProductName(inputValue);
   }
-  searchProductName(inputValue);
 });
 
 // Search product by price
@@ -66,7 +68,9 @@ const searchProductPrice = (min, max) => {
         timer: 2000
       });
       getProduct();
-    })
+      document.querySelector('#minPrice').value = '';
+      document.querySelector('#maxPrice').value = '';
+    });
 };
 const formSearchPrice = document.querySelector('#formSearchPrice');
 formSearchPrice.addEventListener('submit', (e) => {
@@ -89,7 +93,7 @@ const addProduct = (idProduct) => {
     body: JSON.stringify(idProduct)
   })
   .then(response => {
-      return response.json();
+    return response.json();
   })
   .then(() => {
     Swal.fire({

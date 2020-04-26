@@ -17,24 +17,17 @@ class Article extends CI_Controller {
 		checkLoginBuyer();
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['data_article'] = $this->M_Article->get_AllArticle();
 
-		$this->load->view("V_Article",$data,array('error' => ' ' ));
+		$this->load->view("V_Article",$data);
 	}
 
-	public function searchArticleBuyer() {
+	public function searchArticleName($keyword) {
 		checkLoginBuyer();
-		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-		$searchValue = $this->input->get('searchArticle');
-		if ($searchValue) {
-			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
-		} else {
-			$data['data_article'] = $this->M_Article->get_AllArticle();
+		$result = $this->M_Article->get_ArticlebyName($keyword);
+		if ($result) {
+			echo json_encode($result);
 		}
-
-		$this->load->view("V_Article", $data);
 	}
 
 	public function showDetailArticle($id_article) {
@@ -48,8 +41,9 @@ class Article extends CI_Controller {
 
 	public function showAllArticle() {
 		checkLoginBuyer();
-		$data = $this->M_Article->get_AllArticle();
-		echo json_encode($data);
+		
+		$dataArticle = $this->M_Article->get_AllArticle();
+		echo json_encode($dataArticle);
 	}
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //

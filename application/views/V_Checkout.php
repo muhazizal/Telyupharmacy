@@ -25,30 +25,6 @@
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<!-- Search Product Name -->
-							<form action="<?= site_url('Product/searchProductBuyer') ?>" method="GET"
-								class="navbar-form">
-								<div class="form-group input-group">
-									<?php
-										if (array_key_exists("name", $_GET)) {
-									?>
-									<input id="search" type="text" name="searchProduct" value="<?= $_GET["name"] ?>"
-										class="form-control" placeholder="<?= $_GET["name"] ?>">
-									<?php
-										} else {
-									?>
-									<input id="search" type="text" name="searchProduct" class="form-control"
-										placeholder="Search">
-									<?php } ?>
-									<div class="input-group-btn">
-										<button type="submit" id="icon" class="btn btn-outline-info">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</button>
-									</div>
-								</div>
-							</form>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" id="a-item" href="<?= site_url('Product'); ?>">Product</a>
 						</li>
 						<li class="nav-item">
@@ -66,16 +42,16 @@
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
 								aria-expanded="false" data-offset="10,20"><img
-									src="<?= base_url('assets/uploads/profile/')  ?>"
+									src="<?= base_url('assets/uploads/profile/').$buyer['image'] ?>"
 									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<form action="">
-									<img src="<?= base_url('assets/uploads/profile/') ?>"
+									<img src="<?= base_url('assets/uploads/profile/').$buyer['image'] ?>"
 										class="rounded-circle d-block bot" />
-									<h3 class="text-center profile-title"></h3>
-									<h3 class="text-center profile-title"></h3>
+									<h3 class="text-center profile-title"><?= $buyer['name'] ?></h3>
+									<h3 class="text-center profile-title"><?= $buyer['email'] ?></h3>
 									<a type="button" class="btn btn-default mt-3 text-white text-center"
 										data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 									</a>
@@ -123,8 +99,6 @@
 				<button class="btn btn-outline-primary " type="button">Back To Home</button>
 			</div>
 		</div>
-
-
 
 		<!-- secction5 -->
 		<div class="container-fluid" id="section5">
@@ -254,8 +228,6 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
-	<script src="<?= base_url('assets/js/test.js'); ?>"></script>
 </body>
 
 </html>
