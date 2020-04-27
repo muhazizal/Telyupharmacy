@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Product extends CI_Model {
 
-  function __construct(){
-    parent::__construct();
-  }
-
   public function get_AllProduct(){
     return $this->db->get('product')->result_array();
   }
@@ -16,7 +12,7 @@ class M_Product extends CI_Model {
     return $this->db->get('product')->row_array();
   }
 
-  public function get_ProductbyName($name_product){
+  public function get_ProductbyName($name_product) {
     $this->db->like('name',$name_product);
     return $this->db->get('product')->result_array();
   }

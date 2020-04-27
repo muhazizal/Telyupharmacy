@@ -36,7 +36,7 @@ const searchArticle = (keyword) => {
       getArticle();
       document.querySelector('#search').value = '';
     });
-}
+};
 const formSearchArticle = document.querySelector('#formSearchArticle');
 formSearchArticle.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -46,7 +46,7 @@ formSearchArticle.addEventListener('submit', (e) => {
   } else {
     searchArticle(inputSearch);
   }
-})
+});
 
 const renderArticle = (articles) => {
   const articleElement = document.querySelector('#section1');
@@ -67,6 +67,6 @@ const renderArticle = (articles) => {
           </a>
         </div>
       </div>
-    `
+    `;
   });
 };

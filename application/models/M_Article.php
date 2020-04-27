@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Article extends CI_Model {
 
-  function __construct(){
-    parent::__construct();
-  }
-
   public function get_AllArticle(){
     return $this->db->get('article')->result_array();
   } 
@@ -22,7 +18,7 @@ class M_Article extends CI_Model {
     return $this->db->get('article')->result_array();
   }
 
-  public function insert_Article($data){     
+  public function insert_Article($data) {
     return $this->db->insert('article',$data);
   }
 

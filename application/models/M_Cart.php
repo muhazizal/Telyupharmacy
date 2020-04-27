@@ -14,6 +14,7 @@ class M_Cart extends CI_Model {
     $this->db->where('id_product', $idProduct);
     return $this->db->get('transaction')->row_array();
   }
+  
 }
 
 ?>
