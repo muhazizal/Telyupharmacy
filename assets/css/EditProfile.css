@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* universal */
 
@@ -35,7 +35,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -45,7 +45,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -55,19 +55,18 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
 	border: none;
-
 }
 
 .input-group-btn {
@@ -109,12 +108,11 @@
 	cursor: pointer;
 }
 
-
 /* section1 */
 
 #section1 {
 	margin-top: 3%;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 	position: relative;
@@ -148,7 +146,6 @@
 	margin-top: 5%;
 }
 
-
 #section1 button {
 	margin-top: 5%;
 	border-radius: 5px;
@@ -156,7 +153,7 @@
 }
 
 .btn-danger {
-	background: #F90000;
+	background: #f90000;
 	border-radius: 5px;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -165,11 +162,10 @@
 	line-height: 19px;
 	text-align: center;
 	letter-spacing: 0.02em;
-
 }
 
 .btn-info {
-	background: #4BC2C5;
+	background: #4bc2c5;
 	border-radius: 5px;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -177,9 +173,8 @@
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 #vector6 {
 	position: absolute;
@@ -203,8 +198,6 @@
 .alert {
 	z-index: 1;
 }
-
-
 
 /* profile */
 
@@ -245,14 +238,14 @@
 }
 
 .dropdown-menu a {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -269,7 +262,7 @@
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -291,13 +284,12 @@
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
-
 
 /* Delete */
 #DeleteAccount .modal-content {
@@ -311,7 +303,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
 	#vector6,
 	#vector7 {
 		display: none;

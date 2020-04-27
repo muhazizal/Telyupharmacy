@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* universal */
 
@@ -35,7 +35,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -45,7 +45,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -55,19 +55,18 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
 	border: none;
-
 }
 
 .input-group-btn {
@@ -109,12 +108,11 @@
 	cursor: pointer;
 }
 
-
 /* section1 */
 
 #section1 {
 	margin-top: 3%;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 	position: relative;
@@ -131,7 +129,7 @@
 	line-height: 33px;
 	letter-spacing: 0.02em;
 	color: #000000;
-	border-bottom: 1px solid #E7EAEC
+	border-bottom: 1px solid #e7eaec;
 }
 
 #section1 span {
@@ -142,7 +140,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 #category {
@@ -154,9 +152,8 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #ABABAB;
-	border-bottom: 1px solid #E7EAEC;
-
+	color: #ababab;
+	border-bottom: 1px solid #e7eaec;
 }
 
 #deskripsi {
@@ -168,8 +165,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #ABABAB;
-
+	color: #ababab;
 }
 
 #article {
@@ -181,9 +177,7 @@
 	line-height: 16px;
 	letter-spacing: 0.02em;
 	color: #000000;
-
 }
-
 
 #section1 img {
 	width: 90%;
@@ -202,7 +196,7 @@
 	font-size: 14px;
 	line-height: 19px;
 	color: #000000 !important;
-	border-bottom: 1px solid #ABABAB;
+	border-bottom: 1px solid #ababab;
 }
 
 #vector8 {
@@ -218,7 +212,7 @@
 }
 
 .btn-outline {
-	border: 1px solid #C4C4C4;
+	border: 1px solid #c4c4c4;
 	padding: 0%;
 	margin: 0%;
 	border-radius: 100px;
@@ -233,7 +227,7 @@
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 /* section5 */
@@ -248,7 +242,6 @@
 	/* border: 2px solid black; */
 }
 
-
 #section5-1 {
 	width: 90%;
 	padding-top: 3%;
@@ -262,7 +255,7 @@
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -286,7 +279,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -296,10 +289,9 @@
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -315,9 +307,8 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 /* profile */
 
@@ -358,14 +349,14 @@
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -382,7 +373,7 @@
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -404,19 +395,14 @@
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
-
-
-
-
 @media screen and (max-width: 1024px) {
-
 	#vector8,
 	#vector9 {
 		display: none;

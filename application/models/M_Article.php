@@ -5,7 +5,7 @@ class M_Article extends CI_Model {
 
   public function get_AllArticle(){
     return $this->db->get('article')->result_array();
-  } 
+  }
 
   public function get_ArticlebyId($id_article){
     $this->db->where('id',$id_article);

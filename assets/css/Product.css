@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* universal */
-
-
 
 /* section0 */
 
@@ -33,7 +31,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -43,7 +41,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -53,14 +51,14 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
@@ -107,9 +105,7 @@
 	cursor: pointer;
 }
 
-
 /* section1 */
-
 
 /* section2 */
 
@@ -139,7 +135,7 @@ h6 {
 
 .card input {
 	width: 90%;
-	border: 1px solid #E7EAEC;
+	border: 1px solid #e7eaec;
 	box-sizing: border-box;
 	border-radius: 5px;
 }
@@ -179,7 +175,7 @@ h6 {
 	padding: 5% 0 5% 0;
 	margin-left: 5%;
 	margin-top: 5%;
-	border: 1px solid #E7EAEC !important;
+	border: 1px solid #e7eaec !important;
 	border-radius: 15px !important;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -207,8 +203,7 @@ h6 {
 #header {
 	margin-bottom: 3%;
 	padding-bottom: 1%;
-	border-bottom: 1px solid #C4C4C4;
-
+	border-bottom: 1px solid #c4c4c4;
 }
 
 #Tittle {
@@ -258,15 +253,8 @@ h6 {
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
-
-
-
-
-
-
-
 
 /* section5 */
 
@@ -279,7 +267,6 @@ h6 {
 	padding-bottom: 5%;
 	/* border: 2px solid black; */
 }
-
 
 #section5-1 {
 	width: 90%;
@@ -294,7 +281,7 @@ h6 {
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -318,7 +305,7 @@ h6 {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -328,10 +315,9 @@ h6 {
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -347,9 +333,8 @@ h6 {
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 /* profile */
 
@@ -390,14 +375,14 @@ h6 {
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -414,7 +399,7 @@ h6 {
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -436,9 +421,9 @@ h6 {
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }

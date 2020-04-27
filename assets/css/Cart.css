@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* navbar */
 
@@ -25,7 +25,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -45,19 +45,18 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
 	border: none;
-
 }
 
 .input-group-btn {
@@ -68,8 +67,6 @@
 #icon:hover {
 	background-color: white !important;
 }
-
-
 
 .fa-search {
 	cursor: pointer;
@@ -105,11 +102,10 @@
 }
 
 #shoping {
-	border-bottom: 3px solid #4BC2C5;
+	border-bottom: 3px solid #4bc2c5;
 	margin-right: 5%;
 	padding: 0 20px 0 15px;
 }
-
 
 /* section2 */
 #section2 {
@@ -124,15 +120,14 @@
 	background-color: violet;
 }
 
-input[type=checkbox]:checked+label:before {
+input[type="checkbox"]:checked + label:before {
 	background-color: violet;
 }
-
 
 .form-container {
 	margin-top: 5%;
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 	padding: 1em;
@@ -178,7 +173,7 @@ hr {
 	margin-left: 5%;
 	margin-bottom: 5%;
 	width: 90%;
-	background: #4BC2C5;
+	background: #4bc2c5;
 	border-radius: 10px;
 	height: 36px;
 }
@@ -192,8 +187,6 @@ hr {
 	border-radius: 10px;
 }
 
-
-
 #number {
 	border: none;
 	background-color: white;
@@ -205,11 +198,11 @@ hr {
 	font-size: 14px;
 	line-height: 19px;
 	color: #000000;
-	border-bottom: 1px solid #ABABAB;
+	border-bottom: 1px solid #ababab;
 }
 
 .btn-outline {
-	border: 1px solid #C4C4C4;
+	border: 1px solid #c4c4c4;
 	padding: 0%;
 	margin: 0%;
 	border-radius: 100px;
@@ -219,7 +212,7 @@ hr {
 
 .card {
 	border: none;
-	border-bottom: 1px solid #C4C4C4;
+	border-bottom: 1px solid #c4c4c4;
 	padding-bottom: 5%;
 	margin-top: 5%;
 }
@@ -227,7 +220,7 @@ hr {
 #Hapus {
 	float: right;
 	margin-left: 5%;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 #tittle {
@@ -241,7 +234,7 @@ hr {
 }
 
 .fa-trash {
-	color: #C4C4C4;
+	color: #c4c4c4;
 }
 
 #md8 .harga {
@@ -250,7 +243,7 @@ hr {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 19px;
-	color: #3D85BC;
+	color: #3d85bc;
 }
 
 /* section5 */
@@ -265,7 +258,6 @@ hr {
 	/* border: 2px solid black; */
 }
 
-
 #section5-1 {
 	width: 90%;
 	padding-top: 3%;
@@ -279,7 +271,7 @@ hr {
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -303,7 +295,7 @@ hr {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -313,10 +305,9 @@ hr {
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -332,9 +323,8 @@ hr {
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 /* profile */
 
@@ -375,18 +365,18 @@ hr {
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 #btnShowAllArticle {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -403,7 +393,7 @@ hr {
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -425,11 +415,11 @@ hr {
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 @media screen and (max-width: 767px) {

@@ -115,7 +115,7 @@ class Product extends CI_Controller {
   }
 
   public function add_Product(){
-		checkLoginAdmin();
+		checkLoginAdmin();	
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('price', 'Price', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');

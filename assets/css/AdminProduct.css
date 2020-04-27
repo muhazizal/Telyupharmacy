@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* universal */
-
 
 /* section0 */
 
@@ -28,7 +27,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -38,7 +37,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -66,13 +65,11 @@
 	cursor: pointer;
 }
 
-
-
 /* section1 */
 
 #section1 {
 	margin-top: 3%;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
 	padding: 2em;
@@ -92,10 +89,9 @@
 	margin-top: 3%;
 }
 
-
 .navbar-form .form-control {
 	border: 2px solid black;
-	width: 50%;
+	/* width: 50%; */
 	display: inline;
 	border: none;
 	font-family: Nunito Sans;
@@ -105,7 +101,6 @@
 	line-height: 19px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
-
 
 #icon {
 	border: none;
@@ -117,16 +112,14 @@
 	background-color: white !important;
 }
 
-
 #section1 .btn-primary {
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 20px;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 img {
 	width: 15vh;
@@ -148,7 +141,7 @@ td {
 	width: 40px;
 	height: 40px;
 	border-radius: 50px;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
 }
 
@@ -158,7 +151,6 @@ td {
 	margin-left: 40%;
 	transform: translate(0%, -5%);
 }
-
 
 /* add,update,details product */
 
@@ -217,7 +209,7 @@ textarea {
 
 .form-control:disabled,
 .form-control[readonly] {
-	background-color: #FFE7E7;
+	background-color: #ffe7e7;
 }
 
 /* profile */
@@ -259,25 +251,19 @@ textarea {
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
-
 
 /* delete */
 .btn-secondary {
 	transform: translate(-10%);
 }
 
-
-
+/* media screen */
 
 /* media screen */
 
-
-/* media screen */
-
-
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
 	#section1 .btn-primary {
 		margin-top: 5%;
 	}
@@ -297,14 +283,9 @@ textarea {
 }
 
 @media screen and (max-width: 1024px) {
-	#margin {
-		/* transform: translate(0%, 0%); */
-	}
-
 	.btn-warning {
 		margin-bottom: 2%;
 	}
-
 }
 
 @media screen and (max-width: 767px) {
@@ -336,5 +317,4 @@ textarea {
 	.fa-camera {
 		margin-left: 7%;
 	}
-
 }

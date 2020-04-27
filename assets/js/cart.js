@@ -1,32 +1,32 @@
-$(document).ready( () => {
-  getCart();
+$(document).ready(() => {
+	getCart();
 });
 
-const baseURL = window.location.origin + '/Telyupharmacy/';
+const baseURL = window.location.origin + "/Telyupharmacy/";
 
 // Show cart
 const getCart = () => {
-  fetch(`${baseURL}Cart/getCart`)
-    .then(response => {
-      return response.json();
-    })
-    .then(responseJson => {
-      renderCart(responseJson);
-    })
-    .catch(() => {
-      console.log('error');
-    });
-}
+	fetch(`${baseURL}Cart/getCart`)
+		.then((response) => {
+			return response.json();
+		})
+		.then((responseJson) => {
+			renderCart(responseJson);
+		})
+		.catch(() => {
+			console.log("error");
+		});
+};
 
 // Insert cart html element
 const renderCart = (carts) => {
-  const cartElement = document.querySelector('#cartContainer');
-  cartElement.innerHTML = "";
-  let totalProduct = 0;
-  let totalPrice = 0;
+	const cartElement = document.querySelector("#cartContainer");
+	cartElement.innerHTML = "";
+	let totalProduct = 0;
+	let totalPrice = 0;
 
-  carts.forEach(cart => {
-    cartElement.innerHTML += `
+	carts.forEach((cart) => {
+		cartElement.innerHTML += `
       <div class="card">
         <div class="row">
           <div class="col-md-4" id="md4">
@@ -48,12 +48,12 @@ const renderCart = (carts) => {
         </div>
       </div>
     `;
-    totalProduct += parseInt(cart.quantity);
-    totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
-  });
+		totalProduct += parseInt(cart.quantity);
+		totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
+	});
 
-  const summaryElement = document.querySelector('#summaryContainer');
-  summaryElement.innerHTML = `
+	const summaryElement = document.querySelector("#summaryContainer");
+	summaryElement.innerHTML = `
     <span id="tittle-section-2">Ringkasan Belanja</span>
     <hr>
     <span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-1">
@@ -62,5 +62,5 @@ const renderCart = (carts) => {
     <hr>
     <span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP ${totalPrice}</span>
     <a id="checkout" class="btn btn-info" href="${baseURL}Product/load_Checkout/" role="button">Checkout</a>
-  `
-}
+  `;
+};
