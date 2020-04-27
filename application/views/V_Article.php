@@ -98,10 +98,10 @@
 					<img id="article-photo" src="<?= base_url("assets/uploads/article/") . $article['image']; ?>" alt="" class="img-fluid">
 				</div>
 				<div class="col-lg-9">
-					<h1 id="arttittle"><?php echo $article['title'] ?><h1>
-					<h3 id="article"><?php echo $article['description'] ?></h3>
-					<h2 id="category"><?php echo $article['category'] ?></h2>
-					<a href="<?= site_url('Article/showDetailArticle/'.$article['id']); ?>" 
+					<h1 id="arttittle"><h1>
+					<h3 id="article"></h3>
+					<h2 id="category"></h2>
+					<a href="" 
 						class="btn btn-large btn-info mt-3 text-white">Read Article Detail
 					</a>
 				</div>
@@ -116,16 +116,15 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle-password" class="text-center">Change Password</h5>
-							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
+							<form action="" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
 									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>
-									<?= form_error('oldPassword', '<p class="text-danger">', '</p>'); ?>
 								</div>
 								<div class="form-group">
 									<span class="tittle">New Password</span>
 									<input class="form-control" type="password" name="newPassword1" placeholder="New Password" id="newPassword1"/>
-									<?= form_error('newPassword1', '<p class="text-danger">', '</p>'); ?>
+									
 								</div>
 								<div class="form-group">
 									<span class="tittle">Confrim New Password</span>

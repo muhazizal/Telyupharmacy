@@ -1,4 +1,4 @@
-<?php
+ 	<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
@@ -157,10 +157,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 				<!-- Show all product -->
 				<div class="row" id="row1">
-					<?php
-						$i = 0;
-						foreach ($products as $product) {
-					?>
+				<?php $i = 0;
+					foreach ($products as $product){
+						?>
+					
 					<div class="col-md-3" id="col-section-3">
 						<div class="card">
 							<img src="<?= base_url('assets/uploads/product/') . $product['image'] ?>" alt=""
@@ -175,13 +175,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-					<?php 
-						$i += 1;
-						if ($i == 8) {
-							break;
-						}
-					} 
-					?>
+					<?php $i += 1;
+					if($i == 8){
+					break;
+					}
+					}?>
 				</div>
 			</div>
 		</div>
@@ -192,10 +190,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 			<!-- Show all article -->
 			<div class="row" id="row2">
-				<?php
-					$i = 0;
-					foreach ($articles as $article) {
-				?>
+			<?php $i = 0;
+					foreach ($articles as $article){
+						?>
 				<div class="col-md-3">
 					<div class="card" id="card-section-4">
 						<img src="<?= base_url('assets/uploads/article/') . $article['image']; ?>" alt=""
@@ -209,14 +206,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							</div>
 						</div>
 					</div>
-				</div>
-				<?php
-					$i += 1;
-					if ($i == 4) {
-						break;
+				</div><?php $i += 1;
+					if($i == 4){
+					break;
 					}
-				}
-				?>
+					}?>
 				<a href="<?= site_url('Article'); ?>" class="btn btn-large mt-5 mx-auto text-white">Show All Article</a>
 			</div>
 		</div>

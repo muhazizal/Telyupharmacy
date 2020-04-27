@@ -47,8 +47,8 @@
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
 								<img src="<?= base_url('assets/uploads/profile/admindefault.jpg'); ?>"
 									class="rounded-circle d-block bot" />
-								<h3 class="text-center profile-title"><?= $admin['username']; ?></h3>
-								<h3 class="text-center profile-title"><?= $admin['id']; ?></h3>
+								<h3 class="text-center profile-title"></h3>
+								<h3 class="text-center profile-title"><</h3>
 								<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
 									class="btn btn-default mt-3 text-white text-center">Log Out
 								</a>
