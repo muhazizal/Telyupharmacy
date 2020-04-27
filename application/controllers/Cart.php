@@ -24,6 +24,21 @@ class Cart extends CI_Controller {
         echo json_encode($dataCart);
     }
 
+    public function deleteItem($idItem) {
+        $dataItem = $this->M_Cart->deleteItem($idItem);
+        
+        if ($dataItem) {
+            echo json_encode($dataItem);
+        }
+    }
+
+    public function deleteAll(){
+        $dataItemAll = $this->M_Cart->deleteAll();
+
+        if ($dataItemAll) {
+            echo json_encode($dataItemAll);
+        }
+    }
 }
 
 ?>

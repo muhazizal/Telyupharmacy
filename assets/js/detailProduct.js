@@ -35,8 +35,8 @@ const addProduct = (quantity, totalPrice, idProduct) => {
 const minusProduct = document.querySelector("#minusProduct");
 const plusProduct = document.querySelector("#plusProduct");
 let oldValue = parseInt(document.querySelector("#number").value);
-newValue = 1;
-qty = document.querySelector("#number");
+let newValue = 1;
+let qty = document.querySelector("#number");
 
 // Button minus product
 minusProduct.addEventListener("click", () => {

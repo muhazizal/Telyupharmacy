@@ -14,6 +14,15 @@ class M_Cart extends CI_Model {
     $this->db->where('id_product', $idProduct);
     return $this->db->get('transaction')->row_array();
   }
+
+  public function deleteItem($idItem){
+    $this->db->where('id_product', $idItem);
+    return $this->db->delete('transaction');
+  }
+
+  public function deleteAll(){
+    return $this->db->empty_table('transaction');
+  }
   
 }
 

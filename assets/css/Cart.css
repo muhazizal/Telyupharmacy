@@ -120,7 +120,7 @@
 	background-color: violet;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked+label:before {
 	background-color: violet;
 }
 
@@ -217,7 +217,7 @@ hr {
 	margin-top: 5%;
 }
 
-#Hapus {
+#HapusAll {
 	float: right;
 	margin-left: 5%;
 	color: #4bc2c5;

@@ -70,7 +70,7 @@
 					<div class="form-check">
 						<input onclick="checkAll()" class="form-check-input" type="checkbox" value="" id="parent" >
 						<span id="tittle">Pilih Semua Produk</span>
-						<button id="Hapus" class="btn outline-info">Hapus</button>
+						<button id="HapusAll" class="btn outline-info">Hapus</button>
 						<br>
 						<!-- Cart  -->
 						<div id="cartContainer">
@@ -247,6 +247,7 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
 	<script src="<?= base_url('assets/js/cart.js'); ?>"></script>
