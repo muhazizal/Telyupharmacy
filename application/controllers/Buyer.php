@@ -60,7 +60,7 @@ class Buyer extends CI_Controller {
             'name'      => $this->input->post('name', true),
             'image'     => $new_image
           ];
-        } 
+        }
       } else {
         $data = [
           'username' => $this->input->post('username', true),

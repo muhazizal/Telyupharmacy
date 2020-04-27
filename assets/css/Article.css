@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* section0 */
 
@@ -30,7 +29,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -40,7 +39,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -50,14 +49,14 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
@@ -104,15 +103,10 @@
 	cursor: pointer;
 }
 
-
-
-
-
-
 /* section1 */
 
 #section1 {
-	background: #FFFFFF;
+	background: #ffffff;
 	width: 60%;
 	margin-top: 5%;
 	position: relative;
@@ -123,10 +117,7 @@
 	border: rgba(0, 0, 0, 0.15);
 	margin: 10px;
 	padding-bottom: 15px;
-
 }
-
-.row {}
 
 #tittle {
 	padding-top: 3%;
@@ -136,7 +127,7 @@
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 33px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 #article-photo {
@@ -156,7 +147,7 @@
 }
 
 .article {
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 	padding-top: 2%;
@@ -169,7 +160,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	text-align: left;
-	color: #9D9CB5;
+	color: #9d9cb5;
 }
 
 #category {
@@ -193,7 +184,6 @@
 	/* border: 2px solid black; */
 }
 
-
 #section5-1 {
 	width: 90%;
 	padding-top: 3%;
@@ -207,7 +197,7 @@
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -220,7 +210,6 @@
 	color: white !important;
 }
 
-
 #copyright {
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -228,7 +217,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -238,10 +227,9 @@
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -257,14 +245,8 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
-
-
-
-
-
 
 /* profile */
 
@@ -305,14 +287,14 @@
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -329,7 +311,7 @@
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -351,14 +333,14 @@
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
 	#orang {
 		display: none;
 	}

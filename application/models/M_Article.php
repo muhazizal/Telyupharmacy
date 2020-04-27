@@ -3,26 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Article extends CI_Model {
 
-  function __construct(){
-    parent::__construct();
-  }
-
   public function get_AllArticle(){
     return $this->db->get('article')->result_array();
-  } 
+  }
 
   public function get_ArticlebyId($id_article){
     $this->db->where('id',$id_article);
     return $this->db->get('article')->row_array();
   }
 
-  public function get_ArticlebyName($name_product){
-    $this->db->like('title',$name_product);
-    $this->db->or_like('category',$name_product);
+  public function get_ArticlebyName($keyword){
+    $this->db->like('title',$keyword);
+    $this->db->or_like('category',$keyword);
     return $this->db->get('article')->result_array();
   }
 
-  public function insert_Article($data){     
+  public function insert_Article($data) {
     return $this->db->insert('article',$data);
   }
 

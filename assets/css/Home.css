@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 /* sign in */
 
 #SignIn {
@@ -15,10 +15,9 @@
 	position: absolute;
 	width: 320px;
 	height: 429px;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	transform: translate(30%, 30%);
-
 }
 
 #tittle-sign {
@@ -27,7 +26,7 @@
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #9C9C9C;
+	color: #9c9c9c;
 	margin-top: 5%;
 }
 
@@ -38,14 +37,14 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	margin-top: 3%;
 }
 
 .form-group input {
 	width: 230px;
 	height: 44px;
-	border: 1px solid #8F8F8F;
+	border: 1px solid #8f8f8f;
 	box-sizing: border-box;
 	margin-left: 13%;
 	margin-top: 5%;
@@ -66,7 +65,7 @@
 	font-weight: normal;
 	font-size: 10px;
 	line-height: 14px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -79,7 +78,7 @@
 #btn-close-modal {
 	width: 230px;
 	height: 44px;
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 10px;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -87,7 +86,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	margin-bottom: 5%;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 /* section0 */
@@ -101,7 +100,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .collapse {
@@ -109,7 +108,7 @@
 }
 
 #Telyu-navbar {
-	color: #4BC2C5;
+	color: #4bc2c5;
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
@@ -129,7 +128,6 @@
 	letter-spacing: 0.02em;
 	color: black;
 	margin: 0;
-
 }
 
 #navbar2,
@@ -141,9 +139,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-
 }
-
 
 .nav-item {
 	padding: 0 10px 0 10px;
@@ -221,12 +217,10 @@ img#vector1 {
 	border-radius: 10px;
 }
 
-
-
 /* section3 */
 #section3 {
 	margin-top: 5%;
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
 	width: 80%;
@@ -239,8 +233,7 @@ img#vector1 {
 #header {
 	margin-bottom: 3%;
 	padding-bottom: 1%;
-	border-bottom: 1px solid #C4C4C4;
-
+	border-bottom: 1px solid #c4c4c4;
 }
 
 #Tittle {
@@ -260,7 +253,7 @@ img#vector1 {
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	background: #4BC2C5;
+	background: #4bc2c5;
 	border-radius: 10px;
 	width: 30%;
 }
@@ -301,7 +294,7 @@ img#vector1 {
 }
 
 #label-section-3:hover {
-	color: #4BC2C5;
+	color: #4bc2c5;
 	cursor: pointer;
 }
 
@@ -311,7 +304,7 @@ img#vector1 {
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 /* section4 */
@@ -326,7 +319,6 @@ img#vector1 {
 
 #body-title {
 	margin: 10%;
-
 }
 
 #card-title-section4 {
@@ -346,10 +338,8 @@ img#vector1 {
 	font-size: 9px;
 	line-height: 12px;
 	letter-spacing: 0.02em;
-	color: #ABABAB;
+	color: #ababab;
 }
-
-
 
 /* section5 */
 
@@ -362,7 +352,6 @@ img#vector1 {
 	padding-bottom: 5%;
 	/* border: 2px solid black; */
 }
-
 
 #section5-1 {
 	width: 90%;
@@ -377,7 +366,7 @@ img#vector1 {
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -390,7 +379,6 @@ img#vector1 {
 	color: white;
 }
 
-
 #copyright {
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -398,7 +386,7 @@ img#vector1 {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -408,10 +396,9 @@ img#vector1 {
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -427,9 +414,9 @@ img#vector1 {
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }

@@ -19,9 +19,8 @@ class Product extends CI_Controller {
         
 	  $username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		$data['data_product'] = $this->M_Product->get_AllProduct();
         
-		$this->load->view("V_Product", $data,array('error' => ' ' ));
+		$this->load->view("V_Product", $data);
 	}
 	
 	public function searchProductName($searchValue) {
@@ -99,9 +98,9 @@ class Product extends CI_Controller {
 		checkLoginBuyer();
 
 		$username = $this->session->userdata('username');
-		$data['buyer'] = $this->M_Admin->getAdmin($username);
+		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
 		//$data['data_product'] = $this->M_Product->get_AllProduct();
-		$this->load->view("V_Checkout",$data); 
+		$this->load->view("V_Checkout",$data);
   }
 
 
@@ -116,7 +115,7 @@ class Product extends CI_Controller {
   }
 
   public function add_Product(){
-		checkLoginAdmin();
+		checkLoginAdmin();	
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('price', 'Price', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');

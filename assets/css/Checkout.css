@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 /* universal */
-
-
 
 /* section0 */
 
@@ -33,7 +31,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .navbar-brand {
@@ -43,7 +41,7 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 #Pharmacy {
@@ -53,14 +51,14 @@
 }
 
 #search {
-	background: #EDEDED;
+	background: #ededed;
 	border-radius: 8px;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 #icon {
@@ -140,13 +138,12 @@
 }
 
 .card-text {
-
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 19px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	padding-bottom: 5%;
 }
 
@@ -160,16 +157,8 @@
 	letter-spacing: 0.02em;
 }
 
-.row {}
-
 .button-group {
 	margin-top: 2%;
-}
-
-#section1 .info {
-	/* border: 2px solid black; */
-	/* margin-top: 10%; */
-
 }
 
 #section1 h3 {
@@ -179,13 +168,12 @@
 	font-size: 16px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-
 }
 
-#section1 h4{
+#section1 h4 {
 	font-family: Nunito Sans;
 	font-style: normal;
-	font-weight:bold;
+	font-weight: bold;
 	font-size: 16px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
@@ -196,7 +184,7 @@
 	font-weight: bold;
 }
 
-#section1 .info{
+#section1 .info {
 	margin-top: 2%;
 }
 
@@ -205,10 +193,9 @@
 	padding: 1em;
 }
 
-#section1 .col-md-2{
-	border-bottom: 2px solid #ABABAB;
+#section1 .col-md-2 {
+	border-bottom: 2px solid #ababab;
 }
-
 
 /* section5 */
 
@@ -221,7 +208,6 @@
 	padding-bottom: 5%;
 	/* border: 2px solid black; */
 }
-
 
 #section5-1 {
 	width: 90%;
@@ -236,7 +222,7 @@
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -260,7 +246,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -270,10 +256,9 @@
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -289,9 +274,8 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 /* profile */
 
@@ -332,14 +316,14 @@
 }
 
 .dropdown-menu .btn {
-	background-color: #4BC2C5;
+	background-color: #4bc2c5;
 }
 
 /* password */
 
 #Password .modal-content {
 	width: 80%;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	padding-bottom: 5%;
 }
@@ -356,7 +340,7 @@
 }
 
 .form-group .btn-info {
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -378,9 +362,9 @@
 	font-weight: normal;
 	font-size: 11px;
 	line-height: 15px;
-	color: #ABABAB;
+	color: #ababab;
 }
 
 .tittle #a-item {
-	color: #4BC2C5;
+	color: #4bc2c5;
 }

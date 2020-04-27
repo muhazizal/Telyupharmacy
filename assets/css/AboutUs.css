@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 /* sign in */
 
 #SignIn {
@@ -15,10 +15,9 @@
 	position: absolute;
 	width: 320px;
 	height: 429px;
-	background: #FFFFFF;
+	background: #ffffff;
 	border-radius: 10px;
 	transform: translate(30%, 30%);
-
 }
 
 #tittle-sign {
@@ -27,7 +26,7 @@
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 25px;
-	color: #9C9C9C;
+	color: #9c9c9c;
 	margin-top: 5%;
 }
 
@@ -38,14 +37,14 @@
 	font-size: 24px;
 	line-height: 29px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	margin-top: 3%;
 }
 
 .form-group input {
 	width: 230px;
 	height: 44px;
-	border: 1px solid #8F8F8F;
+	border: 1px solid #8f8f8f;
 	box-sizing: border-box;
 	margin-left: 13%;
 	margin-top: 5%;
@@ -66,7 +65,7 @@
 	font-weight: normal;
 	font-size: 10px;
 	line-height: 14px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -79,7 +78,7 @@
 #btn-close-modal {
 	width: 230px;
 	height: 44px;
-	background: #4BC2C5 !important;
+	background: #4bc2c5 !important;
 	border-radius: 10px;
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -87,9 +86,8 @@
 	font-size: 18px;
 	line-height: 25px;
 	margin-bottom: 5%;
-	color: #FFFFFF;
+	color: #ffffff;
 }
-
 
 /* section0 */
 
@@ -102,7 +100,7 @@
 }
 
 .nav-link:hover {
-	color: #4BC2C5 !important;
+	color: #4bc2c5 !important;
 }
 
 .collapse {
@@ -110,7 +108,7 @@
 }
 
 #Telyu-navbar {
-	color: #4BC2C5;
+	color: #4bc2c5;
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: bold;
@@ -130,7 +128,6 @@
 	letter-spacing: 0.02em;
 	color: black;
 	margin: 0;
-
 }
 
 #navbar2,
@@ -142,9 +139,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-
 }
-
 
 .nav-item {
 	padding: 0 10px 0 10px;
@@ -163,7 +158,7 @@
 /* section1 */
 
 #section1 {
-	background: #FFFFFF;
+	background: #ffffff;
 	width: 95%;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
@@ -180,7 +175,7 @@
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 33px;
-	color: #4BC2C5;
+	color: #4bc2c5;
 }
 
 #team {
@@ -192,8 +187,6 @@
 	border: none;
 	margin-top: 2%;
 }
-
-
 
 #team-photo {
 	width: 150px;
@@ -217,14 +210,13 @@
 	font-size: 14px;
 	line-height: 19px;
 	text-align: center;
-	color: #9D9CB5;
+	color: #9d9cb5;
 	margin-top: 2%;
 }
 
-
 /* section2 */
 #section2 {
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
 	width: 95%;
@@ -245,14 +237,13 @@
 #margin li {
 	margin-top: 1%;
 	margin-bottom: 1%;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	font-family: Nunito Sans;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-
 }
 
 #margin ol li ul li {
@@ -262,7 +253,7 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #4BC2C5;
+	color: #4bc2c5;
 	list-style-type: disc;
 }
 
@@ -275,7 +266,7 @@
 }
 
 #faq-table th {
-	color: #4BC2C5;
+	color: #4bc2c5;
 	border-bottom: 0;
 }
 
@@ -286,10 +277,9 @@
 	display: flex;
 }
 
-
 /* section3 */
 #section3 {
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
 	width: 95%;
@@ -304,7 +294,6 @@
 	margin-right: 3%;
 }
 
-
 /* section5 */
 
 #section5 {
@@ -316,7 +305,6 @@
 	padding-bottom: 5%;
 	/* border: 2px solid black; */
 }
-
 
 #section5-1 {
 	width: 90%;
@@ -331,7 +319,7 @@
 	font-size: 36px;
 	line-height: 44px;
 	letter-spacing: 0.02em;
-	color: #78FCFF;
+	color: #78fcff;
 }
 
 #section5 #Pharmacy {
@@ -344,7 +332,6 @@
 	color: white !important;
 }
 
-
 #copyright {
 	font-family: Nunito Sans;
 	font-style: normal;
@@ -352,7 +339,7 @@
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 #section5-header {
@@ -362,10 +349,9 @@
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding-bottom: 5%;
 }
-
 
 #section5-li {
 	padding-bottom: 5%;
@@ -381,11 +367,10 @@
 	font-size: 18px;
 	line-height: 25px;
 	letter-spacing: 0.02em;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
-
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
 	#orang {
 		display: none;
 	}
