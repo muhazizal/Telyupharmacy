@@ -67,7 +67,6 @@
 			</nav>
 		</div>
 
-		<div class="container"></div>
 		<div class="container-fluid" id="section1">
 			<div class="col" id="tittle">About Us</div>
 			<div class="row text-center" id="team">

@@ -78,7 +78,7 @@ btnDeleteAll.addEventListener("click", (e) => {
 		text: "You won't be able to revert this!",
 		icon: "warning",
 		showCancelButton: true,
-		confirmButtonColor: "#3085d6",
+		confirmButtonColor: "#4bc2c5",
 		cancelButtonColor: "#d33",
 		confirmButtonText: "Yes, sure!",
 	}).then((result) => {
@@ -166,7 +166,7 @@ const renderCart = (carts) => {
 					text: "You won't be able to revert this!",
 					icon: "warning",
 					showCancelButton: true,
-					confirmButtonColor: "#3085d6",
+					confirmButtonColor: "#4bc2c5",
 					cancelButtonColor: "#d33",
 					confirmButtonText: "Yes, sure!",
 				}).then((result) => {
@@ -184,7 +184,7 @@ const renderCart = (carts) => {
 				text: "You won't be able to revert this!",
 				icon: "warning",
 				showCancelButton: true,
-				confirmButtonColor: "#3085d6",
+				confirmButtonColor: "#4bc2c5",
 				cancelButtonColor: "#d33",
 				confirmButtonText: "Yes, sure!",
 			}).then((result) => {

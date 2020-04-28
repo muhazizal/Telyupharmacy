@@ -34,7 +34,7 @@ const searchArticle = (keyword) => {
 				timer: 2000,
 			});
 			getArticle();
-			$("#search").val() = "";
+			document.querySelector("#search").value = "";
 		});
 };
 const formSearchArticle = document.querySelector("#formSearchArticle");
