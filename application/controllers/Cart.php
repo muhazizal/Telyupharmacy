@@ -26,7 +26,9 @@ class Cart extends CI_Controller {
 
     public function getCheckout(){
         $dataCheck = $this->M_Cart->getCheckout();
-        echo json_encode($dataCheck)
+        if ($dataCheck) {
+            echo json_encode($dataCheck);
+        }
     }
 
     public function deleteItem($idItem) {
