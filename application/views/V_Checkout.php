@@ -73,28 +73,12 @@
 
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
-			<div class="title text-center">Ringkasan Pembelian </div>
+			<div class="title text-center">Hello <?= $buyer['name'] ?>, This is your purchase summary</div>
 			<div class="col justify-content-center" id="showCheckout">
-				<!-- <div class="row box align-content-center">
-					<div class="col-md-4"></div>
-					<div class=" col-md-2">
-						<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
-					</div>
-					<div class="col-md-2 ">
-						<div class="info">
-							<h3>Nama Barang : <span>0</span></h3>
-							<h3>Harga Barang : <span>0</span></h3>
-							<h3>Jumlah barang : <span>0</span></h3>
-							<h3>Jumlah Harga : <span>0</span></h3>
-						</div>
-					</div>
-					<div class="col-md-3"></div>
-				</div> -->
-				
+				<!-- Show with ajax fetch -->
 			</div>
-			<div class="col text-center total">
-				<h4>Total Barang : <span>0</span></h4>
-				<h4>Total Harga : <span>0</span></h4>
+			<div class="col text-center total" id="total-container">
+				<!-- Show with ajax fetch -->
 			</div>
 			<div class="button-group text-center">
 				<button class="btn btn-outline-primary " type="button">Back To Home</button>

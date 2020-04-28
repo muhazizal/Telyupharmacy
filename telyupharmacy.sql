@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 03:39 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Apr 28, 2020 at 05:34 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -55,7 +55,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `status`) VALUES
 CREATE TABLE `article` (
   `id` int(11) NOT NULL,
   `title` varchar(128) NOT NULL,
-  `description` varchar(256) NOT NULL,
+  `description` longtext NOT NULL,
   `category` varchar(128) NOT NULL,
   `image` varchar(128) NOT NULL,
   `admin_id` int(11) NOT NULL
@@ -99,8 +99,10 @@ CREATE TABLE `buyer` (
 
 INSERT INTO `buyer` (`id`, `username`, `password`, `email`, `name`, `image`, `status`) VALUES
 (1301180243, 'naufalharsap', '$2y$10$caBXr6GIESLP8B9NPYXm6OuxUVc4p.fasJVP2yjr14fAeBzIvu4Qe', 'pewangi@gmail.com', 'Naufal Harsa', 'default.jpg', 2),
-(1301180244, 'daniamri', 'daniamri', 'daniamri92@gmail.com', 'Chamadani Amri', 'dani.jpg', 2),
-(1301180245, 'alvin', '$2y$10$OqHzk7zT9zIY573WvcE3C.Ef078fEQAKKciAhZC3oWZyhPLDJ3VYO', 'alvin@gmail.com', 'alvin21', 'eid-vector-5a3af17135a693_96860902151381233721987668.jpg', 2);
+(1301180245, 'muhazizal', '$2y$10$MSg86bJhdZyUwNlYJXEiUOwFf15BWbRe/t/ALchKUTyMfSbZb97Ea', 'muhazizal@gmail.com', 'muhazizal', 'IMG_20171215_151518_027.jpg', 2),
+(1301180246, 'apink', '$2y$10$8088rRuo/ustmHvjmchSb.tl/XyjbBcPP4kJl7jypAy3rxe853dHy', 'apink@gmail.com', 'apink', 'default.jpg', 2),
+(1301180247, 'daniamri', '$2y$10$9bTUejtM8XcixU0AU0jtju9gVjx3/ogkxd5b1PFamG83gBP4VCrte', 'daniamri@gmail.com', 'daniamri', 'default.jpg', 2),
+(1301180248, 'acil', '$2y$10$eUlXZw6ADffPUriwqtPukeHXP.jDuO5kT3OgyD0GGa.bXH1E40Nbm', 'acil@gmail.com', 'acil', 'default.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -153,10 +155,7 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`id`, `total_price`, `quantity`, `date`, `id_buyer`, `id_product`) VALUES
-(6, 15000, 1, '20-04-25', 1301180243, 2),
-(7, 1000, 1, '20-04-25', 1301180243, 4),
-(8, 65000, 1, '20-04-25', 1301180245, 9),
-(9, 12650000, 23, '20-04-25', 1301180245, 16);
+(61, 15000, 5, '20-04-28', 1301180245, 2);
 
 --
 -- Indexes for dumped tables
@@ -214,19 +213,19 @@ ALTER TABLE `article`
 -- AUTO_INCREMENT for table `buyer`
 --
 ALTER TABLE `buyer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1301180246;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1301180249;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- Constraints for dumped tables

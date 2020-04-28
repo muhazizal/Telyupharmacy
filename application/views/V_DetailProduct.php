@@ -75,7 +75,7 @@
 				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>" alt="" /></div>
 				<div class="col-xl-7">
 					<h1 id="artittle"><?= $product['name'] ?></h1>
-					<h2 id="category">Price<span class="harga" id="category">Rp<?= $product['price']  ?></span></h2>
+					<h2 id="category">Price<span class="harga" id="category">Rp <?= $product['price']  ?></span></h2>
 					<h2 id="category">Quantity
 						<span>
 							<input type="hidden" id="hiddenPrice" value="<?= $product['price']; ?>">

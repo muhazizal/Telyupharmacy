@@ -157,7 +157,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="container-fluid" id="section1">
 			<div class="row">
 				<div class="col-lg-6">
-					<h2 id="tittle-section1-1">Creating Your Healty, For Your Future</h2>
+					<h2 id="tittle-section1-1">Creating Your Healthy Life Brighten Your Future</h2>
 					<p id="tittle-section1-2">
 					</p>
 				</div>

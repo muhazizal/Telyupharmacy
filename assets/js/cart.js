@@ -14,6 +14,7 @@ const getCart = () => {
 			renderCart(responseJson);
 		})
 		.catch(() => {
+			renderEmpty();
 			console.log("error");
 		});
 };
@@ -71,22 +72,6 @@ const deleteAll = () => {
 			});
 		});
 };
-const btnDeleteAll = document.querySelector("#HapusAll");
-btnDeleteAll.addEventListener("click", (e) => {
-	Swal.fire({
-		title: "Are you sure to delete all this item?",
-		text: "You won't be able to revert this!",
-		icon: "warning",
-		showCancelButton: true,
-		confirmButtonColor: "#4bc2c5",
-		cancelButtonColor: "#d33",
-		confirmButtonText: "Yes, sure!",
-	}).then((result) => {
-		if (result.value) {
-			deleteAll();
-		}
-	});
-});
 
 // Update quantity
 const updateQty = (idProduct, qty) => {
@@ -107,6 +92,30 @@ const updateQty = (idProduct, qty) => {
 
 // Insert cart html element
 const renderCart = (carts) => {
+	const deleteAllContainer = document.querySelector("#deleteAllContainer");
+	deleteAllContainer.innerHTML = `
+		<button id="HapusAll" class="btn outline-info">Delete All Item</button>
+		<br>
+	`;
+
+	// Button delete all
+	const btnDeleteAll = document.querySelector("#HapusAll");
+	btnDeleteAll.addEventListener("click", () => {
+		Swal.fire({
+			title: "Are you sure to delete all this item?",
+			text: "You won't be able to revert this!",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#4bc2c5",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "Yes, sure!",
+		}).then((result) => {
+			if (result.value) {
+				deleteAll();
+			}
+		});
+	});
+
 	const cartElement = document.querySelector("#cartContainer");
 	cartElement.innerHTML = "";
 	let totalProduct = 0;
@@ -117,13 +126,12 @@ const renderCart = (carts) => {
       <div class="card">
         <div class="row">
           <div class="col-md-4" id="md4">
-            <input class="form-check-input" type="checkbox" value="" id="anak" >
             <img id="Barang" src="${baseURL}assets/uploads/product/${cart.image}" alt="" class="img-fluid">
           </div>
           <div class="col-md-8" id="md8">
             <p>${cart.name}</p>
-            <p class="harga">Rp. ${cart.price}</p>
-            <div>
+            <p class="harga">RP ${cart.price}</p>
+            <div class="product-container">
               <button type="button" id="minusProduct" class="btn btn-outline">-</button>
               <input type="text" id="number" value="${cart.quantity}" disabled="true">
               <button type="button" id="plusProduct" class="btn btn-outline">+</button>
@@ -139,13 +147,13 @@ const renderCart = (carts) => {
 		totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
 	});
 
-	const products = document.querySelectorAll(".card");
+	const products = document.querySelectorAll(".product-container");
 	products.forEach((product) => {
-		let oldValue = product.children[0].children[1].children[2].children[1];
+		let oldValue = product.children[1];
 		let newValue = parseInt(oldValue.value);
-		let btnDelete = product.children[0].children[1].children[2].children[3];
-		let btnPlus = product.children[0].children[1].children[2].children[2];
-		let btnMinus = product.children[0].children[1].children[2].children[0];
+		let btnDelete = product.children[3];
+		let btnPlus = product.children[2];
+		let btnMinus = product.children[0];
 
 		// Plus product
 		btnPlus.addEventListener("click", () => {
@@ -205,6 +213,27 @@ const renderCart = (carts) => {
     </span>
     <hr>
     <span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP ${totalPrice}</span>
+    <a id="checkout" class="btn btn-info" href="${baseURL}Product/load_Checkout/" role="button">Checkout</a>
+  `;
+};
+
+const renderEmpty = () => {
+	const deleteAllContainer = document.querySelector("#deleteAllContainer");
+	deleteAllContainer.innerHTML = ``;
+
+	const cartElement = document.querySelector("#cartContainer");
+	cartElement.innerHTML = "";
+
+	// Show summary
+	const summaryElement = document.querySelector("#summaryContainer");
+	summaryElement.innerHTML = `
+    <span id="tittle-section-2">Ringkasan Belanja</span>
+    <hr>
+    <span id="tittle-section-2">Total Barang</span><span id="tittle-section-2-1">
+      (0)
+    </span>
+    <hr>
+    <span id="tittle-section-2">Total Harga</span><span id="tittle-section-2-2">RP 0</span>
     <a id="checkout" class="btn btn-info" href="${baseURL}Product/load_Checkout/" role="button">Checkout</a>
   `;
 };

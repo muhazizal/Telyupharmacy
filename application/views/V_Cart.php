@@ -68,10 +68,9 @@
 			<div class="row">
 				<div class="col-md-7">
 					<div class="form-check">
-						<input onclick="checkAll()" class="form-check-input" type="checkbox" value="" id="parent" >
-						<span id="tittle">Pilih Semua Produk</span>
-						<button id="HapusAll" class="btn outline-info">Hapus</button>
-						<br>
+						<div id="deleteAllContainer">
+							
+						</div>
 						<!-- Cart  -->
 						<div id="cartContainer">
 							<!-- Show by Jquery AJAX -->
