@@ -107,73 +107,87 @@ const renderCart = (carts) => {
         </div>
       </div>
     `;
-    totalProduct += parseInt(cart.quantity);
-    totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
+		totalProduct += parseInt(cart.quantity);
+		totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
 
-    // const minusProduct = document.querySelector("#minusProduct");
-    // const plusProduct = document.querySelector("#plusProduct");
+		// const minusProduct = document.querySelector("#minusProduct");
+		// const plusProduct = document.querySelector("#plusProduct");
 
-    // minusProduct.addEventListener("click", () => {
-    //   let oldValue = parseInt(document.querySelector("#number").value);
-    //   let newValue = oldValue;
-    //   let qty = document.querySelector("#number");
+		// minusProduct.addEventListener("click", () => {
+		//   let oldValue = parseInt(document.querySelector("#number").value);
+		//   let newValue = oldValue;
+		//   let qty = document.querySelector("#number");
 
-    //   if (newValue > 1) {
-    //     newValue -= 1;
-    //     qty.value = newValue;
-    //   }
-    // });
-    // plusProduct.addEventListener("click", () => {
-    //   let oldValue = parseInt(document.querySelector("#number").value);
-    //   let newValue = oldValue;
-    //   let qty = document.querySelector("#number");
+		//   if (newValue > 1) {
+		//     newValue -= 1;
+		//     qty.value = newValue;
+		//   }
+		// });
+		// plusProduct.addEventListener("click", () => {
+		//   let oldValue = parseInt(document.querySelector("#number").value);
+		//   let newValue = oldValue;
+		//   let qty = document.querySelector("#number");
 
-    //   newValue = newValue + 1;
-    //   qty.value = newValue;
-    // });
-  });
-  
-  const minusProduct = document.querySelectorAll("#minusProduct");
-  const plusProduct = document.querySelectorAll("#plusProduct");
-  let oldValue = document.querySelectorAll("#number");
-  let qty = document.querySelectorAll("#number");
+		//   newValue = newValue + 1;
+		//   qty.value = newValue;
+		// });
+	});
 
-  plusProduct.forEach(plus => {
-    oldValue.forEach(old => {
-      qty.forEach(kuantitas => {
-        let newValue = parseInt(old.value);
-        plus.addEventListener("click", () => {
-          newValue += 1;
-          kuantitas.value = newValue;
-        });
-      });
-    });
-  });
+	const minusProduct = document.querySelectorAll("#minusProduct");
+	const plusProduct = document.querySelectorAll("#plusProduct");
+	let oldValue = document.querySelectorAll("#number");
+	let qty = document.querySelectorAll("#number");
 
-  minusProduct.forEach(minus => {
-    oldValue.forEach(old => {
-      qty.forEach(kuantitas => {
-        let newValue = parseInt(old.value);
-        minus.addEventListener("click", () => {
-          if (newValue > 1) {
-            newValue -= 1;
-            qty.value = newValue;
-          }
-        });
-      });
-    });
-  });
+	// plusProduct.forEach(plus => {
+	//   oldValue.forEach(old => {
+	//     qty.forEach(kuantitas => {
+	//       let newValue = parseInt(old.value);
+	//       plus.addEventListener("click", () => {
+	//         newValue += 1;
+	//         kuantitas.value = newValue;
+	//       });
+	//     });
+	//   });
+	// });
 
-  // Btn delete item
+	plusProduct.forEach(plus => {
+		oldValue.forEach(old => {
+			qty.forEach(kuantitas => {
+				let newValue = parseInt(old.value);
+				plus.addEventListener("click", () => {
+					newValue += 1;
+					kuantitas.value = newValue;
+				});
+			});
+		});
+	});
+
+
+
+	minusProduct.forEach(minus => {
+		oldValue.forEach(old => {
+			qty.forEach(kuantitas => {
+				let newValue = parseInt(old.value);
+				minus.addEventListener("click", () => {
+					if (newValue > 1) {
+						newValue -= 1;
+						qty.value = newValue;
+					}
+				});
+			});
+		});
+	});
+
+	// Btn delete item
 	const btnDeleteItem = document.querySelectorAll("#delete_item");
 	btnDeleteItem.forEach(button => {
 		button.addEventListener("click", e => {
 			e.preventDefault();
 			deleteItem(button.value);
 		});
-  });
+	});
 
-  // Show summary
+	// Show summary
 	const summaryElement = document.querySelector("#summaryContainer");
 	summaryElement.innerHTML = `
     <span id="tittle-section-2">Ringkasan Belanja</span>
