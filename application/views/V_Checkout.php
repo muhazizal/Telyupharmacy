@@ -74,8 +74,8 @@
 		<!-- section1 -->
 		<div class="container-fluid" id="section1">
 			<div class="title text-center">Ringkasan Pembelian </div>
-			<div class="col justify-content-center">
-				<div class="row box align-content-center">
+			<div class="col justify-content-center" id="showCheckout">
+				<!-- <div class="row box align-content-center">
 					<div class="col-md-4"></div>
 					<div class=" col-md-2">
 						<img class="img-fluid" src="<?= base_url('assets/uploads/product/mylanta.jpg') ?>" alt="">
@@ -89,7 +89,8 @@
 						</div>
 					</div>
 					<div class="col-md-3"></div>
-				</div>
+				</div> -->
+				
 			</div>
 			<div class="col text-center total">
 				<h4>Total Barang : <span>0</span></h4>
@@ -228,6 +229,8 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="<?= base_url('assets/js/jquery-3.5.0.js'); ?>"></script>
+	<script src="<?= base_url('assets/js/checkout.js'); ?>"></script>
 </body>
 
 </html>
