@@ -18,7 +18,7 @@ const getCart = () => {
 		});
 };
 
-// Delete Item
+// Delete item
 const deleteItem = (idItem) => {
 	fetch(`${baseURL}Cart/deleteItem/${idItem}`)
 		.then((response) => {
@@ -38,14 +38,14 @@ const deleteItem = (idItem) => {
 			Swal.fire({
 				position: "center",
 				icon: "error",
-				title: "Delete Gagal!",
+				title: "Something wrong!",
 				showConfirmButton: false,
 				timer: 2000,
 			});
 		});
-}
+};
 
-// Delete all
+// Delete all item
 const deleteAll = () => {
 	fetch(`${baseURL}Cart/deleteAll`)
 		.then((response) => {
@@ -65,17 +65,45 @@ const deleteAll = () => {
 			Swal.fire({
 				position: "center",
 				icon: "error",
-				title: "Delete Failed!",
+				title: "Something wrong!",
 				showConfirmButton: false,
 				timer: 2000,
 			});
 		});
-}
+};
 const btnDeleteAll = document.querySelector("#HapusAll");
-btnDeleteAll.addEventListener("click", e => {
-	e.preventDefault();
-	deleteAll();
+btnDeleteAll.addEventListener("click", (e) => {
+	Swal.fire({
+		title: "Are you sure to delete all this item?",
+		text: "You won't be able to revert this!",
+		icon: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#3085d6",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Yes, sure!",
+	}).then((result) => {
+		if (result.value) {
+			deleteAll();
+		}
+	});
 });
+
+// Update quantity
+const updateQty = (idProduct, qty) => {
+	fetch(`${baseURL}Cart/updateQty/${idProduct}/${qty}`, {
+		method: "PUT",
+		body: JSON.stringify(idProduct, qty),
+	})
+		.then((response) => {
+			return response.json();
+		})
+		.then(() => {
+			getCart();
+		})
+		.catch(() => {
+			console.log("error");
+		});
+};
 
 // Insert cart html element
 const renderCart = (carts) => {
@@ -107,73 +135,67 @@ const renderCart = (carts) => {
         </div>
       </div>
     `;
-    totalProduct += parseInt(cart.quantity);
-    totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
+		totalProduct += parseInt(cart.quantity);
+		totalPrice += parseInt(cart.price) * parseInt(cart.quantity);
+	});
 
-    // const minusProduct = document.querySelector("#minusProduct");
-    // const plusProduct = document.querySelector("#plusProduct");
+	const products = document.querySelectorAll(".card");
+	products.forEach((product) => {
+		let oldValue = product.children[0].children[1].children[2].children[1];
+		let newValue = parseInt(oldValue.value);
+		let btnDelete = product.children[0].children[1].children[2].children[3];
+		let btnPlus = product.children[0].children[1].children[2].children[2];
+		let btnMinus = product.children[0].children[1].children[2].children[0];
 
-    // minusProduct.addEventListener("click", () => {
-    //   let oldValue = parseInt(document.querySelector("#number").value);
-    //   let newValue = oldValue;
-    //   let qty = document.querySelector("#number");
-
-    //   if (newValue > 1) {
-    //     newValue -= 1;
-    //     qty.value = newValue;
-    //   }
-    // });
-    // plusProduct.addEventListener("click", () => {
-    //   let oldValue = parseInt(document.querySelector("#number").value);
-    //   let newValue = oldValue;
-    //   let qty = document.querySelector("#number");
-
-    //   newValue = newValue + 1;
-    //   qty.value = newValue;
-    // });
-  });
-  
-  const minusProduct = document.querySelectorAll("#minusProduct");
-  const plusProduct = document.querySelectorAll("#plusProduct");
-  let oldValue = document.querySelectorAll("#number");
-  let qty = document.querySelectorAll("#number");
-
-  plusProduct.forEach(plus => {
-    oldValue.forEach(old => {
-      qty.forEach(kuantitas => {
-        let newValue = parseInt(old.value);
-        plus.addEventListener("click", () => {
-          newValue += 1;
-          kuantitas.value = newValue;
-        });
-      });
-    });
-  });
-
-  minusProduct.forEach(minus => {
-    oldValue.forEach(old => {
-      qty.forEach(kuantitas => {
-        let newValue = parseInt(old.value);
-        minus.addEventListener("click", () => {
-          if (newValue > 1) {
-            newValue -= 1;
-            qty.value = newValue;
-          }
-        });
-      });
-    });
-  });
-
-  // Btn delete item
-	const btnDeleteItem = document.querySelectorAll("#delete_item");
-	btnDeleteItem.forEach(button => {
-		button.addEventListener("click", e => {
-			e.preventDefault();
-			deleteItem(button.value);
+		// Plus product
+		btnPlus.addEventListener("click", () => {
+			newValue += 1;
+			oldValue.value = newValue;
+			updateQty(btnDelete.value, newValue);
 		});
-  });
 
-  // Show summary
+		// Minus product
+		btnMinus.addEventListener("click", () => {
+			if (newValue > 1) {
+				newValue -= 1;
+				oldValue.value = newValue;
+				updateQty(btnDelete.value, newValue);
+			} else {
+				Swal.fire({
+					title: "Are you sure to delete this item?",
+					text: "You won't be able to revert this!",
+					icon: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#3085d6",
+					cancelButtonColor: "#d33",
+					confirmButtonText: "Yes, sure!",
+				}).then((result) => {
+					if (result.value) {
+						deleteItem(btnDelete.value);
+					}
+				});
+			}
+		});
+
+		// Delete product
+		btnDelete.addEventListener("click", () => {
+			Swal.fire({
+				title: "Are you sure to delete this item?",
+				text: "You won't be able to revert this!",
+				icon: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#3085d6",
+				cancelButtonColor: "#d33",
+				confirmButtonText: "Yes, sure!",
+			}).then((result) => {
+				if (result.value) {
+					deleteItem(btnDelete.value);
+				}
+			});
+		});
+	});
+
+	// Show summary
 	const summaryElement = document.querySelector("#summaryContainer");
 	summaryElement.innerHTML = `
     <span id="tittle-section-2">Ringkasan Belanja</span>

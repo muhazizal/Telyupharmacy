@@ -47,7 +47,7 @@ minusProduct.addEventListener("click", () => {
 });
 // Button plus product
 plusProduct.addEventListener("click", () => {
-	newValue = newValue + parseInt(oldValue);
+	newValue += oldValue;
 	qty.value = newValue;
 });
 

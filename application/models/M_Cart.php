@@ -23,6 +23,12 @@ class M_Cart extends CI_Model {
   public function deleteAll(){
     return $this->db->empty_table('transaction');
   }
+
+  public function updateQty($idProduct, $qty) {
+    $this->db->set('quantity', $qty);
+    $this->db->where('id_product', $idProduct);
+    return $this->db->update('transaction');
+  }
   
 }
 

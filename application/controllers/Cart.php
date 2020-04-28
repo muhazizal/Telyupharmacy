@@ -39,6 +39,14 @@ class Cart extends CI_Controller {
             echo json_encode($dataItemAll);
         }
     }
+
+    public function updateQty($id_product, $qty) {
+        $result = $this->M_Cart->updateQty($id_product, $qty);
+        
+        if ($result) {
+            echo json_encode($result);
+        }
+    }
 }
 
 ?>
