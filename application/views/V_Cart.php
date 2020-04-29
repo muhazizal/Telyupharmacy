@@ -10,6 +10,7 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/Cart.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 						<a id="shoping" href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"

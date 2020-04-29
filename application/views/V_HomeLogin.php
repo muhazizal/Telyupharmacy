@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/HomeLogin.css') ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
 </head>
 
 <body>
@@ -39,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart') ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">

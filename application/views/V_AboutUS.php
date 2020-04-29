@@ -10,13 +10,14 @@
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/AboutUs.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
+
 </head>
 
 <body>
 	<div class="container-fluid-0">
 		<div class="container-fluid" id="section0">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
 				<div class="collapse navbar-collapse justify-content-start">
 					<a class="navbar-brand" id="Telyu-navbar" href="<?= site_url('Home') ?>">Telyu<span
 							id="Pharmacy-navbar">Pharmacy</span></a>

@@ -13,6 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  		<!-- External CSS -->
  		<link rel="stylesheet" href="<?= base_url('assets/css/Home.css') ?>">
+		 <link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
  	</head>
 
  	<body>
@@ -42,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  						</ul>
  					</div>
 
- 					<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+ 					<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
  						<ul class="navbar-nav" id="navbar3">
  							<li class="nav-item">
  								<a class="nav-link" id="a-item" href="" data-toggle="modal" data-target="#loginmodal">Sign

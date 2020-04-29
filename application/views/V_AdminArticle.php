@@ -12,6 +12,7 @@
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/AdminArticle.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 					<form class="form-inline ">
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"

@@ -11,6 +11,8 @@
 	<!-- External CSS -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/AdminHome.css')?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/jquery.nice-number.css')?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/Media.css') ?>">
+
 </head>
 
 <body>
