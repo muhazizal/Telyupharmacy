@@ -99,7 +99,7 @@ class Article extends CI_Controller {
 			}
 
 			$this->M_Article->insert_Article($data);
-      $this->session->set_flashdata('article_Inserted', 'The selected article has been added!');
+      $this->session->set_flashdata('article_Inserted', 'Article has been added!');
       redirect('Article/load_AdminArticle');
 		}
 	}

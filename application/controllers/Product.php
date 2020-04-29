@@ -158,7 +158,7 @@ class Product extends CI_Controller {
 			}
 		
 		$this->M_Product->insert_Product($data);
-		$this->session->set_flashdata('product_Inserted', 'The selected product has been added!');
+		$this->session->set_flashdata('product_Inserted', 'Product has been added!');
 		redirect('Product/load_AdminProduct');
 		}
   }
