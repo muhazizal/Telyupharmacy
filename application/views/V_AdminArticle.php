@@ -311,7 +311,7 @@
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<div class="modal-body">Data yang dihapus tidak akan bisa dikembalikan.</div>
+				<div class="modal-body">The deleted data cannot be restored</div>
 				<div class="modal-footer">
 					<form action="<?php echo site_url('Article/delete_Article/'.$article['id']) ?>" method="post"
 						enctype="multipart/form-data" class="row">
