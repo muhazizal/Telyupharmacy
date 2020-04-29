@@ -121,6 +121,17 @@
 			</div>
 		</div>
 	</div>
+	<?php } else if ($this->session->flashdata('article_notFound')) { ?>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('article_notUpdated'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
 	<?php } ?>
 
 	<!-- section1 -->
