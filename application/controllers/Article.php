@@ -180,6 +180,10 @@ class Article extends CI_Controller {
 		$searchValue = $this->input->get('searchArticle');
 		if ($searchValue) {
 			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
+			if(empty($data['data_article'])){
+				$data['data_article'] = $this->M_Article->get_AllArticle();
+				$this->session->set_flashdata('article_notFound', 'Article not Found!');
+			}
 		} else {
 			$data['data_article'] = $this->M_Article->get_AllArticle();
 		}

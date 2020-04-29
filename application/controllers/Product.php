@@ -239,6 +239,10 @@ class Product extends CI_Controller {
 		$searchValue = $this->input->get('searchProduct');
 		if ($searchValue) {
 			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
+			if(empty($data['data_product'])){
+				$data['data_product'] = $this->M_Product->get_AllProduct();
+				$this->session->set_flashdata('product_notFound', 'Product not Found!');
+			}
 		} else {
 			$data['data_product'] = $this->M_Product->get_AllProduct();
 		}
