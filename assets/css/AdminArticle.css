@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-/* universal */
-
 /* section0 */
 
 #section0 {
 	width: 100%;
-	/* padding-top: 10px; */
 }
 
 #navbarSupportedContent {
@@ -91,7 +88,6 @@
 
 .navbar-form .form-control {
 	border: 2px solid black;
-	/* width: 50%; */
 	display: inline;
 	border: none;
 	font-family: Nunito Sans;
@@ -105,7 +101,6 @@
 #icon {
 	border: none;
 	color: black;
-	/* transform: translate(10%); */
 }
 
 #icon:hover {
@@ -136,10 +131,6 @@ td {
 #margin {
 	transform: translate(0%, 20%);
 }
-
-/* .btn-danger,.btn-warning {
-	width: 10%;
-} */
 
 .detail {
 	width: 40px;

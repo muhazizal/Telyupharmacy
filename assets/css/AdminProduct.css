@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-/* universal */
-
 /* section0 */
 
 #section0 {
@@ -258,8 +256,6 @@ textarea {
 .btn-secondary {
 	transform: translate(-10%);
 }
-
-/* media screen */
 
 /* media screen */
 

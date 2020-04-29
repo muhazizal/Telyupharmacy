@@ -207,7 +207,6 @@ img#vector1 {
 	margin-top: 5%;
 	width: 80%;
 	border-radius: 10px;
-	/* border:2px solid black; */
 }
 
 .carousel-item {
@@ -278,7 +277,6 @@ img#vector1 {
 .card-text {
 	font-family: Nunito Sans;
 	font-style: normal;
-	/* font-weight: bold; */
 	font-size: 14px;
 	line-height: 19px;
 	letter-spacing: 0.02em;
@@ -351,13 +349,11 @@ img#vector1 {
 	margin-top: 12%;
 	margin-bottom: 0;
 	padding-bottom: 5%;
-	/* border: 2px solid black; */
 }
 
 #section5-1 {
 	width: 90%;
 	padding-top: 3%;
-	/* border: 2px solid black; */
 }
 
 #section5 #Telyu {

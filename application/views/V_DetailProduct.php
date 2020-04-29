@@ -40,39 +40,39 @@
 					<form class="form-inline ">
 						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
-							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 
-								data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
-								class="rounded-circle d-block top" />
+							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false" data-offset="10,20"><img
+									src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
+									class="rounded-circle d-block top" />
 							</a>
 
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="Profile-2">
-							<img src="<?= base_url('assets/uploads/profile/') . $buyer['image'] ?>"
+								<img src="<?= base_url('assets/uploads/profile/') . $buyer['image'] ?>"
 									class="rounded-circle d-block bot img-fluid" />
 								<h3 class="text-center profile-title"><?= $buyer['name']; ?></h3>
 								<h3 class="text-center profile-title"><?= $buyer['email']; ?></h3>
-								<a type="button" class="btn btn-default mt-3 text-white text-center" 
+								<a type="button" class="btn btn-default mt-3 text-white text-center"
 									data-dismiss="modal" href="<?= site_url('Buyer/editProfile') ?>">Edit Profile
 								</a>
-								<a type="button" class="btn btn-default mt-3 text-white text-center" 
-									data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change Password
+								<a type="button" class="btn btn-default mt-3 text-white text-center"
+									data-dismiss="modal" data-toggle="modal" data-target="#ChangePassword">Change
+									Password
 								</a>
-								<a type="button" href="<?= site_url('Auth/do_logout'); ?>" 
+								<a type="button" href="<?= site_url('Auth/do_logout'); ?>"
 									class="btn btn-default mt-3 text-white text-center">Log Out
 								</a>
 							</div>
 						</div>
 					</form>
 				</div>
+			</nav>
 		</div>
-		</form>
-	</div>
-	</nav>
-	</div>
 
 	<div class="container" id="section1">
 		<form class="form-container">
 			<div class="row">
-				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>" alt="" /></div>
+				<div class="col-xl-5"><img src="<?= base_url('assets/uploads/product/' . $product['image']) ?>"
+						alt="" /></div>
 				<div class="col-xl-7">
 					<h1 id="artittle"><?= $product['name'] ?></h1>
 					<h2 id="category">Price<span class="harga" id="category">Rp <?= $product['price']  ?></span></h2>
@@ -91,7 +91,8 @@
 			<div class="row btn-row">
 				<div class="col-xl-5"></div>
 				<div class="col-xl-7">
-					<button id="btnAddToCart" type="button" value="<?= $product['id'] ?>" class="btn btn-info mt-2">Add to Cart</button>
+					<button id="btnAddToCart" type="button" value="<?= $product['id'] ?>" class="btn btn-info mt-2">Add
+						to Cart</button>
 				</div>
 			</div>
 		</form>
@@ -212,11 +213,6 @@
 				</div>
 			</div>
 		</div>
-
-
-
-
-
 	</div>
 
 	<!-- Bootstrap JS -->

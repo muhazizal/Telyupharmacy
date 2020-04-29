@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-/* universal */
-
 /* section0 */
 
 #section0 {
 	width: 100%;
-	/* padding-top: 10px; */
 }
 
 .link-product {

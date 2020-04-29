@@ -158,7 +158,7 @@
 					<th scope="col">Action</th>
 					<th scope="col">Details</th>
 				</tr>
-				</!-->
+			</thead>
 			<tbody>
 				<?php foreach($data_article as $article):  ?>
 				<tr>

@@ -72,25 +72,25 @@
 
 		<!-- Flashdata -->
 		<?php if ($this->session->flashdata('editSuccess')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('editSuccess'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('editSuccess'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+		</div>
 		<?php } else if ($this->session->flashdata('deleteAccountFailed')) { ?>
-		
-			<div class="col-lg-12 text-center">
-				<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
-					<strong><?= $this->session->flashdata('deleteAccountFailed'); ?></strong>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
+
+		<div class="col-lg-12 text-center">
+			<div class="alert alert-danger alert-dismissible fade show" id="success-alert" role="alert">
+				<strong><?= $this->session->flashdata('deleteAccountFailed'); ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+		</div>
 		<?php } ?>
 
 		<div class="container" id="section1">
@@ -104,7 +104,8 @@
 
 				<div class="form-group row d-flex align-items-center">
 					<div class="col-md-4">
-						<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>" class="rounded-circle d-block" />
+						<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
+							class="rounded-circle d-block" />
 					</div>
 					<div class="custom-file col-md-5 ml-3">
 						<input type="file" class="custom-file-input" id="customFile" name="image">
@@ -151,7 +152,8 @@
 						<button type="submit" class="btn btn-info">Submit</button>
 					</div>
 					<div class="col-lg-4">
-						<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteAccount">Delete Account</>
+						<button type="button" class="btn btn-danger" data-toggle="modal"
+							data-target="#DeleteAccount">Delete Account</>
 					</div>
 					<div class="col-lg-2"></div>
 				</div>
@@ -186,7 +188,8 @@
 								</div>
 								<div class="form-group">
 									<button type="submit" class="btn btn-info">Change Password</button>
-									<button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+									<button type="button" class="btn btn-outline-danger"
+										data-dismiss="modal">Cancel</button>
 								</div>
 							</form>
 						</div>
@@ -212,7 +215,8 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<a type="button" href="<?= site_url('Buyer/deleteAccount/'.$buyer['id'])?>" class="btn btn-danger">Delete</a>
+						<a type="button" href="<?= site_url('Buyer/deleteAccount/'.$buyer['id'])?>"
+							class="btn btn-danger">Delete</a>
 					</div>
 				</div>
 			</div>

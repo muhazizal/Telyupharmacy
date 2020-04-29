@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-/* universal */
-
 .container-fluid-0 {
 	position: relative;
 }
@@ -11,7 +9,6 @@
 
 #section0 {
 	width: 100%;
-	/* padding-top: 10px; */
 }
 
 .link-product {
@@ -187,7 +184,6 @@
 	position: absolute;
 	bottom: 31.5%;
 	left: 0%;
-	/* width: 8.5%; */
 }
 
 #vector9 {
@@ -205,13 +201,11 @@
 	margin-top: 12%;
 	margin-bottom: 0;
 	padding-bottom: 5%;
-	/* border: 2px solid black; */
 }
 
 #section5-1 {
 	width: 90%;
 	padding-top: 3%;
-	/* border: 2px solid black; */
 }
 
 #section5 #Telyu {
