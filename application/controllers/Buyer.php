@@ -35,6 +35,11 @@ class Buyer extends CI_Controller {
       $this->load->view('V_EditProfile', $data);
     } else {
       $id = $this->session->userdata('id');
+      $oldUsername = $this->session->userdata('username');
+      $oldEmail = $this->session->userdata('email');
+      $newUsername = $this->input->post('username', true);
+      $newEmail = $this->input->post('email', true);
+      
       $upload_image = $_FILES['image']['name'];
 
       if ($upload_image) {

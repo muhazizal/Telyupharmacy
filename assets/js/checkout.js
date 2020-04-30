@@ -18,7 +18,7 @@ const getCheckout = () => {
 		});
 };
 
-//Insert checkout html element
+// Insert checkout html element
 const renderCheckout = (items) => {
 	const checkElement = document.querySelector("#showCheckout");
 	checkElement.innerHTML = "";
@@ -67,29 +67,29 @@ const renderCheckout = (items) => {
 
 		totalItem += parseInt(quantity);
 		totalPrice += parseInt(quantity) * parseInt(price);
-
-		const totalContainer = document.querySelector("#total-container");
-		totalContainer.innerHTML = `
-			<div class="row box align-content-center">
-				<div class="col-md-3"></div>
-				<div class="col-md-4 text-left">
-					<table class="table table-sm table-borderless">
-						<tbody>
-							<tr>
-								<th scope="row">Total Item</th>
-								<td>:</td>
-								<td>${totalItem}</td>
-							</tr>
-							<tr>
-								<th scope="row">Total Price</th>
-								<td>:</td>
-								<td>${totalPrice}</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col-md-3"></div>
-			</div>
-		`;
 	});
+
+	const totalContainer = document.querySelector("#total-container");
+	totalContainer.innerHTML = `
+		<div class="row box align-content-center" id="total">
+			<div class="col-md-3"></div>
+			<div class="col-md-4 text-left">
+				<table class="table table-sm table-borderless">
+					<tbody>
+						<tr>
+							<th scope="row">Total Item</th>
+							<td>:</td>
+							<td>${totalItem}</td>
+						</tr>
+						<tr>
+							<th scope="row">Total Price</th>
+							<td>:</td>
+							<td>${totalPrice}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	`;
 };

@@ -8,6 +8,7 @@ class Cart extends CI_Controller {
         
         checkLoginBuyer();
         $this->load->model('M_Cart');
+        $this->load->model('M_Article');
         $this->load->model('M_Product');
         $this->load->model('M_Buyer');
     }
@@ -49,6 +50,18 @@ class Cart extends CI_Controller {
         if ($result) {
             echo json_encode($result);
         }
+    }
+
+    public function backToHome() {
+        $username = $this->session->userdata('username');
+        $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+        $data['products'] = $this->M_Product->get_AllProduct();
+        $data['articles'] = $this->M_Article->get_AllArticle();
+        
+        $this->M_Cart->deleteAll();
+        $this->session->set_flashdata('backToCart', 'Thank you for your purchase, ' . $data['buyer']['username']);
+        $this->load->view('V_HomeLogin', $data);
+        
     }
 }
 
