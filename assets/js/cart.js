@@ -92,7 +92,8 @@ const renderCart = (carts) => {
 		<br>
 	`;
 
-	$("#HapusAll").on("click", () => {
+	const btnDeleteAll = document.querySelector("#HapusAll");
+	btnDeleteAll.addEventListener("click", () => {
 		Swal.fire({
 			title: "Are you sure to delete all this item?",
 			text: "You won't be able to revert this!",
@@ -125,7 +126,7 @@ const renderCart = (carts) => {
             <p class="harga">RP ${cart.price}</p>
             <div class="product-container">
               <button type="button" id="minusProduct" class="btn btn-outline">-</button>
-              <input type="text" class="number" value="${cart.quantity}" disabled="true">
+              <input type="text" id="number" value="${cart.quantity}" disabled="true">
               <button type="button" id="plusProduct" class="btn btn-outline">+</button>
               <button type="button" value="${cart.id_product}" class="btn btn-outline" id="delete_item">
                 <i class="fa fa-trash"aria-hidden="true"></i>
@@ -168,7 +169,9 @@ const renderCart = (carts) => {
 					cancelButtonColor: "#d33",
 					confirmButtonText: "Yes, sure!",
 				}).then((result) => {
-					deleteItem(btnDelete.value) ? result.value : console.log("error");
+					if (result.value) {
+						deleteItem(btnDelete.value);
+					}
 				});
 			}
 		});
@@ -204,9 +207,11 @@ const renderCart = (carts) => {
 };
 
 const renderEmpty = () => {
-	$("#deleteAllContainer").html("");
+	const deleteAllContainer = document.querySelector("#deleteAllContainer");
+	deleteAllContainer.innerHTML = ``;
 
-	$("#cartContainer").html("");
+	const cartElement = document.querySelector("#cartContainer");
+	cartElement.innerHTML = "";
 
 	const summaryElement = document.querySelector("#summaryContainer");
 	summaryElement.innerHTML = `

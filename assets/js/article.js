@@ -34,13 +34,14 @@ const searchArticle = (keyword) => {
 				timer: 2000,
 			});
 			getArticle();
-			$("#search").val("");
+			document.querySelector("#search").value = "";
 		});
 };
 
-$("#formSearchArticle").on("submit", (e) => {
+const formSearchArticle = document.querySelector("#formSearchArticle");
+formSearchArticle.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const inputSearch = $("#search").val();
+	const inputSearch = document.querySelector("#search").value;
 
 	if (inputSearch === "" || inputSearch === null || inputSearch === undefined) {
 		getArticle();
