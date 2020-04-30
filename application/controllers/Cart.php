@@ -21,7 +21,7 @@ class Cart extends CI_Controller {
     }
 
     public function getCart() {
-        $dataCart = $this->M_Cart->getCart();
+        $dataCart = $this->M_Cart->getCart()->result();
         
         if ($dataCart) {
             echo json_encode($dataCart);

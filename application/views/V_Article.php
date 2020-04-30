@@ -93,7 +93,7 @@
 					<div class="modal-dialog bg-modal">
 						<div class="modal-content">
 							<h5 id="tittle-password" class="text-center">Change Password</h5>
-							<form action="" method="post">
+							<form action="<?= site_url('Buyer/changePassword') ?>" method="post">
 								<div class="form-group">
 									<span class="tittle">Old Password</span>
 									<input class="form-control" type="password" name="oldPassword" placeholder="Old Password" id="oldPassword"/>

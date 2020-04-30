@@ -7,7 +7,7 @@ class M_Cart extends CI_Model {
     $this->db->select('*');
     $this->db->from('transaction');
     $this->db->join('product', 'product.id = transaction.id_product');
-    return $this->db->get()->result();
+    return $this->db->get();
   }
   
   public function getProductById($idProduct) {

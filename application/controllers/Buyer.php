@@ -27,18 +27,37 @@ class Buyer extends CI_Controller {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
 
-    $this->form_validation->set_rules('name', 'Name', 'required');
-    $this->form_validation->set_rules('username', 'Username', 'required|trim');
-    $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+    $oldUsername = $this->session->userdata('username');
+    $oldEmail = $this->session->userdata('email');
+    $newUsername = $this->input->post('username', true);
+    $newEmail = $this->input->post('email', true);
+
+    if ($oldEmail != $newEmail AND $oldUsername != $newUsername) {
+      $this->form_validation->set_rules('name', 'Name', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[buyer.username]', [
+        'is_unique' => 'Username already used, try another!'
+      ]);
+      $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[buyer.email]', ['is_unique' => 'Email already used, try another!']);
+    } else if ($oldUsername != $newUsername) {
+      $this->form_validation->set_rules('name', 'Name', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[buyer.username]', [
+        'is_unique' => 'Username already used, try another!'
+      ]);
+      $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+    } else if ($oldEmail != $newEmail) {
+      $this->form_validation->set_rules('name', 'Name', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required|trim');
+      $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[buyer.email]', ['is_unique' => 'Email already used, try another!']);
+    } else {
+      $this->form_validation->set_rules('name', 'Name', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required|trim');
+      $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email');
+    }
 
     if ($this->form_validation->run() == FALSE) {
       $this->load->view('V_EditProfile', $data);
     } else {
       $id = $this->session->userdata('id');
-      $oldUsername = $this->session->userdata('username');
-      $oldEmail = $this->session->userdata('email');
-      $newUsername = $this->input->post('username', true);
-      $newEmail = $this->input->post('email', true);
       
       $upload_image = $_FILES['image']['name'];
 
@@ -57,8 +76,9 @@ class Buyer extends CI_Controller {
           if ($old_image != 'default.jpg') {
             unlink(FCPATH . 'assets/uploads/profile/' . $old_image);
           }
-
+          
           $new_image = $this->upload->data('file_name');
+
           $data = [
             'username'  => $this->input->post('username', true),
             'email'     => $this->input->post('email', true),

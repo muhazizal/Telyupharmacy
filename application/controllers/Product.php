@@ -99,10 +99,15 @@ class Product extends CI_Controller {
 
 		$username = $this->session->userdata('username');
 		$data['buyer'] = $this->M_Buyer->checkBuyer($username);
-		//$data['data_product'] = $this->M_Product->get_AllProduct();
-		$this->load->view("V_Checkout",$data);
-  }
+		$check = $this->M_Cart->getCart()->num_rows();
 
+		if ($check > 1) {
+			$this->load->view("V_Checkout",$data);
+		} else {
+			$this->session->set_flashdata('cartEmpty', 'You dont have any item to checkout!');
+			$this->load->view('V_Cart', $data);
+		}
+  }
 
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
   public function load_AdminProduct(){
