@@ -34,13 +34,14 @@ const searchProductName = (keyword) => {
 				timer: 2000,
 			});
 			getProduct();
-			$("#search").val("");
+			document.querySelector("#search").value = "";
 		});
 };
 
-$("#formSearchName").on("submit", (e) => {
+const formSearchName = document.querySelector("#formSearchName");
+formSearchName.addEventListener("submit", (e) => {
 	e.preventDefault();
-	const inputValue = $("#search").val();
+	const inputValue = document.querySelector("#search").value;
 
 	if (inputValue === "" || inputValue === null || inputValue === undefined) {
 		getProduct();
@@ -66,21 +67,24 @@ const searchProductPrice = (min, max) => {
 				timer: 2000,
 			});
 			getProduct();
-			$("#minPrice").val("");
-			$("#maxPrice").val("");
+			document.querySelector("#minPrice").value = "";
+			document.querySelector("#maxPrice").value = "";
 		});
 };
 
-$("#formSearchPrice").on("submit", (e) => {
+const formSearchPrice = document.querySelector("#formSearchPrice");
+formSearchPrice.addEventListener("submit", (e) => {
 	e.preventDefault();
-	let minPrice = $("#minPrice").val();
-	let maxPrice = $("#maxPrice").val();
+	let minPrice = document.querySelector("#minPrice").value;
+	let maxPrice = document.querySelector("#maxPrice").value;
+
 	if (minPrice === null || minPrice === "" || minPrice === undefined) {
 		minPrice = 0;
 	}
 	if (maxPrice === null || maxPrice === "" || maxPrice === undefined) {
 		maxPrice = 99999999999;
 	}
+
 	searchProductPrice(minPrice, maxPrice);
 });
 
@@ -144,9 +148,11 @@ const renderProduct = (products) => {
     `;
 	});
 
-	$(".btnAddToCart").forEach((button) => {
-		button.on("click", () => {
-			idProduct = button.val();
+	const addToCart = document.querySelectorAll("#btnAddToCart");
+
+	addToCart.forEach((button) => {
+		button.addEventListener("click", () => {
+			idProduct = button.value;
 
 			addProduct(idProduct);
 		});

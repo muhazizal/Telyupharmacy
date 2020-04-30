@@ -4,7 +4,6 @@ $(document).ready(() => {
 
 const baseURL = window.location.origin + "/Telyupharmacy/";
 
-// Show checkout
 const getCheckout = () => {
 	fetch(`${baseURL}Cart/getCart`)
 		.then((response) => {
@@ -18,7 +17,6 @@ const getCheckout = () => {
 		});
 };
 
-// Insert checkout html element
 const renderCheckout = (items) => {
 	const checkElement = document.querySelector("#showCheckout");
 	checkElement.innerHTML = "";
