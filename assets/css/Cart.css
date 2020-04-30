@@ -116,7 +116,7 @@
 	background-color: violet;
 }
 
-input[type="checkbox"]:checked+label:before {
+input[type="checkbox"]:checked + label:before {
 	background-color: violet;
 }
 
@@ -183,7 +183,7 @@ hr {
 	border-radius: 10px;
 }
 
-#number {
+.number {
 	border: none;
 	background-color: white;
 	width: 10%;

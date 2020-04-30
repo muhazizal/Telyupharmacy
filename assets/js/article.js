@@ -34,14 +34,14 @@ const searchArticle = (keyword) => {
 				timer: 2000,
 			});
 			getArticle();
-			$("#search").val() = "";
+			$("#search").val("");
 		});
 };
 
-const formSearchArticle = $("#formSearchArticle");
-formSearchArticle.on("submit", (e) => {
+$("#formSearchArticle").on("submit", (e) => {
 	e.preventDefault();
 	const inputSearch = $("#search").val();
+
 	if (inputSearch === "" || inputSearch === null || inputSearch === undefined) {
 		getArticle();
 	} else {
@@ -50,7 +50,7 @@ formSearchArticle.on("submit", (e) => {
 });
 
 const renderArticle = (articles) => {
-	const articleElement = $("#section1");
+	const articleElement = document.querySelector("#section1");
 	articleElement.innerHTML = "";
 
 	articles.forEach((article) => {

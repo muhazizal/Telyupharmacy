@@ -4,7 +4,6 @@ $(document).ready(() => {
 
 const baseURL = window.location.origin + "/Telyupharmacy/";
 
-// Show all product
 const getProduct = () => {
 	fetch(`${baseURL}Product/showAllProduct`)
 		.then((response) => {
@@ -18,7 +17,6 @@ const getProduct = () => {
 		});
 };
 
-// Search product by name
 const searchProductName = (keyword) => {
 	fetch(`${baseURL}Product/searchProductName/${keyword}`)
 		.then((response) => {
@@ -36,13 +34,14 @@ const searchProductName = (keyword) => {
 				timer: 2000,
 			});
 			getProduct();
-			document.querySelector("#search").value = "";
+			$("#search").val("");
 		});
 };
-const formSearchName = document.querySelector("#formSearchName");
-formSearchName.addEventListener("submit", (e) => {
+
+$("#formSearchName").on("submit", (e) => {
 	e.preventDefault();
-	const inputValue = document.querySelector("#search").value;
+	const inputValue = $("#search").val();
+
 	if (inputValue === "" || inputValue === null || inputValue === undefined) {
 		getProduct();
 	} else {
@@ -50,7 +49,6 @@ formSearchName.addEventListener("submit", (e) => {
 	}
 });
 
-// Search product by price
 const searchProductPrice = (min, max) => {
 	fetch(`${baseURL}Product/searchProductPrice/${min}/${max}`)
 		.then((response) => {
@@ -68,15 +66,15 @@ const searchProductPrice = (min, max) => {
 				timer: 2000,
 			});
 			getProduct();
-			document.querySelector("#minPrice").value = "";
-			document.querySelector("#maxPrice").value = "";
+			$("#minPrice").val("");
+			$("#maxPrice").val("");
 		});
 };
-const formSearchPrice = document.querySelector("#formSearchPrice");
-formSearchPrice.addEventListener("submit", (e) => {
+
+$("#formSearchPrice").on("submit", (e) => {
 	e.preventDefault();
-	let minPrice = document.querySelector("#minPrice").value;
-	let maxPrice = document.querySelector("#maxPrice").value;
+	let minPrice = $("#minPrice").val();
+	let maxPrice = $("#maxPrice").val();
 	if (minPrice === null || minPrice === "" || minPrice === undefined) {
 		minPrice = 0;
 	}
@@ -86,7 +84,6 @@ formSearchPrice.addEventListener("submit", (e) => {
 	searchProductPrice(minPrice, maxPrice);
 });
 
-// Add product to cart
 const addProduct = (idProduct) => {
 	fetch(`${baseURL}Product/addProductToCart/${idProduct}`, {
 		method: "POST",
@@ -117,7 +114,6 @@ const addProduct = (idProduct) => {
 		});
 };
 
-// Insert product html element
 const renderProduct = (products) => {
 	const productElement = document.querySelector("#productContainer");
 	productElement.innerHTML = "";
@@ -140,7 +136,7 @@ const renderProduct = (products) => {
             <a href="${baseURL}Product/showDetailProduct/${product.id}"
               class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
             </a>
-            <button id="btnAddToCart" value="${product.id}" type="button"
+            <button class="btnAddToCart" value="${product.id}" type="button"
             class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
           </div>
         </div>
@@ -148,11 +144,9 @@ const renderProduct = (products) => {
     `;
 	});
 
-	const addToCart = document.querySelectorAll("#btnAddToCart");
-
-	addToCart.forEach((button) => {
-		button.addEventListener("click", () => {
-			idProduct = button.value;
+	$(".btnAddToCart").forEach((button) => {
+		button.on("click", () => {
+			idProduct = button.val();
 
 			addProduct(idProduct);
 		});

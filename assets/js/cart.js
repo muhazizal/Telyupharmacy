@@ -4,7 +4,6 @@ $(document).ready(() => {
 
 const baseURL = window.location.origin + "/Telyupharmacy/";
 
-// Show cart
 const getCart = () => {
 	fetch(`${baseURL}Cart/getCart`)
 		.then((response) => {
@@ -15,11 +14,9 @@ const getCart = () => {
 		})
 		.catch(() => {
 			renderEmpty();
-			console.log("error");
 		});
 };
 
-// Delete item
 const deleteItem = (idItem) => {
 	fetch(`${baseURL}Cart/deleteItem/${idItem}`)
 		.then((response) => {
@@ -46,7 +43,6 @@ const deleteItem = (idItem) => {
 		});
 };
 
-// Delete all item
 const deleteAll = () => {
 	fetch(`${baseURL}Cart/deleteAll`)
 		.then((response) => {
@@ -73,7 +69,6 @@ const deleteAll = () => {
 		});
 };
 
-// Update quantity
 const updateQty = (idProduct, qty) => {
 	fetch(`${baseURL}Cart/updateQty/${idProduct}/${qty}`, {
 		method: "PUT",
@@ -90,7 +85,6 @@ const updateQty = (idProduct, qty) => {
 		});
 };
 
-// Insert cart html element
 const renderCart = (carts) => {
 	const deleteAllContainer = document.querySelector("#deleteAllContainer");
 	deleteAllContainer.innerHTML = `
@@ -98,9 +92,7 @@ const renderCart = (carts) => {
 		<br>
 	`;
 
-	// Button delete all
-	const btnDeleteAll = document.querySelector("#HapusAll");
-	btnDeleteAll.addEventListener("click", () => {
+	$("#HapusAll").on("click", () => {
 		Swal.fire({
 			title: "Are you sure to delete all this item?",
 			text: "You won't be able to revert this!",
@@ -133,7 +125,7 @@ const renderCart = (carts) => {
             <p class="harga">RP ${cart.price}</p>
             <div class="product-container">
               <button type="button" id="minusProduct" class="btn btn-outline">-</button>
-              <input type="text" id="number" value="${cart.quantity}" disabled="true">
+              <input type="text" class="number" value="${cart.quantity}" disabled="true">
               <button type="button" id="plusProduct" class="btn btn-outline">+</button>
               <button type="button" value="${cart.id_product}" class="btn btn-outline" id="delete_item">
                 <i class="fa fa-trash"aria-hidden="true"></i>
@@ -155,14 +147,12 @@ const renderCart = (carts) => {
 		let btnPlus = product.children[2];
 		let btnMinus = product.children[0];
 
-		// Plus product
 		btnPlus.addEventListener("click", () => {
 			newValue += 1;
 			oldValue.value = newValue;
 			updateQty(btnDelete.value, newValue);
 		});
 
-		// Minus product
 		btnMinus.addEventListener("click", () => {
 			if (newValue > 1) {
 				newValue -= 1;
@@ -178,14 +168,11 @@ const renderCart = (carts) => {
 					cancelButtonColor: "#d33",
 					confirmButtonText: "Yes, sure!",
 				}).then((result) => {
-					if (result.value) {
-						deleteItem(btnDelete.value);
-					}
+					deleteItem(btnDelete.value) ? result.value : console.log("error");
 				});
 			}
 		});
 
-		// Delete product
 		btnDelete.addEventListener("click", () => {
 			Swal.fire({
 				title: "Are you sure to delete this item?",
@@ -203,7 +190,6 @@ const renderCart = (carts) => {
 		});
 	});
 
-	// Show summary
 	const summaryElement = document.querySelector("#summaryContainer");
 	summaryElement.innerHTML = `
     <span id="tittle-section-2">Ringkasan Belanja</span>
@@ -218,13 +204,10 @@ const renderCart = (carts) => {
 };
 
 const renderEmpty = () => {
-	const deleteAllContainer = document.querySelector("#deleteAllContainer");
-	deleteAllContainer.innerHTML = ``;
+	$("#deleteAllContainer").html("");
 
-	const cartElement = document.querySelector("#cartContainer");
-	cartElement.innerHTML = "";
+	$("#cartContainer").html("");
 
-	// Show summary
 	const summaryElement = document.querySelector("#summaryContainer");
 	summaryElement.innerHTML = `
     <span id="tittle-section-2">Ringkasan Belanja</span>

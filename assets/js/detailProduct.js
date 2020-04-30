@@ -32,31 +32,26 @@ const addProduct = (quantity, totalPrice, idProduct) => {
 		});
 };
 
-const minusProduct = document.querySelector("#minusProduct");
-const plusProduct = document.querySelector("#plusProduct");
-let oldValue = parseInt(document.querySelector("#number").value);
+let oldValue = parseInt($("#number").val());
 let newValue = 1;
-let qty = document.querySelector("#number");
+let qty = $("#number");
 
-// Button minus product
-minusProduct.addEventListener("click", () => {
+$("#minusProduct").on("click", () => {
 	if (newValue > 1) {
 		newValue -= 1;
-		qty.value = newValue;
+		qty.val(newValue);
 	}
 });
-// Button plus product
-plusProduct.addEventListener("click", () => {
+
+$("#plusProduct").on("click", () => {
 	newValue += oldValue;
-	qty.value = newValue;
+	qty.val(newValue);
 });
 
-const hiddenPrice = document.querySelector("#hiddenPrice");
-const addToCart = document.querySelector("#btnAddToCart");
-// Button add to cart
 addToCart.addEventListener("click", () => {
 	const quantity = newValue;
-	const totalPrice = newValue * hiddenPrice.value;
-	const idProduct = addToCart.value;
+	const totalPrice = newValue * $("#hiddenPrice").val();
+	const idProduct = $("#btnAddToCart").val();
+
 	addProduct(quantity, totalPrice, idProduct);
 });
