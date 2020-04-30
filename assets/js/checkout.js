@@ -75,7 +75,7 @@ const renderCheckout = (items) => {
 				<table class="table table-sm table-borderless">
 					<tbody>
 						<tr>
-							<th scope="row">Total Item</th>
+							<th scope="row">Total Items</th>
 							<td>:</td>
 							<td>${totalItem}</td>
 						</tr>
