@@ -37,8 +37,8 @@
 						</li>
 					</ul>
 				</div>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-					<form class="form-inline ">
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<form class="form-inline nav-margin">
 						<a href="<?= site_url('Cart'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 						<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" 

@@ -2,4 +2,7 @@
 	#navbarSupportedContent {
 		justify-content: center !important;
 	}
+	.nav-margin{
+		margin: 0%;
+	}
 }

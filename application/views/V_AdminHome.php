@@ -36,7 +36,7 @@
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-					<form class="form-inline ">
+					<form class="form-inline nav-margin">
 					<div class="dropdown">
 							<a class="dropdown" href="#" id="Profile-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20"><img src="<?= base_url('assets/uploads/profile/admindefault.jpg') ?>"
 								class="rounded-circle d-block top" /></a>

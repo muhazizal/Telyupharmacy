@@ -152,16 +152,19 @@
 					class="form-control" placeholder="<?= $_GET["title"] ?>">
 				<?php
 					} else {
-				?>	<div class="col-sm-5 col" >
+				?>	<div class="col-md-5 col" >
 						<input id="search" type="text" name="searchProduct" class="form-control" placeholder="Search Product" >
 						<button type="submit" id="icon" class="btn btn-outline-info">
 								<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
 					</div>
 				<?php } ?>
-					<div class="col-sm-5"></div>
-					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary col-sm-2"  " data-toggle="modal"
+					<div class="col-md-4"></div>
+					<div class="col-md-3">
+					<a href="<?= base_url("") ?>" type="button" class="btn btn-primary"  " data-toggle="modal"
 						data-target="#addProduct">Add New Product</a>
+					</div>
+					
 				</div>
 			</form>
 			<table class="table">

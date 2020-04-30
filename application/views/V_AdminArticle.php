@@ -148,7 +148,7 @@
 				<?php
 					} else {
 				?>
-				<div class="col-sm-5 col">
+				<div class="col-md-5 col">
 					<input id="search" type="text" name="searchArticle" class="form-control"
 						placeholder="Search Article">
 					<button type="submit" id="icon" class="btn btn-outline-info">
@@ -156,9 +156,10 @@
 					</button>
 				</div>
 				<?php } ?>
-				<div class="col-sm-5"></div>
-				<a href="<?= base_url("") ?>" type="button" class="btn btn-primary col-sm-2" data-toggle="modal"
-					data-target="#addArticle">Add New Article</a>
+				<div class="col-md-4"></div>
+				<div class="col-md-3 "><a href="<?= base_url("") ?>" type="button" class="btn btn-primary" data-toggle="modal"
+					data-target="#addArticle">Add New Article</a></div>
+				
 			</div>
 		</form>
 		<table class="table">

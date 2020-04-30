@@ -136,7 +136,7 @@ const renderProduct = (products) => {
             <a href="${baseURL}Product/showDetailProduct/${product.id}"
               class="btn btn-large btn-block btn-outline-info mt-3">Show Detail
             </a>
-            <button class="btnAddToCart" value="${product.id}" type="button"
+            <button id="btnAddToCart" value="${product.id}" type="button"
             class="btn btn-large btn-block btn-info mt-3">Add to Cart</button>
           </div>
         </div>

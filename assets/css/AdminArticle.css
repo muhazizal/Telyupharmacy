@@ -325,6 +325,10 @@ textarea {
 		display: flex;
 	}
 
+	#section1 .btn-primary{
+		margin-top: 5%;
+	}
+
 	.btn-primary {
 		margin: 0;
 	}

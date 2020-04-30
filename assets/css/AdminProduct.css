@@ -297,6 +297,10 @@ textarea {
 		margin: 0% 0% 0% 40%;
 	}
 
+	#section1 .btn-primary {
+		margin-top: 5%;
+	}
+
 	#section1 .btn-danger {
 		margin-left: 3%;
 	}
