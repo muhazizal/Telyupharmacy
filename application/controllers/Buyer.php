@@ -8,7 +8,6 @@ class Buyer extends CI_Controller {
     parent::__construct();
 
     checkLoginBuyer();
-    
     $this->load->model('M_Buyer');
     $this->load->model('M_Product');
     $this->load->model('M_Article');
@@ -26,7 +25,6 @@ class Buyer extends CI_Controller {
   public function editProfile() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
-
     $oldUsername = $this->session->userdata('username');
     $oldEmail = $this->session->userdata('email');
     $newUsername = $this->input->post('username', true);
@@ -123,6 +121,7 @@ class Buyer extends CI_Controller {
           redirect('Buyer');
         } else {
           $passwordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+          
           $this->M_Buyer->changePassword($id, $passwordHash);
           $this->session->set_flashdata('changePasswordSuccess', 'Your password has been changed!');
           redirect('Buyer');

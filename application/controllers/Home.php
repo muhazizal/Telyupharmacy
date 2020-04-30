@@ -24,6 +24,7 @@ class Home extends CI_Controller {
     
     $data['products'] = $this->M_Product->get_AllProduct();
     $data['articles'] = $this->M_Article->get_AllArticle();
+    
     $this->load->view('V_Home', $data);
   }
 
@@ -34,6 +35,7 @@ class Home extends CI_Controller {
   public function load_AboutUsLogin() {
     $username = $this->session->userdata('username');
     $data['buyer'] = $this->M_Buyer->checkBuyer($username);
+
     $this->load->view('V_AboutUsLogin', $data);
   }
 }

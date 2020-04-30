@@ -35,19 +35,17 @@ class Auth extends CI_Controller {
   private function _do_signIn() {
     $username = $this->input->post('username');
     $password = $this->input->post('password');
-
     $admin = $this->M_Admin->checkAdmin($username, $password);
     $buyer = $this->M_Buyer->checkBuyer($username);
 
-    // if admin avail
     if ($admin) {
-      // if status true
       if ($admin['status'] == 1) {
         $data = [
           'username' => $admin['username'],
           'status'   => $admin['status'],
           'id'       => $admin['id'],
         ];
+
         $this->session->set_userdata($data);
         $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$admin['username']);
         redirect('Admin');
@@ -55,11 +53,8 @@ class Auth extends CI_Controller {
         $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
         redirect('Auth');
       }
-    // if buyer avail
     } else if ($buyer) {
-      // if status true
       if ($buyer['status'] == 2) {
-        // if password true
         if (password_verify($password, $buyer['password'])) {
           $data = [
             'username' => $buyer['username'],
@@ -69,6 +64,7 @@ class Auth extends CI_Controller {
             'id'       => $buyer['id'],
             'password' => $buyer['password']
           ];
+
           $this->session->set_userdata($data);
           $this->session->set_flashdata('signIn_success', 'Welcome to Telyupharmacy, '.$buyer['username']);
           redirect('Buyer');
@@ -80,7 +76,6 @@ class Auth extends CI_Controller {
         $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
         redirect('Auth');
       }
-    // if admin & buyer not avail
     } else {
       $this->session->set_flashdata('signIn_failed', 'Sign in failed!');
       redirect('Auth');

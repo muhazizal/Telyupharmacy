@@ -34,13 +34,14 @@ const searchArticle = (keyword) => {
 				timer: 2000,
 			});
 			getArticle();
-			document.querySelector("#search").value = "";
+			$("#search").val() = "";
 		});
 };
-const formSearchArticle = document.querySelector("#formSearchArticle");
-formSearchArticle.addEventListener("submit", (e) => {
+
+const formSearchArticle = $("#formSearchArticle");
+formSearchArticle.on("submit", (e) => {
 	e.preventDefault();
-	const inputSearch = document.querySelector("#search").value;
+	const inputSearch = $("#search").val();
 	if (inputSearch === "" || inputSearch === null || inputSearch === undefined) {
 		getArticle();
 	} else {
@@ -49,7 +50,7 @@ formSearchArticle.addEventListener("submit", (e) => {
 });
 
 const renderArticle = (articles) => {
-	const articleElement = document.querySelector("#section1");
+	const articleElement = $("#section1");
 	articleElement.innerHTML = "";
 
 	articles.forEach((article) => {

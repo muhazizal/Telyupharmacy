@@ -63,6 +63,7 @@ class Product extends CI_Controller {
 
 		if (!$check) {
 			$product = $this->M_Product->get_ProductbyId($id_product);
+			
 			$insert = [
 				'quantity'      => 1,
 				'date'          => date('y-m-d'),
@@ -112,15 +113,15 @@ class Product extends CI_Controller {
 	// ---------------------------------- ADMIN ---------------------------------------------------- //
   public function load_AdminProduct(){
 		checkLoginAdmin();
-
 		$username = $this->session->userdata('username');
 		$data['admin'] = $this->M_Admin->getAdmin($username);
 		$data['data_product'] = $this->M_Product->get_AllProduct();
+
 		$this->load->view("V_AdminProduct",$data); 
   }
 
   public function add_Product(){
-		checkLoginAdmin();	
+		checkLoginAdmin();
 		$this->form_validation->set_rules('name', 'Name', 'required');
 		$this->form_validation->set_rules('price', 'Price', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
@@ -143,6 +144,7 @@ class Product extends CI_Controller {
 
 				if($this->upload->do_upload('image')){
 					$new_image = $this->upload->data('file_name');
+
 					$data = [					
 						"name" 				=> $this->input->post('name', true),
 						"price" 			=> $this->input->post('price', true),
@@ -171,11 +173,13 @@ class Product extends CI_Controller {
 	public function delete_Product($id_product){
 		checkLoginAdmin();
 		$check = $this->M_Product->delete_Product($id_product);
-		if($check){
+
+		if ($check) {
 			$this->session->set_flashdata('Product_Deleted', 'The selected product has been removed!');
-		}else{
+		} else {
 			$this->session->set_flashdata('Product_notDeleted', 'There was a problem removing the product!');
 		}
+
 		redirect('Product/load_AdminProduct');
 	}
 
@@ -187,13 +191,13 @@ class Product extends CI_Controller {
 		$this->form_validation->set_rules('price', 'Price', 'required');
 		$this->form_validation->set_rules('description', 'Description', 'required');
 
-		if($this->form_validation->run() == FALSE){
+		if ($this->form_validation->run() == FALSE) {
 			$this->session->set_flashdata('product_notUpdated', 'There was a problem updating the product detail(s)!');
 			redirect('Product/load_AdminProduct');
-		}else{
+		} else {
 			$upload_image = $_FILES['image']['name'];
 					
-			if($upload_image){
+			if ($upload_image) {
 				$config = [
 					'upload_path'			=>  './assets/uploads/product/',
 					'allowed_types'		=>  'gif|jpg|png',
@@ -210,6 +214,7 @@ class Product extends CI_Controller {
 					}
 
 					$new_image = $this->upload->data('file_name');
+
 					$data = [
 						"id"            => $id_product,
 						"name"          => $this->input->post('name', true),
@@ -242,8 +247,10 @@ class Product extends CI_Controller {
 		$data['admin'] = $this->M_Admin->getAdmin($username,$password);
 
 		$searchValue = $this->input->get('searchProduct');
+
 		if ($searchValue) {
 			$data['data_product'] = $this->M_Product->get_ProductbyName($searchValue);
+			
 			if(empty($data['data_product'])){
 				$data['data_product'] = $this->M_Product->get_AllProduct();
 				$this->session->set_flashdata('product_notFound', 'Product not Found!');

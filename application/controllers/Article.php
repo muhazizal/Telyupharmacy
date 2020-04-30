@@ -80,6 +80,7 @@ class Article extends CI_Controller {
 
         if ($this->upload->do_upload('image')) {
 					$new_image = $this->upload->data('file_name');
+
           $data = [
 						"title" 			=> $this->input->post('title', true),
 						"description" => $this->input->post('description', true),
@@ -107,11 +108,13 @@ class Article extends CI_Controller {
 	public function delete_Article($id_article){
 		checkLoginAdmin();
 		$check = $this->M_Article->delete_Article($id_article);
+
 		if ($check) {
 			$this->session->set_flashdata('article_Deleted', 'The selected article has been removed!');
 		} else {
 			$this->session->set_flashdata('article_notDeleted', 'There was a problem removing the article!');
 		}
+
 		redirect('Article/load_AdminArticle');
 	}
 
@@ -146,6 +149,7 @@ class Article extends CI_Controller {
 					}
 
 					$new_image = $this->upload->data('file_name');
+
 					$data = [
 						"id" 					=> $id_article,
 						"title" 			=> $this->input->post('title', true),
@@ -180,6 +184,7 @@ class Article extends CI_Controller {
 		$searchValue = $this->input->get('searchArticle');
 		if ($searchValue) {
 			$data['data_article'] = $this->M_Article->get_ArticlebyName($searchValue);
+			
 			if(empty($data['data_article'])){
 				$data['data_article'] = $this->M_Article->get_AllArticle();
 				$this->session->set_flashdata('article_notFound', 'Article not Found!');
