@@ -458,3 +458,19 @@ img#vector1 {
 .tittle #a-item {
 	color: #4bc2c5;
 }
+
+@media only screen and (max-width: 991px) {
+	#tittle-section-1 {
+		text-align: center;
+		margin: 30px auto;
+	}
+
+	img#vector1 {
+		visibility: hidden;
+	}
+
+	#orang {
+		width: 75%;
+		margin: 30px auto;
+	}
+}
