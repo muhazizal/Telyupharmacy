@@ -193,7 +193,6 @@
 
 img#vector1 {
 	display: flex;
-	visibility: 1;
 	z-index: -1;
 	width: 15%;
 	position: absolute;
@@ -255,7 +254,7 @@ img#vector1 {
 	letter-spacing: 0.02em;
 	background: #4bc2c5;
 	border-radius: 10px;
-	width: 30%;
+	width: 120px;
 }
 
 .card {
@@ -416,4 +415,20 @@ img#vector1 {
 
 .btn {
 	background-color: #4bc2c5;
+}
+
+@media only screen and (max-width: 991px) {
+	#tittle-section-1 {
+		text-align: center;
+		margin: 30px auto;
+	}
+
+	img#vector1 {
+		visibility: hidden;
+	}
+
+	#orang {
+		width: 75%;
+		margin: 30px auto;
+	}
 }
