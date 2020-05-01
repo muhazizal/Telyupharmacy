@@ -104,59 +104,48 @@
 				class="form-container">
 
 				<div class="form-group row d-flex align-items-center">
-					<div class="col-md-4">
+					<div class="col-md-8 col-lg-2 mr-4">
 						<img src="<?= base_url('assets/uploads/profile/') . $buyer['image']; ?>"
 							class="rounded-circle d-block" />
 					</div>
-					<div class="custom-file col-md-5 ml-3">
+					<div class="custom-file col-md-8">
 						<input type="file" class="custom-file-input" id="customFile" name="image">
 						<label class="custom-file-label" for="customFile">Choose file</label>
 					</div>
 				</div>
 
 				<div class="form-group row">
-					<div class="col-lg-2"></div>
-					<label for="inputName" class="col-lg-2">Name:</label>
-					<div class="col-lg-7">
-						<input type="text" name="name" class="form-control" id="inputName"
-							value="<?= $buyer['name']; ?>">
+					<label for="inputName" class="col-lg-2 mr-3">Name:</label>
+					<div class="col-lg-8">
+						<input type="text" name="name" class="form-control" id="inputName" value="<?= $buyer['name']; ?>">
 						<?= form_error('name', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="col-lg-1"></div>
 				</div>
 
 				<div class="form-group row">
-					<div class="col-lg-2"></div>
-					<label for="inputName" class="col-lg-2">Username:</label>
-					<div class="col-lg-7">
-						<input type="text" name="username" class="form-control" id="inputName"
-							value="<?= $buyer['username']; ?>">
+					<label for="inputName" class="col-lg-2 mr-3">Username:</label>
+					<div class="col-lg-8">
+						<input type="text" name="username" class="form-control" id="inputName" value="<?= $buyer['username']; ?>">
 						<?= form_error('username', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="col-lg-1"></div>
 				</div>
 
 				<div class="form-group row">
-					<div class="col-lg-2"></div>
-					<label for="inputName" class="col-lg-2">Email:</label>
-					<div class="col-lg-7">
+					<label for="inputName" class="col-lg-2 mr-3">Email:</label>
+					<div class="col-lg-8">
 						<input type="text" name="email" class="form-control" id="inputName"
 							value="<?= $buyer['email']; ?>">
 						<?= form_error('email', '<p class="text-danger">', '</p>'); ?>
 					</div>
-					<div class="col-lg-1"></div>
 				</div>
 
 				<div class="form-group row">
-					<div class="col-lg-2"></div>
-					<div class="col-lg-4">
-						<button type="submit" class="btn btn-info">Submit</button>
+					<div class="col-lg-6 text-center">
+						<button type="submit" class="btn btn-lg btn-info">Submit</button>
 					</div>
-					<div class="col-lg-4">
-						<button type="button" class="btn btn-danger" data-toggle="modal"
-							data-target="#DeleteAccount">Delete Account</>
+					<div class="col-lg-6 text-center">
+						<button type="button" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#DeleteAccount">Delete Account</button>
 					</div>
-					<div class="col-lg-2"></div>
 				</div>
 
 			</form>
@@ -198,7 +187,6 @@
 				</div>
 			</div>
 		</div>
-
 
 		<!-- delete Account -->
 		<div class="modal fade" id="DeleteAccount" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

@@ -139,7 +139,6 @@
 
 #section1 input {
 	border-radius: 5px;
-	width: 80%;
 }
 
 #section1 form {
@@ -294,6 +293,11 @@
 }
 
 @media screen and (max-width: 767px) {
+	#section1 {
+		width: 90%;
+		padding: 3em 1em 3em 1em;
+	}
+
 	#section1 img {
 		float: left;
 	}
