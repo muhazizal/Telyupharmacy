@@ -107,7 +107,7 @@
 	cursor: pointer;
 }
 
-.nav-margin{
+.nav-margin {
 	margin-left: 60%;
 	z-index: 2;
 }
@@ -406,6 +406,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
 	#vector8,
 	#vector9 {
 		display: none;

@@ -177,12 +177,12 @@
 
 #vector6 {
 	position: absolute;
-	bottom: 0%;
+	bottom:-23%;
 }
 
 #vector7 {
 	position: absolute;
-	left: 86.4%;
+	left: 87.9%;
 	bottom: 28.9%;
 	z-index: 0;
 }
@@ -304,6 +304,7 @@
 }
 
 @media screen and (max-width: 1024px) {
+
 	#vector6,
 	#vector7 {
 		display: none;
