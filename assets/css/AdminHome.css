@@ -173,7 +173,4 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-	.navbar-toggler {
-		margin-right: 5%;
-	}
 }
