@@ -84,7 +84,7 @@
 		<div class="container-fluid" id="section2">
 			<div class="row">
 
-				<div class="col-md-2" id="form">
+				<div class="col-md-2 col-sm-4 col-12" id="form">
 					<h1 id="tittle-section2">Search for more details</h1>
 					<div class="card" id="PriceRange">
 						<h6>Price Range</h6>
@@ -98,7 +98,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-10">
+				<div class="col-md-10 col-sm-8">
 					<div class="container">
 						<div class="row" id="productContainer">
 						  <!-- Load Product Using AJAX Fetch -->

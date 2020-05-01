@@ -421,3 +421,14 @@ h6 {
 .tittle #a-item {
 	color: #4bc2c5;
 }
+
+@media screen and (max-width: 576px) {
+	#section2 #PriceRange button {
+		margin: 0 auto 30px 10%;
+		padding: 0;
+	}
+
+	#section2 .col-md-2 {
+		margin-bottom: 30px;
+	}
+}
