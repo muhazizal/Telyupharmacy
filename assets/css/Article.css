@@ -337,8 +337,18 @@
 	color: #4bc2c5;
 }
 
+@media screen and (max-width: 576px) {
+	#section1 {
+		min-width: 350px;
+	}
+}
+
 @media screen and (max-width: 767px) {
 	#orang {
 		display: none;
+	}
+
+	#article-photo {
+		max-width: 300px;
 	}
 }
